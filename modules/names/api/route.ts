@@ -1,7 +1,5 @@
-import express, { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import { getRandomArrayItem } from '../../../utils/arrays';
-import firstNamesList from '../data/firstNamesList';
 import getFirstNames from '../utils/getFirstNames';
 import getFullNames from '../utils/getFullNames';
 import getLastNames from '../utils/getLastNames';

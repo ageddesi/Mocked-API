@@ -1,0 +1,143 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "0.0.1",
+      "title": "Mock API",
+      "description": "An API library for providing endpoints of mock data for use during testing"
+    },
+    "host": "mock-api-msuu.onrender.com",
+    "basePath": "/",
+    "schemes": ["https"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "tags": [
+        {
+            "name": "Names",
+            "description": "A serious of endpoints to get randomly generated names"
+        }
+    ],
+    "paths": {
+        "/names/fullnames/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random fullnames",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "qty",
+                        "required": false,
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/FullNamesResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/firstnames/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random firstnames",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "qty",
+                        "required": false,
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/FirstNamesResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/lastnames/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random lastnames",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "qty",
+                        "required": false,
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/LastNameResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ErrorResponse": {
+            "type": "string"
+        },
+        "FullNamesResponse" : {
+            "properties": {
+                "fullNamesList" : {
+                    "type" : "array",
+                    "items": {
+                        "type" : "string"
+                    }
+                }
+            }
+        },
+        "FirstNamesResponse" : {
+            "properties": {
+                "fullNamesList" : {
+                    "type" : "array",
+                    "items": {
+                        "type" : "string"
+                    }
+                }
+            }
+        },
+        "LastNameResponse" : {
+            "properties": {
+                "lastNamesList" : {
+                    "type" : "array",
+                    "items": {
+                        "type" : "string"
+                    }
+                }
+            }
+        }
+    }
+  }
