@@ -6,7 +6,8 @@ const app = express();
 const port = 3000;
 
 // Load Mock Modules
-require('./modules/names/api/route')(app); // Names
+require('./modules/countries/api/countries-routes')(app); // Countries
+require('./modules/names/api/names-routes')(app); // Names
 
 // Setup Swagger API Documentation
 const swaggerUi = require('swagger-ui-express')

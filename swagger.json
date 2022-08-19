@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-      "version": "0.0.1",
-      "title": "Mock API",
+      "version": "0.0.2",
+      "title": "Mocked-API",
       "description": "An API library for providing endpoints of mock data for use during testing"
     },
     "host": "mock-api-msuu.onrender.com",
@@ -14,9 +14,49 @@
         {
             "name": "Names",
             "description": "A serious of endpoints to get randomly generated names"
+        },
+        {
+            "name": "Countries",
+            "description": "A serious of endpoints related to countries"
         }
     ],
     "paths": {
+        "/countries" : {
+            "get": {
+                "tags": ["Countries"],
+                "summary" : "Obtain a list of all countries",
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CountriesListResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/countries/:filterBy" : {
+            "get": {
+                "tags": ["Countries"],
+                "summary" : "Obtain a list of all countries that contain filtered text",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "filterBy",
+                        "required": false,
+                        "description": "The text you would like to filter countries by"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CountriesListResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/names/fullnames/:qty" : {
             "get": {
                 "tags": ["Names"],
@@ -108,6 +148,16 @@
     "definitions": {
         "ErrorResponse": {
             "type": "string"
+        },
+        "CountriesListResponse" : {
+            "properties": {
+                "countries" : {
+                    "type" : "array",
+                    "items": {
+                        "type" : "string"
+                    }
+                }
+            }
         },
         "FullNamesResponse" : {
             "properties": {
