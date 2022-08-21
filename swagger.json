@@ -7,7 +7,6 @@
     },
     "host": "mock-api-msuu.onrender.com",
     "basePath": "/",
-    "schemes": ["https"],
     "consumes": ["application/json"],
     "produces": ["application/json"],
     "tags": [
@@ -35,15 +34,14 @@
                 }
             }
         },
-        "/countries/:filterBy" : {
+        "/countries/{filterBy}" : {
             "get": {
                 "tags": ["Countries"],
                 "summary" : "Obtain a list of all countries that contain filtered text",
                 "parameters": [
                     {
-                        "in": "query",
+                        "in": "path",
                         "name": "filterBy",
-                        "required": false,
                         "description": "The text you would like to filter countries by"
                     }
                 ],
@@ -57,7 +55,7 @@
                 }
             }
         },
-        "/names/fullnames/:qty" : {
+        "/names/fullnames/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random fullnames",
@@ -85,7 +83,7 @@
                 }
             }
         },
-        "/names/fullnames/male/:qty" : {
+        "/names/fullnames/male/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random male fullnames",
@@ -113,7 +111,7 @@
                 }
             }
         },
-        "/names/fullnames/female/:qty" : {
+        "/names/fullnames/female/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random female fullnames",
@@ -141,7 +139,7 @@
                 }
             }
         },
-        "/names/firstnames/:qty" : {
+        "/names/firstnames/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random firstnames",
@@ -169,7 +167,7 @@
                 }
             }
         },
-        "/names/firstnames/male/:qty" : {
+        "/names/firstnames/male/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random male firstnames",
@@ -197,7 +195,7 @@
                 }
             }
         },
-        "/names/firstnames/female/:qty" : {
+        "/names/firstnames/female/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random female firstnames",
@@ -225,7 +223,7 @@
                 }
             }
         },
-        "/names/lastnames/:qty" : {
+        "/names/lastnames/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random lastnames",
@@ -253,7 +251,7 @@
                 }
             }
         },
-        "/names/lastnames/male/:qty" : {
+        "/names/lastnames/male/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random male lastnames",
@@ -281,7 +279,7 @@
                 }
             }
         },
-        "/names/lastnames/female/:qty" : {
+        "/names/lastnames/female/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random female lastnames",
@@ -309,7 +307,7 @@
                 }
             }
         },
-        "/names/middlenames/:qty" : {
+        "/names/middlenames/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random middlenames",
@@ -337,7 +335,7 @@
                 }
             }
         },
-        "/names/middlenames/male/:qty" : {
+        "/names/middlenames/male/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random male middlenames",
@@ -365,7 +363,7 @@
                 }
             }
         },
-        "/names/middlenames/female/:qty" : {
+        "/names/middlenames/female/{qty}" : {
             "get": {
                 "tags": ["Names"],
                 "summary" : "Obtain a list of random female middlename",
