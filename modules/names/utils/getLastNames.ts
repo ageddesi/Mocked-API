@@ -1,12 +1,20 @@
-import {getRandomArrayItem} from "../../../utils/arrays";
-import lastNamesList from "../data/lastNamesList";
+import { faker } from '@faker-js/faker';
 
-const getLastNames = (qty: number) : string[] => { 
+const getLastNames = (qty: number, sex: string = "both") : string[] => { 
     const namesList = [];
 
     for (let index = 0; index < qty; index++) {
-        let randomLastName = getRandomArrayItem(lastNamesList);
-        namesList.push(randomLastName);
+        switch (sex) {
+            case "female":
+                namesList.push(faker.name.lastName("female"))
+                break;
+            case "male":
+                namesList.push(faker.name.lastName("male"))
+                break;
+            default:
+                namesList.push(faker.name.lastName())
+                break;
+        }
     }
 
     return namesList;

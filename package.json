@@ -1,6 +1,6 @@
 {
   "name": "mocked-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An API library for providing endpoints of mock data for use during testing",
   "main": "app.ts",
   "scripts": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ageddesi/Mocked-API#readme",
   "devDependencies": {
+    "@faker-js/faker": "^7.4.0",
     "@types/express": "^4.17.13",
     "@types/node": "^18.7.6",
     "nodemon": "^2.0.19",

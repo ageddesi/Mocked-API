@@ -1,18 +1,18 @@
 import { faker } from '@faker-js/faker';
 
-const getFirstNames = (qty: number, sex: string = "both") : string[] => { 
+const getMiddleNames = (qty: number, sex: string = "both") : string[] => { 
     const namesList = [];
 
     for (let index = 0; index < qty; index++) {
         switch (sex) {
             case "female":
-                namesList.push(faker.name.firstName("female"))
+                namesList.push(faker.name.middleName("female"))
                 break;
             case "male":
-                namesList.push(faker.name.firstName("male"))
+                namesList.push(faker.name.middleName("male"))
                 break;
             default:
-                namesList.push(faker.name.firstName())
+                namesList.push(faker.name.middleName())
                 break;
         }
     }
@@ -20,4 +20,4 @@ const getFirstNames = (qty: number, sex: string = "both") : string[] => {
     return namesList;
 }
 
-export default getFirstNames;
+export default getMiddleNames;

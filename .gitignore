@@ -4,3 +4,4 @@ npm-debug.log
 .nyc
 .env
 .DS_Store
+.idea

@@ -63,9 +63,64 @@
                 "summary" : "Obtain a list of random fullnames",
                 "parameters": [
                     {
-                        "in": "query",
+                        "in": "path",
                         "name": "qty",
-                        "required": false,
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/FullNamesResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/fullnames/male/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random male fullnames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/FullNamesResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/fullnames/female/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random female fullnames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
                         "default": 10,
                         "description": "The amount of results you would like returned"
                     }
@@ -92,9 +147,64 @@
                 "summary" : "Obtain a list of random firstnames",
                 "parameters": [
                     {
-                        "in": "query",
+                        "in": "path",
                         "name": "qty",
-                        "required": false,
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/FirstNamesResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/firstnames/male/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random male firstnames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/FirstNamesResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/firstnames/female/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random female firstnames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
                         "default": 10,
                         "description": "The amount of results you would like returned"
                     }
@@ -121,9 +231,148 @@
                 "summary" : "Obtain a list of random lastnames",
                 "parameters": [
                     {
-                        "in": "query",
+                        "in": "path",
                         "name": "qty",
-                        "required": false,
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/LastNameResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/lastnames/male/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random male lastnames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/LastNameResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/lastnames/female/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random female lastnames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/LastNameResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/middlenames/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random middlenames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/LastNameResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/middlenames/male/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random male middlenames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/LastNameResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/middlenames/female/:qty" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random female middlename",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
                         "default": 10,
                         "description": "The amount of results you would like returned"
                     }
