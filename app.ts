@@ -9,6 +9,16 @@ const port = 3000;
 require('./modules/countries/api/countries-routes')(app); // Countries
 require('./modules/names/api/names-routes')(app); // Names
 
+// Add an healthcheck endpoint
+app.get('/status', (req, res) => {
+  const data = {
+    uptime: process.uptime(),
+    message: 'Ok',
+    date: new Date()
+  }
+  res.status(200).send(data);
+});
+
 // Setup Swagger API Documentation
 const swaggerUi = require('swagger-ui-express')
 const swaggerDocument = require('./swagger.json');
