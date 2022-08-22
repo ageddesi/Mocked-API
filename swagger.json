@@ -3,7 +3,7 @@
     "info": {
         "version": "0.0.4",
         "title": "Mocked-API",
-        "description": "An API library for providing endpoints of mock data for use during testing. This API is still in the development and until it reaches version 1.0.0 the API is subject to change. To raise an issue or suggest new endpoints head over to https://github.com/ageddesi/Mocked-API/issues",
+        "description": "An API library for providing endpoints of mock data for use during testing. This API is still in the development and until it reaches version 1.0.0 the API is subject to change. To raise an issue or suggest new endpoints head over to https://github.com/ageddesi/Mocked-API/issues"
     },
     "host": "mock-api-msuu.onrender.com",
     "basePath": "/",
