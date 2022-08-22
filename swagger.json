@@ -1,9 +1,9 @@
 {
     "swagger": "2.0",
     "info": {
-      "version": "0.0.3",
-      "title": "Mocked-API",
-      "description": "An API library for providing endpoints of mock data for use during testing"
+        "version": "0.0.4",
+        "title": "Mocked-API",
+        "description": "An API library for providing endpoints of mock data for use during testing. This API is still in the development and until it reaches version 1.0.0 the API is subject to change. To raise an issue or suggest new endpoints head over to https://github.com/ageddesi/Mocked-API/issues",
     },
     "host": "mock-api-msuu.onrender.com",
     "basePath": "/",
@@ -11,15 +11,397 @@
     "produces": ["application/json"],
     "tags": [
         {
-            "name": "Names",
-            "description": "A serious of endpoints to get randomly generated names"
+            "name": "Animals",
+            "description": "A set of endpoints related to animal"
         },
         {
             "name": "Countries",
-            "description": "A serious of endpoints related to countries"
+            "description": "A set of endpoints related to countries"
+        },
+        {
+            "name": "Names",
+            "description": "A set of endpoints to get randomly generated names"
         }
     ],
     "paths": {
+        "/animals/bear/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of bear species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/bird/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of bird species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/cat/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of cat species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/cetecean/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of cetecean species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/cow/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of cow species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/crocodile/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of crocodile species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/dog/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of dog species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/fish/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of fish species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/horse/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of horse species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/insect/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of insect species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/lion/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of lion species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/rabbit/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of rabbit species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/rodent/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of rodent species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animals/snake/species/{qty}" : {
+            "get": {
+                "tags": ["Animals"],
+                "summary" : "Obtain a random list of snake species with no duplications",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of species you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Sun bear"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/countries" : {
             "get": {
                 "tags": ["Countries"],
@@ -28,7 +410,11 @@
                     "200" : {
                         "description" : "OK",
                         "schema": {
-                            "$ref": "#/definitions/CountriesListResponse"
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "United Kingdom, United States Of America"
+                            }
                         }
                     }
                 }
@@ -42,98 +428,20 @@
                     {
                         "in": "path",
                         "name": "filterBy",
-                        "description": "The text you would like to filter countries by"
+                        "description": "The text you would like to filter countries by",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
                     "200" : {
                         "description" : "OK",
                         "schema": {
-                            "$ref": "#/definitions/CountriesListResponse"
-                        }
-                    }
-                }
-            }
-        },
-        "/names/fullnames/{qty}" : {
-            "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random fullnames",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "qty",
-                        "default": 10,
-                        "description": "The amount of results you would like returned"
-                    }
-                ],
-                "responses": {
-                    "200" : {
-                        "description" : "OK",
-                        "schema": {
-                            "$ref": "#/definitions/FullNamesResponse"
-                        }
-                    },
-                    "400" : {
-                        "description": "Unexpected Error",
-                        "schema": {
-                            "$ref": "#/definitions/ErrorResponse"
-                        }
-                    }
-                }
-            }
-        },
-        "/names/fullnames/male/{qty}" : {
-            "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random male fullnames",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "qty",
-                        "default": 10,
-                        "description": "The amount of results you would like returned"
-                    }
-                ],
-                "responses": {
-                    "200" : {
-                        "description" : "OK",
-                        "schema": {
-                            "$ref": "#/definitions/FullNamesResponse"
-                        }
-                    },
-                    "400" : {
-                        "description": "Unexpected Error",
-                        "schema": {
-                            "$ref": "#/definitions/ErrorResponse"
-                        }
-                    }
-                }
-            }
-        },
-        "/names/fullnames/female/{qty}" : {
-            "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random female fullnames",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "qty",
-                        "default": 10,
-                        "description": "The amount of results you would like returned"
-                    }
-                ],
-                "responses": {
-                    "200" : {
-                        "description" : "OK",
-                        "schema": {
-                            "$ref": "#/definitions/FullNamesResponse"
-                        }
-                    },
-                    "400" : {
-                        "description": "Unexpected Error",
-                        "schema": {
-                            "$ref": "#/definitions/ErrorResponse"
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "United Kingdom"
+                            }
                         }
                     }
                 }
@@ -212,6 +520,97 @@
                         "description" : "OK",
                         "schema": {
                             "$ref": "#/definitions/FirstNamesResponse"
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/fullnames/{qty}" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random fullnames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "Bobby Weiman, Tammy Swaniawski"
+                            }
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/fullnames/male/{qty}" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random male fullnames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "items": {
+                                "type" : "string",
+                                "example": "Bobby Weiman, Tammy Swaniawski"
+                            }
+                        }
+                    },
+                    "400" : {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/names/fullnames/female/{qty}" : {
+            "get": {
+                "tags": ["Names"],
+                "summary" : "Obtain a list of random female fullnames",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/FullNamesResponse"
                         }
                     },
                     "400" : {

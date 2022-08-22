@@ -4,13 +4,9 @@ import getFirstNames from '../utils/getFirstNames';
 import getFullNames from '../utils/getFullNames';
 import getLastNames from '../utils/getLastNames';
 import getMiddleNames from '../utils/getMiddleNames';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 
-const defaultQty = 10;
 const defaultErrorMessage = "Unable to provide a random list of names at this time. Unknown Error Occured";
-
-const getQtyFromRequest = (request : Request | null) : number => {
-    return request.params.qty ? parseInt(request.params.qty) : defaultQty;
-}
 
 module.exports = function(app : core.Express){
 
@@ -21,9 +17,7 @@ module.exports = function(app : core.Express){
         if(randomFullNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            fullNamesList: randomFullNames
-        })
+        res.json(randomFullNames)
     })
 
     // Get a list of random male full names
@@ -33,9 +27,7 @@ module.exports = function(app : core.Express){
         if(randomFullNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            fullNamesList: randomFullNames
-        })
+        res.json(randomFullNames)
     })
 
     // Get a list of random female full names
@@ -45,9 +37,7 @@ module.exports = function(app : core.Express){
         if(randomFullNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            fullNamesList: randomFullNames
-        })
+        res.json(randomFullNames)
     })
 
     // Get a list of random first names
@@ -57,9 +47,7 @@ module.exports = function(app : core.Express){
         if(randomFirstNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            firstNamesList: randomFirstNames
-        })
+        res.json(randomFirstNames)
     })
 
     // Get a list of random male first names
@@ -69,9 +57,7 @@ module.exports = function(app : core.Express){
         if(randomFirstNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            firstNamesList: randomFirstNames
-        })
+        res.json(randomFirstNames)
     })
 
     // Get a list of random female first names
@@ -81,9 +67,7 @@ module.exports = function(app : core.Express){
         if(randomFirstNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            firstNamesList: randomFirstNames
-        })
+        res.json(randomFirstNames)
     })
 
     // Get a list of random last names
@@ -93,9 +77,7 @@ module.exports = function(app : core.Express){
         if(randomLastNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            lastNamesList: randomLastNames
-        })
+        res.json(randomLastNames)
     })
 
     // Get a list of random male last names
@@ -105,9 +87,7 @@ module.exports = function(app : core.Express){
         if(randomLastNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            lastNamesList: randomLastNames
-        })
+        res.json(randomLastNames)
     })
 
      // Get a list of random female last names
@@ -117,9 +97,7 @@ module.exports = function(app : core.Express){
         if(randomLastNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            lastNamesList: randomLastNames
-        })
+        res.json(randomLastNames)
     })
 
     // Get a list of random middlenames
@@ -129,9 +107,7 @@ module.exports = function(app : core.Express){
         if(randomLastNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            lastNamesList: randomLastNames
-        })
+        res.json(randomLastNames)
     })
 
     // Get a list of random male middlenames
@@ -141,9 +117,7 @@ module.exports = function(app : core.Express){
         if(randomLastNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            lastNamesList: randomLastNames
-        })
+        res.json(randomLastNames)
     })
 
     // Get a list of random female middlenames
@@ -153,8 +127,6 @@ module.exports = function(app : core.Express){
         if(randomLastNames.length === 0){
             return res.status(400).json(defaultErrorMessage)
         }
-        res.json({
-            lastNamesList: randomLastNames
-        })
+        res.json(randomLastNames)
     })
 }
