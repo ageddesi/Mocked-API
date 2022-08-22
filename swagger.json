@@ -394,14 +394,16 @@
     },
     "definitions": {
         "ErrorResponse": {
-            "type": "string"
+            "type": "string",
+            "example": "An unknown error occured, please try again."
         },
         "CountriesListResponse" : {
             "properties": {
-                "countries" : {
-                    "type" : "array",
+                "countries": {
+                    "type": "array",
                     "items": {
-                        "type" : "string"
+                        "type": "string",
+                        "example": "United Kingdom" 
                     }
                 }
             }
@@ -411,17 +413,19 @@
                 "fullNamesList" : {
                     "type" : "array",
                     "items": {
-                        "type" : "string"
+                        "type" : "string",
+                        "example": "Aaron D Rackley"
                     }
                 }
             }
         },
         "FirstNamesResponse" : {
             "properties": {
-                "fullNamesList" : {
+                "firstNamesList" : {
                     "type" : "array",
                     "items": {
-                        "type" : "string"
+                        "type" : "string",
+                        "example": "Mandy"
                     }
                 }
             }
@@ -431,7 +435,8 @@
                 "lastNamesList" : {
                     "type" : "array",
                     "items": {
-                        "type" : "string"
+                        "type" : "string",
+                        "example": "smith"
                     }
                 }
             }
