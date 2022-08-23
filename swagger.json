@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "0.0.4",
+        "version": "0.0.5",
         "title": "Mocked-API",
         "description": "An API library for providing endpoints of mock data for use during testing. This API is still in the development and until it reaches version 1.0.0 the API is subject to change. To raise an issue or suggest new endpoints head over to https://github.com/ageddesi/Mocked-API/issues"
     },
@@ -17,6 +17,10 @@
         {
             "name": "Countries",
             "description": "A set of endpoints related to countries"
+        },
+        {
+            "name": "Images",
+            "description": "A set of endpoints related to obtaining placeholder image urls"
         },
         {
             "name": "Names",
@@ -447,6 +451,595 @@
                 }
             }
         },
+
+        "/images/abstract/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of abstract image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/animals/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of animal image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/avatar/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of avatar image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/business/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of business image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/cats/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of cat image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/city/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of city image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/fashion/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of fashion image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/food/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of food image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/nature/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of nature image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/nightlife/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of nightlife image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/people/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of people image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/sports/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of sports image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/technics/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of technics image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/images/transport/{width}/{height}/{qty}" : {
+            "get": {
+                "tags": ["Images"],
+                "summary" : "Obtain a list of transport image urls",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "width",
+                        "description": "Width in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 640
+                    },
+                    {
+                        "in": "path",
+                        "name": "height",
+                        "description": "Height in pixels that your image needs to be",
+                        "type": "number",
+                        "default": 480
+                    },
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of image urls you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
         "/names/firstnames/{qty}" : {
             "get": {
                 "tags": ["Names"],

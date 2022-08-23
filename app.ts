@@ -8,6 +8,7 @@ const port = 3000;
 // Load Mock Modules
 require('./modules/animal/api/animal-routes')(app) // Animals
 require('./modules/countries/api/countries-routes')(app); // Countries
+require('./modules/images/api/images-routes')(app); // Images
 require('./modules/names/api/names-routes')(app); // Names
 
 // Add an healthcheck endpoint
