@@ -54,9 +54,7 @@ const getSpeciesOfAnimal = (type: AnimalType, qty: number) : string[] => {
         }
     }
 
-    // Remove Duplications
-
-    return [...new Set(speciesList)];
+    return speciesList;
 
 }
 
