@@ -20,6 +20,10 @@
             "description": "A set of endpoints related to countries"
         },
         {
+            "name": "Currencies",
+            "description": "A set of endpoints related to currencies"
+        },
+        {
             "name": "Images",
             "description": "A set of endpoints related to obtaining placeholder image urls"
         },
@@ -450,6 +454,43 @@
                             "items": {
                                 "type" : "string",
                                 "example": "United Kingdom"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/currencies/market-overview" : {
+            "get": {
+                "tags": ["Currencies"],
+                "summary" : "Get a snapshot of the currency market",
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "object",
+                                "example": "{currency: 'EUR-USD', value: '0.9945', change: '-0.0021', netChange: '-0.21%'}"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/currencies/gbp-usd/ticker" : {
+            "get": {
+                "tags": ["Currencies"],
+                "summary" : "Returns a set of chart data of price data for a given currency market",
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "object"
                             }
                         }
                     }
