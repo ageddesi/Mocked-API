@@ -4,7 +4,7 @@ Welcome to Mocked-API, this is a live API that can be accessed by anyone who nee
 
 ## Getting Started
 
-First you should head over to https://mock-api-msuu.onrender.com/ and read our live api docs than start calling the api endpoints for the data you need.
+First you should head over to https://api.mocked-api.dev and read our live api docs than start calling the api endpoints for the data you need.
 
 ## FAQ
 
