@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/ageddesi/Mocked-API#readme",
   "devDependencies": {
-    "@faker-js/faker": "7.4.0",
+    "@faker-js/faker": "7.5.0",
     "@types/express": "4.17.13",
     "@types/node": "18.7.6",
     "@typescript-eslint/eslint-plugin": "5.36.0",
