@@ -17,16 +17,18 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ## Contributing
 
-I encourage you to contribute to ***Mocked-API***! Feel free to fork the codebase and make a pull request for your changes. I will be working on a contributing guide soon.
+I encourage you to contribute to ***Mocked-API***! Feel free to fork the codebase and make a pull request for your changes.
+
+Our contributing guide is currently WIP and available here [CONTRIBUTING GUIDE](CONTRIBUTING.md)
 
 We use semantic commit messages 
-feat: (new feature for the user, not a new feature for build script)
-fix: (bug fix for the user, not a fix to a build script)
-docs: (changes to the documentation)
-style: (formatting, missing semi colons, etc; no production code change)
-refactor: (refactoring production code, eg. renaming a variable)
-test: (adding missing tests, refactoring tests; no production code change)
-chore: (updating grunt tasks etc; no production code change)
+- feat: (new feature for the user, not a new feature for build script)
+- fix: (bug fix for the user, not a fix to a build script)
+- docs: (changes to the documentation)
+- style: (formatting, missing semi colons, etc; no production code change)
+- refactor: (refactoring production code, eg. renaming a variable)
+- test: (adding missing tests, refactoring tests; no production code change)
+- chore: (updating grunt tasks etc; no production code change)
 
 ## Sponsor
 
