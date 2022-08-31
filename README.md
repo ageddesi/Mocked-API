@@ -1,3 +1,12 @@
+<p align="center" style="margin-bottom: 20px">
+  <a href="https://github.com/ageddesi/Mocked-API">
+    <img
+      src="./mocked-api-main.svg" 
+      alt="Mocked-API" 
+      width="35%">
+  </a>
+</p>
+
 ## About
 
 Welcome to Mocked-API, this is a live API that can be accessed by anyone who needs data to test out their website, app, components etc.
