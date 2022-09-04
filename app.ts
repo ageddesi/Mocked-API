@@ -1,3 +1,4 @@
+require('dotenv').config();
 import express from 'express';
 const morgan = require('morgan');
 const cors = require('cors');
@@ -12,6 +13,7 @@ require('./modules/currency/api/currency-routes')(app); // Currencies
 require('./modules/images/api/images-routes')(app); // Images
 require('./modules/names/api/names-routes')(app); // Names
 require('./modules/sports/api/sports-routes')(app); // Sports
+require('./modules/users/api/user-routes')(app); // Users
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {

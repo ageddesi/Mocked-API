@@ -5,8 +5,8 @@ const defaultQty = 10;
 const imageWidthDefault = 640;
 const imageHeightDefault = 480;
 
-const getQtyFromRequest = (request : Request | null) : number => {
-    return request.params.qty ? parseInt(request.params.qty) : defaultQty;
+const getQtyFromRequest = (request : Request | null, overrideDefaultQty?: number | null) : number => {
+    return request.params.qty ? parseInt(request.params.qty) : (overrideDefaultQty? overrideDefaultQty: defaultQty);
 }
 
 const getImageDataFromRequest = (request : Request | null) : ImageDataType => {
