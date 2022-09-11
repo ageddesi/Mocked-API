@@ -32,6 +32,10 @@
             "description": "A set of endpoints to get randomly generated names"
         },
         {
+            "name": "Products",
+            "description": "A set of endpoints to get random product related info"
+        },
+        {
             "name": "Sports",
             "description": "A set of endpoints to get random sports data"
         }
@@ -1510,6 +1514,41 @@
                 }
             }
         },
+        "/products/reviews" : {
+            "get": {
+                "tags": ["Products"],
+                "summary" : "Obtain a list of random reviews",
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockProductReview"
+                        }
+                    }
+                }
+            }
+        },
+        "/products/reviews/{rating}" : {
+            "get": {
+                "tags": ["Products"],
+                "summary" : "Obtain a list of random reviews with a specific rating",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "rating",
+                        "description": "The rating you would like your mocked reviews to be"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockProductReview"
+                        }
+                    }
+                }
+            }
+        },
         "/sports/football/leagues/premier/teams" : {
             "get": {
                 "tags": ["Sports"],
@@ -1582,6 +1621,45 @@
                     "items": {
                         "type" : "string",
                         "example": "smith"
+                    }
+                }
+            }
+        },
+        "MockProductReview" : {
+            "type" : "array",
+            "items": {
+                "type" : "object",
+                "properties": {
+                    "productName" : {
+                        "type" : "string",
+                        "example" : "Super Gamer Juice"
+                    },
+                    "productId" : {
+                        "type" : "number",
+                        "example" : 1
+                    },
+                    "message" : {
+                        "type" : "string",
+                        "example" : "The only drink I will ever need."
+                    },
+                    "dateTime" : {
+                        "type" : "string",
+                        "example" : "1984-05-21T00:02:11.497Z"
+                    },
+                    "rating" : {
+                        "type" : "number",
+                        "example" : 1
+                    },
+                    "userName" : {
+                        "type" : "string",
+                        "example" : "Aaron Rackley"
+                    },
+                    "categories" : {
+                        "type" : "array",
+                        "items": {
+                            "type" : "string",
+                            "example" : "sport-drinks"
+                        }
                     }
                 }
             }
