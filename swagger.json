@@ -1528,7 +1528,7 @@
                 }
             }
         },
-        "/products/reviews/{rating}" : {
+        "/products/reviews/ratings/{rating}" : {
             "get": {
                 "tags": ["Products"],
                 "summary" : "Obtain a list of random reviews with a specific rating",
