@@ -1,7 +1,7 @@
 <p align="center" style="margin-bottom: 20px">
   <a href="https://github.com/ageddesi/Mocked-API">
     <img
-      src="./mocked-api-main.svg" 
+      src="./mocked-api-logo.png" 
       alt="Mocked-API" 
       width="35%">
   </a>
