@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "0.10.0",
+        "version": "0.11.0",
         "title": "Mocked-API",
         "description": "An API library for providing endpoints of mock data for use during testing. This API is still in the development and until it reaches version 1.0.0 the API is subject to change. To find out more head over to https://mocked-api.dev/"
     },
@@ -14,6 +14,10 @@
         {
             "name": "Animals",
             "description": "A set of endpoints related to animal"
+        },
+        {
+            "name": "Chat",
+            "description": "A set of endpoints related to chats"
         },
         {
             "name": "Countries",
@@ -414,6 +418,50 @@
                                 "type" : "string",
                                 "example": "Sun bear"
                             }
+                        }
+                    }
+                }
+            }
+        },
+        "/chat/random" : {
+            "get": {
+                "tags": ["Chat"],
+                "summary" : "Returns a random chat of 100 users and 1000 messages using randomly generated sentances",
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockChatMessages"
+                        }
+                    }
+                }
+            }
+        },
+        "/chat/random/{userCount}/{messageCount}" : {
+            "get": {
+                "tags": ["Chat"],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "userCount",
+                        "description": "The amount of users the messages can be generated from",
+                        "type": "string",
+                        "default": 100
+                    },
+                    {
+                        "in": "path",
+                        "name": "messageCount",
+                        "description": "The amount of messages that will be returned",
+                        "type": "string",
+                        "default": 1000
+                    }
+                ],
+                "summary" : "Returns a random chat of messages from defined counts using randomly generated sentances",
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockChatMessages"
                         }
                     }
                 }
@@ -1660,6 +1708,30 @@
                             "type" : "string",
                             "example" : "sport-drinks"
                         }
+                    }
+                }
+            }
+        },
+        "MockChatMessages" : {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id" : {
+                        "type" : "string",
+                        "example" : "dc90af0e-f073-45e7-8a77-69e7e94aed31"
+                    },
+                    "createdAt" : {
+                        "type" : "string",
+                        "example" : "2022-09-22T16:03:17.885Z"
+                    },
+                    "message" : {
+                        "type" : "string",
+                        "example" : "Dicta amet dolores mollitia eveniet commodi."
+                    },
+                    "userId" : {
+                        "type" : "string",
+                        "example" : "d392a495-3f4c-4660-a896-dce057afbbd4"
                     }
                 }
             }

@@ -8,6 +8,7 @@ const port = 3000;
 
 // Load Mock Modules
 require('./modules/animal/api/animal-routes')(app) // Animals
+require('./modules/chat/api/chat-routes')(app) // Chat
 require('./modules/countries/api/countries-routes')(app); // Countries
 require('./modules/currency/api/currency-routes')(app); // Currencies
 require('./modules/images/api/images-routes')(app); // Images
