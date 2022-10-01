@@ -1,14 +1,14 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import quotes from '../data/quotes.json'.quotes;
+import { getQtyFromRequest } from '../../../utils/route-utils';
+import quotes from '../data/quotes';
 
 module.exports = function(app : core.Express){
 
     // Get all quotes
     app.get("/quotes/:qty", (req: Request, res: Response) => {
-        const qty = req.params.qty || 10;
-        const qtyQuotes = quotes.slice(0, qty);
-        res.json(qtyQuotes);
+        const qty = getQtyFromRequest(req);
+        res.json(qty);
     })
 
     // Get a random quote

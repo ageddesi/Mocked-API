@@ -1739,7 +1739,7 @@
             "get": {
                 "tags": ["Sports"],
                 "summary" : "Get a list of teams in the uk premier football league from 2022",
-                 "responses": {
+                "responses": {
                     "200" : {
                         "description" : "OK",
                         "schema": {
@@ -1748,8 +1748,10 @@
                                 "type" : "object",
                                 "example": "{ teamName: '', location: '', stadium: '', capacity: ''}"
                             }
+                        }
                     }
-             }
+                }
+            }
         },
         "/quotes": {
             "get": {
@@ -1765,13 +1767,15 @@
                         "description": "The amount of results you would like returned"
                     }
                 ],
-                "200": {
-                    "description": "OK",
-                    "schema": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "example": "{ quote: '', author: ''}"
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "example": "{ quote: '', author: ''}"
+                            }
                         }
                     }
                 }
@@ -1887,17 +1891,6 @@
                 }
             }
         },
-        "MockChatResponse" : {
-            "type" : "object",
-            "properties": {
-                "users" : {
-                    "$ref" : "#/definitions/MockUsers"
-                },
-                "messages" : {
-                    "$ref" : "#/definitions/MockChatMessages"
-                }
-            }
-        },
         "MockChatMessages" : {
             "type": "array",
             "items": {
@@ -1955,6 +1948,17 @@
                         "type" : "string",
                         "example" : "2022-09-22T16:03:17.885Z"
                     }
+                }
+            }
+        },
+        "MockChatResponse" : {
+            "type" : "object",
+            "properties": {
+                "users" : {
+                    "$ref" : "#/definitions/MockUsers"
+                },
+                "messages" : {
+                    "$ref" : "#/definitions/MockChatMessages"
                 }
             }
         },
