@@ -16,6 +16,15 @@
       ]
     },
     {
+      "login": "YasiOnFire",
+      "name": "Yasio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3300701?v=4",
+      "profile": "http://yasio.dev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "alberturria",
       "name": "Alberto Herrera Vargas",
       "avatar_url": "https://avatars.githubusercontent.com/u/32776999?v=4",
@@ -23,7 +32,7 @@
       "contributions": [
         "doc"
       ]
-    }
+     }
   ],
   "contributorsPerLine": 7,
   "skipCi": true,
