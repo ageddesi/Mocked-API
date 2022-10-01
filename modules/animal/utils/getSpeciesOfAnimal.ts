@@ -54,7 +54,7 @@ const getSpeciesOfAnimal = (type: AnimalType, qty: number) : string[] => {
         }
     }
 
-    return speciesList;
+    return [...new Set(speciesList)];
 
 }
 
