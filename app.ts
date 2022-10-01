@@ -14,6 +14,7 @@ require('./modules/currency/api/currency-routes')(app); // Currencies
 require('./modules/images/api/images-routes')(app); // Images
 require('./modules/names/api/names-routes')(app); // Names
 require('./modules/products/api/products-routes')(app); // Products
+require('./modules/socials/api/socials-routes')(app); // Socials
 require('./modules/sports/api/sports-routes')(app); // Sports
 require('./modules/users/api/user-routes')(app); // Users
 
