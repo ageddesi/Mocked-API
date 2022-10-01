@@ -28,6 +28,10 @@
             "description": "A set of endpoints related to currencies"
         },
         {
+            "name": "Emails",
+            "description": "A set of endpoints related to emails"
+        },
+        {
             "name": "Images",
             "description": "A set of endpoints related to obtaining placeholder image urls"
         },
@@ -625,6 +629,21 @@
                             "items": {
                                 "type" : "string"
                             }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/emails" : {
+            "get": {
+                "tags": ["Emails"],
+                "summary" : "Returns a list of emails",
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockEmails"
                         }
                     }
                 }
@@ -1732,6 +1751,45 @@
                     "userId" : {
                         "type" : "string",
                         "example" : "d392a495-3f4c-4660-a896-dce057afbbd4"
+                    }
+                }
+            }
+        },
+        "MockEmails" : {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id" : {
+                        "type" : "string",
+                        "example" : "dc90af0e-f073-45e7-8a77-69e7e94aed31"
+                    },
+                    "from" : {
+                        "type" : "string",
+                        "example" : "john.doe@example.com"
+                    },
+                    "subject" : {
+                        "type" : "string",
+                        "example" : "Lorem ipsum dolor"
+                    },
+                    "body" : {
+                        "type" : "string",
+                        "example" : "Dicta amet dolores mollitia eveniet commodi."
+                    },
+                    "read" : {
+                        "type" : "boolean",
+                        "example" : false
+                    },
+                    "tags" : {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "important"
+                        }
+                    },
+                    "date" : {
+                        "type" : "string",
+                        "example" : "2022-09-22T16:03:17.885Z"
                     }
                 }
             }
