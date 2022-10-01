@@ -18,9 +18,7 @@ const ColorSpaces: {[key: string]: ColorSpace} = {
     id: 'rgba',
     getNums: () => {
       return [
-        Math.floor(Math.random() * 256),
-        Math.floor(Math.random() * 256),
-        Math.floor(Math.random() * 256),
+        ...ColorSpaces.RGB.getNums(),
         Math.round(Math.random() * 100) / 100,
       ]
     }
@@ -40,9 +38,7 @@ const ColorSpaces: {[key: string]: ColorSpace} = {
     id: 'hsla',
     getNums: () => {
       return [
-        Math.floor(Math.random() * 361),
-        Math.floor(Math.random() * 101),
-        Math.floor(Math.random() * 101),
+        ...ColorSpaces.HSL.getNums(),
         Math.round(Math.random() * 100) / 100,
       ]
     }
@@ -51,20 +47,14 @@ const ColorSpaces: {[key: string]: ColorSpace} = {
   HSV: {
     id: 'hsv',
     getNums: () => {
-      return [
-        Math.floor(Math.random() * 361),
-        Math.floor(Math.random() * 101),
-        Math.floor(Math.random() * 101),
-      ]
+      return ColorSpaces.HSL.getNums();
     }
   },
   HSVA: {
     id: 'hsva',
     getNums: () => {
       return [
-        Math.floor(Math.random() * 361),
-        Math.floor(Math.random() * 101),
-        Math.floor(Math.random() * 101),
+        ...ColorSpaces.HSV.getNums(),
         Math.round(Math.random() * 100) / 100,
       ]
     }
@@ -85,10 +75,7 @@ const ColorSpaces: {[key: string]: ColorSpace} = {
     id: 'cmyka',
     getNums: () => {
       return [
-        Math.floor(Math.random() * 101),
-        Math.floor(Math.random() * 101),
-        Math.floor(Math.random() * 101),
-        Math.floor(Math.random() * 101),
+        ...ColorSpaces.CMYKA.getNums(),
         Math.round(Math.random() * 100) / 100,
       ]
     }
