@@ -21,7 +21,7 @@
         },
         {
             "name": "Colors",
-            "description": "A set of endpoints to get a random color in different formats"
+            "description": "A set of endpoints related to colors"
         },
         {
             "name": "Countries",
@@ -466,6 +466,93 @@
                         "description" : "OK",
                         "schema": {
                             "$ref": "#/definitions/MockChatMessages"
+                        }
+                    }
+                }
+            }
+        },
+        "/colors/{qty}" : {
+            "get": {
+                "tags": ["Colors"],
+                "summary" : "Obtain a random color",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "They quantity of colors you want to generate",
+                        "required": false,
+                        "type": "string",
+                        "default": 1
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "efc27b"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/colors/{qty}/{colorSpace}/{colorFormat}" : {
+            "get": {
+                "tags": ["Colors"],
+                "summary" : "Obtain a random color",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "They quantity of colors you want to generate",
+                        "required": true,
+                        "type": "string",
+                        "default": 1
+                    },
+                    {
+                        "in": "path",
+                        "name": "colorSpace",
+                        "description": "The color space of the output color",
+                        "required": true,
+                        "type": "string",
+                        "enum": [
+                            "rgb",
+                            "rgba",
+                            "hsl",
+                            "hsla",
+                            "hsv",
+                            "hsva",
+                            "cmyk",
+                            "cmyka"
+                        ],
+                        "default": "rgb"
+                    },
+                    {
+                        "in": "path",
+                        "name": "colorFormat",
+                        "description": "The format of the output color \nNote: hex is only available if the color space doesn't include alpha",
+                        "required": true,
+                        "type": "string",
+                        "enum": [
+                            "hex",
+                            "decimal",
+                            "css"
+                        ],
+                        "default": "hex"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "string",
+                                "example": "efc27b"
+                            }
                         }
                     }
                 }

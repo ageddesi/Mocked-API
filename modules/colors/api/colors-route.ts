@@ -9,16 +9,17 @@ const defaultColorFormat = "hex";
 
 module.exports = function(app : core.Express){
 
-    app.get("/colors/", (req: Request, res: Response) => {
-        try {
-            const randomColor = getRandomColor(
-                defaultColorSpace,
-                defaultColorFormat,
-            );
+    app.get("/colors/:qty?", (req: Request, res: Response) => {
+        const qty = req.params.qty ? parseInt(req.params.qty) : 1;
 
-            res.json({
-                color: randomColor
-            });
+        try {
+            const randomColors = []
+
+            for (let i = 0; i < qty; i++) {
+                randomColors.push(getRandomColor(defaultColorSpace, defaultColorFormat));
+            }
+
+            res.json(randomColors);
         } catch (error) {
             res.status(500).json({
                 error: error.message
@@ -26,19 +27,19 @@ module.exports = function(app : core.Express){
         }
     })
 
-    app.get("/colors/:colorSpace/:colorFormat", (req: Request, res: Response) => {
+    app.get("/colors/:qty/:colorSpace/:colorFormat", (req: Request, res: Response) => {
+        const qty = req.params.qty ? parseInt(req.params.qty) : 1;
         const colorSpace = req.params.colorSpace || defaultColorSpace;
         const colorFormat = req.params.colorFormat || defaultColorFormat;
 
         try {
-            const randomColor = getRandomColor(
-                colorSpace,
-                colorFormat,
-            );
+            const randomColors = []
+
+            for (let i = 0; i < qty; i++) {
+                randomColors.push(getRandomColor(colorSpace, colorFormat));
+            }
                 
-            res.json({
-                color: randomColor
-            });
+            res.json(randomColors);
         } catch (error) {
             if (
                 error === ColorErrors.InvalidColorSpaceError
