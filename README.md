@@ -15,6 +15,25 @@ Welcome to Mocked-API, this is a live API that can be accessed by anyone who nee
 
 First you should head over to https://api.mocked-api.dev and read our live api docs than start calling the api endpoints for the data you need.
 
+## How to run Mocked-API
+Once you've cloned this repository, running Mocked-API is quite easy, there are just 2 steps you have to follow:
+1. Install the dependencies
+```bash
+npm run install
+```
+2. Serve the application
+```bash
+npm run serve
+```
+This will show you were the application is running
+```
+Mock API is running on port 3000.
+```
+
+Now you should be able to make any request to that port, and get a response back! 
+
+💡 If you browse to that port, you'll see our swagger documentation. 
+
 ## FAQ
 
 **Q:** Are you planning to add more end points?
