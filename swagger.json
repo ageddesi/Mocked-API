@@ -1717,6 +1717,22 @@
                 }
             }
         },
+        "/music/{qty}" : {
+            "get": {
+                "tags": ["Sports"],
+                "summary" : "Get a list of teams in the uk premier football league from 2022",
+                 "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "object",
+                                "example": "{ teamName: '', location: '', stadium: '', capacity: ''}"
+                            }
+                    }
+             }
+        },
         "/quotes": {
             "get": {
                 "tags": [
@@ -1731,15 +1747,13 @@
                         "description": "The amount of results you would like returned"
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "example": "{ quote: '', author: ''}"
-                            }
+                "200": {
+                    "description": "OK",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "example": "{ quote: '', author: ''}"
                         }
                     }
                 }
