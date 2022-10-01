@@ -471,7 +471,7 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/MockChatMessages"
+                            "$ref": "#/definitions/MockChatResponse"
                         }
                     }
                 }
@@ -503,7 +503,7 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/MockChatMessages"
+                            "$ref": "#/definitions/MockChatResponse"
                         }
                     }
                 }
@@ -1855,7 +1855,18 @@
                 }
             }
         },
-        "MockChatMessages": {
+        "MockChatResponse" : {
+            "type" : "object",
+            "properties": {
+                "users" : {
+                    "$ref" : "#/definitions/MockUsers"
+                },
+                "messages" : {
+                    "$ref" : "#/definitions/MockChatMessages"
+                }
+            }
+        },
+        "MockChatMessages" : {
             "type": "array",
             "items": {
                 "type": "object",
@@ -1875,6 +1886,42 @@
                     "userId": {
                         "type": "string",
                         "example": "d392a495-3f4c-4660-a896-dce057afbbd4"
+                    }
+                }
+            }
+        },
+        "MockUsers" : {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "userId" : {
+                        "type" : "string",
+                        "example" : "d392a495-3f4c-4660-a896-dce057afbbd4"
+                    },
+                    "username" : {
+                        "type" : "string",
+                        "example" : "Aaron Rackley"
+                    },
+                    "email" : {
+                        "type" : "string",
+                        "example" : "john.doe@example.com"
+                    },
+                    "avatarUrl" : {
+                        "type" : "string",
+                        "example" : "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/597.jpg"
+                    },
+                    "password" : {
+                        "type" : "string",
+                        "example" : "password"
+                    },
+                    "birthDate" : {
+                        "type" : "string",
+                        "example" : "1984-05-21T00:02:11.497Z"
+                    },
+                    "registeredAt" : {
+                        "type" : "string",
+                        "example" : "2022-09-22T16:03:17.885Z"
                     }
                 }
             }
