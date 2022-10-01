@@ -1723,7 +1723,14 @@
                     "Quotes"
                 ],
                 "summary": "Get a list of all quotes from the database",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -1733,40 +1740,6 @@
                                 "type": "object",
                                 "example": "{ quote: '', author: ''}"
                             }
-                        }
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "Quotes"
-                ],
-                "summary": "Add a quote to the database",
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "quote",
-                        "description": "The quote you would like to add",
-                        "required": true,
-                        "schema": {
-                            "type": "object",
-                            "properties": {
-                                "quote": {
-                                    "type": "string"
-                                },
-                                "author": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "object",
-                            "example": "{ quote: '', author: ''}"
                         }
                     }
                 }

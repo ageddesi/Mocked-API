@@ -1,13 +1,14 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import quotes from '../data/quotes.json'.quotes;
-import fs from 'fs';
 
 module.exports = function(app : core.Express){
 
     // Get all quotes
-    app.get("/quotes", (req: Request, res: Response) => {
-        res.json(quotes)
+    app.get("/quotes/:qty", (req: Request, res: Response) => {
+        const qty = req.params.qty || 10;
+        const qtyQuotes = quotes.slice(0, qty);
+        res.json(qtyQuotes);
     })
 
     // Get a random quote
@@ -16,16 +17,4 @@ module.exports = function(app : core.Express){
         res.json(quote)
     })
 
-    // Add a new quote
-    app.post("/quotes", (req: Request, res: Response) => {
-        const quote = {
-            quote: req.body.quote,
-            author: req.body.author
-        };
-        quotes.push(quote);
-        fs.writeFile('./data/quotes.json', JSON.stringify({quotes: quotes}), (err) => {
-            if(err) throw err;
-            res.json("Quote added successfully");
-        });
-    })
 }
