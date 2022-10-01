@@ -20,6 +20,10 @@
             "description": "A set of endpoints related to chats"
         },
         {
+            "name": "Colors",
+            "description": "A set of endpoints to get a random color in different formats"
+        },
+        {
             "name": "Countries",
             "description": "A set of endpoints related to countries"
         },
