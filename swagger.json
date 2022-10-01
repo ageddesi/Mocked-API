@@ -1562,6 +1562,62 @@
                 }
             }
         },
+        "/product/{department}" : {
+            "get": {
+                "tags": ["Products"],
+                "summary" : "Get a single product with a specified department",
+                "parameters": [
+                    {   
+                        "required": false,
+                        "type": "string",
+                        "in": "path",
+                        "name": "department",
+                        "default": "General",
+                        "description": "Specify department product should be filed under"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/products/{qty}/{department}" : {
+            "get": {
+                "tags": ["Products"],
+                "summary" : "Obtain a list of random products",
+                "parameters": [
+                    {
+                        "required": false,
+                        "type": "number",
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    },
+                    {   
+                        "required": false,
+                        "type": "string",
+                        "in": "path",
+                        "name": "department",
+                        "default": "General",
+                        "description": "Specify department product should be filed under"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/products/reviews" : {
             "get": {
                 "tags": ["Products"],
@@ -1669,6 +1725,63 @@
                     "items": {
                         "type" : "string",
                         "example": "smith"
+                    }
+                }
+            }
+        },
+        "ProductResponse" : {
+            "type" : "array",
+            "items": {
+                "type" : "object",
+                "properties": {
+                    "department" : {
+                        "type" : "string",
+                        "example" : "Sports"
+                    },
+                    "type" : {
+                        "type" : "string",
+                        "example" : "Ball"
+                    },
+                    "name" : {
+                        "type" : "string",
+                        "example" : "Sleek Bronze Towels"
+                    },
+                    "adjective" : {
+                        "type" : "string",
+                        "example" : "Incredible"
+                    },
+                    "description" : {
+                        "type" : "string",
+                        "example" : "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+                    },
+                    "material" : {
+                        "type" : "string",
+                        "example" : "Soft"
+                    },
+                    "sku" : {
+                        "type" : "array",
+                        "items": {
+                            "type" : "object",
+                            "properties": {
+                                "meta": {
+                                    "type" : "object",
+                                    "properties": {
+                                        "size" : {
+                                            "type" : "string",
+                                            "example" : "Medium"
+                                        }
+                                    }
+                                },
+                                "price" : {
+                                    "type" : "string",
+                                    "example" : "232.00"
+                                },
+                                "amount" : {
+                                    "type" : "number",
+                                    "example" : 11109
+                                }
+                            }
+                        }
                     }
                 }
             }
