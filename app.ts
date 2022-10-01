@@ -16,6 +16,7 @@ require('./modules/names/api/names-routes')(app); // Names
 require('./modules/products/api/products-routes')(app); // Products
 require('./modules/sports/api/sports-routes')(app); // Sports
 require('./modules/users/api/user-routes')(app); // Users
+require('./modules/colors/api/colors-route')(app); // Colors
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
