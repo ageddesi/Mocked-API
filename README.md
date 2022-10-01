@@ -1,6 +1,6 @@
 <p align="center" style="margin-bottom: 20px">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://github.com/ageddesi/Mocked-API">
     <img
@@ -80,6 +80,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center"><a href="https://github.com/ahmedsilat44"><img src="https://avatars.githubusercontent.com/u/105588821?v=4?s=100" width="100px;" alt="Ahmed Silat"/><br /><sub><b>Ahmed Silat</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=ahmedsilat44" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/alberturria"><img src="https://avatars.githubusercontent.com/u/32776999?v=4?s=100" width="100px;" alt="Alberto Herrera Vargas"/><br /><sub><b>Alberto Herrera Vargas</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=alberturria" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
