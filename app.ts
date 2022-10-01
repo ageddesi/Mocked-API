@@ -15,7 +15,8 @@ require('./modules/images/api/images-routes')(app); // Images
 require('./modules/names/api/names-routes')(app); // Names
 require('./modules/products/api/products-routes')(app); // Products
 require('./modules/sports/api/sports-routes')(app); // Sports
-require('./modules/users/api/user-routes')(app); // Users
+require('./modules/users/api/user-routes')(app); //Users
+require('./modules/music/api/music-routes')(app); // Music
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
