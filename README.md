@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -87,6 +87,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/Coskntkk"><img src="https://avatars.githubusercontent.com/u/53823825?v=4?s=100" width="100px;" alt="Coşkun Atak"/><br /><sub><b>Coşkun Atak</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Coskntkk" title="Code">💻</a></td>
       <td align="center"><a href="https://website-portofolio-ian.vercel.app/"><img src="https://avatars.githubusercontent.com/u/58666218?v=4?s=100" width="100px;" alt="Rizky ian indiarto"/><br /><sub><b>Rizky ian indiarto</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=rizkyian78" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Eroxl"><img src="https://avatars.githubusercontent.com/u/77178777?v=4?s=100" width="100px;" alt="Evan"/><br /><sub><b>Evan</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Eroxl" title="Code">💻</a></td>
+      <td align="center"><a href="http://steamcommunity.com/id/Trigstur"><img src="https://avatars.githubusercontent.com/u/11588132?v=4?s=100" width="100px;" alt="Trigstur"/><br /><sub><b>Trigstur</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Trigstur" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
