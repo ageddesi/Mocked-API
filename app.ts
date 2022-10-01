@@ -1,5 +1,5 @@
 require('dotenv').config();
-import express from 'express';
+const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -17,6 +17,7 @@ require('./modules/products/api/products-routes')(app); // Products
 require('./modules/sports/api/sports-routes')(app); // Sports
 require('./modules/users/api/user-routes')(app); //Users
 require('./modules/music/api/music-routes')(app); // Music
+require('./modules/quote/api/quotes-routes')(app); // Quotes
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {

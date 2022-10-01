@@ -6,10 +6,16 @@
         "description": "An API library for providing endpoints of mock data for use during testing. This API is still in the development and until it reaches version 1.0.0 the API is subject to change. To find out more head over to https://mocked-api.dev/"
     },
     "host": "api.mocked-api.dev",
-    "schemes": ["https"],
+    "schemes": [
+        "https"
+    ],
     "basePath": "/",
-    "consumes": ["application/json"],
-    "produces": ["application/json"],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
     "tags": [
         {
             "name": "Animals",
@@ -42,13 +48,19 @@
         {
             "name": "Sports",
             "description": "A set of endpoints to get random sports data"
+        },
+        {
+            "name": "Quotes",
+            "description": "A set of endpoints to get random quote"
         }
     ],
     "paths": {
-        "/animals/bear/species/{qty}" : {
+        "/animals/bear/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of bear species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of bear species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -59,12 +71,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -72,10 +84,12 @@
                 }
             }
         },
-        "/animals/bird/species/{qty}" : {
+        "/animals/bird/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of bird species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of bird species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -86,12 +100,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -99,10 +113,12 @@
                 }
             }
         },
-        "/animals/cat/species/{qty}" : {
+        "/animals/cat/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of cat species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of cat species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -113,12 +129,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -126,10 +142,12 @@
                 }
             }
         },
-        "/animals/cetecean/species/{qty}" : {
+        "/animals/cetecean/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of cetecean species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of cetecean species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -140,12 +158,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -153,10 +171,12 @@
                 }
             }
         },
-        "/animals/cow/species/{qty}" : {
+        "/animals/cow/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of cow species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of cow species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -167,12 +187,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -180,10 +200,12 @@
                 }
             }
         },
-        "/animals/crocodile/species/{qty}" : {
+        "/animals/crocodile/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of crocodile species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of crocodile species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -194,12 +216,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -207,10 +229,12 @@
                 }
             }
         },
-        "/animals/dog/species/{qty}" : {
+        "/animals/dog/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of dog species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of dog species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -221,12 +245,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -234,10 +258,12 @@
                 }
             }
         },
-        "/animals/fish/species/{qty}" : {
+        "/animals/fish/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of fish species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of fish species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -248,12 +274,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -261,10 +287,12 @@
                 }
             }
         },
-        "/animals/horse/species/{qty}" : {
+        "/animals/horse/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of horse species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of horse species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -275,12 +303,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -288,10 +316,12 @@
                 }
             }
         },
-        "/animals/insect/species/{qty}" : {
+        "/animals/insect/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of insect species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of insect species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -302,12 +332,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -315,10 +345,12 @@
                 }
             }
         },
-        "/animals/lion/species/{qty}" : {
+        "/animals/lion/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of lion species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of lion species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -329,12 +361,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -342,10 +374,12 @@
                 }
             }
         },
-        "/animals/rabbit/species/{qty}" : {
+        "/animals/rabbit/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of rabbit species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of rabbit species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -356,12 +390,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -369,10 +403,12 @@
                 }
             }
         },
-        "/animals/rodent/species/{qty}" : {
+        "/animals/rodent/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of rodent species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of rodent species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -383,12 +419,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -396,10 +432,12 @@
                 }
             }
         },
-        "/animals/snake/species/{qty}" : {
+        "/animals/snake/species/{qty}": {
             "get": {
-                "tags": ["Animals"],
-                "summary" : "Obtain a random list of snake species with no duplications",
+                "tags": [
+                    "Animals"
+                ],
+                "summary": "Obtain a random list of snake species with no duplications",
                 "parameters": [
                     {
                         "in": "path",
@@ -410,12 +448,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Sun bear"
                             }
                         }
@@ -423,23 +461,27 @@
                 }
             }
         },
-        "/chat/random" : {
+        "/chat/random": {
             "get": {
-                "tags": ["Chat"],
-                "summary" : "Returns a random chat of 100 users and 1000 messages using randomly generated sentances",
+                "tags": [
+                    "Chat"
+                ],
+                "summary": "Returns a random chat of 100 users and 1000 messages using randomly generated sentances",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/MockChatMessages"
+                            "$ref": "#/definitions/MockChatResponse"
                         }
                     }
                 }
             }
         },
-        "/chat/random/{userCount}/{messageCount}" : {
+        "/chat/random/{userCount}/{messageCount}": {
             "get": {
-                "tags": ["Chat"],
+                "tags": [
+                    "Chat"
+                ],
                 "parameters": [
                     {
                         "in": "path",
@@ -456,28 +498,30 @@
                         "default": 1000
                     }
                 ],
-                "summary" : "Returns a random chat of messages from defined counts using randomly generated sentances",
+                "summary": "Returns a random chat of messages from defined counts using randomly generated sentances",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/MockChatMessages"
+                            "$ref": "#/definitions/MockChatResponse"
                         }
                     }
                 }
             }
         },
-        "/countries" : {
+        "/countries": {
             "get": {
-                "tags": ["Countries"],
-                "summary" : "Obtain a list of all countries",
+                "tags": [
+                    "Countries"
+                ],
+                "summary": "Obtain a list of all countries",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "United Kingdom, United States Of America"
                             }
                         }
@@ -485,10 +529,12 @@
                 }
             }
         },
-        "/countries/{filterBy}" : {
+        "/countries/{filterBy}": {
             "get": {
-                "tags": ["Countries"],
-                "summary" : "Obtain a list of all countries that contain filtered text",
+                "tags": [
+                    "Countries"
+                ],
+                "summary": "Obtain a list of all countries that contain filtered text",
                 "parameters": [
                     {
                         "in": "path",
@@ -499,12 +545,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "United Kingdom"
                             }
                         }
@@ -512,18 +558,19 @@
                 }
             }
         },
-
-        "/currencies/market-overview" : {
+        "/currencies/market-overview": {
             "get": {
-                "tags": ["Currencies"],
-                "summary" : "Get a snapshot of the currency market",
+                "tags": [
+                    "Currencies"
+                ],
+                "summary": "Get a snapshot of the currency market",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "object",
+                                "type": "object",
                                 "example": "{currency: 'EUR-USD', value: '0.9945', change: '-0.0021', netChange: '-0.21%'}"
                             }
                         }
@@ -531,28 +578,30 @@
                 }
             }
         },
-
-        "/currencies/gbp-usd/ticker" : {
+        "/currencies/gbp-usd/ticker": {
             "get": {
-                "tags": ["Currencies"],
-                "summary" : "Returns a set of chart data of price data for a given currency market",
+                "tags": [
+                    "Currencies"
+                ],
+                "summary": "Returns a set of chart data of price data for a given currency market",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "object"
+                                "type": "object"
                             }
                         }
                     }
                 }
             }
         },
-
-        "/currencies/digital-coins/bitcoin/random-address/{qty}" : {
+        "/currencies/digital-coins/bitcoin/random-address/{qty}": {
             "get": {
-                "tags": ["Currencies"],
+                "tags": [
+                    "Currencies"
+                ],
                 "parameters": [
                     {
                         "in": "path",
@@ -562,24 +611,25 @@
                         "default": 10
                     }
                 ],
-                "summary" : "Returns random bitcoin addresses",
+                "summary": "Returns random bitcoin addresses",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string"
+                                "type": "string"
                             }
                         }
                     }
                 }
             }
         },
-
-        "/currencies/digital-coins/ethereum/random-address/{qty}" : {
+        "/currencies/digital-coins/ethereum/random-address/{qty}": {
             "get": {
-                "tags": ["Currencies"],
+                "tags": [
+                    "Currencies"
+                ],
                 "parameters": [
                     {
                         "in": "path",
@@ -589,24 +639,25 @@
                         "default": 10
                     }
                 ],
-                "summary" : "Returns random ethereum addresses",
+                "summary": "Returns random ethereum addresses",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string"
+                                "type": "string"
                             }
                         }
                     }
                 }
             }
         },
-
-        "/currencies/digital-coins/litecoin/random-address/{qty}" : {
+        "/currencies/digital-coins/litecoin/random-address/{qty}": {
             "get": {
-                "tags": ["Currencies"],
+                "tags": [
+                    "Currencies"
+                ],
                 "parameters": [
                     {
                         "in": "path",
@@ -616,25 +667,26 @@
                         "default": 10
                     }
                 ],
-                "summary" : "Returns random litecoin addresses",
+                "summary": "Returns random litecoin addresses",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string"
+                                "type": "string"
                             }
                         }
                     }
                 }
             }
         },
-
-        "/images/abstract/{width}/{height}/{qty}" : {
+        "/images/abstract/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of abstract image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of abstract image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -659,12 +711,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -672,11 +724,12 @@
                 }
             }
         },
-
-        "/images/animals/{width}/{height}/{qty}" : {
+        "/images/animals/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of animal image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of animal image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -701,12 +754,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -714,11 +767,12 @@
                 }
             }
         },
-
-        "/images/avatar/{width}/{height}/{qty}" : {
+        "/images/avatar/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of avatar image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of avatar image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -743,12 +797,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -756,11 +810,12 @@
                 }
             }
         },
-
-        "/images/business/{width}/{height}/{qty}" : {
+        "/images/business/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of business image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of business image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -785,12 +840,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -798,11 +853,12 @@
                 }
             }
         },
-
-        "/images/cats/{width}/{height}/{qty}" : {
+        "/images/cats/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of cat image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of cat image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -827,12 +883,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -840,11 +896,12 @@
                 }
             }
         },
-
-        "/images/city/{width}/{height}/{qty}" : {
+        "/images/city/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of city image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of city image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -869,12 +926,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -882,11 +939,12 @@
                 }
             }
         },
-
-        "/images/fashion/{width}/{height}/{qty}" : {
+        "/images/fashion/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of fashion image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of fashion image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -911,12 +969,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -924,11 +982,12 @@
                 }
             }
         },
-
-        "/images/food/{width}/{height}/{qty}" : {
+        "/images/food/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of food image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of food image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -953,12 +1012,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -966,11 +1025,12 @@
                 }
             }
         },
-
-        "/images/nature/{width}/{height}/{qty}" : {
+        "/images/nature/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of nature image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of nature image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -995,12 +1055,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -1008,11 +1068,12 @@
                 }
             }
         },
-
-        "/images/nightlife/{width}/{height}/{qty}" : {
+        "/images/nightlife/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of nightlife image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of nightlife image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -1037,12 +1098,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -1050,11 +1111,12 @@
                 }
             }
         },
-
-        "/images/people/{width}/{height}/{qty}" : {
+        "/images/people/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of people image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of people image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -1079,12 +1141,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -1092,11 +1154,12 @@
                 }
             }
         },
-
-        "/images/sports/{width}/{height}/{qty}" : {
+        "/images/sports/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of sports image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of sports image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -1121,12 +1184,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -1134,11 +1197,12 @@
                 }
             }
         },
-
-        "/images/technics/{width}/{height}/{qty}" : {
+        "/images/technics/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of technics image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of technics image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -1163,12 +1227,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -1176,11 +1240,12 @@
                 }
             }
         },
-
-        "/images/transport/{width}/{height}/{qty}" : {
+        "/images/transport/{width}/{height}/{qty}": {
             "get": {
-                "tags": ["Images"],
-                "summary" : "Obtain a list of transport image urls",
+                "tags": [
+                    "Images"
+                ],
+                "summary": "Obtain a list of transport image urls",
                 "parameters": [
                     {
                         "in": "path",
@@ -1205,12 +1270,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
                             }
                         }
@@ -1218,11 +1283,12 @@
                 }
             }
         },
-
-        "/names/firstnames/{qty}" : {
+        "/names/firstnames/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random firstnames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random firstnames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1232,13 +1298,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/FirstNamesResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1247,10 +1313,12 @@
                 }
             }
         },
-        "/names/firstnames/male/{qty}" : {
+        "/names/firstnames/male/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random male firstnames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random male firstnames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1260,13 +1328,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/FirstNamesResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1275,10 +1343,12 @@
                 }
             }
         },
-        "/names/firstnames/female/{qty}" : {
+        "/names/firstnames/female/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random female firstnames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random female firstnames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1288,13 +1358,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/FirstNamesResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1303,10 +1373,12 @@
                 }
             }
         },
-        "/names/fullnames/{qty}" : {
+        "/names/fullnames/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random fullnames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random fullnames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1316,17 +1388,17 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Bobby Weiman, Tammy Swaniawski"
                             }
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1335,10 +1407,12 @@
                 }
             }
         },
-        "/names/fullnames/male/{qty}" : {
+        "/names/fullnames/male/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random male fullnames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random male fullnames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1348,16 +1422,16 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "Bobby Weiman, Tammy Swaniawski"
                             }
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1366,10 +1440,12 @@
                 }
             }
         },
-        "/names/fullnames/female/{qty}" : {
+        "/names/fullnames/female/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random female fullnames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random female fullnames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1379,13 +1455,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/FullNamesResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1394,10 +1470,12 @@
                 }
             }
         },
-        "/names/lastnames/{qty}" : {
+        "/names/lastnames/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random lastnames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random lastnames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1407,13 +1485,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/LastNameResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1422,10 +1500,12 @@
                 }
             }
         },
-        "/names/lastnames/male/{qty}" : {
+        "/names/lastnames/male/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random male lastnames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random male lastnames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1435,13 +1515,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/LastNameResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1450,10 +1530,12 @@
                 }
             }
         },
-        "/names/lastnames/female/{qty}" : {
+        "/names/lastnames/female/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random female lastnames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random female lastnames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1463,13 +1545,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/LastNameResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1478,10 +1560,12 @@
                 }
             }
         },
-        "/names/middlenames/{qty}" : {
+        "/names/middlenames/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random middlenames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random middlenames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1491,13 +1575,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/LastNameResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1506,10 +1590,12 @@
                 }
             }
         },
-        "/names/middlenames/male/{qty}" : {
+        "/names/middlenames/male/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random male middlenames",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random male middlenames",
                 "parameters": [
                     {
                         "in": "path",
@@ -1519,13 +1605,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/LastNameResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1534,10 +1620,12 @@
                 }
             }
         },
-        "/names/middlenames/female/{qty}" : {
+        "/names/middlenames/female/{qty}": {
             "get": {
-                "tags": ["Names"],
-                "summary" : "Obtain a list of random female middlename",
+                "tags": [
+                    "Names"
+                ],
+                "summary": "Obtain a list of random female middlename",
                 "parameters": [
                     {
                         "in": "path",
@@ -1547,13 +1635,13 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/LastNameResponse"
                         }
                     },
-                    "400" : {
+                    "400": {
                         "description": "Unexpected Error",
                         "schema": {
                             "$ref": "#/definitions/ErrorResponse"
@@ -1562,13 +1650,15 @@
                 }
             }
         },
-        "/products/reviews" : {
+        "/products/reviews": {
             "get": {
-                "tags": ["Products"],
-                "summary" : "Obtain a list of random reviews",
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Obtain a list of random reviews",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/MockProductReview"
                         }
@@ -1576,10 +1666,12 @@
                 }
             }
         },
-        "/products/reviews/ratings/{rating}" : {
+        "/products/reviews/ratings/{rating}": {
             "get": {
-                "tags": ["Products"],
-                "summary" : "Obtain a list of random reviews with a specific rating",
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Obtain a list of random reviews with a specific rating",
                 "parameters": [
                     {
                         "in": "path",
@@ -1588,8 +1680,8 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/MockProductReview"
                         }
@@ -1597,10 +1689,12 @@
                 }
             }
         },
-        "/sports/football/leagues/premier/teams" : {
+        "/sports/football/leagues/premier/teams": {
             "get": {
-                "tags": ["Sports"],
-                "summary" : "Get a list of teams in the uk premier football league from 2022",
+                "tags": [
+                    "Sports"
+                ],
+                "summary": "Get a list of teams in the uk premier football league from 2022",
                 "parameters": [
                     {
                         "in": "path",
@@ -1610,12 +1704,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "object",
+                                "type": "object",
                                 "example": "{ teamName: '', location: '', stadium: '', capacity: ''}"
                             }
                         }
@@ -1627,6 +1721,24 @@
             "get": {
                 "tags": ["Sports"],
                 "summary" : "Get a list of teams in the uk premier football league from 2022",
+                 "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "object",
+                                "example": "{ teamName: '', location: '', stadium: '', capacity: ''}"
+                            }
+                    }
+             }
+        },
+        "/quotes": {
+            "get": {
+                "tags": [
+                    "Quotes"
+                ],
+                "summary": "Get a list of all quotes from the database",
                 "parameters": [
                     {
                         "in": "path",
@@ -1635,14 +1747,33 @@
                         "description": "The amount of results you would like returned"
                     }
                 ],
+                "200": {
+                    "description": "OK",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "example": "{ quote: '', author: ''}"
+                        }
+                    }
+                }
+            }
+        },
+        "/quotes/random": {
+            "get": {
+                "tags": [
+                    "Quotes"
+                ],
+                "summary": "Get a random quote from the database",
+                "parameters": [],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "object",
                             "items": {
-                                "type" : "object",
-                                "example": "{ teamName: '', location: '', stadium: '', capacity: ''}"
+                                "type": "object",
+                                "example": "{ quote: '', author: ''}"
                             }
                         }
                     }
@@ -1655,86 +1786,97 @@
             "type": "string",
             "example": "An unknown error occured, please try again."
         },
-        "CountriesListResponse" : {
+        "CountriesListResponse": {
             "properties": {
                 "countries": {
                     "type": "array",
                     "items": {
                         "type": "string",
-                        "example": "United Kingdom" 
+                        "example": "United Kingdom"
                     }
                 }
             }
         },
-        "FullNamesResponse" : {
+        "FullNamesResponse": {
             "properties": {
-                "fullNamesList" : {
-                    "type" : "array",
+                "fullNamesList": {
+                    "type": "array",
                     "items": {
-                        "type" : "string",
+                        "type": "string",
                         "example": "Aaron D Rackley"
                     }
                 }
             }
         },
-        "FirstNamesResponse" : {
+        "FirstNamesResponse": {
             "properties": {
-                "firstNamesList" : {
-                    "type" : "array",
+                "firstNamesList": {
+                    "type": "array",
                     "items": {
-                        "type" : "string",
+                        "type": "string",
                         "example": "Mandy"
                     }
                 }
             }
         },
-        "LastNameResponse" : {
+        "LastNameResponse": {
             "properties": {
-                "lastNamesList" : {
-                    "type" : "array",
+                "lastNamesList": {
+                    "type": "array",
                     "items": {
-                        "type" : "string",
+                        "type": "string",
                         "example": "smith"
                     }
                 }
             }
         },
-        "MockProductReview" : {
-            "type" : "array",
+        "MockProductReview": {
+            "type": "array",
             "items": {
-                "type" : "object",
+                "type": "object",
                 "properties": {
-                    "productName" : {
-                        "type" : "string",
-                        "example" : "Super Gamer Juice"
+                    "productName": {
+                        "type": "string",
+                        "example": "Super Gamer Juice"
                     },
-                    "productId" : {
-                        "type" : "number",
-                        "example" : 1
+                    "productId": {
+                        "type": "number",
+                        "example": 1
                     },
-                    "message" : {
-                        "type" : "string",
-                        "example" : "The only drink I will ever need."
+                    "message": {
+                        "type": "string",
+                        "example": "The only drink I will ever need."
                     },
-                    "dateTime" : {
-                        "type" : "string",
-                        "example" : "1984-05-21T00:02:11.497Z"
+                    "dateTime": {
+                        "type": "string",
+                        "example": "1984-05-21T00:02:11.497Z"
                     },
-                    "rating" : {
-                        "type" : "number",
-                        "example" : 1
+                    "rating": {
+                        "type": "number",
+                        "example": 1
                     },
-                    "userName" : {
-                        "type" : "string",
-                        "example" : "Aaron Rackley"
+                    "userName": {
+                        "type": "string",
+                        "example": "Aaron Rackley"
                     },
-                    "categories" : {
-                        "type" : "array",
+                    "categories": {
+                        "type": "array",
                         "items": {
-                            "type" : "string",
-                            "example" : "sport-drinks"
+                            "type": "string",
+                            "example": "sport-drinks"
                         }
                     }
+                }
+            }
+        },
+        "MockChatResponse" : {
+            "type" : "object",
+            "properties": {
+                "users" : {
+                    "$ref" : "#/definitions/MockUsers"
+                },
+                "messages" : {
+                    "$ref" : "#/definitions/MockChatMessages"
                 }
             }
         },
@@ -1743,24 +1885,60 @@
             "items": {
                 "type": "object",
                 "properties": {
-                    "id" : {
-                        "type" : "string",
-                        "example" : "dc90af0e-f073-45e7-8a77-69e7e94aed31"
+                    "id": {
+                        "type": "string",
+                        "example": "dc90af0e-f073-45e7-8a77-69e7e94aed31"
                     },
-                    "createdAt" : {
-                        "type" : "string",
-                        "example" : "2022-09-22T16:03:17.885Z"
+                    "createdAt": {
+                        "type": "string",
+                        "example": "2022-09-22T16:03:17.885Z"
                     },
-                    "message" : {
-                        "type" : "string",
-                        "example" : "Dicta amet dolores mollitia eveniet commodi."
+                    "message": {
+                        "type": "string",
+                        "example": "Dicta amet dolores mollitia eveniet commodi."
                     },
+                    "userId": {
+                        "type": "string",
+                        "example": "d392a495-3f4c-4660-a896-dce057afbbd4"
+                    }
+                }
+            }
+        },
+        "MockUsers" : {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
                     "userId" : {
                         "type" : "string",
                         "example" : "d392a495-3f4c-4660-a896-dce057afbbd4"
+                    },
+                    "username" : {
+                        "type" : "string",
+                        "example" : "Aaron Rackley"
+                    },
+                    "email" : {
+                        "type" : "string",
+                        "example" : "john.doe@example.com"
+                    },
+                    "avatarUrl" : {
+                        "type" : "string",
+                        "example" : "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/597.jpg"
+                    },
+                    "password" : {
+                        "type" : "string",
+                        "example" : "password"
+                    },
+                    "birthDate" : {
+                        "type" : "string",
+                        "example" : "1984-05-21T00:02:11.497Z"
+                    },
+                    "registeredAt" : {
+                        "type" : "string",
+                        "example" : "2022-09-22T16:03:17.885Z"
                     }
                 }
             }
         }
     }
-  }
+}
