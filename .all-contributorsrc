@@ -1,0 +1,61 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "ahmedsilat44",
+      "name": "Ahmed Silat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105588821?v=4",
+      "profile": "https://github.com/ahmedsilat44",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "YasiOnFire",
+      "name": "Yasio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3300701?v=4",
+      "profile": "http://yasio.dev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "alberturria",
+      "name": "Alberto Herrera Vargas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32776999?v=4",
+      "profile": "https://github.com/alberturria",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Coskntkk",
+      "name": "Coşkun Atak",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53823825?v=4",
+      "profile": "https://github.com/Coskntkk",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "rizkyian78",
+      "name": "Rizky ian indiarto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58666218?v=4",
+      "profile": "https://website-portofolio-ian.vercel.app/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "Mocked-API",
+  "projectOwner": "ageddesi"
+}

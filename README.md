@@ -1,4 +1,7 @@
 <p align="center" style="margin-bottom: 20px">
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://github.com/ageddesi/Mocked-API">
     <img
       src="./mocked-api-logo.png" 
@@ -14,6 +17,25 @@ Welcome to Mocked-API, this is a live API that can be accessed by anyone who nee
 ## Getting Started
 
 First you should head over to https://api.mocked-api.dev and read our live api docs than start calling the api endpoints for the data you need.
+
+## How to run Mocked-API
+Once you've cloned this repository, running Mocked-API is quite easy, there are just 2 steps you have to follow:
+1. Install the dependencies
+```bash
+npm run install
+```
+2. Serve the application
+```bash
+npm run serve
+```
+This will show you were the application is running
+```
+Mock API is running on port 3000.
+```
+
+Now you should be able to make any request to that port, and get a response back! 
+
+💡 If you browse to that port, you'll see our swagger documentation. 
 
 ## FAQ
 
@@ -46,3 +68,32 @@ Do you like this project? Support it by donating.
 <a href="https://www.buymeacoffee.com/aaronrackley">
   Buy Me A Coffee
 </a>
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/ahmedsilat44"><img src="https://avatars.githubusercontent.com/u/105588821?v=4?s=100" width="100px;" alt="Ahmed Silat"/><br /><sub><b>Ahmed Silat</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=ahmedsilat44" title="Code">💻</a></td>
+      <td align="center"><a href="http://yasio.dev"><img src="https://avatars.githubusercontent.com/u/3300701?v=4?s=100" width="100px;" alt="Yasio"/><br /><sub><b>Yasio</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=YasiOnFire" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/alberturria"><img src="https://avatars.githubusercontent.com/u/32776999?v=4?s=100" width="100px;" alt="Alberto Herrera Vargas"/><br /><sub><b>Alberto Herrera Vargas</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=alberturria" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/Coskntkk"><img src="https://avatars.githubusercontent.com/u/53823825?v=4?s=100" width="100px;" alt="Coşkun Atak"/><br /><sub><b>Coşkun Atak</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Coskntkk" title="Code">💻</a></td>
+      <td align="center"><a href="https://website-portofolio-ian.vercel.app/"><img src="https://avatars.githubusercontent.com/u/58666218?v=4?s=100" width="100px;" alt="Rizky ian indiarto"/><br /><sub><b>Rizky ian indiarto</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=rizkyian78" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    
+  </tfoot>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
