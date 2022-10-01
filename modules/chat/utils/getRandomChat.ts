@@ -1,8 +1,9 @@
 import { faker } from "@faker-js/faker";
 import getRandomUsers from "../../users/utils/getRandomUsers";
 import ChatMessage from "../consts/ChatMessage";
+import ChatRandomResponse from "../consts/ChatRandomResponse";
 
-export const getRandomChat = (userCount : number, messageCount: number) : ChatMessage[] => {
+export const getRandomChat = (userCount : number, messageCount: number) : ChatRandomResponse => {
     const users = getRandomUsers(userCount);
 
     const messages : ChatMessage[] = [];
@@ -14,5 +15,8 @@ export const getRandomChat = (userCount : number, messageCount: number) : ChatMe
             userId: users[faker.datatype.number({ min: 0, max: userCount - 1 })].userId,
         })
     })
-    return messages;
+    return {
+        users,
+        messages
+    }
 }
