@@ -11,6 +11,7 @@ require('./modules/animal/api/animal-routes')(app) // Animals
 require('./modules/chat/api/chat-routes')(app) // Chat
 require('./modules/countries/api/countries-routes')(app); // Countries
 require('./modules/currency/api/currency-routes')(app); // Currencies
+require('./modules/ecommerce/api/ecommerce-routes')(app); // Ecommerce
 require('./modules/images/api/images-routes')(app); // Images
 require('./modules/names/api/names-routes')(app); // Names
 require('./modules/products/api/products-routes')(app); // Products
