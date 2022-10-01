@@ -1,11 +1,12 @@
 import ColorSpaces from '../consts/ColorSpaces';
 import formatColor from './formatColor';
+import ColorErrors from '../consts/ColorErrors';
 
 const getRandomColor = (colorSpace: string, colorFormat: string) => {
   const colorRepresentation = ColorSpaces[colorSpace.toUpperCase()];
   
   if (!colorRepresentation) {
-    throw new Error("Invalid color space");
+    throw ColorErrors.InvalidColorSpaceError;
   }
 
   return formatColor(colorFormat, colorRepresentation);

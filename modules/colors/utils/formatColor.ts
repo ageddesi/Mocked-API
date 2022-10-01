@@ -1,10 +1,11 @@
+import ColorErrors from '../consts/ColorErrors';
 import type { ColorSpace } from '../consts/ColorSpaces';
 
 const formatColor = (format: string, colorRepresentation: ColorSpace) => {
   switch (format) {
     case "hex":
       if (colorRepresentation.id.endsWith('a')) {
-        throw new Error("Cannot convert to hex with alpha");
+        throw ColorErrors.CannotConvertToHexWithAlphaError;
       }
 
       return colorRepresentation
@@ -21,7 +22,7 @@ const formatColor = (format: string, colorRepresentation: ColorSpace) => {
 
       return `${colorRepresentation.id}( ${color} )`;
     default: 
-      throw new Error("Invalid format");
+      throw ColorErrors.InvalidFormatError
   }
 }
 
