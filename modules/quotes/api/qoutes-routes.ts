@@ -8,7 +8,7 @@ module.exports = function(app : core.Express){
     // Get all quotes
     app.get("/quotes/:qty", (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        res.json(qty);
+        res.json(qty >= quotes.length ? quotes : quotes.slice(0, qty));
     })
 
     // Get a random quote
