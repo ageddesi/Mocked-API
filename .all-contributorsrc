@@ -145,10 +145,19 @@
       ]
     },
     {
-     "login": "alexjharrison",
+      "login": "alexjharrison",
       "name": "Alex Harrison",
       "avatar_url": "https://avatars.githubusercontent.com/u/8920897?v=4",
       "profile": "https://aharrison.xyz",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "MiTo0o",
+      "name": "Derzan Chiang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76019114?v=4",
+      "profile": "https://derzan.dev/",
       "contributions": [
         "code"
       ]
