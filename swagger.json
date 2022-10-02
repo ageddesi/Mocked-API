@@ -70,6 +70,10 @@
             "description": "A set of endpoints to get random sports data"
         },
         {
+            "name": "Chemical Elements",
+            "description": "A set of endpoints to get random Chemical Elements values"
+        },
+        {
             "name": "TimeZones",
             "description": "A set of endpoints related to TimeZones"
         }
@@ -2013,6 +2017,48 @@
                 }
             }
         }
+        "/elements": {
+            "get": {
+                "tags": [
+                    "Chemical Elements"
+                ],
+                "summary": "Get a random value of a Chemical Elements",
+                "parameters": [],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockChemicalElement"
+                        }
+                    }
+                }
+            }
+        },         
+        "/elements/{qty}": {
+            "get": {
+                "tags": [
+                    "Chemical Elements"
+                ],
+                "summary": "Get a random list of value of Chemical Elements",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockChemicalElements"
+                            }
+                    }
+                }
+            }
+        },
+        
     },
     "definitions": {
         "ErrorResponse": {
@@ -2270,6 +2316,28 @@
                 }
             }
         },
+        "MockChemicalElement" : {
+            "properties": {
+                "symbol": {
+                    "type": "string",
+                    "example": "N"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Nitrogen"
+                },
+                "atomicNumber": {
+                    "type" : "number",
+                    "example" : 7
+                }
+            }
+        },
+        "MockChemicalElements" : {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/MockChemicalElement"
+            }
+        }
         "MockProductReview": {
             "type": "array",
             "items": {

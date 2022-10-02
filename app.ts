@@ -22,7 +22,8 @@ require('./modules/socials/api/socials-routes')(app); // Socials
 require('./modules/sports/api/sports-routes')(app); // Sports
 require('./modules/users/api/user-routes')(app); //Users
 require('./modules/music/api/music-routes')(app); // Music
-require('./modules/quotes/api/quotes-routes')(app); // Quotes
+require('./modules/quotes/api/qoutes-routes')(app); // Quotes
+require('./modules/elements/api/elements-routes')(app); // Chemical Elements
 require('./modules/time_zones/api/timezones-routes.ts')(app); // Timezones
 
 // Add an healthcheck endpoint
