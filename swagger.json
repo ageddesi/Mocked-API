@@ -68,6 +68,10 @@
         {
             "name": "Sports",
             "description": "A set of endpoints to get random sports data"
+        },
+        {
+            "name": "TimeZones",
+            "description": "A set of endpoints related to TimeZones"
         }
     ],
     "paths": {
@@ -828,7 +832,7 @@
                     }
                 ],
                 "responses": {
-                    "200": {
+                    "200"Countries: {
                         "description": "OK",
                         "schema": {
                             "type": "array",
@@ -1965,6 +1969,44 @@
                             "items": {
                                 "type": "object",
                                 "example": "{ teamName: '', location: '', stadium: '', capacity: ''}"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/time_zones": {
+            "get": {
+                "tags": [
+                    "/TimeZones"
+                ],
+                "summary": "Returns an object of all available TimeZones",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/time_zones": {
+            "get": {
+                "tags": [
+                    "/TimeZones/random"
+                ],
+                "summary": "Returns an random TimeZones",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
                             }
                         }
                     }
