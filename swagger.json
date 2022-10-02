@@ -71,7 +71,7 @@
         },
         {
             "name": "Socials",
-            "description": "A set of endpoints to get random social feed data"  
+            "description": "A set of endpoints to get random social feed data"
         },
         {
             "name": "Sports",
@@ -1933,7 +1933,7 @@
                 "tags": ["Products"],
                 "summary" : "Get a single product with a specified department",
                 "parameters": [
-                    {   
+                    {
                         "required": false,
                         "type": "string",
                         "in": "path",
@@ -1965,7 +1965,7 @@
                         "default": 10,
                         "description": "The amount of results you would like returned"
                     },
-                    {   
+                    {
                         "required": false,
                         "type": "string",
                         "in": "path",
@@ -2151,7 +2151,7 @@
                     }
                 }
             }
-        }
+        },
         "/elements": {
             "get": {
                 "tags": [
@@ -2168,7 +2168,7 @@
                     }
                 }
             }
-        },         
+        },
         "/elements/{qty}": {
             "get": {
                 "tags": [
@@ -2193,8 +2193,6 @@
                 }
             }
         },
-        
-    },
     "definitions": {
         "ErrorResponse": {
             "type": "string",
@@ -2302,35 +2300,35 @@
                         "$ref": "#/definitions/MockEcommerceCartItem"
                     }
                 },
-                "couponCode":{ 
+                "couponCode":{
                     "type":"string",
-                    "default": "DISCOUNT" 
+                    "default": "DISCOUNT"
                 },
-                "couponPercent":{ 
+                "couponPercent":{
                     "type":"number",
-                    "default":8 
+                    "default":8
                 },
-                "couponValue":{ 
+                "couponValue":{
                     "type":"number",
-                    "default":4 
+                    "default":4
                 },
-                "taxPercent":{ 
+                "taxPercent":{
                     "type":"number",
-                    "default":4 
+                    "default":4
                 },
-                "taxApplied":{ 
+                "taxApplied":{
                     "type":"number",
-                    "default":8 
+                    "default":8
                 },
-                "postageValue":{ 
+                "postageValue":{
                     "type":"number",
-                    "default":5 
+                    "default":5
                 },
-                "subtotal":{ 
+                "subtotal":{
                     "type":"number",
                     "default":100
                 },
-                "total":{ 
+                "total":{
                     "type":"number",
                     "default": 120
                 }
@@ -2564,7 +2562,7 @@
             "items": {
                 "$ref": "#/definitions/MockChemicalElement"
             }
-        }
+        },
         "MockProductReview": {
             "type": "array",
             "items": {
@@ -2603,6 +2601,6 @@
                     }
                 }
             }
-        },
+        }
     }
   }
