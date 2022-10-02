@@ -68,6 +68,10 @@
         {
             "name": "Sports",
             "description": "A set of endpoints to get random sports data"
+        },
+        {
+            "name": "TimeZones",
+            "description": "A set of endpoints related to TimeZones"
         }
     ],
     "paths": {
@@ -828,7 +832,7 @@
                     }
                 ],
                 "responses": {
-                    "200": {
+                    "200"Countries: {
                         "description": "OK",
                         "schema": {
                             "type": "array",
@@ -1785,6 +1789,62 @@
                 }
             }
         },
+        "/product/{department}" : {
+            "get": {
+                "tags": ["Products"],
+                "summary" : "Get a single product with a specified department",
+                "parameters": [
+                    {   
+                        "required": false,
+                        "type": "string",
+                        "in": "path",
+                        "name": "department",
+                        "default": "General",
+                        "description": "Specify department product should be filed under"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/products/{qty}/{department}" : {
+            "get": {
+                "tags": ["Products"],
+                "summary" : "Obtain a list of random products",
+                "parameters": [
+                    {
+                        "required": false,
+                        "type": "number",
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    },
+                    {   
+                        "required": false,
+                        "type": "string",
+                        "in": "path",
+                        "name": "department",
+                        "default": "General",
+                        "description": "Specify department product should be filed under"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/products/reviews": {
             "get": {
                 "tags": [
@@ -1914,6 +1974,44 @@
                     }
                 }
             }
+        },
+        "/time_zones": {
+            "get": {
+                "tags": [
+                    "/TimeZones"
+                ],
+                "summary": "Returns an object of all available TimeZones",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/time_zones": {
+            "get": {
+                "tags": [
+                    "/TimeZones/random"
+                ],
+                "summary": "Returns an random TimeZones",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -1965,40 +2063,58 @@
                 }
             }
         },
-        "MockProductReview": {
-            "type": "array",
+        "ProductResponse" : {
+            "type" : "array",
             "items": {
-                "type": "object",
+                "type" : "object",
                 "properties": {
-                    "productName": {
-                        "type": "string",
-                        "example": "Super Gamer Juice"
+                    "department" : {
+                        "type" : "string",
+                        "example" : "Sports"
                     },
-                    "productId": {
-                        "type": "number",
-                        "example": 1
+                    "type" : {
+                        "type" : "string",
+                        "example" : "Ball"
                     },
-                    "message": {
-                        "type": "string",
-                        "example": "The only drink I will ever need."
+                    "name" : {
+                        "type" : "string",
+                        "example" : "Sleek Bronze Towels"
                     },
-                    "dateTime": {
-                        "type": "string",
-                        "example": "1984-05-21T00:02:11.497Z"
+                    "adjective" : {
+                        "type" : "string",
+                        "example" : "Incredible"
                     },
-                    "rating": {
-                        "type": "number",
-                        "example": 1
+                    "description" : {
+                        "type" : "string",
+                        "example" : "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
                     },
-                    "userName": {
-                        "type": "string",
-                        "example": "Aaron Rackley"
+                    "material" : {
+                        "type" : "string",
+                        "example" : "Soft"
                     },
-                    "categories": {
-                        "type": "array",
+                    "sku" : {
+                        "type" : "array",
                         "items": {
-                            "type": "string",
-                            "example": "sport-drinks"
+                            "type" : "object",
+                            "properties": {
+                                "meta": {
+                                    "type" : "object",
+                                    "properties": {
+                                        "size" : {
+                                            "type" : "string",
+                                            "example" : "Medium"
+                                        }
+                                    }
+                                },
+                                "price" : {
+                                    "type" : "string",
+                                    "example" : "232.00"
+                                },
+                                "amount" : {
+                                    "type" : "number",
+                                    "example" : 11109
+                                }
+                            }
                         }
                     }
                 }
@@ -2153,6 +2269,45 @@
                     }
                 }
             }
-        }
+        },
+        "MockProductReview": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "productName": {
+                        "type": "string",
+                        "example": "Super Gamer Juice"
+                    },
+                    "productId": {
+                        "type": "number",
+                        "example": 1
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "The only drink I will ever need."
+                    },
+                    "dateTime": {
+                        "type": "string",
+                        "example": "1984-05-21T00:02:11.497Z"
+                    },
+                    "rating": {
+                        "type": "number",
+                        "example": 1
+                    },
+                    "userName": {
+                        "type": "string",
+                        "example": "Aaron Rackley"
+                    },
+                    "categories": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "sport-drinks"
+                        }
+                    }
+                }
+            }
+        },
     }
   }
