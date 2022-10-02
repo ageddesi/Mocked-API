@@ -35,6 +35,13 @@ This will show you where the application is running
 Mock API is running on port 3000.
 ```
 
+## Getting Started (Docker)
+
+1. Ensure you have Docker installed
+1. Open your terminal/command line tool
+1. Run `docker-compose up`
+1. Open your browser to [http://localhost:3000/](http://localhost:3000/)
+
 Now you should be able to make any request to that port, and get a response back! 
 
 💡 If you browse to that port, you'll see our swagger documentation. 
