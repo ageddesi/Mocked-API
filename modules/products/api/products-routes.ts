@@ -38,11 +38,7 @@ import getProducts from '../utils/getProducts';
  */
 
 module.exports = function (app: core.Express) {
-    app.get('/products/reviews', (req: Request, res: Response) => {
-        res.json(productReviews);
-    });
-
-    // Returns a random product
+        // Returns a random product
     app.get('/product/', (req: Request, res: Response) => {
         res.json(getProducts(1));
     });
