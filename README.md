@@ -100,6 +100,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://aharrison.xyz"><img src="https://avatars.githubusercontent.com/u/8920897?v=4?s=100" width="100px;" alt="Alex Harrison"/><br /><sub><b>Alex Harrison</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=alexjharrison" title="Code">💻</a></td>
+      <td align="center"><a href="https://siddharth1729.github.io/sid.github.io/"><img src="https://avatars.githubusercontent.com/u/46781764?v=4?s=100" width="100px;" alt="Siddharth Pandey"/><br /><sub><b>Siddharth Pandey</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=siddharth1729" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
