@@ -87,6 +87,16 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "tzii",
+      "name": "Vu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61374202?v=4",
+      "profile": "http://tuanvu.dev",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
