@@ -6,7 +6,7 @@ const { version } = require('../package.json');
 
 const options: swaggerJsdoc.Options = {
     definition: {
-        openapi: '3.0.0',
+        swagger: '2.0',
         info: {
             version,
             title: 'Mocked-API',
@@ -73,7 +73,7 @@ const options: swaggerJsdoc.Options = {
             },
         ],
     },
-    apis: ['./modules/*/api/*.ts'],
+    apis: ['./modules/*/api/*.ts', './modules/*/const/*.ts'],
 };
 
 export const swaggerSpec = swaggerJsdoc(options);

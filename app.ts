@@ -26,18 +26,18 @@ require('./modules/quotes/api/qoutes-routes')(app); // Quotes
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
-  const data = {
-    uptime: process.uptime(),
-    message: 'Ok',
-    date: new Date(),
-  };
-  res.status(200).send(data);
+    const data = {
+        uptime: process.uptime(),
+        message: 'Ok',
+        date: new Date(),
+    };
+    res.status(200).send(data);
 });
 
 // Docs in JSON format
 app.get('/docs.json', (req: Request, res: Response) => {
-  res.setHeader('Content-Type', 'application/json');
-  res.send(swaggerSpec);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(swaggerSpec);
 });
 
 // Setup Swagger API Documentation
@@ -48,5 +48,5 @@ app.use(cors()); // enabling CORS for all requests
 app.use(morgan('combined')); // adding morgan to log HTTP requests
 
 app.listen(port, () => {
-  console.log(`Mock API is running on port ${port}.`);
+    console.log(`Mock API is running on port ${port}.`);
 });
