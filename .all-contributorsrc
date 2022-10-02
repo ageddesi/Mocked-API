@@ -134,6 +134,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "alexjharrison",
+      "name": "Alex Harrison",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8920897?v=4",
+      "profile": "https://aharrison.xyz",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
