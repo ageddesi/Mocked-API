@@ -4,12 +4,6 @@ import { faker } from "@faker-js/faker";
 import { Music } from '../consts/Music'
 import { Album } from '../consts/Album'
 
-interface Music {
-    id: string
-    genre: string
-    song: string
-}
-
 module.exports = function (app: core.Express) {
     /**
      * @openapi
@@ -60,8 +54,8 @@ module.exports = function (app: core.Express) {
                 price: "$" + Math.floor(Math.random() * (20 - 10 + 1) + 10),
                 publisher: faker.company.name(),
                 songs: Number(params.qty)
-            })
-
+            }) 
+   
         res.json({
            data
         })
