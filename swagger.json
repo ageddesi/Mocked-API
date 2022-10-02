@@ -1927,11 +1927,10 @@
                 "summary": "Get a random value of a Chemical Elements",
                 "parameters": [],
                 "responses": {
-                    "200": {
-                        "description": "OK",
+                    "200" : {
+                        "description" : "OK",
                         "schema": {
-                            "type": "object",
-                            "example": "{ symbol: 'Li', name: 'Lithium', atomicNumber: 3 }"
+                            "$ref": "#/definitions/MockChemicalElement"
                         }
                     }
                 }
@@ -1952,11 +1951,10 @@
                     }
                 ],
                 "responses": {
-                    "200": {
-                        "description": "OK",
+                    "200" : {
+                        "description" : "OK",
                         "schema": {
-                            "type": "array",
-                            "items": ["America", "Asia"]
+                            "$ref": "#/definitions/MockChemicalElements"
                         }
                     }
                 }
@@ -2199,6 +2197,28 @@
                         "example" : "2022-09-22T16:03:17.885Z"
                     }
                 }
+            }
+        },
+        "MockChemicalElement" : {
+            "properties": {
+                "symbol": {
+                    "type": "string",
+                    "example": "N"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Nitrogen"
+                },
+                "atomicNumber": {
+                    "type" : "number",
+                    "example" : 7
+                }
+            }
+        },
+        "MockChemicalElements" : {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/MockChemicalElement"
             }
         }
     }
