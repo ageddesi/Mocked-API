@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -35,9 +35,35 @@ This will show you where the application is running
 Mock API is running on port 3000.
 ```
 
+## Getting Started (Docker)
+
+1. Ensure you have Docker installed
+1. Open your terminal/command line tool
+1. Run `docker-compose up`
+1. Open your browser to [http://localhost:3000/](http://localhost:3000/)
+
 Now you should be able to make any request to that port, and get a response back! 
 
 💡 If you browse to that port, you'll see our swagger documentation. 
+
+
+## Testing
+
+### How to write tests
+For each module you create you will also need to create a tests folder, Inside this folder there should be a `api` and `utils`
+(if you create any utils) folder.
+
+The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add 
+```javascript
+const request = require('supertest');
+const baseURL = 'http://localhost:3000';
+``` 
+to your tests and make a request in your test instead of calling a normal function.
+
+### How to run tests
+1. Run the mocked api server locally
+2. run `npm run test`
+
 
 ## FAQ
 
@@ -91,6 +117,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/fadkeabhi"><img src="https://avatars.githubusercontent.com/u/31249309?v=4?s=100" width="100px;" alt="fadkeabhi"/><br /><sub><b>fadkeabhi</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=fadkeabhi" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/Sir-Martin-Esq-III"><img src="https://avatars.githubusercontent.com/u/11279843?v=4?s=100" width="100px;" alt="Thomas Martin"/><br /><sub><b>Thomas Martin</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Sir-Martin-Esq-III" title="Code">💻</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=Sir-Martin-Esq-III" title="Tests">⚠️</a></td>
     </tr>
   </tbody>
   <tfoot>

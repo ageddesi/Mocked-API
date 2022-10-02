@@ -1,5 +1,7 @@
 require('dotenv').config();
-const express = require('express');
+import express, { Request, Response } from 'express';
+import { swaggerSpec } from './utils/swagger';
+
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -22,25 +24,32 @@ require('./modules/users/api/user-routes')(app); //Users
 require('./modules/music/api/music-routes')(app); // Music
 require('./modules/quotes/api/qoutes-routes')(app); // Quotes
 require('./modules/invoice/api/invoice-routes')(app); // Invoices
+require('./modules/elements/api/elements-routes')(app); // Chemical Elements
+require('./modules/time_zones/api/timezones-routes.ts')(app); // Timezones
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
-  const data = {
-    uptime: process.uptime(),
-    message: 'Ok',
-    date: new Date(),
-  };
-  res.status(200).send(data);
+    const data = {
+        uptime: process.uptime(),
+        message: 'Ok',
+        date: new Date(),
+    };
+    res.status(200).send(data);
+});
+
+// Docs in JSON format
+app.get('/docs.json', (req: Request, res: Response) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(swaggerSpec);
 });
 
 // Setup Swagger API Documentation
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(cors()); // enabling CORS for all requests
 app.use(morgan('combined')); // adding morgan to log HTTP requests
 
 app.listen(port, () => {
-  console.log(`Mock API is running on port ${port}.`);
+    console.log(`Mock API is running on port ${port}.`);
 });
