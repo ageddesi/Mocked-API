@@ -4,11 +4,21 @@ import { getRandomEmails } from '../utils/getRandomEmails';
 
 const defaultEmailCount = 10;
 
-module.exports = function(app : core.Express){
-
-    // Returns a set of Fake Emails
-    app.get("/emails", (req: Request, res: Response) => {
+module.exports = function (app: core.Express) {
+    /**
+     * @openapi
+     * '/email':
+     *   get:
+     *     tags:
+     *     - Emails
+     *     summary: Returns a list of emails
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           $ref: '#/definitions/MockEmails'
+     */
+    app.get('/emails', (req: Request, res: Response) => {
         res.json(getRandomEmails(defaultEmailCount));
-    })
-
-}
+    });
+};
