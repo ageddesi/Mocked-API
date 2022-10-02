@@ -49,19 +49,6 @@ module.exports = function (app: core.Express) {
         res.json(getProducts(1, department));
     });
 
-    // Returns a random list of products
-    app.get('/products/:qty?', (req: Request, res: Response) => {
-        const qty = getQtyFromRequest(req);
-        res.json(getProducts(qty));
-    });
-
-    // Returns a random list of products under a specified department
-    app.get('/products/:qty/:department', (req: Request, res: Response) => {
-        const qty = getQtyFromRequest(req);
-        const department = req.params.department ? req.params.department.toString() : 'General';
-        res.json(getProducts(qty, department));
-    });
-
     /**
      * @openapi
      * '/products/reviews':
@@ -75,8 +62,21 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockProductReview'
      */
-    app.get('/products/reviews', (req: Request, res: Response) => {
+     app.get('/products/reviews', (req: Request, res: Response) => {
         res.json(productReviews);
+    });
+
+    // Returns a random list of products
+    app.get('/products/:qty?', (req: Request, res: Response) => {
+        const qty = getQtyFromRequest(req);
+        res.json(getProducts(qty));
+    });
+
+    // Returns a random list of products under a specified department
+    app.get('/products/:qty/:department', (req: Request, res: Response) => {
+        const qty = getQtyFromRequest(req);
+        const department = req.params.department ? req.params.department.toString() : 'General';
+        res.json(getProducts(qty, department));
     });
 
     /**
