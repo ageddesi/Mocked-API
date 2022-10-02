@@ -68,6 +68,25 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "fadkeabhi",
+      "name": "fadkeabhi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31249309?v=4",
+      "profile": "https://github.com/fadkeabhi",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Sir-Martin-Esq-III",
+      "name": "Thomas Martin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11279843?v=4",
+      "profile": "https://github.com/Sir-Martin-Esq-III",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
