@@ -21,6 +21,7 @@ require('./modules/sports/api/sports-routes')(app); // Sports
 require('./modules/users/api/user-routes')(app); //Users
 require('./modules/music/api/music-routes')(app); // Music
 require('./modules/quotes/api/qoutes-routes')(app); // Quotes
+require('./modules/timezones/api/timezones-routes')(app); // Timezones
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
