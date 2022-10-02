@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -92,6 +92,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center"><a href="https://github.com/fadkeabhi"><img src="https://avatars.githubusercontent.com/u/31249309?v=4?s=100" width="100px;" alt="fadkeabhi"/><br /><sub><b>fadkeabhi</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=fadkeabhi" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/Sir-Martin-Esq-III"><img src="https://avatars.githubusercontent.com/u/11279843?v=4?s=100" width="100px;" alt="Thomas Martin"/><br /><sub><b>Thomas Martin</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Sir-Martin-Esq-III" title="Code">💻</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=Sir-Martin-Esq-III" title="Tests">⚠️</a></td>
+      <td align="center"><a href="http://tuanvu.dev"><img src="https://avatars.githubusercontent.com/u/61374202?v=4?s=100" width="100px;" alt="Vu"/><br /><sub><b>Vu</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=tzii" title="Code">💻</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=tzii" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
