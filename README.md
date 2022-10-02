@@ -39,6 +39,25 @@ Now you should be able to make any request to that port, and get a response back
 
 💡 If you browse to that port, you'll see our swagger documentation. 
 
+
+## Testing
+
+### How to write tests
+For each module you create you will also need to create a tests folder, Inside this folder there should be a `api` and `utils`
+(if you create any utils) folder.
+
+The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add 
+```javascript
+const request = require('supertest');
+const baseURL = 'http://localhost:3000';
+``` 
+to your tests and make a request in your test instead of calling a normal function.
+
+### How to run tests
+1. Run the mocked api server locally
+2. run `npm run test`
+
+
 ## FAQ
 
 **Q:** Are you planning to add more end points? <br />
