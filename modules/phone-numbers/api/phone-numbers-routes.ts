@@ -13,14 +13,14 @@ const formats = {
 module.exports = function(app : core.Express) {
 
     // return a number phone number in a random format
-    app.get("/phonenumber/", (req: Request, res: Response) => {
+    app.get("/phonenumbers", (req: Request, res: Response) => {
         res.json(faker.phone.number())
     })
 
     // return a number based on the 2 letter country code (ISO 3166-1)
     // format can be "space", "nospace", or "dash"
     // format will be "space" by default
-    app.get("/phonenumber/:cc/:format?", (req: Request, res: Response) => {
+    app.get("/phonenumbers/country/:cc/:format?", (req: Request, res: Response) => {
         const countryData = countryNumberData[req.params.cc.toUpperCase()];
 
         // default format to be space 
@@ -36,7 +36,7 @@ module.exports = function(app : core.Express) {
     })
 
     // return a random IMEI number
-    app.get("/phonenumber/imei", (req: Request, res: Response) => {
+    app.get("/phonenumbers/imei", (req: Request, res: Response) => {
         res.json(faker.phone.imei())
     })
 
