@@ -4,12 +4,6 @@ import { faker } from "@faker-js/faker";
 import { Music } from '../consts/Music'
 import { Album } from '../consts/Album'
 
-interface Music {
-    id: string
-    genre: string
-    song: string
-}
-
 module.exports = function (app: core.Express) {
     /**
      * @openapi
