@@ -1919,7 +1919,7 @@
                 }
             }
         },
-        "/element": {
+        "/elements": {
             "get": {
                 "tags": [
                     "Chemical Elements"
