@@ -1404,6 +1404,15 @@
             "get": {
                 "tags": ["Music"],
                 "summary" : "Get a song name and genre",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of songs and genre you require",
+                        "type": "string",
+                        "default": 5
+                    }
+                ],
                 "responses": {
                     "200" : {
                         "description" : "OK",
@@ -1422,6 +1431,15 @@
             "get": {
                 "tags": ["Music"],
                 "summary" : "Get an album name with release date, publisher, price, and total songs inlcuded",
+                 "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of albums you require",
+                        "type": "string",
+                        "default": 5
+                    }
+                ],
                 "responses": {
                     "200" : {
                         "description" : "OK",
