@@ -1,18 +1,21 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import BankData from '../data/bandata';
+import { getQtyFromRequest } from '../../../utils/route-utils';
+import BankData from '../data/bankdata';
 
 module.exports = function (app: core.Express) {
   // Get a list of bank statement
-  app.get('/', (req: Request, res: Response) => {
-    const response = { message: '', data: {} };
+  app.get('/bank/feed/:qty', (req: Request, res: Response) => {
+    const defaultErrorMessage = 'Unable to provide a bank statement. Unknown Error Occured';
+    const qty = getQtyFromRequest(req);
+
     try {
-      if (req.method === 'get') {
-        (response.message = 'Sucess'), (response.data = BankData);
+      if (qty) {
+        BankData.statement[0].amount = qty.toString();
+        res.status(200).json(BankData);
       }
     } catch (error) {
-      (response.message = 'Filed'), (response.data = error);
+      return res.status(400).json(defaultErrorMessage);
     }
-    res.json(response);
   });
 };
