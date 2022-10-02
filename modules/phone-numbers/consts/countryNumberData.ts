@@ -102,7 +102,10 @@ const formats = {
   HK: { name: 'Hong Kong' },
   HU: { name: 'Hungary' },
   IS: { name: 'Iceland' },
-  IN: { name: 'India' },
+  IN: { 
+    name: 'India',
+    format: '+91 ##### #####'
+  },
   ID: { name: 'Indonesia' },
   IR: { name: 'Iran, Islamic Republic Of' },
   IQ: { name: 'Iraq' },
@@ -118,7 +121,10 @@ const formats = {
   KE: { name: 'Kenya' },
   KI: { name: 'Kiribati' },
   KP: { name: "Korea, Democratic People'S Republic of" },
-  KR: { name: 'Korea, Republic of' },
+  KR: { 
+    name: 'Korea, Republic of',
+    format: '+82 ## #### ####'
+  },
   KW: { name: 'Kuwait' },
   KG: { name: 'Kyrgyzstan' },
   LA: { name: "Lao People'S Democratic Republic" },
