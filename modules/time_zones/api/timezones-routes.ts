@@ -5,7 +5,7 @@ import time_zones from '../data/time_zones';
 module.exports = function(app : core.Express){
 
     // Get all time_zones
-    app.get("/time_zones/", (req: Request, res: Response) => {
+    app.get("/time_zones", (req: Request, res: Response) => {
         res.json(time_zones)
 
     })
