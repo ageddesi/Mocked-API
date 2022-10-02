@@ -4,6 +4,12 @@ import { faker } from "@faker-js/faker";
 import countryNumberData from '../consts/countryNumberData';
 import supportedCountries from '../utils/supportedCountries';
 
+const formats = {
+    space: ' ',
+    nospace: '',
+    dash: '-'
+}
+
 module.exports = function(app : core.Express) {
 
     // return a number phone number in a random format
@@ -12,15 +18,20 @@ module.exports = function(app : core.Express) {
     })
 
     // return a number based on the 2 letter country code (ISO 3166-1)
-    app.get("/phonenumber/:cc", (req: Request, res: Response) => {
+    // format can be "space", "nospace", or "dash"
+    // format will be "space" by default
+    app.get("/phonenumber/:cc/:format?", (req: Request, res: Response) => {
         const countryData = countryNumberData[req.params.cc.toUpperCase()];
+
+        // default format to be space 
+        const separator = formats[req.params.format] === undefined ? formats['space'] : formats[req.params.format];
+
         if (countryData === undefined) {
             return res.status(400).json("Invalid country code please use 2 letter country code (ISO 3166-1)");
         } else if (countryData['format'] === undefined) {
-            console.log(supportedCountries)
             return res.status(400).json("Country currently not supported, supported countries: " + JSON.stringify(supportedCountries));
         } else {
-            res.json(faker.phone.number(countryData['format']))
+            res.json(faker.phone.number(countryData['format']).split(' ').join(separator))
         }
     })
 
