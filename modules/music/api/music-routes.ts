@@ -1,21 +1,9 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import { faker } from "@faker-js/faker";
+import { Music } from '../consts/Music'
+import { Album } from '../consts/Album'
 
-interface Music {
-    id: string
-    genre: string
-    song: string
-}
-
-interface Album {
-    id: string
-    name: string
-    releasedate: string
-    price: string
-    publisher: string
-    songs: number
-}
 
 module.exports = function(app : core.Express){
 
@@ -35,7 +23,8 @@ module.exports = function(app : core.Express){
         })
     })
 
-    app.get("/album/", (req: Request, res: Response) => {
+    app.get("/album/:qty", (req: Request, res: Response) => {
+        const {params} = req
         let data: Album[] = []
 
             data.push({
@@ -44,7 +33,7 @@ module.exports = function(app : core.Express){
                 releasedate: faker.date.past(80).toString().split(' ')[3],
                 price: "$" + Math.floor(Math.random() * (20 - 10 + 1) + 10),
                 publisher: faker.company.name(),
-                songs: Math.floor(Math.random() * (20 - 6 + 1) + 6)
+                songs: Number(params.qty)
             }) 
    
         res.json({

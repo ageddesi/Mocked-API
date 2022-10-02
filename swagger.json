@@ -1403,7 +1403,7 @@
         "/music/{qty}" : {
             "get": {
                 "tags": ["Music"],
-                "summary" : "Get a list of teams in the uk premier football league from 2022",
+                "summary" : "Get a song name and genre",
                 "responses": {
                     "200" : {
                         "description" : "OK",
@@ -1411,7 +1411,25 @@
                             "type" : "array",
                             "items": {
                                 "type" : "object",
-                                "example": "{ teamName: '', location: '', stadium: '', capacity: ''}"
+                                "example": "{ genre: '', song: ''}"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/album/{qty}" : {
+            "get": {
+                "tags": ["Music"],
+                "summary" : "Get an album name with release date, publisher, price, and total songs inlcuded",
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "type" : "array",
+                            "items": {
+                                "type" : "object",
+                                "example": "{ name: '', releasedate: '', price: '', publisher: '', songs: ''}"
                             }
                         }
                     }
