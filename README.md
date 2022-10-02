@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -30,7 +30,7 @@ npm run install
 ```bash
 npm run serve
 ```
-This will show you were the application is running
+This will show you where the application is running
 ```
 Mock API is running on port 3000.
 ```
@@ -39,12 +39,31 @@ Now you should be able to make any request to that port, and get a response back
 
 💡 If you browse to that port, you'll see our swagger documentation. 
 
+
+## Testing
+
+### How to write tests
+For each module you create you will also need to create a tests folder, Inside this folder there should be a `api` and `utils`
+(if you create any utils) folder.
+
+The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add 
+```javascript
+const request = require('supertest');
+const baseURL = 'http://localhost:3000';
+``` 
+to your tests and make a request in your test instead of calling a normal function.
+
+### How to run tests
+1. Run the mocked api server locally
+2. run `npm run test`
+
+
 ## FAQ
 
-**Q:** Are you planning to add more end points?
+**Q:** Are you planning to add more end points? <br />
 **A:** I plan to add as many as I can, if there is a specific endpoint of data you would like to see feel free to add a Issue Request.
 
-## Ghangelog
+## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
@@ -87,6 +106,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/Coskntkk"><img src="https://avatars.githubusercontent.com/u/53823825?v=4?s=100" width="100px;" alt="Coşkun Atak"/><br /><sub><b>Coşkun Atak</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Coskntkk" title="Code">💻</a></td>
       <td align="center"><a href="https://website-portofolio-ian.vercel.app/"><img src="https://avatars.githubusercontent.com/u/58666218?v=4?s=100" width="100px;" alt="Rizky ian indiarto"/><br /><sub><b>Rizky ian indiarto</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=rizkyian78" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Eroxl"><img src="https://avatars.githubusercontent.com/u/77178777?v=4?s=100" width="100px;" alt="Evan"/><br /><sub><b>Evan</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Eroxl" title="Code">💻</a></td>
+      <td align="center"><a href="http://steamcommunity.com/id/Trigstur"><img src="https://avatars.githubusercontent.com/u/11588132?v=4?s=100" width="100px;" alt="Trigstur"/><br /><sub><b>Trigstur</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Trigstur" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/fadkeabhi"><img src="https://avatars.githubusercontent.com/u/31249309?v=4?s=100" width="100px;" alt="fadkeabhi"/><br /><sub><b>fadkeabhi</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=fadkeabhi" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>

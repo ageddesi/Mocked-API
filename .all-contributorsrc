@@ -59,6 +59,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Trigstur",
+      "name": "Trigstur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11588132?v=4",
+      "profile": "http://steamcommunity.com/id/Trigstur",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "fadkeabhi",
+      "name": "fadkeabhi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31249309?v=4",
+      "profile": "https://github.com/fadkeabhi",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
