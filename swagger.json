@@ -68,6 +68,10 @@
         {
             "name": "Sports",
             "description": "A set of endpoints to get random sports data"
+        },
+        {
+            "name": "Timezones",
+            "description": "A set of endpoints to get random Timezones values"
         }
     ],
     "paths": {
@@ -1910,6 +1914,46 @@
                                 "type": "object",
                                 "example": "{ teamName: '', location: '', stadium: '', capacity: ''}"
                             }
+                        }
+                    }
+                }
+            }
+        },
+        "/timezones": {
+            "get": {
+                "tags": [
+                    "Timezones"
+                ],
+                "summary": "Get a random value of a Timezone",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": "America/Chicago"
+                    }
+                }
+            }
+        },
+        "/timezones/{qty}": {
+            "get": {
+                "tags": [
+                    "Timezones"
+                ],
+                "summary": "Get a random list of value of Timezones",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": ["America", "Asia"]
                         }
                     }
                 }
