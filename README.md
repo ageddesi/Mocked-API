@@ -12,6 +12,7 @@
   </a>
 </p>
 
+
 ## About
 
 Welcome to Mocked-API, this is a live API that can be accessed by anyone who needs data to test out their website, app, components etc.
@@ -19,6 +20,17 @@ Welcome to Mocked-API, this is a live API that can be accessed by anyone who nee
 ## Getting Started
 
 First you should head over to https://api.mocked-api.dev and read our live api docs than start calling the api endpoints for the data you need.
+
+## Join our discord
+
+<p align="center" style="margin-bottom: 20px">
+  <a href="https://discord.gg/yxqrkjDR87">
+    <img
+      src="./discord-join.png" 
+      alt="Join Our Discord" 
+      width="35%">
+  </a>
+</p>
 
 ## How to run Mocked-API
 Once you've cloned this repository, running Mocked-API is quite easy, there are just 2 steps you have to follow:
