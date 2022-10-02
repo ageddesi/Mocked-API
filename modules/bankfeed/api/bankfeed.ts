@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import { getQtyFromRequest } from '../../../utils/route-utils';
-import BankData from '../data/bankdata';
+
+import BankData from '../data/bankdata'; //Bank feed json
 
 module.exports = function (app: core.Express) {
   // Get a list of bank statement
