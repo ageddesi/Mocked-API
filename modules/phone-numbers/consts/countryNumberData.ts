@@ -1,5 +1,8 @@
 const formats = {
-  AF: { name: 'Afghanistan' },
+  AF: { 
+    name: 'Afghanistan', 
+    format: '+93 ## #######' 
+  },
   AX: { name: 'Åland Islands' },
   AL: { name: 'Albania' },
   DZ: { name: 'Algeria' },
@@ -231,7 +234,9 @@ const formats = {
     name: 'United Kingdom', 
     format: '+44 ## #### ####'
   },
-  US: { name: 'United States' },
+    US: { name: 'United States', 
+    format: '+1 ### ### ####'
+  },
   UM: { name: 'United States Minor Outlying Islands' },
   UY: { name: 'Uruguay' },
   UZ: { name: 'Uzbekistan' },
