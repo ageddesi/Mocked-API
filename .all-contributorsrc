@@ -98,6 +98,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "kalwabed",
+      "name": "Kalwabed Rizki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49640654?v=4",
+      "profile": "http://kalwabed.xyz",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
