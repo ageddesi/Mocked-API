@@ -24,6 +24,10 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to animal',
             },
             {
+                name: 'BankFeeds',
+                description: 'A set of endpoints related to bank feeds',
+            },
+            {
                 name: 'Chat',
                 description: 'A set of endpoints related to chats',
             },
@@ -40,6 +44,14 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to currencies',
             },
             {
+                name: 'Ecommerce',
+                description: 'A set of endpoints related to ecommerce',
+            },
+            {
+                name: 'Elements',
+                description: 'A set of endpoints related to elements on the periodic table',
+            },
+            {
                 name: 'Emails',
                 description: 'A set of endpoints related to emails',
             },
@@ -48,12 +60,20 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to obtaining placeholder image urls',
             },
             {
+                name: 'Invoices',
+                description: 'A set of endpoints related to invoices',
+            },
+            {
                 name: 'Music',
                 description: 'A set of endpoints related to music',
             },
             {
                 name: 'Names',
                 description: 'A set of endpoints to get randomly generated names',
+            },
+            {
+                name: 'PhoneNumbers',
+                description: 'A set of endpoints to get randomly generated phone numbers',
             },
             {
                 name: 'Products',
@@ -70,6 +90,14 @@ const options: swaggerJsdoc.Options = {
             {
                 name: 'Sports',
                 description: 'A set of endpoints to get random sports data',
+            },
+            {
+                name: 'TimeZones',
+                description: 'A set of endpoints to get random time zones',
+            },
+            {
+                name: 'Users',
+                description: 'A set of endpoints to get random user data',
             },
         ],
     },
