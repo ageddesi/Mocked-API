@@ -14,6 +14,7 @@ require('./modules/chat/api/chat-routes')(app); // Chat
 require('./modules/colors/api/colors-route')(app); // Colors
 require('./modules/countries/api/countries-routes')(app); // Countries
 require('./modules/currency/api/currency-routes')(app); // Currencies
+require('./modules/ecommerce/api/ecommerce-routes')(app); // Ecommerce
 require('./modules/emails/api/emails-routes')(app); // Emails
 require('./modules/images/api/images-routes')(app); // Images
 require('./modules/names/api/names-routes')(app); // Names

@@ -38,6 +38,10 @@
             "description": "A set of endpoints related to currencies"
         },
         {
+            "name": "Ecommerce",
+            "description": "A set of endpoints related to ecommerce"
+        },
+        {
             "name": "Emails",
             "description": "A set of endpoints related to emails"
         },
@@ -759,6 +763,47 @@
                             "items": {
                                 "type": "string"
                             }
+                        }
+                    }
+                }
+            }
+        },
+        "/ecommerce/cart": {
+            "get": {
+                "tags": [
+                    "Ecommerce"
+                ],
+                "summary": "Returns ecommerce cart with products and totals",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockEcommerceCart"
+                        }
+                    }
+                }
+            }
+        },
+        "/ecommerce/cart/{qty}": {
+            "get": {
+                "tags": [
+                    "Ecommerce"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of products in your cart",
+                        "type": "string",
+                        "default": 5
+                    }
+                ],
+                "summary": "Returns ecommerce cart with products and totals",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockEcommerceCart"
                         }
                     }
                 }
@@ -2109,8 +2154,100 @@
                 }
             }
         },
-        "ProductResponse" : {
-            "type" : "array",
+        "MockEcommerceCartItem": {
+            "type":"object",
+            "properties": {
+                "pricePerUnit": {
+                    "type":"number",
+                    "example": 2
+                },
+                "quantity": {
+                    "type":"number",
+                    "example":2
+                },
+                "product": {
+                    "type": "object",
+                    "properties":{
+                        "productName": {
+                            "type": "string",
+                            "example": "Super Gamer Juice"
+                        },
+                        "productId": {
+                            "type": "number",
+                            "example": 1
+                        },
+                        "message": {
+                            "type": "string",
+                            "example": "The only drink I will ever need."
+                        },
+                        "dateTime": {
+                            "type": "string",
+                            "example": "1984-05-21T00:02:11.497Z"
+                        },
+                        "rating": {
+                            "type": "number",
+                            "example": 1
+                        },
+                        "userName": {
+                            "type": "string",
+                            "example": "Aaron Rackley"
+                        },
+                        "categories": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "sport-drinks"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "MockEcommerceCart": {
+            "type":"object",
+            "properties": {
+                "products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MockEcommerceCartItem"
+                    }
+                },
+                "couponCode":{ 
+                    "type":"string",
+                    "default": "DISCOUNT" 
+                },
+                "couponPercent":{ 
+                    "type":"number",
+                    "default":8 
+                },
+                "couponValue":{ 
+                    "type":"number",
+                    "default":4 
+                },
+                "taxPercent":{ 
+                    "type":"number",
+                    "default":4 
+                },
+                "taxApplied":{ 
+                    "type":"number",
+                    "default":8 
+                },
+                "postageValue":{ 
+                    "type":"number",
+                    "default":5 
+                },
+                "subtotal":{ 
+                    "type":"number",
+                    "default":100
+                },
+                "total":{ 
+                    "type":"number",
+                    "default": 120
+                }
+            }
+        },
+        "MockProductReview": {
+            "type": "array",
             "items": {
                 "type" : "object",
                 "properties": {
