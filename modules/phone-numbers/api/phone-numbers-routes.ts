@@ -3,12 +3,7 @@ import * as core from 'express-serve-static-core';
 import { faker } from "@faker-js/faker";
 import countryNumberData from '../consts/countryNumberData';
 import supportedCountries from '../utils/supportedCountries';
-
-const formats = {
-    space: ' ',
-    nospace: '',
-    dash: '-'
-}
+import formats from '../consts/formats';
 
 module.exports = function(app : core.Express) {
 
