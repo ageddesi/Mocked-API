@@ -107,6 +107,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "talis-fb",
+      "name": "Talison Fabio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54823205?v=4",
+      "profile": "https://github.com/talis-fb",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
