@@ -38,7 +38,12 @@ Once you've cloned this repository, running Mocked-API is quite easy, there are 
 ```bash
 npm run install
 ```
-2. Serve the application
+2. Configure the application
+An example configuration file `.env.example` is provided. 
+```bash
+npm run config
+```
+3. Serve the application
 ```bash
 npm run serve
 ```

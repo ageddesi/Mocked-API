@@ -4,8 +4,8 @@
   "description": "An API library for providing endpoints of mock data for use during testing",
   "main": "app.ts",
   "scripts": {
-    "serve": "nodemon app.ts"
-  },
+    "serve": "nodemon app.ts",
+    "config": "ts-node utils\\config.ts" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ageddesi/Mocked-API.git"

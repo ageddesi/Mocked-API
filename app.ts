@@ -35,6 +35,9 @@ app.get('/status', (req, res) => {
 // Setup Swagger API Documentation
 const swaggerUi = require('swagger-ui-express')
 const swaggerDocument = require('./swagger.json');
+swaggerDocument.host = process.env.HOSTNAME || swaggerDocument.host;
+swaggerDocument.schemes = [process.env.SCHEME] || swaggerDocument.schemes;
+
 app.use(
   '/',
   swaggerUi.serve, 
