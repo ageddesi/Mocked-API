@@ -30,7 +30,7 @@ npm run install
 ```bash
 npm run serve
 ```
-This will show you were the application is running
+This will show you where the application is running
 ```
 Mock API is running on port 3000.
 ```
@@ -41,10 +41,10 @@ Now you should be able to make any request to that port, and get a response back
 
 ## FAQ
 
-**Q:** Are you planning to add more end points?
+**Q:** Are you planning to add more end points? <br />
 **A:** I plan to add as many as I can, if there is a specific endpoint of data you would like to see feel free to add a Issue Request.
 
-## Ghangelog
+## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
