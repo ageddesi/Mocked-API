@@ -1,5 +1,5 @@
 require('dotenv').config();
-import express from 'express';
+const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -9,13 +9,18 @@ const port = 3000;
 // Load Mock Modules
 require('./modules/animal/api/animal-routes')(app) // Animals
 require('./modules/chat/api/chat-routes')(app) // Chat
+require('./modules/colors/api/colors-route')(app); // Colors
 require('./modules/countries/api/countries-routes')(app); // Countries
 require('./modules/currency/api/currency-routes')(app); // Currencies
+require('./modules/emails/api/emails-routes')(app); // Emails
 require('./modules/images/api/images-routes')(app); // Images
 require('./modules/names/api/names-routes')(app); // Names
 require('./modules/products/api/products-routes')(app); // Products
+require('./modules/socials/api/socials-routes')(app); // Socials
 require('./modules/sports/api/sports-routes')(app); // Sports
-require('./modules/users/api/user-routes')(app); // Users
+require('./modules/users/api/user-routes')(app); //Users
+require('./modules/music/api/music-routes')(app); // Music
+require('./modules/quotes/api/qoutes-routes')(app); // Quotes
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
