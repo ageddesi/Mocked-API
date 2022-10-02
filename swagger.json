@@ -1381,7 +1381,7 @@
                     {
                         "in": "path",
                         "name": "qty",
-                        "description": "The amount of image urls you require",
+                        "description": "The amount of image urls you acquire",
                         "type": "string",
                         "default": 10
                     }
@@ -1408,7 +1408,7 @@
                     {
                         "in": "path",
                         "name": "qty",
-                        "description": "The amount of songs and genre you require",
+                        "description": "The amount of songs and genre you acquire",
                         "type": "string",
                         "default": 5
                     }
