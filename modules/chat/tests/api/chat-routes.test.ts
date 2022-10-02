@@ -6,11 +6,13 @@ describe('chat api endpoints', () => {
     it('should return a random chat snapshot with 1000 messages', async () => {
       const response = await request(baseURL).get(`/chat/random`);
 
-      expect(response.body.length).toBe(1000);
-      expect(response.body[0]).toHaveProperty('id');
-      expect(response.body[0]).toHaveProperty('createdAt');
-      expect(response.body[0]).toHaveProperty('message');
-      expect(response.body[0]).toHaveProperty('userId');
+      console.log(response.body.messages.length);
+
+      expect(response.body.messages.length).toBe(1000);
+      expect(response.body.messages[0]).toHaveProperty('id');
+      expect(response.body.messages[0]).toHaveProperty('createdAt');
+      expect(response.body.messages[0]).toHaveProperty('message');
+      expect(response.body.messages[0]).toHaveProperty('userId');
     });
   });
 
@@ -20,15 +22,13 @@ describe('chat api endpoints', () => {
       const messageCount = 100;
       const response = await request(baseURL).get(`/chat/random/${userCount}/${messageCount}`);
 
-      expect(response.body.length).toBe(messageCount);
-
       const userSet = new Set();
 
-      response.body.forEach((element) => {
+      response.body.users.forEach((element) => {
         userSet.add(element.userId);
       });
 
-      expect(response.body.length).toBe(messageCount);
+      expect(response.body.messages.length).toBe(messageCount);
       expect(userSet.size).toBe(userCount);
     });
   });

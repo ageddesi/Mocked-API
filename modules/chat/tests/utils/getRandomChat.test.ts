@@ -5,6 +5,6 @@ describe('get random chat', () => {
     const chatCount = 20;
     const res = getRandomChat(2, chatCount);
 
-    expect(res.length).toBe(chatCount);
+    expect(res.messages.length).toBe(chatCount);
   });
 });
