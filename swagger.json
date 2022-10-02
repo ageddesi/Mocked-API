@@ -70,8 +70,8 @@
             "description": "A set of endpoints to get random sports data"
         },
         {
-            "name": "Timezones",
-            "description": "A set of endpoints to get random Timezones values"
+            "name": "Chemical Elements",
+            "description": "A set of endpoints to get random Chemical Elements values"
         }
     ],
     "paths": {
@@ -1919,27 +1919,30 @@
                 }
             }
         },
-        "/timezones": {
+        "/element": {
             "get": {
                 "tags": [
-                    "Timezones"
+                    "Chemical Elements"
                 ],
-                "summary": "Get a random value of a Timezone",
+                "summary": "Get a random value of a Chemical Elements",
                 "parameters": [],
                 "responses": {
                     "200": {
                         "description": "OK",
-                        "schema": "America/Chicago"
+                        "schema": {
+                            "type": "object",
+                            "example": "{ symbol: 'Li', name: 'Lithium', atomicNumber: 3 }"
+                        }
                     }
                 }
             }
         },
-        "/timezones/{qty}": {
+        "/elements/{qty}": {
             "get": {
                 "tags": [
-                    "Timezones"
+                    "Chemical Elements"
                 ],
-                "summary": "Get a random list of value of Timezones",
+                "summary": "Get a random list of value of Chemical Elements",
                 "parameters": [
                     {
                         "in": "path",
