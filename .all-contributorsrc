@@ -75,7 +75,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/31249309?v=4",
       "profile": "https://github.com/fadkeabhi",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -86,6 +87,43 @@
       "contributions": [
         "code",
         "test"
+      ]
+    },
+    {
+      "login": "tzii",
+      "name": "Vu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61374202?v=4",
+      "profile": "http://tuanvu.dev",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "kalwabed",
+      "name": "Kalwabed Rizki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49640654?v=4",
+      "profile": "http://kalwabed.xyz",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "talis-fb",
+      "name": "Talison Fabio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54823205?v=4",
+      "profile": "https://github.com/talis-fb",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "cmjchrisjones",
+      "name": "Chris Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3969086?v=4",
+      "profile": "https://c-j.tech",
+      "contributions": [
+        "tool"
       ]
     }
   ],
