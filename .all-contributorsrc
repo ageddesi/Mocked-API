@@ -190,6 +190,25 @@
         "doc",
         "test"
       ]
+    },
+    {
+      "login": "AnishDe12020",
+      "name": "Anish De",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63192115?v=4",
+      "profile": "https://anishde.dev/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vaibhavg20comp",
+      "name": "Vaibhav Garje",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96220995?v=4",
+      "profile": "https://github.com/vaibhavg20comp",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
