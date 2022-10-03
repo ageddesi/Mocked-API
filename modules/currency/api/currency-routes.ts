@@ -4,6 +4,7 @@ import currencySnapshot from '../data/currency-snapshot';
 import GBP_USD_TICKER_DATA from '../data/gbp-usd-ticker-data';
 import { getQtyFromRequest } from '../../../utils/route-utils';
 import getDigitalCurrencyAddress from '../utils/getDigitalCurrencyAddress';
+import getDigitalCurrencyTxList from '../utils/getDigitalCurrencyTxList';
 import DigitalCoinEnum from '../consts/DigitalCoinEnum';
 
 module.exports = function(app: core.Express){
@@ -37,6 +38,13 @@ module.exports = function(app: core.Express){
         const qty = getQtyFromRequest(req);
         const addresses = getDigitalCurrencyAddress(qty, DigitalCoinEnum.Litecoin);
         res.json(addresses);
+    })
+
+    //Returns the list of transactions performed by an address
+    app.get("/currencies/digital-coins/ethereum/tx-list/:address?", (req: Request, res: Response) => {
+        const address = req.params.address;
+        const tx_list = getDigitalCurrencyTxList(address);
+        res.json(tx_list);
     })
 
 }
