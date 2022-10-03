@@ -42,6 +42,10 @@
             "description": "A set of endpoints related to emails"
         },
         {
+            "name": "Elements",
+            "description": "A set of endpoints related to elements"
+        },
+        {
             "name": "Images",
             "description": "A set of endpoints related to obtaining placeholder image urls"
         },
@@ -63,7 +67,7 @@
         },
         {
             "name": "Socials",
-            "description": "A set of endpoints to get random social feed data"  
+            "description": "A set of endpoints to get random social feed data"
         },
         {
             "name": "Sports",
@@ -612,6 +616,55 @@
                 }
             }
         },
+        "/elements": {
+            "get": {
+                "tags": [
+                    "Elements"
+                ],
+                "summary": "All elements in the periodic table",
+                "responses": {
+                    "200": {
+                        "description": "TEST",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "Hydrogen"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/elements/{qty}": {
+            "get": {
+                "tags": [
+                    "Elements"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "atomicnbr",
+                        "description": "The atomic number of the element you intend to find",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "summary": "Find the element with the specified atomic number",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "type": "string",
+                                "example": "Oxygen"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/countries": {
             "get": {
                 "tags": [
@@ -622,9 +675,9 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "array",
+                            "type": "object",
                             "items": {
-                                "type": "string",
+                                "type": "array",
                                 "example": "United Kingdom, United States Of America"
                             }
                         }
@@ -1938,6 +1991,17 @@
         "ErrorResponse": {
             "type": "string",
             "example": "An unknown error occured, please try again."
+        },
+        "ElementsListResponse": {
+            "properties": {
+                "elements": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "example": "Hydrogen"
+                    }
+                }
+            }
         },
         "CountriesListResponse": {
             "properties": {
