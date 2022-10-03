@@ -25,7 +25,9 @@ module.exports = function (app: core.Express) {
    *      '200':
    *        description: OK
    *        schema:
-   *          $ref: '#/definitions/MockInvoiceResponse'
+   *          type: array
+   *          items:
+   *            $ref: '#/definitions/MockInvoiceResponse'
    */
   app.get('/invoices/:qty?', (req: Request, res: Response) => {
     const qty = getQtyFromRequest(req, DEFAULT_INVOICE_QUANTITY);
