@@ -170,6 +170,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Suraj-Bhandarkar-S",
+      "name": "Suraj Bhandarkar S",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42907076?v=4",
+      "profile": "http://suraj-bhandarkar-s.github.io/web/",
+      "contributions": [
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
