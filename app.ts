@@ -21,6 +21,7 @@ require('./modules/sports/api/sports-routes')(app); // Sports
 require('./modules/users/api/user-routes')(app); //Users
 require('./modules/music/api/music-routes')(app); // Music
 require('./modules/quotes/api/qoutes-routes')(app); // Quotes
+require('./modules/elements/api/element-routes')(app); // Elements
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
@@ -37,7 +38,7 @@ const swaggerUi = require('swagger-ui-express')
 const swaggerDocument = require('./swagger.json');
 app.use(
   '/',
-  swaggerUi.serve, 
+  swaggerUi.serve,
   swaggerUi.setup(swaggerDocument)
 );
 
