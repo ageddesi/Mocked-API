@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -144,6 +144,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="http://suraj-bhandarkar-s.github.io/web/"><img src="https://avatars.githubusercontent.com/u/42907076?v=4?s=100" width="100px;" alt="Suraj Bhandarkar S"/><br /><sub><b>Suraj Bhandarkar S</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Suraj-Bhandarkar-S" title="Tests">⚠️</a></td>
       <td align="center"><a href="https://github.com/devrrior"><img src="https://avatars.githubusercontent.com/u/69869135?v=4?s=100" width="100px;" alt="Fernando Guerrero"/><br /><sub><b>Fernando Guerrero</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=devrrior" title="Documentation">📖</a></td>
       <td align="center"><a href="https://anishde.dev/"><img src="https://avatars.githubusercontent.com/u/63192115?v=4?s=100" width="100px;" alt="Anish De"/><br /><sub><b>Anish De</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=AnishDe12020" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/vaibhavg20comp"><img src="https://avatars.githubusercontent.com/u/96220995?v=4?s=100" width="100px;" alt="Vaibhav Garje"/><br /><sub><b>Vaibhav Garje</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=vaibhavg20comp" title="Code">💻</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=vaibhavg20comp" title="Tests">⚠️</a></td>
     </tr>
   </tbody>
   <tfoot>
