@@ -13,8 +13,8 @@ const options: swaggerJsdoc.Options = {
             description:
                 'An API library for providing endpoints of mock data for use during testing. This API is still in the development and until it reaches version 1.0.0 the API is subject to change. To find out more head over to https://mocked-api.dev/',
         },
-        host: 'api.mocked-api.dev',
-        schemes: ['https'],
+        host: process.env.HOSTNAME || 'api.mocked-api.dev',
+        schemes: [process.env.SCHEME || 'https'],
         basePath: '/',
         consumes: ['application/json'],
         produces: ['application/json'],
