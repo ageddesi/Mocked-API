@@ -180,6 +180,15 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "devrrior",
+      "name": "Fernando Guerrero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69869135?v=4",
+      "profile": "https://github.com/devrrior",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
