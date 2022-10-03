@@ -25,6 +25,19 @@ module.exports = function(app : core.Express){
 
     })
 
+    /**
+     * @openapi
+     * "/time-zones/random":
+     *  get:
+     *    tags:
+     *      - TimeZones
+     *    summary: Get random time zone
+     *    responses:
+     *      '200':
+     *        description: OK
+     *        schema:
+     *          $ref: '#/definitions/MockTimeZoneResponse'
+     */
     // Get a random quote
     app.get("/time-zones/random", (req: Request, res: Response) => {
         const time_zone = time_zones[Math.floor(Math.random() * time_zones.length)];
