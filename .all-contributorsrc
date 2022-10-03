@@ -161,6 +161,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ATH42",
+      "name": "ATH",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80352300?v=4",
+      "profile": "https://github.com/ATH42",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
