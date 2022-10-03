@@ -105,7 +105,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/49640654?v=4",
       "profile": "http://kalwabed.xyz",
       "contributions": [
-        "code"
+        "code",
+        "test"
       ]
     },
     {
@@ -160,6 +161,53 @@
       "profile": "https://derzan.dev/",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "ATH42",
+      "name": "ATH",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80352300?v=4",
+      "profile": "https://github.com/ATH42",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Suraj-Bhandarkar-S",
+      "name": "Suraj Bhandarkar S",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42907076?v=4",
+      "profile": "http://suraj-bhandarkar-s.github.io/web/",
+      "contributions": [
+        "test"
+      ]
+    },
+    {
+      "login": "devrrior",
+      "name": "Fernando Guerrero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69869135?v=4",
+      "profile": "https://github.com/devrrior",
+      "contributions": [
+        "doc",
+        "test"
+      ]
+    },
+    {
+      "login": "AnishDe12020",
+      "name": "Anish De",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63192115?v=4",
+      "profile": "https://anishde.dev/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vaibhavg20comp",
+      "name": "Vaibhav Garje",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96220995?v=4",
+      "profile": "https://github.com/vaibhavg20comp",
+      "contributions": [
+        "code",
+        "test"
       ]
     }
   ],
