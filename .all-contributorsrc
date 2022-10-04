@@ -209,6 +209,15 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "fms12",
+      "name": "Mayank Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68012074?v=4",
+      "profile": "https://github.com/fms12",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
