@@ -68,6 +68,10 @@
         {
             "name": "Sports",
             "description": "A set of endpoints to get random sports data"
+        },
+        {
+            "name": "IP",
+            "description": "A set of endpoints to get random ip and mac address"
         }
     ],
     "paths": {
