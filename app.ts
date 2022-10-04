@@ -49,6 +49,7 @@ app.get('/docs.json', (req: Request, res: Response) => {
 const swaggerUi = require('swagger-ui-express');
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+
 app.use(cors()); // enabling CORS for all requests
 app.use(morgan('combined')); // adding morgan to log HTTP requests
 
