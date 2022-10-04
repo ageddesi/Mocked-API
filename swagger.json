@@ -84,6 +84,9 @@
         {
             "name": "TimeZones",
             "description": "A set of endpoints related to TimeZones"
+        },{
+            "name": "IP",
+            "description": "A set of endpoints to get random ip and mac address"
         }
     ],
     "paths": {
@@ -892,6 +895,46 @@
                             "items": {
                                 "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ip": {
+            "get": {
+                "tags": [
+                    "ip"
+                ],
+                "summary": "Obtain a random ip",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "17.32.365.125"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/mac": {
+            "get": {
+                "tags": [
+                    "mac"
+                ],
+                "summary": "Obtain a random mac address",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "44:F8:2A:57:6A:16"
                             }
                         }
                     }

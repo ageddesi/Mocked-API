@@ -28,6 +28,8 @@ require('./modules/elements/api/elements-routes')(app); // Chemical Elements
 require('./modules/time_zones/api/timezones-routes.ts')(app); // Timezones
 require('./modules/phone-numbers/api/phone-numbers-routes')(app); // Phone numbers
 require('./modules/quotes/api/quotes-routes')(app); // Quotes
+require('./modules/ip/api/ip-routes')(app); // ip and mac address
+
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
