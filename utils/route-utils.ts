@@ -2,11 +2,14 @@ import { Request } from 'express';
 import ImageDataType from '../modules/images/consts/imageDataType';
 
 const defaultQty = 10;
+const maxQty = 100;
 const imageWidthDefault = 640;
 const imageHeightDefault = 480;
 
 const getQtyFromRequest = (request : Request | null, overrideDefaultQty?: number | null) : number => {
-    return request.params.qty ? parseInt(request.params.qty) : (overrideDefaultQty? overrideDefaultQty: defaultQty);
+    return request.params.qty ? 
+           (parseInt(request.params.qty) < maxQty ? parseInt(request.params.qty):maxQty) :
+           (overrideDefaultQty? overrideDefaultQty: defaultQty);
 }
 
 const getImageDataFromRequest = (request : Request | null) : ImageDataType => {

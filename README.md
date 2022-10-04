@@ -38,7 +38,12 @@ Once you've cloned this repository, running Mocked-API is quite easy, there are 
 ```bash
 npm install
 ```
-2. Serve the application
+2. Configure the application
+An example configuration file `.env.example` is provided. 
+```bash
+npm run config
+```
+3. Serve the application
 ```bash
 npm run serve
 ```
@@ -47,9 +52,35 @@ This will show you where the application is running
 Mock API is running on port 3000.
 ```
 
+## Getting Started (Docker)
+
+1. Ensure you have Docker installed
+1. Open your terminal/command line tool
+1. Run `docker-compose up`
+1. Open your browser to [http://localhost:3000/](http://localhost:3000/)
+
 Now you should be able to make any request to that port, and get a response back! 
 
 💡 If you browse to that port, you'll see our swagger documentation. 
+
+
+## Testing
+
+### How to write tests
+For each module you create you will also need to create a tests folder, Inside this folder there should be a `api` and `utils`
+(if you create any utils) folder.
+
+The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add 
+```javascript
+const request = require('supertest');
+const baseURL = 'http://localhost:3000';
+``` 
+to your tests and make a request in your test instead of calling a normal function.
+
+### How to run tests
+1. Run the mocked api server locally
+2. run `npm run test`
+
 
 ## FAQ
 
