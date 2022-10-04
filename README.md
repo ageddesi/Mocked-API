@@ -36,7 +36,7 @@ First you should head over to https://api.mocked-api.dev and read our live api d
 Once you've cloned this repository, running Mocked-API is quite easy, there are just 2 steps you have to follow:
 1. Install the dependencies
 ```bash
-npm run install
+npm install
 ```
 2. Serve the application
 ```bash
