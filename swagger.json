@@ -845,6 +845,46 @@
                 }
             }
         },
+        "/ip": {
+            "get": {
+                "tags": [
+                    "ip"
+                ],
+                "summary": "Obtain a random ip",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "17.32.365.125"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/mac": {
+            "get": {
+                "tags": [
+                    "mac"
+                ],
+                "summary": "Obtain a random mac address",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "44:F8:2A:57:6A:16"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/images/animals/{width}/{height}/{qty}": {
             "get": {
                 "tags": [
