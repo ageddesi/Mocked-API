@@ -1,3 +1,5 @@
+export class macgen {
+
 function genMAC(){
     var hexDigits = "0123456789ABCDEF";
     var macAddress = "";
@@ -7,4 +9,5 @@ function genMAC(){
         if (i != 5) macAddress += ":";
     }
     return macAddress;
+}
 }
