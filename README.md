@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -36,7 +36,7 @@ First you should head over to https://api.mocked-api.dev and read our live api d
 Once you've cloned this repository, running Mocked-API is quite easy, there are just 2 steps you have to follow:
 1. Install the dependencies
 ```bash
-npm run install
+npm install
 ```
 2. Configure the application
 An example configuration file `.env.example` is provided. 
@@ -152,6 +152,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/vaibhavg20comp"><img src="https://avatars.githubusercontent.com/u/96220995?v=4?s=100" width="100px;" alt="Vaibhav Garje"/><br /><sub><b>Vaibhav Garje</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=vaibhavg20comp" title="Code">💻</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=vaibhavg20comp" title="Tests">⚠️</a></td>
+      <td align="center"><a href="https://github.com/computamike"><img src="https://avatars.githubusercontent.com/u/464876?v=4?s=100" width="100px;" alt="Mike Hingley"/><br /><sub><b>Mike Hingley</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=computamike" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/fms12"><img src="https://avatars.githubusercontent.com/u/68012074?v=4?s=100" width="100px;" alt="Mayank Singh"/><br /><sub><b>Mayank Singh</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=fms12" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
