@@ -19,6 +19,7 @@ describe('socials api endpoints', () => {
             expect(twitter).toHaveProperty('comments');
             expect(twitter).toHaveProperty('retweets');
             expect(twitter).toHaveProperty('date');
+            expect(response.body.length).toEqual(DEFAULT_POSTS_COUNT);
         });
     });
 
