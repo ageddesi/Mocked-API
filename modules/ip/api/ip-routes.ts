@@ -46,27 +46,6 @@ let maco = new macgen();
 *         schema:
 *           $ref: '#/definitions/MockipResponse'
 */
-
-/**
-* @openapi
-* '/mac/{qty}':
-*   get:
-*     tags:
-*     - Products
-*     summary: Returns a random list of mac addresses 
-*     parameters:
-*     - in: path
-*       name: qty
-*       description: The number of mac you want
-*     responses:
-*       '200':
-*         description: OK
-*         schema:
-*           $ref: '#/definitions/MockmacResponse'
-*/
-
-
-
 app.get("/ip/:qty?", (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
 
@@ -86,7 +65,23 @@ app.get("/ip/:qty?", (req: Request, res: Response) => {
         }
     })
 
-
+/**
+* @openapi
+* '/mac/{qty}':
+*   get:
+*     tags:
+*     - Products
+*     summary: Returns a random list of mac addresses 
+*     parameters:
+*     - in: path
+*       name: qty
+*       description: The number of mac you want
+*     responses:
+*       '200':
+*         description: OK
+*         schema:
+*           $ref: '#/definitions/MockmacResponse'
+*/
 app.get("/mac/:qty?", (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
 
