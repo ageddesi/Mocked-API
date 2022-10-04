@@ -110,15 +110,13 @@ module.exports = function (app: core.Express) {
 		res.json(ecommerceCart);
 	});
 
-	// Same functionality as above but I am adding the openapi comments for if it returned a list of carts of the given quantity
-
 	/**
 	 * @openapi
 	 * '/ecommerce/cart/{qty}':
 	 *   get:
 	 *     tags:
 	 *     - Ecommerce
-	 *     summary: Returns a list of random carts of the given quantity with random products
+	 *     summary: Returns a random cart with the given number of random products
 	 *     parameters:
 	 *     - in: path
 	 *       name: qty
