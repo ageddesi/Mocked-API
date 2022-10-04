@@ -105,7 +105,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/49640654?v=4",
       "profile": "http://kalwabed.xyz",
       "contributions": [
-        "code"
+        "code",
+        "test"
       ]
     },
     {
@@ -170,7 +171,63 @@
       "contributions": [
         "doc"
       ]
-    }
+    },
+    {
+      "login": "Suraj-Bhandarkar-S",
+      "name": "Suraj Bhandarkar S",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42907076?v=4",
+      "profile": "http://suraj-bhandarkar-s.github.io/web/",
+      "contributions": [
+        "test"
+      ]
+    },
+    {
+      "login": "devrrior",
+      "name": "Fernando Guerrero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69869135?v=4",
+      "profile": "https://github.com/devrrior",
+      "contributions": [
+        "doc",
+        "test"
+      ]
+    },
+    {
+      "login": "AnishDe12020",
+      "name": "Anish De",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63192115?v=4",
+      "profile": "https://anishde.dev/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vaibhavg20comp",
+      "name": "Vaibhav Garje",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96220995?v=4",
+      "profile": "https://github.com/vaibhavg20comp",
+      "contributions": [
+        "code",
+        "test"
+      ]
+    },
+    {
+      "login": "fms12",
+      "name": "Mayank Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68012074?v=4",
+      "profile": "https://github.com/fms12",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+    "login": "computamike",
+      "name": "Mike Hingley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/464876?v=4",
+      "profile": "https://github.com/computamike",
+      "contributions": [
+        "code"
+        ]
+     },
   ],
   "contributorsPerLine": 7,
   "skipCi": true,
