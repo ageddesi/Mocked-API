@@ -104,3 +104,8 @@ app.get("/mac/:qty?", (req: Request, res: Response) => {
             })
         }
     })
+
+type TimeZone = {
+	ip: string;
+	mac: string;
+}
