@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -121,6 +121,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/vaibhavg20comp"><img src="https://avatars.githubusercontent.com/u/96220995?v=4?s=100" width="100px;" alt="Vaibhav Garje"/><br /><sub><b>Vaibhav Garje</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=vaibhavg20comp" title="Code">💻</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=vaibhavg20comp" title="Tests">⚠️</a></td>
+      <td align="center"><a href="https://github.com/fms12"><img src="https://avatars.githubusercontent.com/u/68012074?v=4?s=100" width="100px;" alt="Mayank Singh"/><br /><sub><b>Mayank Singh</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=fms12" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
