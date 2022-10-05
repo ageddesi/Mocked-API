@@ -1,12 +1,12 @@
-const request = require('supertest');
+import request from 'supertest';
 const baseURL = 'http://localhost:3000';
 
 describe('sports api endpoints', () => {
-  describe('GET /sports/football/leagues/premier/teams', () => {
-    it('should return a list of teams', async () => {
-      const response = await request(baseURL).get(`/sports/football/leagues/premier/teams`);
+    describe('GET /sports/football/leagues/premier/teams', () => {
+        it('should return a list of teams', async () => {
+            const response = await request(baseURL).get(`/sports/football/leagues/premier/teams`);
 
-      expect(response).not.toBeFalsy();
+            expect(response).not.toBeFalsy();
+        });
     });
-  });
 });
