@@ -19,10 +19,10 @@ Welcome to Mocked-API, this is a live API that can be accessed by anyone who nee
 
 ## Hacktoberfest Contributors
 
-If you would like to contribute during Hacktoberfest please following our contribution guidelines (Which we are still working on) but here is a quick summary of what we expect in a PR.
+If you would like to contribute during Hacktoberfest please following our contribution guidelines (Which we are still working on) but here is a quick summary of what we expect in the process of dev to raising your PR.
 
 1. Find a ticket and ask to be assigned, once assigned start work. :) This is so we don't get multiple PR's for the same issue.
-1. Please branch from our active next release *v.0.13.0*
+1. Please branch from our active next release *dev*
 2. Please make sure your new endpoints all have OpenAPI Comments as they will be used to generate our swagger documentation.
 3. Please make sure you have added unit tests for end points and util functions.
 4. MOST importantly, have fun.
