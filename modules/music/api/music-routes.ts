@@ -48,12 +48,12 @@ module.exports = function (app: core.Express) {
 
     app.get('/album/:qty', (req: Request, res: Response) => {
         const { params } = req;
-        let data: Album[] = [];
+        const data: Album[] = [];
 
         data.push({
             id: faker.datatype.uuid(),
             name: faker.music.songName(),
-            releasedate: faker.date.past(80).toString().split(' ')[3],
+            releaseDate: faker.date.past(80).toString().split(' ')[3],
             price: '$' + Math.floor(Math.random() * (20 - 10 + 1) + 10),
             publisher: faker.company.name(),
             songs: Number(params.qty),
