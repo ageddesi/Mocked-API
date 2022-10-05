@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -36,9 +36,14 @@ First you should head over to https://api.mocked-api.dev and read our live api d
 Once you've cloned this repository, running Mocked-API is quite easy, there are just 2 steps you have to follow:
 1. Install the dependencies
 ```bash
-npm run install
+npm install
 ```
-2. Serve the application
+2. Configure the application
+An example configuration file `.env.example` is provided. 
+```bash
+npm run config
+```
+3. Serve the application
 ```bash
 npm run serve
 ```
@@ -47,9 +52,35 @@ This will show you where the application is running
 Mock API is running on port 3000.
 ```
 
+## Getting Started (Docker)
+
+1. Ensure you have Docker installed
+1. Open your terminal/command line tool
+1. Run `docker-compose up`
+1. Open your browser to [http://localhost:3000/](http://localhost:3000/)
+
 Now you should be able to make any request to that port, and get a response back! 
 
 💡 If you browse to that port, you'll see our swagger documentation. 
+
+
+## Testing
+
+### How to write tests
+For each module you create you will also need to create a tests folder, Inside this folder there should be a `api` and `utils`
+(if you create any utils) folder.
+
+The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add 
+```javascript
+const request = require('supertest');
+const baseURL = 'http://localhost:3000';
+``` 
+to your tests and make a request in your test instead of calling a normal function.
+
+### How to run tests
+1. Run the mocked api server locally
+2. run `npm run test`
+
 
 ## FAQ
 
@@ -116,8 +147,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://derzan.dev/"><img src="https://avatars.githubusercontent.com/u/76019114?v=4?s=100" width="100px;" alt="Derzan Chiang"/><br /><sub><b>Derzan Chiang</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=MiTo0o" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/ATH42"><img src="https://avatars.githubusercontent.com/u/80352300?v=4?s=100" width="100px;" alt="ATH"/><br /><sub><b>ATH</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=ATH42" title="Documentation">📖</a></td>
       <td align="center"><a href="http://suraj-bhandarkar-s.github.io/web/"><img src="https://avatars.githubusercontent.com/u/42907076?v=4?s=100" width="100px;" alt="Suraj Bhandarkar S"/><br /><sub><b>Suraj Bhandarkar S</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Suraj-Bhandarkar-S" title="Tests">⚠️</a></td>
-      <td align="center"><a href="https://github.com/devrrior"><img src="https://avatars.githubusercontent.com/u/69869135?v=4?s=100" width="100px;" alt="Fernando Guerrero"/><br /><sub><b>Fernando Guerrero</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=devrrior" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/devrrior"><img src="https://avatars.githubusercontent.com/u/69869135?v=4?s=100" width="100px;" alt="Fernando Guerrero"/><br /><sub><b>Fernando Guerrero</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=devrrior" title="Documentation">📖</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=devrrior" title="Tests">⚠️</a></td>
       <td align="center"><a href="https://anishde.dev/"><img src="https://avatars.githubusercontent.com/u/63192115?v=4?s=100" width="100px;" alt="Anish De"/><br /><sub><b>Anish De</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=AnishDe12020" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/vaibhavg20comp"><img src="https://avatars.githubusercontent.com/u/96220995?v=4?s=100" width="100px;" alt="Vaibhav Garje"/><br /><sub><b>Vaibhav Garje</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=vaibhavg20comp" title="Code">💻</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=vaibhavg20comp" title="Tests">⚠️</a></td>
+      <td align="center"><a href="https://github.com/computamike"><img src="https://avatars.githubusercontent.com/u/464876?v=4?s=100" width="100px;" alt="Mike Hingley"/><br /><sub><b>Mike Hingley</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=computamike" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/fms12"><img src="https://avatars.githubusercontent.com/u/68012074?v=4?s=100" width="100px;" alt="Mayank Singh"/><br /><sub><b>Mayank Singh</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=fms12" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>

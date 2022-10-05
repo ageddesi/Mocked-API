@@ -38,6 +38,10 @@
             "description": "A set of endpoints related to currencies"
         },
         {
+            "name": "Ecommerce",
+            "description": "A set of endpoints related to ecommerce"
+        },
+        {
             "name": "Emails",
             "description": "A set of endpoints related to emails"
         },
@@ -54,6 +58,10 @@
             "description": "A set of endpoints to get randomly generated names"
         },
         {
+            "name": "Phone Numbers",
+            "description": "A set of endpoints to get random phone numbers"
+        },
+        {
             "name": "Products",
             "description": "A set of endpoints to get random product related info"
         },
@@ -63,11 +71,22 @@
         },
         {
             "name": "Socials",
-            "description": "A set of endpoints to get random social feed data"  
+            "description": "A set of endpoints to get random social feed data"
         },
         {
             "name": "Sports",
             "description": "A set of endpoints to get random sports data"
+        },
+        {
+            "name": "Chemical Elements",
+            "description": "A set of endpoints to get random Chemical Elements values"
+        },
+        {
+            "name": "TimeZones",
+            "description": "A set of endpoints related to TimeZones"
+        },{
+            "name": "IP",
+            "description": "A set of endpoints to get random ip and mac address"
         }
     ],
     "paths": {
@@ -756,6 +775,47 @@
                 }
             }
         },
+        "/ecommerce/cart": {
+            "get": {
+                "tags": [
+                    "Ecommerce"
+                ],
+                "summary": "Returns ecommerce cart with products and totals",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockEcommerceCart"
+                        }
+                    }
+                }
+            }
+        },
+        "/ecommerce/cart/{qty}": {
+            "get": {
+                "tags": [
+                    "Ecommerce"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of products in your cart",
+                        "type": "string",
+                        "default": 5
+                    }
+                ],
+                "summary": "Returns ecommerce cart with products and totals",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockEcommerceCart"
+                        }
+                    }
+                }
+            }
+        },
         "/currencies/digital-coins/litecoin/random-address/{qty}": {
             "get": {
                 "tags": [
@@ -828,13 +888,53 @@
                     }
                 ],
                 "responses": {
-                    "200": {
+                    "200"Countries: {
                         "description": "OK",
                         "schema": {
                             "type": "array",
                             "items": {
                                 "type": "string",
                                 "example": "https://loremflickr.com/1024/201/cats?49645"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ip": {
+            "get": {
+                "tags": [
+                    "ip"
+                ],
+                "summary": "Obtain a random ip",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "17.32.365.125"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/mac": {
+            "get": {
+                "tags": [
+                    "mac"
+                ],
+                "summary": "Obtain a random mac address",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "44:F8:2A:57:6A:16"
                             }
                         }
                     }
@@ -1381,7 +1481,7 @@
                     {
                         "in": "path",
                         "name": "qty",
-                        "description": "The amount of image urls you require",
+                        "description": "The amount of image urls you acquire",
                         "type": "string",
                         "default": 10
                     }
@@ -1404,6 +1504,15 @@
             "get": {
                 "tags": ["Music"],
                 "summary" : "Get a song name and genre",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of songs and genre you acquire",
+                        "type": "string",
+                        "default": 5
+                    }
+                ],
                 "responses": {
                     "200" : {
                         "description" : "OK",
@@ -1422,6 +1531,15 @@
             "get": {
                 "tags": ["Music"],
                 "summary" : "Get an album name with release date, publisher, price, and total songs inlcuded",
+                 "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of albums you require",
+                        "type": "string",
+                        "default": 5
+                    }
+                ],
                 "responses": {
                     "200" : {
                         "description" : "OK",
@@ -1803,6 +1921,130 @@
                 }
             }
         },
+        "/phonenumbers": {
+            "get": {
+                "tags": [
+                    "Phone Numbers"
+                ],
+                "summary": "Obtain a random phone number in a random format",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string",
+                            "example": "+1 222 333 4444"
+                        }
+                    }
+                }
+            }
+        },
+        "/phonenumbers/country/{countrycode}/{format}": {
+            "get": {
+                "tags": [
+                    "Phone Numbers"
+                ],
+                "summary": "Obtain a random phone number based on country code and optional formatting",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "country code",
+                        "description": "The 2 letter code of a country (ISO 3166-1 alpha-2)",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "format",
+                        "description": "The separator for the phone number 'space', 'nospace', 'dash'",
+                        "required": false,
+                        "type": "string",
+                        "default": "space"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string",
+                            "example": "+1-222-333-4444"
+                        }
+                    }
+                }
+            }
+        },
+        "/phonenumbers/imei": {
+            "get": {
+                "tags": [
+                    "Phone Numbers"
+                ],
+                "summary": "Obtain a random IMEI (International Mobile Equipment Identity) number",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string",
+                            "example": "85-635465-967419-2"
+                        }
+                    }
+                }
+            }
+        },
+        "/product/{department}" : {
+            "get": {
+                "tags": ["Products"],
+                "summary" : "Get a single product with a specified department",
+                "parameters": [
+                    {
+                        "required": false,
+                        "type": "string",
+                        "in": "path",
+                        "name": "department",
+                        "default": "General",
+                        "description": "Specify department product should be filed under"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/products/{qty}/{department}" : {
+            "get": {
+                "tags": ["Products"],
+                "summary" : "Obtain a list of random products",
+                "parameters": [
+                    {
+                        "required": false,
+                        "type": "number",
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    },
+                    {
+                        "required": false,
+                        "type": "string",
+                        "in": "path",
+                        "name": "department",
+                        "default": "General",
+                        "description": "Specify department product should be filed under"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/products/reviews": {
             "get": {
                 "tags": [
@@ -1932,8 +2174,86 @@
                     }
                 }
             }
-        }
-    },
+        },
+        "/time_zones": {
+            "get": {
+                "tags": [
+                    "/TimeZones"
+                ],
+                "summary": "Returns an object of all available TimeZones",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/time_zones": {
+            "get": {
+                "tags": [
+                    "/TimeZones/random"
+                ],
+                "summary": "Returns an random TimeZones",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/elements": {
+            "get": {
+                "tags": [
+                    "Chemical Elements"
+                ],
+                "summary": "Get a random value of a Chemical Elements",
+                "parameters": [],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockChemicalElement"
+                        }
+                    }
+                }
+            }
+        },
+        "/elements/{qty}": {
+            "get": {
+                "tags": [
+                    "Chemical Elements"
+                ],
+                "summary": "Get a random list of value of Chemical Elements",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description" : "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MockChemicalElements"
+                            }
+                    }
+                }
+            }
+        },
     "definitions": {
         "ErrorResponse": {
             "type": "string",
@@ -1983,40 +2303,150 @@
                 }
             }
         },
+        "MockEcommerceCartItem": {
+            "type":"object",
+            "properties": {
+                "pricePerUnit": {
+                    "type":"number",
+                    "example": 2
+                },
+                "quantity": {
+                    "type":"number",
+                    "example":2
+                },
+                "product": {
+                    "type": "object",
+                    "properties":{
+                        "productName": {
+                            "type": "string",
+                            "example": "Super Gamer Juice"
+                        },
+                        "productId": {
+                            "type": "number",
+                            "example": 1
+                        },
+                        "message": {
+                            "type": "string",
+                            "example": "The only drink I will ever need."
+                        },
+                        "dateTime": {
+                            "type": "string",
+                            "example": "1984-05-21T00:02:11.497Z"
+                        },
+                        "rating": {
+                            "type": "number",
+                            "example": 1
+                        },
+                        "userName": {
+                            "type": "string",
+                            "example": "Aaron Rackley"
+                        },
+                        "categories": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "sport-drinks"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "MockEcommerceCart": {
+            "type":"object",
+            "properties": {
+                "products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MockEcommerceCartItem"
+                    }
+                },
+                "couponCode":{
+                    "type":"string",
+                    "default": "DISCOUNT"
+                },
+                "couponPercent":{
+                    "type":"number",
+                    "default":8
+                },
+                "couponValue":{
+                    "type":"number",
+                    "default":4
+                },
+                "taxPercent":{
+                    "type":"number",
+                    "default":4
+                },
+                "taxApplied":{
+                    "type":"number",
+                    "default":8
+                },
+                "postageValue":{
+                    "type":"number",
+                    "default":5
+                },
+                "subtotal":{
+                    "type":"number",
+                    "default":100
+                },
+                "total":{
+                    "type":"number",
+                    "default": 120
+                }
+            }
+        },
         "MockProductReview": {
             "type": "array",
             "items": {
-                "type": "object",
+                "type" : "object",
                 "properties": {
-                    "productName": {
-                        "type": "string",
-                        "example": "Super Gamer Juice"
+                    "department" : {
+                        "type" : "string",
+                        "example" : "Sports"
                     },
-                    "productId": {
-                        "type": "number",
-                        "example": 1
+                    "type" : {
+                        "type" : "string",
+                        "example" : "Ball"
                     },
-                    "message": {
-                        "type": "string",
-                        "example": "The only drink I will ever need."
+                    "name" : {
+                        "type" : "string",
+                        "example" : "Sleek Bronze Towels"
                     },
-                    "dateTime": {
-                        "type": "string",
-                        "example": "1984-05-21T00:02:11.497Z"
+                    "adjective" : {
+                        "type" : "string",
+                        "example" : "Incredible"
                     },
-                    "rating": {
-                        "type": "number",
-                        "example": 1
+                    "description" : {
+                        "type" : "string",
+                        "example" : "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
                     },
-                    "userName": {
-                        "type": "string",
-                        "example": "Aaron Rackley"
+                    "material" : {
+                        "type" : "string",
+                        "example" : "Soft"
                     },
-                    "categories": {
-                        "type": "array",
+                    "sku" : {
+                        "type" : "array",
                         "items": {
-                            "type": "string",
-                            "example": "sport-drinks"
+                            "type" : "object",
+                            "properties": {
+                                "meta": {
+                                    "type" : "object",
+                                    "properties": {
+                                        "size" : {
+                                            "type" : "string",
+                                            "example" : "Medium"
+                                        }
+                                    }
+                                },
+                                "price" : {
+                                    "type" : "string",
+                                    "example" : "232.00"
+                                },
+                                "amount" : {
+                                    "type" : "number",
+                                    "example" : 11109
+                                }
+                            }
                         }
                     }
                 }
@@ -2168,6 +2598,67 @@
                     "date" : {
                         "type" : "string",
                         "example" : "2022-09-22T16:03:17.885Z"
+                    }
+                }
+            }
+        },
+        "MockChemicalElement" : {
+            "properties": {
+                "symbol": {
+                    "type": "string",
+                    "example": "N"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Nitrogen"
+                },
+                "atomicNumber": {
+                    "type" : "number",
+                    "example" : 7
+                }
+            }
+        },
+        "MockChemicalElements" : {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/MockChemicalElement"
+            }
+        },
+        "MockProductReview": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "productName": {
+                        "type": "string",
+                        "example": "Super Gamer Juice"
+                    },
+                    "productId": {
+                        "type": "number",
+                        "example": 1
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "The only drink I will ever need."
+                    },
+                    "dateTime": {
+                        "type": "string",
+                        "example": "1984-05-21T00:02:11.497Z"
+                    },
+                    "rating": {
+                        "type": "number",
+                        "example": 1
+                    },
+                    "userName": {
+                        "type": "string",
+                        "example": "Aaron Rackley"
+                    },
+                    "categories": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "sport-drinks"
+                        }
                     }
                 }
             }
