@@ -17,6 +17,18 @@
 
 Welcome to Mocked-API, this is a live API that can be accessed by anyone who needs data to test out their website, app, components etc.
 
+## Hacktoberfest Contributors
+
+If you would like to contribute during Hacktoberfest please following our contribution guidelines (Which we are still working on) but here is a quick summary of what we expect in a PR.
+
+1. Find a ticket and ask to be assigned, once assigned start work. :) This is so we don't get multiple PR's for the same issue.
+1. Please branch from our active next release *v.0.13.0*
+2. Please make sure your new endpoints all have OpenAPI Comments as they will be used to generate our swagger documentation.
+3. Please make sure you have added unit tests for end points and util functions.
+4. MOST importantly, have fun.
+
+If you need help, please leave a comment on the ticket you are assigned to our join our discord by clicking the link below.
+
 ## Getting Started
 
 First you should head over to https://api.mocked-api.dev and read our live api docs than start calling the api endpoints for the data you need.
