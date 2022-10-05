@@ -1,39 +1,3 @@
-/**
- * @openapi
- * definitions:
- *   MockChemicalElement:
- *     type: object
- *     properties:
- *       symbol:
- *         type: string
- *         example: Cl
- *       name:
- *         type: string
- *         example: Chlorine
- *       atomicNumber:
- *         type: number
- *         example: 17
- */
-
-/**
- * @openapi
- * definitions:
- *   MockChemicalElementList:
- *     type: array
- *     items:
- *       type: object
- *       properties:
- *         symbol:
- *           type: string
- *           example: Cl
- *         name:
- *           type: string
- *           example: Chlorine
- *         atomicNumber:
- *           type: number
- *           example: 17
- */
-
 // jest test for getElement.ts which gets random chemical element
 
 import { getElement } from '../../utils/getElement';
