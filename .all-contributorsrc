@@ -75,7 +75,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/31249309?v=4",
       "profile": "https://github.com/fadkeabhi",
       "contributions": [
-        "doc",
         "code"
       ]
     },
@@ -105,7 +104,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/49640654?v=4",
       "profile": "http://kalwabed.xyz",
       "contributions": [
-        "code",
         "test"
       ]
     },
@@ -220,14 +218,41 @@
       ]
     },
     {
-    "login": "computamike",
+      "login": "computamike",
       "name": "Mike Hingley",
       "avatar_url": "https://avatars.githubusercontent.com/u/464876?v=4",
       "profile": "https://github.com/computamike",
       "contributions": [
         "code"
-        ]
-     }
+      ]
+    },
+    {
+      "login": "kk5190",
+      "name": "krishna",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3418713?v=4",
+      "profile": "https://www.krishnasingh.co.in/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "VadimDez",
+      "name": "Vadym Yatsyuk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3748453?v=4",
+      "profile": "https://vadimdez.github.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nibih",
+      "name": "Nicholas Robert Beckham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42928462?v=4",
+      "profile": "https://github.com/nibih",
+      "contributions": [
+        "test"
+      ]
+    }
   ],
   "contributorsPerLine": 7,
   "skipCi": true,
