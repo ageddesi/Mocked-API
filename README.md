@@ -6,8 +6,8 @@
 <p align="center" style="margin-bottom: 20px">
   <a href="https://github.com/ageddesi/Mocked-API">
     <img
-      src="./mocked-api-logo.png" 
-      alt="Mocked-API" 
+      src="./mocked-api-logo.png"
+      alt="Mocked-API"
       width="35%">
   </a>
 </p>
@@ -26,8 +26,8 @@ First you should head over to https://api.mocked-api.dev and read our live api d
 <p align="center" style="margin-bottom: 20px">
   <a href="https://discord.gg/yxqrkjDR87">
     <img
-      src="./discord-join.png" 
-      alt="Join Our Discord" 
+      src="./discord-join.png"
+      alt="Join Our Discord"
       width="35%">
   </a>
 </p>
@@ -39,7 +39,7 @@ Once you've cloned this repository, running Mocked-API is quite easy, there are 
 npm install
 ```
 2. Configure the application
-An example configuration file `.env.example` is provided. 
+An example configuration file `.env.example` is provided.
 ```bash
 npm run config
 ```
@@ -59,9 +59,9 @@ Mock API is running on port 3000.
 1. Run `docker-compose up`
 1. Open your browser to [http://localhost:3000/](http://localhost:3000/)
 
-Now you should be able to make any request to that port, and get a response back! 
+Now you should be able to make any request to that port, and get a response back!
 
-💡 If you browse to that port, you'll see our swagger documentation. 
+💡 If you browse to that port, you'll see our swagger documentation.
 
 
 ## Testing
@@ -70,11 +70,11 @@ Now you should be able to make any request to that port, and get a response back
 For each module you create you will also need to create a tests folder, Inside this folder there should be a `api` and `utils`
 (if you create any utils) folder.
 
-The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add 
+The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add
 ```javascript
-const request = require('supertest');
+import request from 'supertest';
 const baseURL = 'http://localhost:3000';
-``` 
+```
 to your tests and make a request in your test instead of calling a normal function.
 
 ### How to run tests
@@ -97,7 +97,7 @@ I encourage you to contribute to ***Mocked-API***! Feel free to fork the codebas
 
 Our contributing guide is currently WIP and available here [CONTRIBUTING GUIDE](CONTRIBUTING.md)
 
-We use semantic commit messages 
+We use semantic commit messages
 - feat: (new feature for the user, not a new feature for build script)
 - fix: (bug fix for the user, not a fix to a build script)
 - docs: (changes to the documentation)
@@ -157,7 +157,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
   </tbody>
   <tfoot>
-    
+
   </tfoot>
 </table>
 
