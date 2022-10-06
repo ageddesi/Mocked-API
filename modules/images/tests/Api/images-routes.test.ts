@@ -14,11 +14,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/abstract/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -29,11 +27,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/animals/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -45,14 +41,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/avatar/${width}/${height}/${qty}}`);
-
-            console.log(response.body);
-
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -63,11 +54,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/business/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -78,11 +67,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/cats/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -93,11 +80,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/city/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -108,11 +93,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/fashion/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -123,11 +106,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/food/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -138,11 +119,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/nature/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -153,11 +132,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/nightlife/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -168,11 +145,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/people/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -183,11 +158,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/sports/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -198,11 +171,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/technics/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });
@@ -213,11 +184,9 @@ describe('image api endpoints', () => {
             const width = 200;
             const height = 200;
             const qty = 2;
-
             const response = await request(baseURL).get(`/images/transport/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
-
             expect(width_height[0]).toEqual(width.toString());
             expect(width_height[1]).toEqual(height.toString());
         });

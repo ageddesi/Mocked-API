@@ -60,6 +60,10 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to obtaining placeholder image urls',
             },
             {
+                name: 'IPs',
+                description: 'A set of endpoints related to obtaining random IP Addresses',
+            },
+            {
                 name: 'Invoices',
                 description: 'A set of endpoints related to invoices',
             },

@@ -15,8 +15,6 @@ describe('country api endpoints', () => {
         it('should return gpb_usd ticker data', async () => {
             const filter = 'Afghanistan';
             const response = await request(baseURL).get(`/countries/${filter}`);
-            console.log(response.body);
-
             expect(response.body.countries[0]).toEqual(filter);
         });
     });
