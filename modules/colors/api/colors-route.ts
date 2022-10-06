@@ -33,8 +33,7 @@ module.exports = function (app: core.Express) {
      *             example: efc27b
      */
     app.get('/colors/:qty?', (req: Request, res: Response) => {
-        const qty = getQtyFromRequest(req);
-
+        const qty = getQtyFromRequest(req,1)
         try {
             const randomColors = [];
 
