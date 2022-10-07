@@ -2,6 +2,7 @@ let request = require('supertest');
 
 const baseUrl = 'http://localhost:13000';
 
+// address-routes.ts tests
 describe('GET /address/', () => {
 	it('should return a random address', async () => {
 
@@ -16,6 +17,7 @@ describe('GET /address/', () => {
 	})
 })
 
+// address/:country
 describe('GET /address/:country', () => {
 	it('should return a random USA format address', async () => {
 		const response = await request(baseUrl)
@@ -40,6 +42,7 @@ describe('GET /address/:country', () => {
 	})
 })
 
+// address/:country/:qty
 describe('GET /address/:country/:qty', () => {
 	it('should return given number of random USA format addresses', async () => {
 		const response = await request(baseUrl)

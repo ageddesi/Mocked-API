@@ -10,7 +10,8 @@ const getRandomAddresses = (addressCount : number = 1, country : string = 'uk') 
 		let streetAddress = faker.address.streetAddress(false);
 		let city = faker.address.cityName();
 		let zipcode = faker.address.zipCode();
-		let address = `${addresseeName}\n${streetAddress}`;
+
+		let address = `${addresseeName}\n${streetAddress}\n`;
 	
 		switch (country) {
 			case 'uk':
