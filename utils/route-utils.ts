@@ -5,6 +5,7 @@ const defaultQty = 10;
 const maxQty = 100;
 const imageWidthDefault = 640;
 const imageHeightDefault = 480;
+const defaultCountry = 'uk';
 
 const getQtyFromRequest = (request: Request | null, overrideDefaultQty?: number | null): number => {
     return request.params.qty
@@ -27,4 +28,13 @@ const getImageDataFromRequest = (request: Request | null): ImageDataType => {
     };
 };
 
-export { getQtyFromRequest, getImageDataFromRequest };
+const getCountryNameFromRequest = (request : Request | null) : string => {
+	return request.params.country ? request.params.country : defaultCountry;
+}
+
+
+export {
+    getQtyFromRequest,
+    getImageDataFromRequest,
+	getCountryNameFromRequest
+}

@@ -30,8 +30,8 @@ require('./modules/phone-numbers/api/phone-numbers-routes')(app); // Phone numbe
 require('./modules/quotes/api/quotes-routes')(app); // Quotes
 require('./modules/ip/api/ip-routes')(app); // ip and mac address
 require('./modules/vehicles/api/vehicles-routes')(app); // Vehicles
+require('./modules/address/api/address-routes')(app); // Addresses
 require('./modules/bankfeed/api/bankfeed-routes')(app); // Bank Feed
-
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
