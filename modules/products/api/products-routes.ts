@@ -142,7 +142,7 @@ module.exports = function (app: core.Express) {
 
 	/**
 	 * @openapi
-	 * '/products/quantity/{qty}':
+	 * '/products/{qty}':
 	 *   get:
 	 *     tags:
 	 *     - Products
@@ -157,7 +157,7 @@ module.exports = function (app: core.Express) {
 	 *         schema:
 	 *           $ref: '#/definitions/MockProduct'
 	 */
-	app.get('/products/quantity/:qty?', (req: Request, res: Response) => {
+	app.get('/products/:qty?', (req: Request, res: Response) => {
 		const qty = getQtyFromRequest(req);
 		res.json(getProducts(qty));
 	});
