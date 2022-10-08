@@ -1,6 +1,6 @@
 import request from 'supertest';
+import app from '../../../../app';
 
-const baseURL = 'http://localhost:3000';
 
 const get_width_height = (str: string): string[] => {
     const width_height_regex = /\d+\/\d+/;
@@ -15,7 +15,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/abstract/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/abstract/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -30,7 +30,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/animals/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/animals/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -46,7 +46,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/avatar/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/avatar/${width}/${height}/${qty}}`);
 
             console.log(response.body);
 
@@ -64,7 +64,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/business/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/business/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -79,7 +79,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/cats/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/cats/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -94,7 +94,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/city/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/city/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -109,7 +109,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/fashion/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/fashion/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -124,7 +124,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/food/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/food/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -139,7 +139,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/nature/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/nature/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -154,7 +154,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/nightlife/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/nightlife/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -169,7 +169,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/people/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/people/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -184,7 +184,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/sports/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/sports/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -199,7 +199,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/technics/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/technics/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 
@@ -214,7 +214,7 @@ describe('image api endpoints', () => {
             const height = 200;
             const qty = 2;
 
-            const response = await request(baseURL).get(`/images/transport/${width}/${height}/${qty}}`);
+            const response = await request(app).get(`/images/transport/${width}/${height}/${qty}}`);
             expect(response.body.length).toBe(qty);
             const width_height = get_width_height(response.body[0]);
 

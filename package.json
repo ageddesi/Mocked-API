@@ -7,6 +7,7 @@
     "serve": "nodemon app.ts",
     "config": "ts-node utils\\config.ts",
     "test": "jest",
+    "test:watch": "jest --watch",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
     "contributors:check": "all-contributors check"

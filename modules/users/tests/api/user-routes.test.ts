@@ -1,10 +1,10 @@
 import request from 'supertest';
-const baseURL = 'http://localhost:3000';
+import app from '../../../../app';
 
 describe('user api endpoints', () => {
     describe('GET /user', () => {
         it('should return a user', async () => {
-            const response = await request(baseURL).get(`/users/`);
+            const response = await request(app).get(`/users/`);
 
             expect(response.body[0]).toHaveProperty('avatarUrl');
             expect(response.body[0]).toHaveProperty('birthDate');
@@ -20,7 +20,7 @@ describe('user api endpoints', () => {
         const qty = 5;
 
         it('should return a list of users ', async () => {
-            const response = await request(baseURL).get(`/users/${qty}`);
+            const response = await request(app).get(`/users/${qty}`);
             expect(response.body.length).toEqual(qty);
         });
     });

@@ -1,10 +1,10 @@
 import request from 'supertest';
+import app from '../../../../app';
 
-const baseURL = 'http://localhost:3000';
 
 describe('GET /time-zones/', () => {
   it('should return 200 OK', async () => {
-    const response = await request(baseURL).get('/time-zones');
+    const response = await request(app).get('/time-zones');
     const timeZone = response.body[0];
 
     expect(response.status).toBe(200);
@@ -20,7 +20,7 @@ describe('GET /time-zones/', () => {
 
 describe('GET /time-zones/random', () => {
   it('should return 200 OK', async () => {
-    const response = await request(baseURL).get('/time-zones/random');
+    const response = await request(app).get('/time-zones/random');
     const timeZone = response.body;
 
     expect(response.status).toBe(200);
