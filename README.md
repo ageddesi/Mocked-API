@@ -85,14 +85,13 @@ For each module you create you will also need to create a tests folder, Inside t
 The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add
 ```javascript
 import request from 'supertest';
-const baseURL = 'http://localhost:3000';
+import app from 'path/to/app';
 ```
 to your tests and make a request in your test instead of calling a normal function.
 
 ### How to run tests
-1. Run the mocked api server locally
-2. run `npm run test`
-
+run `npm test`
+run `npm run test:watch` to run the tests in watch mode.
 
 ## FAQ
 
