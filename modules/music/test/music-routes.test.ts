@@ -2,13 +2,13 @@ import request from 'supertest';
 import { Album } from '../consts/Album';
 import { Music } from '../consts/Music';
 
-const baseURL = 'http://localhost:3000';
+import app from '../../../app';
 
 describe('music api endpoints', () => {
     describe('GET /music/:qty', () => {
         it('should return a list of musics', async () => {
             const qty = 10;
-            const response = await request(baseURL).get(`/music/${qty}`);
+            const response = await request(app).get(`/music/${qty}`);
             const music: Music = response.body.data[0];
 
             expect(music).toHaveProperty('id');
@@ -21,7 +21,7 @@ describe('music api endpoints', () => {
     describe('GET /album/:qty', () => {
         it('should return a album', async () => {
             const qty = 10;
-            const response = await request(baseURL).get(`/album/${qty}`);
+            const response = await request(app).get(`/album/${qty}`);
             const album: Album = response.body.data[0];
 
             expect(album).toHaveProperty('id');

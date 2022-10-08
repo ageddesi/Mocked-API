@@ -6,8 +6,6 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
-
 // Load Mock Modules
 require('./modules/animal/api/animal-routes')(app); // Animals
 require('./modules/chat/api/chat-routes')(app); // Chat
@@ -55,6 +53,4 @@ app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(cors()); // enabling CORS for all requests
 app.use(morgan('combined')); // adding morgan to log HTTP requests
 
-app.listen(port, () => {
-    console.log(`Mock API is running on port ${port}.`);
-});
+export default app;
