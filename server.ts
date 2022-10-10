@@ -1,13 +1,9 @@
-import express from 'express';
-
 import app from './app'
 
-const server = express();
 const port = 3000;
 
-app.use(app);
-
-server.listen(port, () => {
+app.listen(port, () => {
     console.log(`Mock API is running on port ${port}.`);
+    console.log(`Vist Mock API in the browser http://localhost:${port}.`);
 });
 

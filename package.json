@@ -4,7 +4,7 @@
   "description": "An API library for providing endpoints of mock data for use during testing",
   "main": "app.ts",
   "scripts": {
-    "serve": "nodemon app.ts",
+    "serve": "nodemon server.ts",
     "config": "ts-node utils\\config.ts",
     "test": "jest",
     "test:watch": "jest --watch",
