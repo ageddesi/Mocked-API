@@ -901,7 +901,7 @@ const time_zones = [
     "isdst": false,
     "text": "(UTC+03:00) Moscow, St. Petersburg, Volgograd, Minsk",
     "utc": [
-	    "Europe/Kirov",
+      "Europe/Kirov",
       "Europe/Moscow",
       "Europe/Simferopol",
       "Europe/Volgograd",
@@ -915,9 +915,9 @@ const time_zones = [
     "isdst": false,
     "text": "(UTC+04:00) Samara, Ulyanovsk, Saratov",
     "utc": [
-	    "Europe/Astrakhan",
+      "Europe/Astrakhan",
       "Europe/Samara",
-	    "Europe/Ulyanovsk"
+      "Europe/Ulyanovsk"
     ]
   },
   {

@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import time_zones from '../data/time_zones';
 
-module.exports = function(app : core.Express){
+module.exports = function (app: core.Express) {
 
     /**
      * @openapi

@@ -6,7 +6,6 @@ describe.only('chat api endpoints', () => {
     describe('GET /chat/random', () => {
         it('should return a random chat snapshot with 1000 messages', async () => {
             const response = await request(app).get(`/chat/random`);
-
             expect(response.body.messages.length).toBe(1000);
             expect(response.body.messages[0]).toHaveProperty('id');
             expect(response.body.messages[0]).toHaveProperty('createdAt');
