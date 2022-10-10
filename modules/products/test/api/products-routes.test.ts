@@ -1,10 +1,10 @@
 import request from 'supertest';
-const baseURL = 'http://localhost:3000';
+import app from '../../../../app';
 
 describe('products api endpoints', () => {
     describe('GET /products/reviews', () => {
         it('should return a user', async () => {
-            const response = await request(baseURL).get(`/products/reviews`);
+            const response = await request(app).get(`/products/reviews`);
 
             expect(response.body[0]).toHaveProperty('productName');
             expect(response.body[0]).toHaveProperty('productId');
@@ -71,7 +71,7 @@ describe('products api endpoints', () => {
     });
 
     describe('GET /product', () => {
-        it('should return a list of reviews ', async () => {
+        it('should return a random product ', async () => {
             const response = await request(baseURL).get(`/product`);
             expect(response.body.length).toEqual(1);
             expect(response.body[0]).toHaveProperty('department');

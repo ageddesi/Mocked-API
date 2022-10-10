@@ -6,8 +6,6 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
-
 // Load Mock Modules
 require('./modules/animal/api/animal-routes')(app); // Animals
 require('./modules/chat/api/chat-routes')(app); // Chat
@@ -30,8 +28,9 @@ require('./modules/phone-numbers/api/phone-numbers-routes')(app); // Phone numbe
 require('./modules/quotes/api/quotes-routes')(app); // Quotes
 require('./modules/ip/api/ip-routes')(app); // ip and mac address
 require('./modules/vehicles/api/vehicles-routes')(app); // Vehicles
+require('./modules/address/api/address-routes')(app); // Addresses
 require('./modules/bankfeed/api/bankfeed-routes')(app); // Bank Feed
-
+require('./modules/location/api/location-routes')(app); // Bank Feed
 
 // Add an healthcheck endpoint
 app.get('/status', (req, res) => {
@@ -53,10 +52,7 @@ app.get('/docs.json', (req: Request, res: Response) => {
 const swaggerUi = require('swagger-ui-express');
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-
 app.use(cors()); // enabling CORS for all requests
 app.use(morgan('combined')); // adding morgan to log HTTP requests
 
-app.listen(port, () => {
-    console.log(`Mock API is running on port ${port}.`);
-});
+export default app;

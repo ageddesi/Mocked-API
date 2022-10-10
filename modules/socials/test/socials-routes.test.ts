@@ -2,13 +2,12 @@ import request from 'supertest';
 import Twitter from '../consts/Twitter';
 import Instagram from '../consts/Instagram';
 import { DEFAULT_POSTS_COUNT } from '../consts/default';
-
-const baseURL = 'http://localhost:3000';
+import app from '../../../app';
 
 describe('socials api endpoints', () => {
     describe('GET /socials/twitter/', () => {
         it('should returns a list of fake twitter posts', async () => {
-            const response = await request(baseURL).get(`/socials/twitter/`);
+            const response = await request(app).get(`/socials/twitter/`);
             const twitter: Twitter = response.body[0];
 
             expect(twitter).toHaveProperty('id');
@@ -25,7 +24,7 @@ describe('socials api endpoints', () => {
 
     describe('GET /socials/instagram/', () => {
         it('should returns a list of fake instagram posts', async () => {
-            const response = await request(baseURL).get(`/socials/instagram/`);
+            const response = await request(app).get(`/socials/instagram/`);
             const instagram: Instagram = response.body[0];
 
             expect(instagram).toHaveProperty('id');

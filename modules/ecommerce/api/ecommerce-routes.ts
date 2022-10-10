@@ -8,41 +8,40 @@ import { getEcommerceCart } from '../utils/get-ecommerce-cart';
  *   MockEcommerceProduct:
  *     type: object
  *     properties:
- *       department:
- *         type: string
- *         example: Computers
- *       type:
- *         type: string
- *         example: Chair
- *       name:
- *         type: string
- *         example: Generic Granite Chair
- *       adjective:
- *         type: string
- *         example: Recycled
- *       description:
- *         type: string
- *         example: Carbonite web goalkeeper gloves are ergonomically designed to give easy fit
- *       material:
- *         type: string
- *         example: Wooden
- *       sku:
- *         type: array
- *         items:
- *           type: object
- *           properties:
- *             meta:
- *               type: object
- *               properties:
- *                 size:
- *                   type: string
- *                   example: Standard
- *             price:
+ *       pricePerUnit:
+ *         type: number
+ *         example: 35.44
+ *       quantity:
+ *         type: number
+ *         example: 3
+ *       product:
+ *         type: object
+ *         properties:
+ *           productId:
+ *             type: number
+ *             example: 1
+ *           productName:
+ *             type: string
+ *             example: Super Gamer Juice
+ *           message:
+ *             type: string
+ *             example: I couldn't have managed my 36 hour stint on Fallout 76, without the 4 litres of Super Gamer Juice I drank
+ *           dateTime:
+ *             type: string
+ *             example: 2020-07-02T20:56:42.244Z
+ *           rating:
+ *             type: number
+ *             example: 4
+ *           userName:
+ *             type: array
+ *             items:
  *               type: string
- *               example: 806.00
- *             amount:
- *               type: number
- *               amount: 49403
+ *               example: Myraa
+ *           categories:
+ *             type: array
+ *             items:
+ *               type: string
+ *               example: sport-drinks
  */
 
 /**
