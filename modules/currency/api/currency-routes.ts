@@ -41,9 +41,10 @@ module.exports = function(app: core.Express){
     })
 
     //Returns the list of transactions performed by an address
-    app.get("/currencies/digital-coins/ethereum/tx-list/:address?", (req: Request, res: Response) => {
+    app.get("/currencies/digital-coins/ethereum/tx-list/:address?/:qty?", (req: Request, res: Response) => {
         const address = req.params.address;
-        const tx_list = getDigitalCurrencyTxList(address);
+        const qty = parseInt(req.params.qty);
+        const tx_list = getDigitalCurrencyTxList(address, qty);
         res.json(tx_list);
     })
 
