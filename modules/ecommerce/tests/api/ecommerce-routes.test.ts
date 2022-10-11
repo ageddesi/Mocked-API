@@ -1,10 +1,10 @@
-const request = require('supertest');
-const baseURL = 'http://localhost:3000';
+import app from "../../../../app";
+let request = require('supertest');
 
 describe('ecommerce api endpoints', () => {
   describe('GET /ecommerce/cart', () => {
     it('should return a random cart with random products', async () => {
-      const response = await request(baseURL).get(`/ecommerce/cart`);
+      const response = await request(app).get(`/ecommerce/cart`);
       
       const cart = response.body;
 
@@ -35,7 +35,7 @@ describe('ecommerce api endpoints', () => {
     const qty = 2;
 
     it('should return a random cart with the given quantity of products', async () => {
-      const response = await request(baseURL).get(`/ecommerce/cart/${qty}`);
+      const response = await request(app).get(`/ecommerce/cart/${qty}`);
       expect(response.body.products.length).toEqual(qty);
     });
   });

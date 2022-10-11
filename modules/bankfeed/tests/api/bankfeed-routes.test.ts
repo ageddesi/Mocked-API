@@ -1,12 +1,12 @@
-import request from 'supertest';
-const baseURL = 'http://localhost:3000';
+import app from "../../../../app";
+let request = require('supertest');
 
 describe('bank feed api endpoints', () => {
     describe('GET /bank/feed/:qty', () => {
         it('should return a list of bank statement', async () => {
             const qty = 5;
 
-            const response = await request(baseURL).get(`/bank/feed/${qty}`);
+            const response = await request(app).get(`/bank/feed/${qty}`);
             const bankData = response.body;
             const bankStatement = bankData.statement[0]
 
