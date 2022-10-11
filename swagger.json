@@ -50,6 +50,10 @@
             "description": "A set of endpoints related to obtaining placeholder image urls"
         },
         {
+            "name": "IPs",
+            "description": "A set of endpoints related to obtaining random IP Addresses"
+        },
+        {
             "name": "Music",
             "description": "A set of endpoints related to music"
         },
@@ -84,7 +88,8 @@
         {
             "name": "TimeZones",
             "description": "A set of endpoints related to TimeZones"
-        },{
+        },
+        {
             "name": "IP",
             "description": "A set of endpoints to get random ip and mac address"
         }
@@ -544,10 +549,12 @@
                 }
             }
         },
-        "/colors/{qty}" : {
+        "/colors/{qty}": {
             "get": {
-                "tags": ["Colors"],
-                "summary" : "Obtain a random color",
+                "tags": [
+                    "Colors"
+                ],
+                "summary": "Obtain a random color",
                 "parameters": [
                     {
                         "in": "path",
@@ -559,12 +566,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "efc27b"
                             }
                         }
@@ -572,10 +579,12 @@
                 }
             }
         },
-        "/colors/{qty}/{colorSpace}/{colorFormat}" : {
+        "/colors/{qty}/{colorSpace}/{colorFormat}": {
             "get": {
-                "tags": ["Colors"],
-                "summary" : "Obtain a random color",
+                "tags": [
+                    "Colors"
+                ],
+                "summary": "Obtain a random color",
                 "parameters": [
                     {
                         "in": "path",
@@ -618,12 +627,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "string",
+                                "type": "string",
                                 "example": "efc27b"
                             }
                         }
@@ -844,13 +853,15 @@
                 }
             }
         },
-        "/emails" : {
+        "/emails": {
             "get": {
-                "tags": ["Emails"],
-                "summary" : "Returns a list of emails",
+                "tags": [
+                    "Emails"
+                ],
+                "summary": "Returns a list of emails",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/MockEmails"
                         }
@@ -888,13 +899,15 @@
                     }
                 ],
                 "responses": {
-                    "200"Countries: {
-                        "description": "OK",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "example": "https://loremflickr.com/1024/201/cats?49645"
+                    "200": {
+                        "Countries": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "example": "https://loremflickr.com/1024/201/cats?49645"
+                                }
                             }
                         }
                     }
@@ -1500,10 +1513,12 @@
                 }
             }
         },
-        "/music/{qty}" : {
+        "/music/{qty}": {
             "get": {
-                "tags": ["Music"],
-                "summary" : "Get a song name and genre",
+                "tags": [
+                    "Music"
+                ],
+                "summary": "Get a song name and genre",
                 "parameters": [
                     {
                         "in": "path",
@@ -1514,12 +1529,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "object",
+                                "type": "object",
                                 "example": "{ genre: '', song: ''}"
                             }
                         }
@@ -1527,11 +1542,13 @@
                 }
             }
         },
-        "/album/{qty}" : {
+        "/album/{qty}": {
             "get": {
-                "tags": ["Music"],
-                "summary" : "Get an album name with release date, publisher, price, and total songs inlcuded",
-                 "parameters": [
+                "tags": [
+                    "Music"
+                ],
+                "summary": "Get an album name with release date, publisher, price, and total songs inlcuded",
+                "parameters": [
                     {
                         "in": "path",
                         "name": "qty",
@@ -1541,12 +1558,12 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "type" : "array",
+                            "type": "array",
                             "items": {
-                                "type" : "object",
+                                "type": "object",
                                 "example": "{ name: '', releasedate: '', price: '', publisher: '', songs: ''}"
                             }
                         }
@@ -1989,10 +2006,12 @@
                 }
             }
         },
-        "/product/{department}" : {
+        "/product/department/{department}": {
             "get": {
-                "tags": ["Products"],
-                "summary" : "Get a single product with a specified department",
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Get a single product with a specified department",
                 "parameters": [
                     {
                         "required": false,
@@ -2004,8 +2023,8 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/ProductResponse"
                         }
@@ -2013,10 +2032,12 @@
                 }
             }
         },
-        "/products/{qty}/{department}" : {
+        "/products/{qty}/{department}": {
             "get": {
-                "tags": ["Products"],
-                "summary" : "Obtain a list of random products",
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Obtain a list of random products",
                 "parameters": [
                     {
                         "required": false,
@@ -2036,8 +2057,8 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/ProductResponse"
                         }
@@ -2133,13 +2154,15 @@
                 }
             }
         },
-        "/socials/twitter" : {
+        "/socials/twitter": {
             "get": {
-                "tags": ["Socials"],
-                "summary" : "Returns random Twitter posts",
+                "tags": [
+                    "Socials"
+                ],
+                "summary": "Returns random Twitter posts",
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/MockTwitterPosts"
                         }
@@ -2222,7 +2245,7 @@
                 }
             }
         },
-        "/time_zones": {
+        "/time-zones": {
             "get": {
                 "tags": [
                     "/TimeZones/random"
@@ -2249,8 +2272,8 @@
                 "summary": "Get a random value of a Chemical Elements",
                 "parameters": [],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/MockChemicalElement"
                         }
@@ -2273,423 +2296,385 @@
                     }
                 ],
                 "responses": {
-                    "200" : {
-                        "description" : "OK",
+                    "200": {
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/MockChemicalElements"
-                            }
-                    }
-                }
-            }
-        },
-    "definitions": {
-        "ErrorResponse": {
-            "type": "string",
-            "example": "An unknown error occured, please try again."
-        },
-        "CountriesListResponse": {
-            "properties": {
-                "countries": {
-                    "type": "array",
-                    "items": {
-                        "type": "string",
-                        "example": "United Kingdom"
-                    }
-                }
-            }
-        },
-        "FullNamesResponse": {
-            "properties": {
-                "fullNamesList": {
-                    "type": "array",
-                    "items": {
-                        "type": "string",
-                        "example": "Aaron D Rackley"
-                    }
-                }
-            }
-        },
-        "FirstNamesResponse": {
-            "properties": {
-                "firstNamesList": {
-                    "type": "array",
-                    "items": {
-                        "type": "string",
-                        "example": "Mandy"
-                    }
-                }
-            }
-        },
-        "LastNameResponse": {
-            "properties": {
-                "lastNamesList": {
-                    "type": "array",
-                    "items": {
-                        "type": "string",
-                        "example": "smith"
-                    }
-                }
-            }
-        },
-        "MockEcommerceCartItem": {
-            "type":"object",
-            "properties": {
-                "pricePerUnit": {
-                    "type":"number",
-                    "example": 2
-                },
-                "quantity": {
-                    "type":"number",
-                    "example":2
-                },
-                "product": {
-                    "type": "object",
-                    "properties":{
-                        "productName": {
-                            "type": "string",
-                            "example": "Super Gamer Juice"
-                        },
-                        "productId": {
-                            "type": "number",
-                            "example": 1
-                        },
-                        "message": {
-                            "type": "string",
-                            "example": "The only drink I will ever need."
-                        },
-                        "dateTime": {
-                            "type": "string",
-                            "example": "1984-05-21T00:02:11.497Z"
-                        },
-                        "rating": {
-                            "type": "number",
-                            "example": 1
-                        },
-                        "userName": {
-                            "type": "string",
-                            "example": "Aaron Rackley"
-                        },
-                        "categories": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "example": "sport-drinks"
-                            }
                         }
                     }
                 }
             }
         },
-        "MockEcommerceCart": {
-            "type":"object",
-            "properties": {
-                "products": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/MockEcommerceCartItem"
-                    }
-                },
-                "couponCode":{
-                    "type":"string",
-                    "default": "DISCOUNT"
-                },
-                "couponPercent":{
-                    "type":"number",
-                    "default":8
-                },
-                "couponValue":{
-                    "type":"number",
-                    "default":4
-                },
-                "taxPercent":{
-                    "type":"number",
-                    "default":4
-                },
-                "taxApplied":{
-                    "type":"number",
-                    "default":8
-                },
-                "postageValue":{
-                    "type":"number",
-                    "default":5
-                },
-                "subtotal":{
-                    "type":"number",
-                    "default":100
-                },
-                "total":{
-                    "type":"number",
-                    "default": 120
-                }
-            }
-        },
-        "MockProductReview": {
-            "type": "array",
-            "items": {
-                "type" : "object",
+        "definitions": {
+            "ErrorResponse": {
+                "type": "string",
+                "example": "An unknown error occured, please try again."
+            },
+            "CountriesListResponse": {
                 "properties": {
-                    "department" : {
-                        "type" : "string",
-                        "example" : "Sports"
-                    },
-                    "type" : {
-                        "type" : "string",
-                        "example" : "Ball"
-                    },
-                    "name" : {
-                        "type" : "string",
-                        "example" : "Sleek Bronze Towels"
-                    },
-                    "adjective" : {
-                        "type" : "string",
-                        "example" : "Incredible"
-                    },
-                    "description" : {
-                        "type" : "string",
-                        "example" : "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
-                    },
-                    "material" : {
-                        "type" : "string",
-                        "example" : "Soft"
-                    },
-                    "sku" : {
-                        "type" : "array",
+                    "countries": {
+                        "type": "array",
                         "items": {
-                            "type" : "object",
-                            "properties": {
-                                "meta": {
-                                    "type" : "object",
-                                    "properties": {
-                                        "size" : {
-                                            "type" : "string",
-                                            "example" : "Medium"
-                                        }
-                                    }
-                                },
-                                "price" : {
-                                    "type" : "string",
-                                    "example" : "232.00"
-                                },
-                                "amount" : {
-                                    "type" : "number",
-                                    "example" : 11109
+                            "type": "string",
+                            "example": "United Kingdom"
+                        }
+                    }
+                }
+            },
+            "FullNamesResponse": {
+                "properties": {
+                    "fullNamesList": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "Aaron D Rackley"
+                        }
+                    }
+                }
+            },
+            "FirstNamesResponse": {
+                "properties": {
+                    "firstNamesList": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "Mandy"
+                        }
+                    }
+                }
+            },
+            "LastNameResponse": {
+                "properties": {
+                    "lastNamesList": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "smith"
+                        }
+                    }
+                }
+            },
+            "MockEcommerceCartItem": {
+                "type": "object",
+                "properties": {
+                    "pricePerUnit": {
+                        "type": "number",
+                        "example": 2
+                    },
+                    "quantity": {
+                        "type": "number",
+                        "example": 2
+                    },
+                    "product": {
+                        "type": "object",
+                        "properties": {
+                            "productName": {
+                                "type": "string",
+                                "example": "Super Gamer Juice"
+                            },
+                            "productId": {
+                                "type": "number",
+                                "example": 1
+                            },
+                            "message": {
+                                "type": "string",
+                                "example": "The only drink I will ever need."
+                            },
+                            "dateTime": {
+                                "type": "string",
+                                "example": "1984-05-21T00:02:11.497Z"
+                            },
+                            "rating": {
+                                "type": "number",
+                                "example": 1
+                            },
+                            "userName": {
+                                "type": "string",
+                                "example": "Aaron Rackley"
+                            },
+                            "categories": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "example": "sport-drinks"
                                 }
                             }
                         }
                     }
                 }
-            }
-        },
-        "MockChatMessages" : {
-            "type": "array",
-            "items": {
+            },
+            "MockEcommerceCart": {
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "type": "string",
-                        "example": "dc90af0e-f073-45e7-8a77-69e7e94aed31"
-                    },
-                    "createdAt": {
-                        "type": "string",
-                        "example": "2022-09-22T16:03:17.885Z"
-                    },
-                    "message": {
-                        "type": "string",
-                        "example": "Dicta amet dolores mollitia eveniet commodi."
-                    },
-                    "userId": {
-                        "type": "string",
-                        "example": "d392a495-3f4c-4660-a896-dce057afbbd4"
-                    }
-                }
-            }
-        },
-        "MockUsers" : {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "userId" : {
-                        "type" : "string",
-                        "example" : "d392a495-3f4c-4660-a896-dce057afbbd4"
-                    },
-                    "username" : {
-                        "type" : "string",
-                        "example" : "Aaron Rackley"
-                    },
-                    "email" : {
-                        "type" : "string",
-                        "example" : "john.doe@example.com"
-                    },
-                    "avatarUrl" : {
-                        "type" : "string",
-                        "example" : "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/597.jpg"
-                    },
-                    "password" : {
-                        "type" : "string",
-                        "example" : "password"
-                    },
-                    "birthDate" : {
-                        "type" : "string",
-                        "example" : "1984-05-21T00:02:11.497Z"
-                    },
-                    "registeredAt" : {
-                        "type" : "string",
-                        "example" : "2022-09-22T16:03:17.885Z"
-                    }
-                }
-            }
-        },
-        "MockChatResponse" : {
-            "type" : "object",
-            "properties": {
-                "users" : {
-                    "$ref" : "#/definitions/MockUsers"
-                },
-                "messages" : {
-                    "$ref" : "#/definitions/MockChatMessages"
-                }
-            }
-        },
-        "MockEmails" : {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "id" : {
-                        "type" : "string",
-                        "example" : "dc90af0e-f073-45e7-8a77-69e7e94aed31"
-                    },
-                    "from" : {
-                        "type" : "string",
-                        "example" : "john.doe@example.com"
-                    },
-                    "subject" : {
-                        "type" : "string",
-                        "example" : "Lorem ipsum dolor"
-                    },
-                    "body" : {
-                        "type" : "string",
-                        "example" : "Dicta amet dolores mollitia eveniet commodi."
-                    },
-                    "read" : {
-                        "type" : "boolean",
-                        "example" : false
-                    },
-                    "tags" : {
+                    "products": {
                         "type": "array",
                         "items": {
-                            "type": "string",
-                            "example": "important"
+                            "$ref": "#/definitions/MockEcommerceCartItem"
                         }
                     },
-                    "date" : {
-                        "type" : "string",
-                        "example" : "2022-09-22T16:03:17.885Z"
+                    "couponCode": {
+                        "type": "string",
+                        "default": "DISCOUNT"
+                    },
+                    "couponPercent": {
+                        "type": "number",
+                        "default": 8
+                    },
+                    "couponValue": {
+                        "type": "number",
+                        "default": 4
+                    },
+                    "taxPercent": {
+                        "type": "number",
+                        "default": 4
+                    },
+                    "taxApplied": {
+                        "type": "number",
+                        "default": 8
+                    },
+                    "postageValue": {
+                        "type": "number",
+                        "default": 5
+                    },
+                    "subtotal": {
+                        "type": "number",
+                        "default": 100
+                    },
+                    "total": {
+                        "type": "number",
+                        "default": 120
                     }
                 }
-            }
-        },
-        "MockTwitterPosts" : {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "id" : {
-                        "type" : "string",
-                        "example" : "dc90af0e-f073-45e7-8a77-69e7e94aed31"
-                    },
-                    "handle" : {
-                        "type" : "string",
-                        "example" : "@JohnDoe"
-                    },
-                    "message" : {
-                        "type" : "string",
-                        "example" : "Dicta amet dolores mollitia eveniet commodi."
-                    },
-                    "media" : {
-                        "type" : "string",
-                        "example" : "https://loremflickr.com/640/480"
-                    },
-                    "likes" : {
-                        "type" : "number",
-                        "example" : 438
-                    },
-                    "comments" : {
-                        "type" : "number",
-                        "example" : 10
-                    },
-                    "retweets" : {
-                        "type" : "number",
-                        "example" : 2
-                    },
-                    "date" : {
-                        "type" : "string",
-                        "example" : "2022-09-22T16:03:17.885Z"
-                    }
-                }
-            }
-        },
-        "MockChemicalElement" : {
-            "properties": {
-                "symbol": {
-                    "type": "string",
-                    "example": "N"
-                },
-                "name": {
-                    "type": "string",
-                    "example": "Nitrogen"
-                },
-                "atomicNumber": {
-                    "type" : "number",
-                    "example" : 7
-                }
-            }
-        },
-        "MockChemicalElements" : {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/MockChemicalElement"
-            }
-        },
-        "MockProductReview": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "productName": {
-                        "type": "string",
-                        "example": "Super Gamer Juice"
-                    },
-                    "productId": {
-                        "type": "number",
-                        "example": 1
-                    },
-                    "message": {
-                        "type": "string",
-                        "example": "The only drink I will ever need."
-                    },
-                    "dateTime": {
-                        "type": "string",
-                        "example": "1984-05-21T00:02:11.497Z"
-                    },
-                    "rating": {
-                        "type": "number",
-                        "example": 1
-                    },
-                    "userName": {
-                        "type": "string",
-                        "example": "Aaron Rackley"
-                    },
-                    "categories": {
-                        "type": "array",
-                        "items": {
+            },
+            "MockProductReview": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "department": {
                             "type": "string",
-                            "example": "sport-drinks"
+                            "example": "Sports"
+                        },
+                        "type": {
+                            "type": "string",
+                            "example": "Ball"
+                        },
+                        "name": {
+                            "type": "string",
+                            "example": "Sleek Bronze Towels"
+                        },
+                        "adjective": {
+                            "type": "string",
+                            "example": "Incredible"
+                        },
+                        "description": {
+                            "type": "string",
+                            "example": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+                        },
+                        "material": {
+                            "type": "string",
+                            "example": "Soft"
+                        },
+                        "sku": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "meta": {
+                                        "type": "object",
+                                        "properties": {
+                                            "size": {
+                                                "type": "string",
+                                                "example": "Medium"
+                                            }
+                                        }
+                                    },
+                                    "price": {
+                                        "type": "string",
+                                        "example": "232.00"
+                                    },
+                                    "amount": {
+                                        "type": "number",
+                                        "example": 11109
+                                    }
+                                }
+                            }
                         }
                     }
+                }
+            },
+            "MockChatMessages": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "example": "dc90af0e-f073-45e7-8a77-69e7e94aed31"
+                        },
+                        "createdAt": {
+                            "type": "string",
+                            "example": "2022-09-22T16:03:17.885Z"
+                        },
+                        "message": {
+                            "type": "string",
+                            "example": "Dicta amet dolores mollitia eveniet commodi."
+                        },
+                        "userId": {
+                            "type": "string",
+                            "example": "d392a495-3f4c-4660-a896-dce057afbbd4"
+                        }
+                    }
+                }
+            },
+            "MockUsers": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "userId": {
+                            "type": "string",
+                            "example": "d392a495-3f4c-4660-a896-dce057afbbd4"
+                        },
+                        "username": {
+                            "type": "string",
+                            "example": "Aaron Rackley"
+                        },
+                        "email": {
+                            "type": "string",
+                            "example": "john.doe@example.com"
+                        },
+                        "avatarUrl": {
+                            "type": "string",
+                            "example": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/597.jpg"
+                        },
+                        "password": {
+                            "type": "string",
+                            "example": "password"
+                        },
+                        "birthDate": {
+                            "type": "string",
+                            "example": "1984-05-21T00:02:11.497Z"
+                        },
+                        "registeredAt": {
+                            "type": "string",
+                            "example": "2022-09-22T16:03:17.885Z"
+                        }
+                    }
+                }
+            },
+            "MockChatResponse": {
+                "type": "object",
+                "properties": {
+                    "users": {
+                        "$ref": "#/definitions/MockUsers"
+                    },
+                    "messages": {
+                        "$ref": "#/definitions/MockChatMessages"
+                    }
+                }
+            },
+            "MockEmails": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "example": "dc90af0e-f073-45e7-8a77-69e7e94aed31"
+                        },
+                        "from": {
+                            "type": "string",
+                            "example": "john.doe@example.com"
+                        },
+                        "subject": {
+                            "type": "string",
+                            "example": "Lorem ipsum dolor"
+                        },
+                        "body": {
+                            "type": "string",
+                            "example": "Dicta amet dolores mollitia eveniet commodi."
+                        },
+                        "read": {
+                            "type": "boolean",
+                            "example": false
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "important"
+                            }
+                        },
+                        "date": {
+                            "type": "string",
+                            "example": "2022-09-22T16:03:17.885Z"
+                        }
+                    }
+                }
+            },
+            "MockTwitterPosts": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "example": "dc90af0e-f073-45e7-8a77-69e7e94aed31"
+                        },
+                        "handle": {
+                            "type": "string",
+                            "example": "@JohnDoe"
+                        },
+                        "message": {
+                            "type": "string",
+                            "example": "Dicta amet dolores mollitia eveniet commodi."
+                        },
+                        "media": {
+                            "type": "string",
+                            "example": "https://loremflickr.com/640/480"
+                        },
+                        "likes": {
+                            "type": "number",
+                            "example": 438
+                        },
+                        "comments": {
+                            "type": "number",
+                            "example": 10
+                        },
+                        "retweets": {
+                            "type": "number",
+                            "example": 2
+                        },
+                        "date": {
+                            "type": "string",
+                            "example": "2022-09-22T16:03:17.885Z"
+                        }
+                    }
+                }
+            },
+            "MockChemicalElement": {
+                "properties": {
+                    "symbol": {
+                        "type": "string",
+                        "example": "N"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Nitrogen"
+                    },
+                    "atomicNumber": {
+                        "type": "number",
+                        "example": 7
+                    }
+                }
+            },
+            "MockChemicalElements": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/MockChemicalElement"
                 }
             }
         }
     }
-  }
+}
