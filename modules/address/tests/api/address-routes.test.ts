@@ -1,12 +1,11 @@
+import app from "../../../../app";
 let request = require('supertest');
-
-const baseUrl = 'http://localhost:13000';
 
 // address-routes.ts tests
 describe('GET /address/', () => {
 	it('should return a random address', async () => {
 
-		const response = await request(baseUrl)
+		const response = await request(app)
 			.get('/address');
 		
 		const {status, body} = response;
@@ -20,7 +19,7 @@ describe('GET /address/', () => {
 // address/:country
 describe('GET /address/:country', () => {
 	it('should return a random USA format address', async () => {
-		const response = await request(baseUrl)
+		const response = await request(app)
 			.get('/address/usa');
 
 		const {status, body} = response;
@@ -31,7 +30,7 @@ describe('GET /address/:country', () => {
 	})
 
 	it('should return a random UK format address', async () => {
-		const response = await request(baseUrl)
+		const response = await request(app)
 			.get('/address/uk');
 
 		const {status, body} = response;
@@ -45,7 +44,7 @@ describe('GET /address/:country', () => {
 // address/:country/:qty
 describe('GET /address/:country/:qty', () => {
 	it('should return given number of random USA format addresses', async () => {
-		const response = await request(baseUrl)
+		const response = await request(app)
 			.get('/address/usa/5');
 
 		const {status, body} = response;
@@ -60,7 +59,7 @@ describe('GET /address/:country/:qty', () => {
 	})
 
 	it('should return given number of random UK format addresses', async () => {
-		const response = await request(baseUrl)
+		const response = await request(app)
 			.get('/address/uk/5');
 
 		const {status, body} = response;

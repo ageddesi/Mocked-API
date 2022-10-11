@@ -20,7 +20,7 @@ describe('products api endpoints', () => {
         const rating = 2;
 
         it('should return a list of reviews ', async () => {
-            const response = await request(baseURL).get(`/products/reviews/ratings/${rating}`);
+            const response = await request(app).get(`/products/reviews/ratings/${rating}`);
             expect(response.body[0].rating).toEqual(rating);
             expect(response.body[0]).toHaveProperty('productName');
             expect(response.body[0]).toHaveProperty('productId');
@@ -37,7 +37,7 @@ describe('products api endpoints', () => {
         const department = "Computer";
 
         it('should return a list of products ', async () => {
-            const response = await request(baseURL).get(`/products/${quantity}/${department}`);
+            const response = await request(app).get(`/products/${quantity}/${department}`);
             expect(response.body.length).toEqual(quantity);
             expect(response.body[0].department).toEqual(department);
             expect(response.body[0]).toHaveProperty('department');
@@ -54,7 +54,7 @@ describe('products api endpoints', () => {
         const quantity = 4;
 
         it('should return a list of products ', async () => {
-            const response = await request(baseURL).get(`/products/quantity/${quantity}`);
+            const response = await request(app).get(`/products/quantity/${quantity}`);
             expect(response.body.length).toEqual(quantity);
 
         });
@@ -64,7 +64,7 @@ describe('products api endpoints', () => {
         const department = "Computer";
 
         it('should return a list of products', async () => {
-            const response = await request(baseURL).get(`/products/department/${department}`);
+            const response = await request(app).get(`/products/department/${department}`);
             expect(response.body[0].department).toEqual(department);
 
         });
@@ -72,7 +72,7 @@ describe('products api endpoints', () => {
 
     describe('GET /product', () => {
         it('should return a random product ', async () => {
-            const response = await request(baseURL).get(`/product`);
+            const response = await request(app).get(`/product`);
             expect(response.body.length).toEqual(1);
             expect(response.body[0]).toHaveProperty('department');
             expect(response.body[0]).toHaveProperty('type');
