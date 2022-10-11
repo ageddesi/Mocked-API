@@ -1,11 +1,13 @@
 require('dotenv').config();
 import express, { Request, Response } from 'express';
 import { swaggerSpec } from './utils/swagger';
+import swag from "./swagger.json";
 
 const morgan = require('morgan');
 const cors = require('cors');
 
 const app = express();
+
 // Load Mock Modules
 require('./modules/animal/api/animal-routes')(app); // Animals
 require('./modules/chat/api/chat-routes')(app); // Chat
@@ -32,12 +34,16 @@ require('./modules/address/api/address-routes')(app); // Addresses
 require('./modules/bankfeed/api/bankfeed-routes')(app); // Bank Feed
 require('./modules/location/api/location-routes')(app); // Bank Feed
 
+
 // Add an healthcheck endpoint
+// Shows amount of API Categories and their endpoints
 app.get('/status', (req, res) => {
     const data = {
         uptime: process.uptime(),
         message: 'Ok',
         date: new Date(),
+        totalCategories: swag.tags.length,
+        totalEndpoints: Object.keys(swag.paths).length,
     };
     res.status(200).send(data);
 });
