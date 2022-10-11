@@ -58,6 +58,7 @@ module.exports = function (app: core.Express) {
      *           type: array
      *           items:
      *             type: object
+     *             $ref: '#/definitions/FacebookPost'
      */
          app.get('/socials/facebook', (req: Request, res: Response) => {
             res.json(getRandomFacebookPosts(DEFAULT_POSTS_COUNT));
