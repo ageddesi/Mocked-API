@@ -2198,6 +2198,34 @@
                 }
             }
         },
+        "/sports/football/leagues/laliga/teams/{qty}": {
+            "get": {
+                "tags": [
+                    "Sports"
+                ],
+                "summary": "Get a list of teams in the La Liga (Spain) football league from 2022",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "default": 10,
+                        "description": "The amount of results you would like returned"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "example": "{ teamName: '', location: '', stadium: '', capacity: ''}"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/time_zones": {
             "get": {
                 "tags": [
