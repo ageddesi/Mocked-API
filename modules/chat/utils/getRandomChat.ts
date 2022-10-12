@@ -4,7 +4,7 @@ import ChatMessage from '../consts/ChatMessage'
 import ChatRandomResponse from '../consts/ChatRandomResponse'
 import { generateRandomMessage } from './generateRandomMessage'
 
-export const getRandomChat = (userCount: number, messageCount: number): ChatRandomResponse => {
+export const getRandomChat = (userCount: number, messageCount: number, various: boolean = false): ChatRandomResponse => {
   const users = getRandomUsers(userCount)
 
   const messages: ChatMessage[] = []
@@ -12,7 +12,7 @@ export const getRandomChat = (userCount: number, messageCount: number): ChatRand
     messages.push({
       id: faker.datatype.uuid(),
       createdAt: faker.date.recent(faker.datatype.number({ min: 0, max: 30 })).toISOString(),
-      message: generateRandomMessage(),
+      message: various ? generateRandomMessage() : faker.lorem.sentence(),
       userId: users[faker.datatype.number({ min: 0, max: userCount - 1 })].userId
     })
   })
