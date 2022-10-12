@@ -1,37 +1,35 @@
-import { faker } from '@faker-js/faker';
-import { Request, Response } from 'express';
-import * as core from 'express-serve-static-core';
-import getRandomUsers from '../../users/utils/getRandomUsers';
-import { getRandomChat } from '../utils/getRandomChat';
+import { Request, Response } from 'express'
+import * as core from 'express-serve-static-core'
+import { getRandomChat } from '../utils/getRandomChat'
 
-const defaultUserCount = 100;
-const defaultMessageCount = 1000;
+const defaultUserCount = 100
+const defaultMessageCount = 1000
 
 module.exports = function (app: core.Express) {
-    /**
+  /**
      * @openapi
      * '/chat/random':
      *   get:
      *     tags:
      *       - Chat
-     *     summary: Returns a random chat of 100 users and 1000 messages using randomly generated sentances
+     *     summary: Returns a random chat of 100 users and 1000 messages of various length (word, sentences, paragraphs)
      *     responses:
      *       '200':
      *         description: OK
      *         schema:
      *           $ref: '#/definitions/MockChatResponse'
      */
-    app.get('/chat/random/', (req: Request, res: Response) => {
-        res.json(getRandomChat(defaultUserCount, defaultMessageCount));
-    });
+  app.get('/chat/random/', (req: Request, res: Response) => {
+    res.json(getRandomChat(defaultUserCount, defaultMessageCount))
+  })
 
-    /**
+  /**
      * @openapi
      * '/chat/random/{userCount}/{messageCount}':
      *   get:
      *     tags:
      *       - Chat
-     *     summary: Returns a random chat of messages from defined counts using randomly generated sentances
+     *     summary: Returns a random chat of messages from defined counts using randomly generated messages of various length (word, sentences, paragraphs)
      *     parameters:
      *       - in: path
      *         name: userCount
@@ -49,9 +47,9 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockChatResponse'
      */
-    app.get('/chat/random/:userCount/:messageCount', (req: Request, res: Response) => {
-        const userCount = req.params.userCount ? parseInt(req.params.userCount) : defaultUserCount;
-        const messageCount = req.params.messageCount ? parseInt(req.params.messageCount) : defaultMessageCount;
-        res.json(getRandomChat(userCount, messageCount));
-    });
-};
+  app.get('/chat/random/:userCount/:messageCount', (req: Request, res: Response) => {
+    const userCount = req.params.userCount ? parseInt(req.params.userCount) : defaultUserCount
+    const messageCount = req.params.messageCount ? parseInt(req.params.messageCount) : defaultMessageCount
+    res.json(getRandomChat(userCount, messageCount))
+  })
+}
