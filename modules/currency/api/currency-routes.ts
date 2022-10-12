@@ -7,34 +7,122 @@ import getDigitalCurrencyAddress from '../utils/getDigitalCurrencyAddress';
 import getDigitalCurrencyTxList from '../utils/getDigitalCurrencyTxList';
 import DigitalCoinEnum from '../consts/DigitalCoinEnum';
 
-module.exports = function(app: core.Express){
-
-    // Returns a snapshot of data for the state of the currency market
-    app.get("/currencies/market-overview", (req: Request, res: Response) => {
+module.exports = function (app: core.Express) {
+    /**
+     * @openapi
+     * '/currencies/market-overview':
+     *   get:
+     *     tags:
+     *     - Currencies
+     *     summary: Get a snapshot of the currency market
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: array
+     *           items:
+     *             type: object
+     *             example: {currency: 'EUR-USD', value: '0.9945', change: '-0.0021', netChange: '-0.21%'}
+     */
+    app.get('/currencies/market-overview', (req: Request, res: Response) => {
         res.json(currencySnapshot);
-    })
+    });
 
-    // Returns a set of chart data of price data for a given currency market
-    app.get("/currencies/gbp-usd/ticker", (req: Request, res: Response) => {
+    /**
+     * @openapi
+     * '/currencies/gbp-usd/ticker':
+     *   get:
+     *     tags:
+     *     - Currencies
+     *     summary: Returns a set of chart data of price data for a given currency market
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: array
+     *           items:
+     *             type: object
+     */
+    app.get('/currencies/gbp-usd/ticker', (req: Request, res: Response) => {
         res.json(GBP_USD_TICKER_DATA);
-    })
+    });
 
-    // Returns a set of bitcoin digital addresses
-    app.get("/currencies/digital-coins/bitcoin/random-address/:qty?", (req: Request, res: Response) => {
-        const qty = getQtyFromRequest(req); 
+    /**
+     * @openapi
+     * '/currencies/digital-coins/bitcoin/random-address/{qty}':
+     *   get:
+     *     tags:
+     *     - Currencies
+     *     summary: Returns random bitcoin addresses
+     *     parameters:
+     *     - in: path
+     *       name: qty
+     *       description: The amount of addresses you require
+     *       type: string
+     *       default: 10
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: array
+     *           items:
+     *             type: string
+     */
+    app.get('/currencies/digital-coins/bitcoin/random-address/:qty?', (req: Request, res: Response) => {
+        const qty = getQtyFromRequest(req);
         const addresses = getDigitalCurrencyAddress(qty, DigitalCoinEnum.Bitcoin);
         res.json(addresses);
-    })
+    });
 
-    // Returns a set of ethereum digital addresses
-    app.get("/currencies/digital-coins/ethereum/random-address/:qty?", (req: Request, res: Response) => {
+    /**
+     * @openapi
+     * '/currencies/digital-coins/ethereum/random-address/{qty}':
+     *   get:
+     *     tags:
+     *     - Currencies
+     *     summary: Returns random ethereum addresses
+     *     parameters:
+     *     - in: path
+     *       name: qty
+     *       description: The amount of addresses you require
+     *       type: string
+     *       default: 10
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: array
+     *           items:
+     *             type: string
+     */
+    app.get('/currencies/digital-coins/ethereum/random-address/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const addresses = getDigitalCurrencyAddress(qty, DigitalCoinEnum.Ethereum);
         res.json(addresses);
-    })
+    });
 
-    // Returns a set of litecoin digital addresses
-    app.get("/currencies/digital-coins/litecoin/random-address/:qty?", (req: Request, res: Response) => {
+    /**
+     * @openapi
+     * '/currencies/digital-coins/litecoin/random-address/{qty}':
+     *   get:
+     *     tags:
+     *     - Currencies
+     *     summary: Returns random litecoin addresses
+     *     parameters:
+     *     - in: path
+     *       name: qty
+     *       description: The amount of addresses you require
+     *       type: string
+     *       default: 10
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: array
+     *           items:
+     *             type: string
+     */
+    app.get('/currencies/digital-coins/litecoin/random-address/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const addresses = getDigitalCurrencyAddress(qty, DigitalCoinEnum.Litecoin);
         res.json(addresses);

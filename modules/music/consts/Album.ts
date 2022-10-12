@@ -1,10 +1,10 @@
 interface Album {
-    id: string
-    name: string
-    releasedate: string
-    price: string
-    publisher: string
-    songs: number
+    id: string;
+    name: string;
+    releaseDate: string;
+    price: string;
+    publisher: string;
+    songs: number;
 }
 
 export type { Album };

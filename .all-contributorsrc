@@ -75,7 +75,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/31249309?v=4",
       "profile": "https://github.com/fadkeabhi",
       "contributions": [
-        "doc",
         "code"
       ]
     },
@@ -105,7 +104,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/49640654?v=4",
       "profile": "http://kalwabed.xyz",
       "contributions": [
-        "code",
         "test"
       ]
     },
@@ -187,7 +185,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/69869135?v=4",
       "profile": "https://github.com/devrrior",
       "contributions": [
-        "doc"
+        "doc",
+        "test"
       ]
     },
     {
@@ -206,6 +205,51 @@
       "profile": "https://github.com/vaibhavg20comp",
       "contributions": [
         "code",
+        "test"
+      ]
+    },
+    {
+      "login": "fms12",
+      "name": "Mayank Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68012074?v=4",
+      "profile": "https://github.com/fms12",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "computamike",
+      "name": "Mike Hingley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/464876?v=4",
+      "profile": "https://github.com/computamike",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "kk5190",
+      "name": "krishna",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3418713?v=4",
+      "profile": "https://www.krishnasingh.co.in/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "VadimDez",
+      "name": "Vadym Yatsyuk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3748453?v=4",
+      "profile": "https://vadimdez.github.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nibih",
+      "name": "Nicholas Robert Beckham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42928462?v=4",
+      "profile": "https://github.com/nibih",
+      "contributions": [
         "test"
       ]
     }

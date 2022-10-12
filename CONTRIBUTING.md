@@ -130,7 +130,7 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/agedde
 include Setup of env, IDE and typical getting started instructions?
 -->
 1. When adding new API endpoints, please add OpenAPI comments
-2. All code must have corrosponding unit tests.
+2. All code must have corresponding unit tests.
 3. All API endpoints must have unit tests for all return codes.
 
 ### Improving The Documentation
