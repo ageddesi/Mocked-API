@@ -517,6 +517,96 @@ const productReviews = [
         userName: getFullNames(1),
         categories: ['music','sound-devices']
     },
+    {
+        productName: "Super Noise-Cancelling Headphones",
+        productId: 18,
+        message: "Wow. Just wow. I've had so many different types of headphones in my life, but this one takes the cake. Not only are they amazing at noise-cancellation, but the sound quality is the best I've ever heard. The bass on these is perfect!",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['headphones', 'electronics']
+    },
+    {
+        productName: "Super Noise-Cancelling Headphones",
+        productId: 18,
+        message: "My wife works from home and she's always telling me about how distracting it is hearing all the noises outside. I heard great things about the Super Noise-Cancelling Headphones and decided to buy her a pair. She loves them! She said it has helped her stay in flow while working.",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['headphones', 'electronics']
+    },
+    {
+        productName: "Super Noise-Cancelling Headphones",
+        productId: 18,
+        message: "What are you waiting for? Get a pair of these headphones already! I'm telling you, you will have no regrets. Buy a pair for everyone you love, too.",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['headphones', 'electronics']
+    },
+    {
+        productName: "Super Noise-Cancelling Headphones",
+        productId: 18,
+        message: "I do not usually write reviews, but I felt obligated to share my experience. I am very particular with sound quality and I am impressed. I love using the Super Noise-Cancelling Headphones during my piano practice sessions. It allows me to really feel my music even with the hustle and bustle of New York City.",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['headphones', 'electronics']
+    },
+    {
+        productName: "Super Noise-Cancelling Headphones",
+        productId: 18,
+        message: "I wanted to love these. I really did. After seeing tons of good reviews, I thought these were the ones. Nope. They're not designed for large heads. Maybe if they come out with an XL version, I'll give them another shot. For now, they will be returned.",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['headphones', 'electronics']
+    },
+    {
+        productName: "Super Smooth Mouse",
+        productId: 19,
+        message: "This mouse is perfect for gamers. Smooth, with just the right amount of buttons to customize.",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['computer mouse', 'gamer mouse', 'electronics']
+    },
+    {
+        productName: "Super Smooth Mouse",
+        productId: 19,
+        message: "I've seen this mouse being advertised for gamers, but it sounded like it met all of my needs, so I decided to try it out. It's great! I do a lot of graphic design work and this has definitely improved my experience.",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['computer mouse', 'gamer mouse', 'electronics']
+    },
+    {
+        productName: "Super Smooth Mouse",
+        productId: 19,
+        message: "I've been using this mouse for 3 months and let me tell you! I will never go back to No Name Mouse again!",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['computer mouse', 'gamer mouse', 'electronics']
+    },
+    {
+        productName: "Super Smooth Mouse",
+        productId: 19,
+        message: "My girlfriend gave me this as a gift. She is the best. I can't believe I didn't get this sooner!",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['computer mouse', 'gamer mouse', 'electronics']
+    },
+    {
+        productName: "Super Smooth Mouse",
+        productId: 19,
+        message: "I received this product for free in exchange for my honest review. This mouse is smooth, ergonomically friendly, and has customizable buttons for all of your needs. I would highly recommend it to gamers and anyone who prioritizes comfort and functionality.",
+        dateTime: getRandomDate(new Date('1970-02-12T01:57:45.271Z'), new Date('2022-10-12T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['computer mouse', 'gamer mouse', 'electronics']
+    },
 ]
 
 export default productReviews;
