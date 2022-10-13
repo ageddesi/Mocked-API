@@ -33,6 +33,7 @@ require('./modules/vehicles/api/vehicles-routes')(app); // Vehicles
 require('./modules/address/api/address-routes')(app); // Addresses
 require('./modules/bankfeed/api/bankfeed-routes')(app); // Bank Feed
 require('./modules/location/api/location-routes')(app); // Bank Feed
+require('./modules/instruments/api/instruments-routes')(app); // Instruments
 
 
 // Add an healthcheck endpoint
