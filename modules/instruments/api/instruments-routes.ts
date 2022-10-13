@@ -1,15 +1,23 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import instrumentsList from '../data/instruments';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 
 module.exports = function (app: core.Express) {
     /**
      * @openapi
-     * '/instruments':
+     * '/instruments/{qty}':
      *   get:
      *     tags:
      *     - Instruments
      *     summary: Obtain a list of all instruments
+     *     parameters:
+     *     - in: path
+     *       name: qty
+     *       description: They quantity of instruments you want to generate
+     *       type: string
+     *       default: 1
+     *       required: false
      *     responses:
      *       '200':
      *         description: OK
@@ -19,15 +27,16 @@ module.exports = function (app: core.Express) {
      *             type: string
      *             example: Saxhorn, Tuba
      */
-    app.get('/instruments/', (req: Request, res: Response) => {
+    app.get('/instruments/:qty?', (req: Request, res: Response) => {
+        const qty = getQtyFromRequest(req);
         res.json({
-            instruments: instrumentsList,
+            instruments: instrumentsList.slice(0, qty),
         });
     });
 
     /**
      * @openapi
-     * '/instruments/{filterBy}':
+     * '/instruments/{filterBy}/{qty}':
      *   get:
      *     tags:
      *     - Instruments
@@ -38,6 +47,12 @@ module.exports = function (app: core.Express) {
      *       description: The text you would like to filter instruments by
      *       type: string
      *       required: false
+     *     - in: path
+     *       name: qty
+     *       description: They quantity of instruments you want to generate
+     *       type: string
+     *       default: 1
+     *       required: false
      *     responses:
      *       '200':
      *         description: OK
@@ -47,17 +62,18 @@ module.exports = function (app: core.Express) {
      *             type: string
      *             example: Trumpet
      */
-    app.get('/instruments/:filterBy?', (req: Request, res: Response) => {
+    app.get('/instruments/:filterBy?/:qty?', (req: Request, res: Response) => {
+        const qty = getQtyFromRequest(req);
         if (req.params.filterBy) {
             const filteredList = instrumentsList.filter((source) =>
                 source.toLocaleLowerCase().includes(req.params.filterBy.toLocaleLowerCase())
             );
             return res.json({
-                instruments: filteredList,
+                instruments: filteredList.slice(0, qty),
             });
         }
         res.json({
-            instruments: instrumentsList,
+            instruments: instrumentsList.slice(0, qty),
         });
     });
 };
