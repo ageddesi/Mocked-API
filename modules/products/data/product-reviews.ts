@@ -337,6 +337,186 @@ const productReviews = [
         userName: getFullNames(1),
         categories: ['shoes','sneakers']
     },
+    {
+        productName: "The super golden gloves 3000",
+        productId: 11,
+        message: "These are the gloves I always wanted to have. I received them last chrismas and I love them.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['gloves','garden']
+    },
+    {
+        productName: "The super golden gloves 3000",
+        productId: 11,
+        message: "Terrible gloves. They got broken after the second time I cut a tree. Need to improve in quality.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['gloves','garden']
+    },
+    {
+        productName: "Tequila mi rancho",
+        productId: 12,
+        message: "I tried this first in New Zeland when I was 18 and I had a memorable night. The nex day however, was even more memorable.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['alcoholic','drinks', 'spirits']
+    },
+    {
+        productName: "Tequila mi rancho",
+        productId: 12,
+        message: "What a nice taste, dry and thick. Remains in the throat with a banana-like flavor.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['alcoholic','drinks', 'spirits']
+    },
+    {
+        productName: "Tequila mi rancho",
+        productId: 12,
+        message: "Changed my life, got me a wife and made me wild.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['alcoholic','drinks', 'spirits']
+    },
+    {
+        productName: "Logimax keyboard 960",
+        productId: 13,
+        message: "Unfortunatelly, I got this with some broken buttons. Will as for a refund.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['pc','tech', 'accesories']
+    },
+    {
+        productName: "Logimax keyboard 960",
+        productId: 13,
+        message: "Works like a charm. My laptop's keyboard is usually very hot, but with this one I don't have that problem.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['pc','tech', 'accesories']
+    },
+    {
+        productName: "Logimax keyboard 960",
+        productId: 13,
+        message: "Keys are sooo soft, I'm planning to order another one.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['pc','tech', 'accesories']
+    },
+    {
+        productName: "A little place called little-land",
+        productId: 14,
+        message: "The funniest thing I've ever read. It's so litlle that makes laugh... a little.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['books','ebooks', 'novel']
+    },
+    {
+        productName: "A little place called little-land",
+        productId: 14,
+        message: "Finished in two hours. I was actually expecting it to be longer.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['books','ebooks', 'novel']
+    },
+    {
+        productName: "A little place called little-land",
+        productId: 14,
+        message: "Another success for Jimmy, the author. Even thuoght he's short in size he has great ideas.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['books','ebooks', 'novel']
+    },
+    {
+        productName: "Towel 100x50cm",
+        productId: 15,
+        message: "While not so soft they're very absorbent.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['bathroom','towels']
+    },
+    {
+        productName: "Towel 100x50cm",
+        productId: 15,
+        message: "Been looking for these for years! Now that I finally found them, I enjoy my bath more than ever.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['bathroom','towels']
+    },
+    {
+        productName: "Towel 100x50cm",
+        productId: 15,
+        message: "Luxirious towel, feels great on your skin and dries out quite fast.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['bathroom','towels']
+    },
+    {
+        productName: "Motor case Y-U. The motorized suitcase for your travels.",
+        productId: 16,
+        message: "Why you? Indeed, why your product is easy to break?",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['travel','suitcase']
+    },
+    {
+        productName: "Motor case Y-U. The motorized suitcase for your travels.",
+        productId: 16,
+        message: "Drives me from the airport's front door, directly to the plane. It's just crazy!",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['travel','suitcase']
+    },
+    {
+        productName: "Motor case Y-U. The motorized suitcase for your travels.",
+        productId: 16,
+        message: "Got this for my 16yo kid and he loves it.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['travel','suitcase']
+    },
+    {
+        productName: "Antique DVD player",
+        productId: 17,
+        message: "Finally, I can play all my DVDs again. Simply amazing.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['music','sound-devices']
+    },
+    {
+        productName: "Antique DVD player",
+        productId: 17,
+        message: "If you're as old fashion as me, you're gonna love this.",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['music','sound-devices']
+    },
+    {
+        productName: "Antique DVD player",
+        productId: 17,
+        message: "I've was waiting for this for so long but now that I have it. It doesn't seem to work :(",
+        dateTime: getRandomDate(new Date('1960-02-12T01:57:45.271Z'), new Date('2023-12-31T01:57:45.271Z')),
+        rating: randomRating(),
+        userName: getFullNames(1),
+        categories: ['music','sound-devices']
+    },
 ]
 
 export default productReviews;
