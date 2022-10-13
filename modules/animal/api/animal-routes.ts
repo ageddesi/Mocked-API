@@ -4,6 +4,7 @@ import { getQtyFromRequest } from '../../../utils/route-utils';
 import AnimalType from '../consts/AnimalEnum';
 import getSpeciesOfAnimal from '../utils/getSpeciesOfAnimal';
 
+
 module.exports = function (app: core.Express) {
     /**
      * @openapi
