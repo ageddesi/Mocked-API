@@ -64,7 +64,7 @@ module.exports = function(app : core.Express) {
      * '/address/:country/:qty':
      *   get:
      *     tags:
-     *     - Addresses
+     *     - Address
      *     summary: Obtain random UK/USA addresses
      *     parameters:
      *       - in: path 
