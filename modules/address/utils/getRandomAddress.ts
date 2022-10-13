@@ -1,28 +1,19 @@
 import { faker } from '@faker-js/faker';
+import Address from '../consts/Address';
 
-const getRandomAddresses = (addressCount : number = 1, country : string = 'uk') : string[] => {
-	const addresses = [];
+const getRandomAddresses = (addressCount : number = 1, country : string = 'uk') : Address[] => {
+	const addresses : Address[] = [];
 	
 	for (let index = 0; index < addressCount; index++) {
-		let addresseeName = faker.name.fullName({
-			sex: faker.name.sexType()
-		});
-		let streetAddress = faker.address.streetAddress(false);
-		let city = faker.address.cityName();
-		let zipcode = faker.address.zipCode();
-
-		let address = `${addresseeName}\n${streetAddress}\n`;
-	
-		switch (country) {
-			case 'uk':
-				address += `${city}\n${zipcode}\nUK`;
-				break;
-			case 'usa':
-			default:
-				address += `${city} ${zipcode}\nUSA`;
-				break;
-		}
-		addresses.push(address);
+		addresses.push({
+			houseNumber: faker.address.buildingNumber(),
+			addressLine1: faker.address.secondaryAddress(),
+			addressLine2: faker.address.street(),
+			city: faker.address.cityName(),
+			postcode: country !== "usa" ? faker.address.zipCode() : null, 
+			zipcode: country === "usa" ? faker.address.zipCode() : null,
+			country
+		})
 	}
 	return addresses;
 }
