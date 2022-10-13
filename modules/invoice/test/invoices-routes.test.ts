@@ -1,12 +1,12 @@
 import request from 'supertest';
 import Invoice from '../consts/Invoice';
+import app from '../../../app';
 
-const baseURL = 'http://localhost:3000';
 
 describe('invoice api endpoints', () => {
     describe('GET /invoices/', () => {
         it('should return a invoice', async () => {
-            const response = await request(baseURL).get(`/invoices/`);
+            const response = await request(app).get(`/invoices/`);
             const invoice: Invoice = response.body[0];
 
             expect(invoice).toHaveProperty('id');
@@ -34,7 +34,7 @@ describe('invoice api endpoints', () => {
         it('should return a list of invoices', async () => {
             const qty = 5;
 
-            const response = await request(baseURL).get(`/invoices/${qty}`);
+            const response = await request(app).get(`/invoices/${qty}`);
             expect(response.body.length).toEqual(qty);
         });
     });

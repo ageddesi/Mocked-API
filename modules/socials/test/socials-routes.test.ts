@@ -2,13 +2,13 @@ import request from 'supertest';
 import Twitter from '../consts/Twitter';
 import Instagram from '../consts/Instagram';
 import { DEFAULT_POSTS_COUNT } from '../consts/default';
-
-const baseURL = 'http://localhost:3000';
+import app from '../../../app';
+import Facebook from '../consts/Facebook';
 
 describe('socials api endpoints', () => {
     describe('GET /socials/twitter/', () => {
         it('should returns a list of fake twitter posts', async () => {
-            const response = await request(baseURL).get(`/socials/twitter/`);
+            const response = await request(app).get(`/socials/twitter/`);
             const twitter: Twitter = response.body[0];
 
             expect(twitter).toHaveProperty('id');
@@ -25,7 +25,7 @@ describe('socials api endpoints', () => {
 
     describe('GET /socials/instagram/', () => {
         it('should returns a list of fake instagram posts', async () => {
-            const response = await request(baseURL).get(`/socials/instagram/`);
+            const response = await request(app).get(`/socials/instagram/`);
             const instagram: Instagram = response.body[0];
 
             expect(instagram).toHaveProperty('id');
@@ -48,6 +48,30 @@ describe('socials api endpoints', () => {
             expect(instagram).toHaveProperty('comments');
             expect(instagram).toHaveProperty('likes');
             expect(response.body.length).toEqual(DEFAULT_POSTS_COUNT);
+        });
+    });
+
+    describe('GET /socials/facebook/', () => {
+        it('should returns a list of fake facebook posts', async () => {
+            const response = await request(app).get(`/socials/facebook/`);
+            const facebook: Facebook = response.body[0];
+
+            expect(facebook).toHaveProperty('id');
+            expect(facebook).toHaveProperty('createdUserName');
+            expect(facebook).toHaveProperty('createdUserEmail');
+            expect(facebook).toHaveProperty('content');
+            expect(facebook).toHaveProperty('media');
+            expect(facebook).toHaveProperty('reactions.like');
+            expect(facebook).toHaveProperty('reactions.love');
+            expect(facebook).toHaveProperty('reactions.wow');
+            expect(facebook).toHaveProperty('reactions.haha');
+            expect(facebook).toHaveProperty('reactions.sad');
+            expect(facebook).toHaveProperty('reactions.angry');
+            expect(facebook).toHaveProperty('shares');
+            expect(facebook).toHaveProperty('comments');
+            expect(facebook).toHaveProperty('createdAt');
+            expect(response.body.length).toEqual(DEFAULT_POSTS_COUNT);
+            
         });
     });
 });

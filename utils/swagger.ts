@@ -1,6 +1,4 @@
-import { Express, Request, Response } from 'express';
 import swaggerJsdoc from 'swagger-jsdoc';
-import swaggerUi from 'swagger-ui-express';
 
 const { version } = require('../package.json');
 
@@ -19,6 +17,10 @@ const options: swaggerJsdoc.Options = {
         consumes: ['application/json'],
         produces: ['application/json'],
         tags: [
+            {
+                name: 'Address',
+                description: 'A set of endpoints related to addresses',
+            },
             {
                 name: 'Animals',
                 description: 'A set of endpoints related to animal',
@@ -58,6 +60,10 @@ const options: swaggerJsdoc.Options = {
             {
                 name: 'Images',
                 description: 'A set of endpoints related to obtaining placeholder image urls',
+            },
+            {
+                name: 'IPs',
+                description: 'A set of endpoints related to obtaining random IP Addresses',
             },
             {
                 name: 'Invoices',
