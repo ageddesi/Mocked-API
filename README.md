@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-27-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-37-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -168,6 +168,20 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://www.krishnasingh.co.in/"><img src="https://avatars.githubusercontent.com/u/3418713?v=4?s=100" width="100px;" alt="krishna"/><br /><sub><b>krishna</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=kk5190" title="Code">💻</a></td>
       <td align="center"><a href="https://vadimdez.github.io/"><img src="https://avatars.githubusercontent.com/u/3748453?v=4?s=100" width="100px;" alt="Vadym Yatsyuk"/><br /><sub><b>Vadym Yatsyuk</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=VadimDez" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/nibih"><img src="https://avatars.githubusercontent.com/u/42928462?v=4?s=100" width="100px;" alt="Nicholas Robert Beckham"/><br /><sub><b>Nicholas Robert Beckham</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=nibih" title="Tests">⚠️</a></td>
+      <td align="center"><a href="https://devvspace.webflow.io/"><img src="https://avatars.githubusercontent.com/u/77179231?v=4?s=100" width="100px;" alt="Ayanwola Ayomide"/><br /><sub><b>Ayanwola Ayomide</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=devvspaces" title="Code">💻</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=devvspaces" title="Tests">⚠️</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=devvspaces" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://preciouslife837753359.wordpress.com/"><img src="https://avatars.githubusercontent.com/u/34958019?v=4?s=100" width="100px;" alt="Zuhaib Shah"/><br /><sub><b>Zuhaib Shah</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=zaibugemi" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/GuilhermeFernandes01"><img src="https://avatars.githubusercontent.com/u/26780625?v=4?s=100" width="100px;" alt="Guilherme Fernandes"/><br /><sub><b>Guilherme Fernandes</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=GuilhermeFernandes01" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/benhalverson"><img src="https://avatars.githubusercontent.com/u/7907232?v=4?s=100" width="100px;" alt="Ben Halverson"/><br /><sub><b>Ben Halverson</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=benhalverson" title="Code">💻</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=benhalverson" title="Tests">⚠️</a></td>
+      <td align="center"><a href="https://github.com/darkl1ght"><img src="https://avatars.githubusercontent.com/u/19537472?v=4?s=100" width="100px;" alt="Ayush Chauhan"/><br /><sub><b>Ayush Chauhan</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=darkl1ght" title="Tests">⚠️</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=darkl1ght" title="Code">💻</a></td>
+      <td align="center"><a href="https://edwardsmoses.com/"><img src="https://avatars.githubusercontent.com/u/19548998?v=4?s=100" width="100px;" alt="Edwards Moses"/><br /><sub><b>Edwards Moses</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=edwardsmoses" title="Documentation">📖</a> <a href="https://github.com/ageddesi/Mocked-API/commits?author=edwardsmoses" title="Tests">⚠️</a></td>
+      <td align="center"><a href="https://rizkyrajitha.github.io/"><img src="https://avatars.githubusercontent.com/u/38534289?v=4?s=100" width="100px;" alt="Rajitha Gunathilake"/><br /><sub><b>Rajitha Gunathilake</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=RizkyRajitha" title="Code">💻</a></td>
+      <td align="center"><a href="https://bmusuko.tech/"><img src="https://avatars.githubusercontent.com/u/32943475?v=4?s=100" width="100px;" alt="Bram Musuko Panjaitan"/><br /><sub><b>Bram Musuko Panjaitan</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=bmusuko" title="Tests">⚠️</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/filipkujawa"><img src="https://avatars.githubusercontent.com/u/44206832?v=4?s=100" width="100px;" alt="filip"/><br /><sub><b>filip</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=filipkujawa" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/mdfarhaan"><img src="https://avatars.githubusercontent.com/u/60516398?v=4?s=100" width="100px;" alt="Farhaan"/><br /><sub><b>Farhaan</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=mdfarhaan" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
