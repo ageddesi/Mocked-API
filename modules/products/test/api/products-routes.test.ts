@@ -53,10 +53,9 @@ describe('products api endpoints', () => {
     describe('GET /products/quantity/:qty', () => {
         const quantity = 4;
 
-        it('should return a list of products ', async () => {
-            const response = await request(app).get(`/products/quantity/${quantity}`);
+        it('should return a list of products', async () => {
+            const response = await request(app).get(`/products/${quantity}`);
             expect(response.body.length).toEqual(quantity);
-
         });
     });
 
@@ -66,7 +65,6 @@ describe('products api endpoints', () => {
         it('should return a list of products', async () => {
             const response = await request(app).get(`/products/department/${department}`);
             expect(response.body[0].department).toEqual(department);
-
         });
     });
 
