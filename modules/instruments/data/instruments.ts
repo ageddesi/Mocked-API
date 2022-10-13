@@ -1,4 +1,5 @@
-const instrumentsList = ["Accordion",
+const instrumentsList = [
+    "Accordion",
     "Acoustic bass guitar",
     "Acoustic guitar",
     "Acoustic bass guitar",

@@ -67,13 +67,13 @@ module.exports = function (app: core.Express) {
         if (req.params.filterBy) {
             const filteredList = instrumentsList.filter((source) =>
                 source.toLocaleLowerCase().includes(req.params.filterBy.toLocaleLowerCase())
-            );
+            ).slice(0, qty);
             return res.json({
-                instruments: filteredList.slice(0, qty),
+                instruments: filteredList,
             });
         }
         res.json({
-            instruments: instrumentsList.slice(0, qty),
+            instruments: instrumentsList,
         });
     });
 };
