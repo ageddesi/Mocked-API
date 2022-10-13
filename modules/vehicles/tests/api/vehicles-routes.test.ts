@@ -1,10 +1,10 @@
 const request = require('supertest');
-const baseURL = 'http://localhost:3000';
+import app from '../../../../app';
 
 describe('vehicles api endpoints', () => {
   describe('GET /vehicles', () => {
     it('should return a vehicle', async () => {
-      const response = await request(baseURL).get(`/vehicles/`);
+      const response = await request(app).get(`/vehicles/`);
 
       expect(response.body[0]).toHaveProperty('name');
       expect(response.body[0]).toHaveProperty('type');
@@ -21,7 +21,7 @@ describe('vehicles api endpoints', () => {
     const qty = 5;
 
     it('should return a list of users ', async () => {
-      const response = await request(baseURL).get(`/users/${qty}`);
+      const response = await request(app).get(`/users/${qty}`);
       expect(response.body.length).toEqual(qty);
     });
   });

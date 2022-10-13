@@ -20,7 +20,7 @@ module.exports = function (app: core.Express) {
      * '/ip/{qty}':
      *   get:
      *     tags:
-     *     - Products
+     *     - IPs
      *     summary: Returns a random list of ip addresses
      *     parameters:
      *     - in: path
@@ -75,7 +75,7 @@ module.exports = function (app: core.Express) {
      * '/mac/{qty}':
      *   get:
      *     tags:
-     *     - Products
+     *     - IPs
      *     summary: Returns a random list of mac addresses
      *     parameters:
      *     - in: path

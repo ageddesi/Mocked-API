@@ -7,7 +7,7 @@ const BankData = {
   statement: [
     {
       date: '2222-22-22',
-      discription: 'This is bank statemnet ',
+      description: 'This is bank statement ',
       amount: '50000',
     },
   ],

@@ -3,6 +3,7 @@ import * as core from 'express-serve-static-core';
 import productReviews from '../data/product-reviews';
 import { getQtyFromRequest } from '../../../utils/route-utils';
 import getProducts from '../utils/getProducts';
+import { randomRating } from '../../../utils/numbers';
 
 /**
  * @openapi
@@ -102,7 +103,7 @@ module.exports = function (app: core.Express) {
 
 	/**
 	 * @openapi
-	 * '/product/{department}':
+	 * '/product/department/{department}':
 	 *   get:
 	 *     tags:
 	 *     - Products
@@ -117,7 +118,7 @@ module.exports = function (app: core.Express) {
 	 *         schema:
 	 *           $ref: '#/definitions/MockProduct'
 	 */
-	app.get('/product/:department', (req: Request, res: Response) => {
+	app.get('/product/department/:department', (req: Request, res: Response) => {
 		const department = req.params.department ? req.params.department.toString() : 'General';
 		res.json(getProducts(1, department));
 	});
@@ -204,12 +205,13 @@ module.exports = function (app: core.Express) {
 	 *         schema:
 	 *           $ref: '#/definitions/MockProductReview'
 	 */
-	app.get('/products/reviews/rating/:rating', (req: Request, res: Response) => {
-		let reviews = productReviews;
-		const rating = parseInt(req.params.rating);
-		reviews.forEach((element) => {
-			element.rating = rating;
-		});
-		res.json(reviews);
+	app.get('/products/reviews/ratings/:rating', (req: Request, res: Response) => {
+		const rating = req.params.rating ?
+			(parseInt(req.params.rating) <= 5 ?
+				parseInt(req.params.rating)
+				: 5)
+			: randomRating();
+		const filtereReview = productReviews.filter((element) => element.rating = rating);
+		res.json(filtereReview);
 	});
 };
