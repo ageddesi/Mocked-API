@@ -9,3 +9,5 @@ type Video = {
     runtimeSeconds: number,
     maxQuality: string,
 }
+
+export default Video;
