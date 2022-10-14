@@ -16,7 +16,10 @@ const getVideo = () => {
     }
 
     video.likes = Math.max(video.views, faker.datatype.number());
-    video.dislikes = Math.max(video.views - video.likes, faker.datatype.number());
+    video.dislikes = faker.datatype.number();
+    if (video.dislikes > video.views - video.likes) {
+        video.dislikes = video.views - video.likes
+    }
 
     return video;
 }
