@@ -139,7 +139,144 @@ Updating, improving and correcting the documentation
 
 -->
 
-## Styleguides
+## Coding Conventions
+
+This is all about standardization :blush:
+
+### Folders and Files Naming
+
+All of the folders and files should use `kebab-case`.
+
+> The `kebab-case` usage (in package, folder and file names) will make us easier when it's time to extract them into itsown package in the future.
+> [Here is the related discussion](https://github.com/ageddesi/Mocked-API/issues/121#issuecomment-1273622574).
+
+### File Extensions
+
+This is all about the files and the clear definition of their usage :
+
+- APIs
+  - `*.routes.ts`
+	- This file located right inside the feature's folder
+- Data
+  - `*.ts`
+	- This file located under `data` folder of the feature's folder (e.g. `data/*.ts`)
+	- This `data` folder is used to store the static data used in APIs (not your mock data)
+- Interfaces/Types
+  - `*.types.ts`
+	- This file located under `models` folder of the feature's folder (e.g. `models/*.types.ts`)
+- Utilities
+  - `*.ts`
+	- This file located under `utils` folder of the feature's folder (e.g. `utils/*.ts`)
+- Tests
+  - `*.test.ts`
+	- This file located under `tests` folder of the feature's folder (e.g. `tests/*.test.ts`)
+	- This `tests` folder should follow the feature's folder structure, e.g. :
+	  - `tests/*.test.ts` -> test file for the APIs
+		- `tests/utils/*.test.ts` -> test file for the APIs
+
+### File Structure
+
+The file structure in this repository should look like this :
+```
+Mocked-API
+│   README.md
+│   package.json
+│   ...
+│
+└───middleware
+│   │
+│   └───rate-limiter
+│       │   rate-limiter.ts
+│       └───models
+│           │  
+│           └───rate-limiter-response.ts
+│
+└───modules
+│   │
+│   └───feature-sample-1
+│   │   │   feature-sample-1.routes.ts
+│   │   │   
+│   │   └───data
+│   │   │   │   data-1.ts
+│   │   │   │   data-2.ts
+│   │   │   │   ...
+│   │   │   
+│   │   └───models
+│   │   │   │   address.types.ts
+│   │   │   │   country.types.ts
+│   │   │   │   ...
+│   │   │   
+│   │   └───utils
+│   │   │   │   util-1.ts
+│   │   │   │   util-2.ts
+│   │   │   │   ...
+│   │   │   
+│   │   └───tests   /* Should have the same structure with `feature-sample-1` folder */
+│   │       │   feature-sample-1.test.ts   /* Test for `feature-sample-1.routes.ts` */
+│   │       │   
+│   │       └───utils
+│   │           │   util-1.test.ts
+│   │           │   util-2.test.ts
+│   │           │   ...
+│   │
+│   └───feature-sample-2
+│   │   │   *.routes.ts
+│   │   │   
+│   │   └───data
+│   │   │   └─── *.ts
+│   │   │   
+│   │   └───models
+│   │   │   └─── *.types.ts
+│   │   │   
+│   │   └───utils
+│   │   │   └─── *.ts
+│   │   │   
+│   │   └───tests   /* Should have the same structure with `feature-sample-1` folder */
+│   │       │   *.test.ts
+│   │       │   
+│   │       └───utils
+│   │           └─── *.ts
+│   │
+│   └───feature-sample-3
+│       │   *.routes.ts
+│       │   
+│       └───data
+│       │   └─── *.ts
+│       │   
+│       └───models
+│       │   └─── *.types.ts
+│       │   
+│       └───utils
+│       │   └─── *.ts
+│       │   
+│       └───tests   /* Should have the same structure with `feature-sample-1` folder */
+│           │   *.test.ts
+│           │   
+│           └───utils
+│               └─── *.ts
+│
+└───utils
+│   │   file-utils-1.ts
+│   │   file-utils-2.ts
+│   │   ...
+│   │
+│   └───tests
+│       │   file-utils-1.test.ts
+│       │   file-utils-2.test.ts
+│       │   ...
+│
+└───middleware
+│   │   file011.txt
+│   │   file012.txt
+│   │
+│   └───subfolder1
+│       │   file111.txt
+│       │   file112.txt
+│       │   ...
+│   
+└───another-folders
+```
+
 ### Commit Messages
 <!-- TODO
 
