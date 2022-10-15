@@ -179,103 +179,103 @@ This is all about the files and the clear definition of their usage :
 The file structures in this repository should look like this :
 
     ```markdown
-    Mocked-API
-    │   README.md
-    │   package.json
-    │   ...
-    │
-    └───middleware
-    │   │
-    │   └───rate-limiter
-    │       │   rate-limiter.ts
-    │       │
-    │       └───models
-    │           │
-    │           └───rate-limiter-response.ts
-    │
-    └───modules
-    │   │
-    │   └───feature-sample-1
-    │   │   │   feature-sample-1.routes.ts
-    │   │   │
-    │   │   └───data
-    │   │   │   │   data-1.ts
-    │   │   │   │   data-2.ts
-    │   │   │   │   ...
-    │   │   │
-    │   │   └───models
-    │   │   │   │   address.types.ts
-    │   │   │   │   country.types.ts
-    │   │   │   │   ...
-    │   │   │
-    │   │   └───utils
-    │   │   │   │   util-1.ts
-    │   │   │   │   util-2.ts
-    │   │   │   │   ...
-    │   │   │
-    │   │   └───tests   /* Should have the same structure with `feature-sample-1` folder */
-    │   │       │   feature-sample-1.test.ts   /* Test for `feature-sample-1.routes.ts` */
-    │   │       │
-    │   │       └───utils
-    │   │           │   util-1.test.ts
-    │   │           │   util-2.test.ts
-    │   │           │   ...
-    │   │
-    │   └───feature-sample-2
-    │   │   │   *.routes.ts
-    │   │   │
-    │   │   └───data
-    │   │   │   │
-    │   │   │   └─── *.ts
-    │   │   │
-    │   │   └───models
-    │   │   │   │
-    │   │   │   └─── *.types.ts
-    │   │   │
-    │   │   └───utils
-    │   │   │   │
-    │   │   │   └─── *.ts
-    │   │   │
-    │   │   └───tests   /* Should have the same structure with `feature-sample-2` folder */
-    │   │       │   *.test.ts
-    │   │       │
-    │   │       └───utils
-    │   │           │
-    │   │           └─── *.ts
-    │   │
-    │   └───feature-sample-3
-    │       │   *.routes.ts
-    │       │
-    │       └───data
-    │       │   │
-    │       │   └─── *.ts
-    │       │
-    │       └───models
-    │       │   │
-    │       │   └─── *.types.ts
-    │       │
-    │       └───utils
-    │       │   │
-    │       │   └─── *.ts
-    │       │
-    │       └───tests   /* Should have the same structure with `feature-sample-3` folder */
-    │           │   *.test.ts
-    │           │
-    │           └───utils
-    │               │
-    │               └─── *.ts
-    │
-    └───utils
-    │   │   file-utils-1.ts
-    │   │   file-utils-2.ts
-    │   │   ...
-    │   │
-    │   └───tests
-    │       │   file-utils-1.test.ts
-    │       │   file-utils-2.test.ts
-    │       │   ...
-    │
-    └───another-folders
+        Mocked-API
+        │   README.md
+        │   package.json
+        │   ...
+        │
+        └───middleware
+        │   │
+        │   └───rate-limiter
+        │       │   rate-limiter.ts
+        │       │
+        │       └───models
+        │           │
+        │           └───rate-limiter-response.ts
+        │
+        └───modules
+        │   │
+        │   └───feature-sample-1
+        │   │   │   feature-sample-1.routes.ts
+        │   │   │
+        │   │   └───data
+        │   │   │   │   data-1.ts
+        │   │   │   │   data-2.ts
+        │   │   │   │   ...
+        │   │   │
+        │   │   └───models
+        │   │   │   │   address.types.ts
+        │   │   │   │   country.types.ts
+        │   │   │   │   ...
+        │   │   │
+        │   │   └───utils
+        │   │   │   │   util-1.ts
+        │   │   │   │   util-2.ts
+        │   │   │   │   ...
+        │   │   │
+        │   │   └───tests   /* Should have the same structure with `feature-sample-1` folder */
+        │   │       │   feature-sample-1.test.ts   /* Test for `feature-sample-1.routes.ts` */
+        │   │       │
+        │   │       └───utils
+        │   │           │   util-1.test.ts
+        │   │           │   util-2.test.ts
+        │   │           │   ...
+        │   │
+        │   └───feature-sample-2
+        │   │   │   *.routes.ts
+        │   │   │
+        │   │   └───data
+        │   │   │   │
+        │   │   │   └─── *.ts
+        │   │   │
+        │   │   └───models
+        │   │   │   │
+        │   │   │   └─── *.types.ts
+        │   │   │
+        │   │   └───utils
+        │   │   │   │
+        │   │   │   └─── *.ts
+        │   │   │
+        │   │   └───tests   /* Should have the same structure with `feature-sample-2` folder */
+        │   │       │   *.test.ts
+        │   │       │
+        │   │       └───utils
+        │   │           │
+        │   │           └─── *.ts
+        │   │
+        │   └───feature-sample-3
+        │       │   *.routes.ts
+        │       │
+        │       └───data
+        │       │   │
+        │       │   └─── *.ts
+        │       │
+        │       └───models
+        │       │   │
+        │       │   └─── *.types.ts
+        │       │
+        │       └───utils
+        │       │   │
+        │       │   └─── *.ts
+        │       │
+        │       └───tests   /* Should have the same structure with `feature-sample-3` folder */
+        │           │   *.test.ts
+        │           │
+        │           └───utils
+        │               │
+        │               └─── *.ts
+        │
+        └───utils
+        │   │   file-utils-1.ts
+        │   │   file-utils-2.ts
+        │   │   ...
+        │   │
+        │   └───tests
+        │       │   file-utils-1.test.ts
+        │       │   file-utils-2.test.ts
+        │       │   ...
+        │
+        └───another-folders
     ```
 
 ### Commit Messages
