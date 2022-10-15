@@ -20,7 +20,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 - [Suggesting Enhancements](#suggesting-enhancements)
 - [Your First Code Contribution](#your-first-code-contribution)
 - [Improving The Documentation](#improving-the-documentation)
-- [Styleguides](#styleguides)
+- [Coding Conventions](#Coding-Conventions)
 - [Commit Messages](#commit-messages)
 - [Join The Project Team](#join-the-project-team)
 
@@ -148,6 +148,7 @@ This is all about standardization :blush:
 All of the folders and files should use `kebab-case`.
 
 > The `kebab-case` usage (in package, folder and file names) will make us easier when it's time to extract them into itsown package in the future.
+> 
 > [Here is the related discussion](https://github.com/ageddesi/Mocked-API/issues/121#issuecomment-1273622574).
 
 ### File Extensions
