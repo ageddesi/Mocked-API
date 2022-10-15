@@ -1,3 +1,11 @@
+/**
+ * @openapi
+ * definitions:
+ *   MockVideoResolution:
+ *     type: array
+ *     items:
+ *       type: string
+ */
 const resolutions = [
     '8K',
     '4K',
