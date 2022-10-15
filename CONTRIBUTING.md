@@ -178,7 +178,7 @@ This is all about the files and the clear definition of their usage :
 
 The file structures in this repository should look like this :
 
-```
+```markdown
 Mocked-API
 │   README.md
 │   package.json
