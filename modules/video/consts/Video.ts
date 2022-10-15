@@ -3,7 +3,7 @@
  * @openapi
  * definitions:
  *   MockVideo:
- *     type: object:
+ *     type: object
  *     properties:
 *        title:
 *          type: string
