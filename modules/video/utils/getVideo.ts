@@ -24,4 +24,14 @@ const getVideo = () => {
     return video;
 }
 
-export default getVideo;
+const getVideos = (qty: number) => {
+    const videos = [];
+
+    for (let i = 0; i < qty; i++) {
+        videos.push(getVideo());
+    }
+
+    return videos;
+}
+
+export { getVideo, getVideos }
