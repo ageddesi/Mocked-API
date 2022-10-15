@@ -224,36 +224,44 @@ Mocked-API
 │   │   │   *.routes.ts
 │   │   │   
 │   │   └───data
+│   │   │   │
 │   │   │   └─── *.ts
 │   │   │   
 │   │   └───models
+│   │   │   │
 │   │   │   └─── *.types.ts
 │   │   │   
 │   │   └───utils
+│   │   │   │
 │   │   │   └─── *.ts
 │   │   │   
-│   │   └───tests   /* Should have the same structure with `feature-sample-1` folder */
+│   │   └───tests   /* Should have the same structure with `feature-sample-2` folder */
 │   │       │   *.test.ts
 │   │       │   
 │   │       └───utils
+│   │           │
 │   │           └─── *.ts
 │   │
 │   └───feature-sample-3
 │       │   *.routes.ts
 │       │   
 │       └───data
+│       │   │
 │       │   └─── *.ts
 │       │   
 │       └───models
+│       │   │
 │       │   └─── *.types.ts
 │       │   
 │       └───utils
+│       │   │
 │       │   └─── *.ts
 │       │   
-│       └───tests   /* Should have the same structure with `feature-sample-1` folder */
+│       └───tests   /* Should have the same structure with `feature-sample-3` folder */
 │           │   *.test.ts
 │           │   
 │           └───utils
+│               │
 │               └─── *.ts
 │
 └───utils
