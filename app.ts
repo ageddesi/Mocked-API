@@ -2,11 +2,14 @@ require('dotenv').config();
 import express, { Request, Response } from 'express';
 import { swaggerSpec } from './utils/swagger';
 import swag from "./swagger.json";
-
+import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
 const morgan = require('morgan');
 const cors = require('cors');
 
 const app = express();
+
+// Rate limit middleware
+app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
 
 // Load Mock Modules
 require('./modules/animal/api/animal-routes')(app); // Animals
