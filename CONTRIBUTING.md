@@ -274,15 +274,6 @@ Mocked-API
 │       │   file-utils-1.test.ts
 │       │   file-utils-2.test.ts
 │       │   ...
-│
-└───middleware
-│   │   file011.txt
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
 │   
 └───another-folders
 ```
