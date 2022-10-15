@@ -34,6 +34,7 @@ require('./modules/address/api/address-routes')(app); // Addresses
 require('./modules/bankfeed/api/bankfeed-routes')(app); // Bank Feed
 require('./modules/location/api/location-routes')(app); // Bank Feed
 require('./modules/instruments/api/instruments-routes')(app); // Instruments
+require('./modules/video/api/video-routes')(app) // Video Data
 
 
 // Add an healthcheck endpoint
