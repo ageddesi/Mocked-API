@@ -154,25 +154,25 @@ All of the folders and files should use `kebab-case`.
 
 This is all about the files and the clear definition of their usage :
 
-- APIs
-    - `*.routes.ts`
-    - This file located right inside the feature's folder
-- Data
-    - `*.ts`
-    - This file located under `data` folder of the feature's folder (e.g. `data/*.ts`)
-    - This `data` folder is used to store the static data used in APIs (not your mock data)
-- Interfaces/Types
-    - `*.types.ts`
-    - This file located under `models` folder of the feature's folder (e.g. `models/*.types.ts`)
-- Utilities
-    - `*.ts`
-    - This file located under `utils` folder of the feature's folder (e.g. `utils/*.ts`)
-- Tests
-    - `*.test.ts`
-    - This file located under `tests` folder of the feature's folder (e.g. `tests/*.test.ts`)
-    - This `tests` folder should follow the feature's folder structure, e.g. :
-        - `tests/*.test.ts` -> test file for the APIs
-        - `tests/utils/*.test.ts` -> test file for the APIs
+  - APIs
+      - `*.routes.ts`
+      - This file located right inside the feature's folder
+  - Data
+      - `*.ts`
+      - This file located under `data` folder of the feature's folder (e.g. `data/*.ts`)
+      - This `data` folder is used to store the static data used in APIs (not your mock data)
+  - Interfaces/Types
+      - `*.types.ts`
+      - This file located under `models` folder of the feature's folder (e.g. `models/*.types.ts`)
+  - Utilities
+      - `*.ts`
+      - This file located under `utils` folder of the feature's folder (e.g. `utils/*.ts`)
+  - Tests
+      - `*.test.ts`
+      - This file located under `tests` folder of the feature's folder (e.g. `tests/*.test.ts`)
+      - This `tests` folder should follow the feature's folder structure, e.g. :
+          - `tests/*.test.ts` -> test file for the APIs
+          - `tests/utils/*.test.ts` -> test file for the APIs
 
 ### File Structures
 
