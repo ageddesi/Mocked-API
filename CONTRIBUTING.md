@@ -175,9 +175,9 @@ This is all about the files and the clear definition of their usage :
 	  - `tests/*.test.ts` -> test file for the APIs
 		- `tests/utils/*.test.ts` -> test file for the APIs
 
-### File Structure
+### File Structures
 
-The file structure in this repository should look like this :
+The file structures in this repository should look like this :
 ```
 Mocked-API
 │   README.md
