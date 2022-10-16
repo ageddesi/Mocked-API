@@ -38,6 +38,8 @@ require('./modules/ip/api/ip-routes')(app); // ip and mac address
 require('./modules/vehicles/api/vehicles-routes')(app); // Vehicles
 require('./modules/location/api/location-routes')(app); // Bank Feed
 require('./modules/instruments/api/instruments-routes')(app); // Instruments
+require('./modules/news/api/news-routes')(app); // news
+require('./modules/video/api/video-routes')(app) // Video Data
 
 // Add an healthcheck endpoint
 // Shows amount of API Categories and their endpoints
