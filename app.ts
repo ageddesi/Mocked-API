@@ -1,8 +1,9 @@
 require('dotenv').config();
 import express, { Request, Response } from 'express';
 import { swaggerSpec } from './utils/swagger';
-import swag from "./swagger.json";
+import swag from './swagger.json';
 import { applicationRateLimiter } from './middleware/rate-limiter/rate-limiter';
+
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -33,11 +34,10 @@ require('./modules/phone-numbers/api/phone-numbers-routes')(app); // Phone numbe
 require('./modules/quotes/api/quotes-routes')(app); // Quotes
 require('./modules/ip/api/ip-routes')(app); // ip and mac address
 require('./modules/vehicles/api/vehicles-routes')(app); // Vehicles
-require('./modules/address/api/address-routes')(app); // Addresses
+require('./modules/address/address.routes')(app); // Addresses
 require('./modules/bankfeed/api/bankfeed-routes')(app); // Bank Feed
 require('./modules/location/api/location-routes')(app); // Bank Feed
 require('./modules/instruments/api/instruments-routes')(app); // Instruments
-
 
 // Add an healthcheck endpoint
 // Shows amount of API Categories and their endpoints

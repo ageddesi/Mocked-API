@@ -107,7 +107,12 @@ const options: swaggerJsdoc.Options = {
             },
         ],
     },
-    apis: ['./modules/*/api/*.ts', './modules/*/consts/*.ts'],
+    apis: [
+        './modules/*/api/*.ts', // Remove this after all files has been refactored
+        './modules/*/consts/*.ts', // Remove this after all files has been refactored
+        './modules/*/*.routes.ts',
+        './modules/*/models/*.types.ts',
+    ],
 };
 
 export const swaggerSpec = swaggerJsdoc(options);

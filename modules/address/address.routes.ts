@@ -1,30 +1,30 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import getRandomAddresses from '../utils/getRandomAddress';
-import { getQtyFromRequest } from '../../../utils/route-utils';
-import { getCountryNameFromRequest } from '../../../utils/route-utils';
+import randomAddresses from './utils/random-address';
+import { getQtyFromRequest } from '../../utils/route-utils';
+import { getCountryNameFromRequest } from '../../utils/route-utils';
 
-module.exports = function(app : core.Express) {
+module.exports = function (app: core.Express) {
     /**
-	 * @openapi
-	 * "/address":
-	 *   get:
-	 *     tags:
-	 *     - Address
-	 *     summary: Obtain a USA address (by default)
-	 *     responses:
-	 *       '200':
-	 *         description: An array of single address string
-	 * 		   schema:
-	 *           type: array
-	 *           items:
-	 *             type: object
-	 *             example: ['Andrew Kappa\n3686 Capital Lakeview\nLahore 2344\nUSA']
-	 */
-	app.get('/address', (req: Request, res: Response) => {
-		const address = getRandomAddresses();
-		res.json(address);
-	});
+     * @openapi
+     * "/address":
+     *   get:
+     *     tags:
+     *     - Address
+     *     summary: Obtain a USA address (by default)
+     *     responses:
+     *       '200':
+     *         description: An array of single address string
+     * 		   schema:
+     *           type: array
+     *           items:
+     *             type: object
+     *             example: ['Andrew Kappa\n3686 Capital Lakeview\nLahore 2344\nUSA']
+     */
+    app.get('/address', (req: Request, res: Response) => {
+        const address = randomAddresses();
+        res.json(address);
+    });
 
     // get a random UK/USA address
     /**
@@ -35,7 +35,7 @@ module.exports = function(app : core.Express) {
      *     - Address
      *     summary: Obtain a random UK/USA address
      *     parameters:
-     *       - in: path 
+     *       - in: path
      *         name: country
      *         description: The country whose address is required; can be 'usa' or 'uk'
      *         type: string
@@ -50,7 +50,7 @@ module.exports = function(app : core.Express) {
      */
     app.get('/address/:country?', (req: Request, res: Response) => {
         const country = getCountryNameFromRequest(req);
-        const address = getRandomAddresses(1, country);
+        const address = randomAddresses(1, country);
         res.json(address);
     });
 
@@ -63,11 +63,11 @@ module.exports = function(app : core.Express) {
      *     - Address
      *     summary: Obtain random UK/USA addresses
      *     parameters:
-     *       - in: path 
+     *       - in: path
      *         name: country
      *         description: The country whose address is required; can be 'usa' or 'uk'
      *         type: string
-     *       - in: path 
+     *       - in: path
      *         name: qty
      *         description: The number of addresses required
      *         type: number
@@ -83,7 +83,7 @@ module.exports = function(app : core.Express) {
     app.get('/address/:country?/:qty?', (req: Request, res: Response) => {
         const country = getCountryNameFromRequest(req);
         const qty = getQtyFromRequest(req);
-        const addresses = getRandomAddresses(qty, country);
+        const addresses = randomAddresses(qty, country);
         res.json(addresses);
     });
-}
+};
