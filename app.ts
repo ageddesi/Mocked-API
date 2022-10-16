@@ -49,6 +49,7 @@ app.get('/status', (req, res) => {
         date: new Date(),
         totalCategories: swag.tags.length,
         totalEndpoints: Object.keys(swag.paths).length,
+        version: swag.info.version
     };
     res.status(200).send(data);
 });
