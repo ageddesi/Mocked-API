@@ -1,4 +1,4 @@
-import app from "../../../../app";
+import app from '../../../../app';
 let request = require('supertest');
 
 describe('bank feed api endpoints', () => {
@@ -8,7 +8,7 @@ describe('bank feed api endpoints', () => {
 
             const response = await request(app).get(`/bank/feed/${qty}`);
             const bankData = response.body;
-            const bankStatement = bankData.statement[0]
+            const bankStatement = bankData.statement[0];
 
             // bank data
             expect(bankData).toHaveProperty('id');
@@ -21,10 +21,9 @@ describe('bank feed api endpoints', () => {
             // bank statement
             expect(bankData.statement.length).toEqual(1);
             expect(bankStatement).toHaveProperty('date');
-            expect(bankStatement).toHaveProperty('description');    
-            expect(bankStatement).toHaveProperty('amount');    
-            expect(parseInt(bankStatement.amount)).toEqual(qty);    
-
+            expect(bankStatement).toHaveProperty('description');
+            expect(bankStatement).toHaveProperty('amount');
+            expect(parseInt(bankStatement.amount)).toEqual(qty);
         });
     });
 });

@@ -15,6 +15,7 @@ app.use(applicationRateLimiter); // rate-limit applied to all the routes by defa
 // Load Mock Modules
 require('./modules/address/address.routes')(app); // Addresses
 require('./modules/animal/animal.routes')(app); // Animals
+require('./modules/bank-feed/bankfeed.routes')(app); // Bank Feed
 require('./modules/chat/api/chat-routes')(app); // Chat
 require('./modules/colors/api/colors-route')(app); // Colors
 require('./modules/countries/api/countries-routes')(app); // Countries
@@ -35,7 +36,6 @@ require('./modules/phone-numbers/api/phone-numbers-routes')(app); // Phone numbe
 require('./modules/quotes/api/quotes-routes')(app); // Quotes
 require('./modules/ip/api/ip-routes')(app); // ip and mac address
 require('./modules/vehicles/api/vehicles-routes')(app); // Vehicles
-require('./modules/bankfeed/api/bankfeed-routes')(app); // Bank Feed
 require('./modules/location/api/location-routes')(app); // Bank Feed
 require('./modules/instruments/api/instruments-routes')(app); // Instruments
 
