@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 
-import { getQtyFromRequest } from '../../../utils/route-utils';
-import getRandomColor from '../utils/getRandomColor';
-import ColorErrors from '../consts/ColorErrors';
+import { getQtyFromRequest } from '../../utils/route-utils';
+import randomColor from './utils/random-color';
+import ColorErrors from './data/color-errors';
 
 const defaultColorSpace = 'rgb';
 const defaultColorFormat = 'hex';
@@ -39,7 +39,7 @@ module.exports = function (app: core.Express) {
             const randomColors = [];
 
             for (let i = 0; i < qty; i++) {
-                randomColors.push(getRandomColor(defaultColorSpace, defaultColorFormat));
+                randomColors.push(randomColor(defaultColorSpace, defaultColorFormat));
             }
 
             res.json(randomColors);
@@ -109,7 +109,7 @@ module.exports = function (app: core.Express) {
             const randomColors = [];
 
             for (let i = 0; i < qty; i++) {
-                randomColors.push(getRandomColor(colorSpace, colorFormat));
+                randomColors.push(randomColor(colorSpace, colorFormat));
             }
 
             res.json(randomColors);
