@@ -1,6 +1,6 @@
 {
   "name": "mocked-api",
-  "version": "0.12.0",
+  "version": "0.14.0",
   "description": "An API library for providing endpoints of mock data for use during testing",
   "main": "app.ts",
   "scripts": {
