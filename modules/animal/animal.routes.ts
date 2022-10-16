@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import { getQtyFromRequest } from '../../../utils/route-utils';
-import AnimalType from '../consts/AnimalEnum';
-import getSpeciesOfAnimal from '../utils/getSpeciesOfAnimal';
+import { getQtyFromRequest } from '../../utils/route-utils';
+import Animal from './models/animal.types';
+import animalSpecies from './utils/animal-species';
 
 
 module.exports = function (app: core.Express) {
@@ -30,7 +30,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/bear/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomBears = getSpeciesOfAnimal(AnimalType.Bear, qty);
+        const randomBears = animalSpecies(Animal.Bear, qty);
         res.json(randomBears);
     });
 
@@ -58,7 +58,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/bird/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomBirds = getSpeciesOfAnimal(AnimalType.Bird, qty);
+        const randomBirds = animalSpecies(Animal.Bird, qty);
         res.json(randomBirds);
     });
 
@@ -86,7 +86,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/cat/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomCats = getSpeciesOfAnimal(AnimalType.Cat, qty);
+        const randomCats = animalSpecies(Animal.Cat, qty);
         res.json(randomCats);
     });
 
@@ -114,7 +114,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/cetecean/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomCetecean = getSpeciesOfAnimal(AnimalType.Cetecean, qty);
+        const randomCetecean = animalSpecies(Animal.Cetecean, qty);
         res.json(randomCetecean);
     });
 
@@ -142,7 +142,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/cow/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomCow = getSpeciesOfAnimal(AnimalType.Cow, qty);
+        const randomCow = animalSpecies(Animal.Cow, qty);
         res.json(randomCow);
     });
 
@@ -170,7 +170,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/crocodile/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomCrocodile = getSpeciesOfAnimal(AnimalType.Crocodile, qty);
+        const randomCrocodile = animalSpecies(Animal.Crocodile, qty);
         res.json(randomCrocodile);
     });
 
@@ -198,7 +198,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/dog/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomDog = getSpeciesOfAnimal(AnimalType.Dog, qty);
+        const randomDog = animalSpecies(Animal.Dog, qty);
         res.json(randomDog);
     });
 
@@ -226,7 +226,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/fish/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomFish = getSpeciesOfAnimal(AnimalType.Fish, qty);
+        const randomFish = animalSpecies(Animal.Fish, qty);
         res.json(randomFish);
     });
 
@@ -254,7 +254,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/horse/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomHorse = getSpeciesOfAnimal(AnimalType.Horse, qty);
+        const randomHorse = animalSpecies(Animal.Horse, qty);
         res.json(randomHorse);
     });
 
@@ -282,7 +282,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/insect/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomInsect = getSpeciesOfAnimal(AnimalType.Insect, qty);
+        const randomInsect = animalSpecies(Animal.Insect, qty);
         res.json(randomInsect);
     });
 
@@ -310,7 +310,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/lion/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomLion = getSpeciesOfAnimal(AnimalType.Lion, qty);
+        const randomLion = animalSpecies(Animal.Lion, qty);
         res.json(randomLion);
     });
 
@@ -338,7 +338,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/rabbit/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomRabbit = getSpeciesOfAnimal(AnimalType.Rabbit, qty);
+        const randomRabbit = animalSpecies(Animal.Rabbit, qty);
         res.json(randomRabbit);
     });
 
@@ -366,7 +366,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/rodent/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomRodent = getSpeciesOfAnimal(AnimalType.Rodent, qty);
+        const randomRodent = animalSpecies(Animal.Rodent, qty);
         res.json(randomRodent);
     });
 
@@ -394,7 +394,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/animals/snake/species/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const randomSnake = getSpeciesOfAnimal(AnimalType.Snake, qty);
+        const randomSnake = animalSpecies(Animal.Snake, qty);
         res.json(randomSnake);
     });
 };
