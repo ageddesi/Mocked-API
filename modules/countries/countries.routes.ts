@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import countriesList from '../data/countries';
+import countriesList from './data/countries';
 
 module.exports = function (app: core.Express) {
     /**

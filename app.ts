@@ -18,7 +18,7 @@ require('./modules/animal/animal.routes')(app); // Animals
 require('./modules/bank-feed/bankfeed.routes')(app); // Bank Feed
 require('./modules/chat/chat.routes')(app); // Chat
 require('./modules/colors/colors.routes')(app); // Colors
-require('./modules/countries/api/countries-routes')(app); // Countries
+require('./modules/countries/countries.routes')(app); // Countries
 require('./modules/currency/api/currency-routes')(app); // Currencies
 require('./modules/ecommerce/api/ecommerce-routes')(app); // Ecommerce
 require('./modules/emails/api/emails-routes')(app); // Emails
