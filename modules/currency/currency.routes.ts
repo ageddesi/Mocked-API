@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import currencySnapshot from '../data/currency-snapshot';
-import GBP_USD_TICKER_DATA from '../data/gbp-usd-ticker-data';
-import { getQtyFromRequest } from '../../../utils/route-utils';
-import getDigitalCurrencyAddress from '../utils/getDigitalCurrencyAddress';
-import getDigitalCurrencyTxList from '../utils/getDigitalCurrencyTxList';
-import DigitalCoinEnum from '../consts/DigitalCoinEnum';
+import currencySnapshot from './data/currency-snapshot';
+import GBP_USD_TICKER_DATA from './data/gbp-usd-ticker-data';
+import { getQtyFromRequest } from '../../utils/route-utils';
+import digitalCurrencyAddress from './utils/digital-currency-address';
+import digitalCurrencyTxList from './utils/digital-currency-tx-list';
+import DigitalCoin from './models/digital-coin.types';
 
 module.exports = function (app: core.Express) {
     /**
@@ -70,7 +70,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/currencies/digital-coins/bitcoin/random-address/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const addresses = getDigitalCurrencyAddress(qty, DigitalCoinEnum.Bitcoin);
+        const addresses = digitalCurrencyAddress(qty, DigitalCoin.Bitcoin);
         res.json(addresses);
     });
 
@@ -97,7 +97,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/currencies/digital-coins/ethereum/random-address/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const addresses = getDigitalCurrencyAddress(qty, DigitalCoinEnum.Ethereum);
+        const addresses = digitalCurrencyAddress(qty, DigitalCoin.Ethereum);
         res.json(addresses);
     });
 
@@ -124,11 +124,11 @@ module.exports = function (app: core.Express) {
      */
     app.get('/currencies/digital-coins/litecoin/random-address/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        const addresses = getDigitalCurrencyAddress(qty, DigitalCoinEnum.Litecoin);
+        const addresses = digitalCurrencyAddress(qty, DigitalCoin.Litecoin);
         res.json(addresses);
-    })
+    });
 
-     /**
+    /**
      * @openapi
      * '/currencies/digital-coins/ethereum/tx-list/:address?/:qty?':
      *   get:
@@ -155,11 +155,10 @@ module.exports = function (app: core.Express) {
      */
 
     //Returns the list of transactions performed by an address
-    app.get("/currencies/digital-coins/ethereum/tx-list/:address?/:qty?", (req: Request, res: Response) => {
+    app.get('/currencies/digital-coins/ethereum/tx-list/:address?/:qty?', (req: Request, res: Response) => {
         const address = req.params.address;
         const qty = getQtyFromRequest(req);
-        const tx_list = getDigitalCurrencyTxList(address, qty);
+        const tx_list = digitalCurrencyTxList(address, qty);
         res.json(tx_list);
-    })
-
-}
+    });
+};
