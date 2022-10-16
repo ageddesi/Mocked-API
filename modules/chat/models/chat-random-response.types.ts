@@ -1,5 +1,5 @@
 import User from '../../users/consts/User';
-import ChatMessage from './ChatMessage';
+import ChatMessage from './chat-message.types';
 /**
  * @openapi
  * definitions:
