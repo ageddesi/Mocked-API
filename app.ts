@@ -9,7 +9,7 @@ const cors = require('cors');
 const app = express();
 
 // Rate limit middleware
-// app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
+app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
 
 // Load Mock Modules
 require('./modules/animal/api/animal-routes')(app); // Animals
