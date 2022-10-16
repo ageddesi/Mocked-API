@@ -1,40 +1,8 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import { getQtyFromRequest } from '../../../utils/route-utils';
-import { getRandomSubArray } from '../../../utils/arrays';
 import { getAllNews, getNewsBySlug } from '../utils/getNews';
-import { INews } from '../utils/news.interface';
-
-/**
- * @openapi
- * definitions:
- *   MockNews:
- *     type: array
- *     items:
- *       type: object
- *       properties:
- *         title:
- *           type: string
- *           example: 'Bitcoin: Breaking Up Money and State'
- *         slug:
- *           type: string
- *           example: Bitcoin:-Breaking-Up-Money-and-State
- *         summary:
- *           type: string
- *           example: 'The only drink I will ever need'
- *         category:
- *           type: string
- *           example: 'AI'
- *         language:
- *           type: string
- *           example: en
- *         publishedDate:
- *           type: string
- *           example: '1984-05-21 00:02:11'
- *         author:
- *           type: string
- *           example: sport-drinks
- */
+import { INews } from '../consts/news.interface';
 
 module.exports = function (app: core.Express) {
     /**
@@ -55,19 +23,15 @@ module.exports = function (app: core.Express) {
      *         description: OK
      *         schema:
      *           $ref: '#/definitions/MockNews'
-     *             
+     *
      */
     app.get('/news/:qty', (req: Request, res: Response) => {
         let qty = getQtyFromRequest(req);
 
-        if (!qty) {
-            qty = 10;
-        }
-
-        const data : INews[] = getAllNews(qty);
+        const data: INews[] = getAllNews(qty);
 
         if (!data || data.length === 0) {
-            return res.status(404).json();
+            return res.status(400).json();
         }
 
         res.json(data);
@@ -93,10 +57,10 @@ module.exports = function (app: core.Express) {
      */
     app.get('/news/slug/:slug', (req: Request, res: Response) => {
         const { slug } = req.params;
-        const data : INews[] = getNewsBySlug(slug);
+        const data: INews[] = getNewsBySlug(slug);
 
         if (!data || data.length === 0) {
-            return res.status(404).json();
+            return res.status(400).json();
         }
 
         res.json(data);
