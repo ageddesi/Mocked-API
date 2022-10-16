@@ -1,6 +1,6 @@
 import { rateLimit } from 'express-rate-limit';
 import { Request, Response } from 'express';
-import rateLimitResponse from './models/rate-limit-response';
+import rateLimitResponse from './models/rate-limit-response.types';
 
 // WINDOW_SIZE and WINDOW_TIME can be configured in .env.example file
 const RATELIMIT_WINDOWSIZE = parseInt(process.env.RATELIMIT_WINDOWSIZE);
