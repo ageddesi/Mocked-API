@@ -1,7 +1,7 @@
 import Vehicle from '../consts/Vehicle';
 import { faker } from '@faker-js/faker';
 
-const getRandomVehicles = (qty: number) => {
+const getRandomVehicles = (qty: number) : Vehicle[] => {
   const vehicles: Vehicle[] = [];
 
   Array.from({ length: qty }).forEach(() => {

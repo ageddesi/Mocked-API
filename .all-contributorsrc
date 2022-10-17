@@ -252,6 +252,101 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "devvspaces",
+      "name": "Ayanwola Ayomide",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77179231?v=4",
+      "profile": "https://devvspace.webflow.io/",
+      "contributions": [
+        "code",
+        "test",
+        "doc"
+      ]
+    },
+    {
+      "login": "zaibugemi",
+      "name": "Zuhaib Shah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34958019?v=4",
+      "profile": "https://preciouslife837753359.wordpress.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "GuilhermeFernandes01",
+      "name": "Guilherme Fernandes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26780625?v=4",
+      "profile": "https://github.com/GuilhermeFernandes01",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "benhalverson",
+      "name": "Ben Halverson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7907232?v=4",
+      "profile": "https://github.com/benhalverson",
+      "contributions": [
+        "code",
+        "test"
+      ]
+    },
+    {
+      "login": "darkl1ght",
+      "name": "Ayush Chauhan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19537472?v=4",
+      "profile": "https://github.com/darkl1ght",
+      "contributions": [
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "edwardsmoses",
+      "name": "Edwards Moses",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19548998?v=4",
+      "profile": "https://edwardsmoses.com/",
+      "contributions": [
+        "doc",
+        "test"
+      ]
+    },
+    {
+      "login": "RizkyRajitha",
+      "name": "Rajitha Gunathilake",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38534289?v=4",
+      "profile": "https://rizkyrajitha.github.io/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "bmusuko",
+      "name": "Bram Musuko Panjaitan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32943475?v=4",
+      "profile": "https://bmusuko.tech/",
+      "contributions": [
+        "test"
+      ]
+    },
+    {
+      "login": "filipkujawa",
+      "name": "filip",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44206832?v=4",
+      "profile": "https://github.com/filipkujawa",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mdfarhaan",
+      "name": "Farhaan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60516398?v=4",
+      "profile": "https://github.com/mdfarhaan",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -1,12 +1,12 @@
 import countriesList from '../data/countries';
 
 import request from 'supertest';
-const baseURL = 'http://localhost:3000';
+import app from '../../../app';
 
 describe('country api endpoints', () => {
     describe('GET /countries/', () => {
         it('should return a list of countries', async () => {
-            const response = await request(baseURL).get(`/countries/`);
+            const response = await request(app).get(`/countries/`);
             expect(response.body).toStrictEqual({ countries: [...countriesList] });
         });
     });
@@ -14,9 +14,7 @@ describe('country api endpoints', () => {
     describe('GET /countries/:filterBy?', () => {
         it('should return gpb_usd ticker data', async () => {
             const filter = 'Afghanistan';
-            const response = await request(baseURL).get(`/countries/${filter}`);
-            console.log(response.body);
-
+            const response = await request(app).get(`/countries/${filter}`);
             expect(response.body.countries[0]).toEqual(filter);
         });
     });

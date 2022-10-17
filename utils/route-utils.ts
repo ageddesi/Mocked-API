@@ -5,6 +5,7 @@ const defaultQty = 10;
 const maxQty = 100;
 const imageWidthDefault = 640;
 const imageHeightDefault = 480;
+const defaultCountry = 'uk';
 
 
 function isNumber(value: string | number): boolean
@@ -46,4 +47,13 @@ const getImageDataFromRequest = (request: Request | null): ImageDataType => {
     };
 };
 
-export { getQtyFromRequest, getImageDataFromRequest };
+const getCountryNameFromRequest = (request : Request | null) : string => {
+	return request.params.country ? request.params.country : defaultCountry;
+}
+
+
+export {
+    getQtyFromRequest,
+    getImageDataFromRequest,
+	getCountryNameFromRequest
+}
