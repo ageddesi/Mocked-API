@@ -7,14 +7,23 @@ const imageWidthDefault = 640;
 const imageHeightDefault = 480;
 const defaultCountry = 'uk';
 
+
+function isNumber(value: string | number): boolean
+{
+   return ((value != null) &&
+           (value !== '') &&
+           !isNaN(Number(value.toString())));
+}
+
+
 const getQtyFromRequest = (request: Request | null, overrideDefaultQty?: number | null): number => {
-    return request.params.qty
-        ? parseInt(request.params.qty) < maxQty
-            ? parseInt(request.params.qty)
-            : maxQty
-        : overrideDefaultQty
-        ? overrideDefaultQty
-        : defaultQty;
+    const defaultValue = overrideDefaultQty ?? defaultQty; 
+
+    return  request.params.qty ? 
+                isNumber(request.params.qty) && parseInt(request.params.qty) < maxQty ? 
+                    parseInt(request.params.qty)
+                    : maxQty
+                :defaultValue
 };
 
 const getImageDataFromRequest = (request: Request | null): ImageDataType => {

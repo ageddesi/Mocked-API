@@ -47,6 +47,14 @@ app.get('/status', (req, res) => {
         uptime: process.uptime(),
         message: 'Ok',
         date: new Date(),
+    };
+    res.status(200).send(data);
+});
+app.get('/full-status', (req, res) => {
+    const data = {
+        uptime: process.uptime(),
+        message: 'Ok',
+        date: new Date(),
         totalCategories: swag.tags.length,
         totalEndpoints: Object.keys(swag.paths).length,
     };

@@ -4,6 +4,24 @@ import { getImageDataFromRequest, getQtyFromRequest } from '../route-utils';
 
 describe('route utils', () => {
   describe('get qty from request', () => {
+    it('should qty doesnt exist - return 10', () => {
+      const expectedQty = 10;
+      const res = getQtyFromRequest({
+        params: {
+        },
+      } as unknown as Request);
+
+      expect(res).toEqual(expectedQty);
+    });
+    it('should qty doesnt exist, override specified - return 1', () => {
+      const expectedQty = 1;
+      const res = getQtyFromRequest({
+        params: {
+        },
+      } as unknown as Request,expectedQty);
+
+      expect(res).toEqual(expectedQty);
+    });
     it('should return the qty from a request', () => {
       const expectedQty = 5;
       const res = getQtyFromRequest({
@@ -21,6 +39,14 @@ describe('route utils', () => {
 
       expect(res).toEqual(expectedQty);
     });
+    it('should return the return spomthing is  qty ', () => {
+      const expectedQty = 100;
+      const res = getQtyFromRequest({ params: { qty: "foo" } } as unknown as Request, expectedQty);
+      expect(res).toEqual(expectedQty);
+    });
+
+
+
   });
 
   describe('get getImageDataFromRequest from request', () => {
