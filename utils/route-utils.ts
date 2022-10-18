@@ -24,16 +24,6 @@ const getQtyFromRequest = (request: Request | null, overrideDefaultQty?: number 
                     parseInt(request.params.qty)
                     : maxQty
                 :defaultValue
-
- 
-
-    // return request.params.qty
-    //     ? parseInt(request.params.qty) < maxQty
-    //         ? parseInt(request.params.qty)
-    //         : maxQty
-    //     : overrideDefaultQty
-    //     ? overrideDefaultQty
-    //     : defaultQty;
 };
 
 const getImageDataFromRequest = (request: Request | null): ImageDataType => {
