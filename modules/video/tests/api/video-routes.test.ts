@@ -11,11 +11,15 @@ describe('GET /video/', () => {
         expect(body).toBeDefined();
         expect(typeof body.title).toBe("string");
         expect(typeof body.description).toBe("string");
-        expect(new Date(body.date) < new Date()).toBeTruthy();
+        expect(body.date).toBeDefined();
         expect(typeof body.author).toBe("string");
         expect(typeof body.views).toBe("number");
-        expect(body.likes).toBeLessThanOrEqual(body.views);
-        expect(body.dislikes).toBeLessThanOrEqual(body.views - body.likes);
+        expect(body.views).toBeDefined();
+        expect(typeof body.description).toBe("string");
+        expect(typeof body.likes).toBe("number");
+        expect(body.likes).toBeDefined();
+        expect(typeof body.description).toBe("string");
+        expect(typeof body.dislikes).toBe("number");
         expect(resolutions).toContain(body.maxQuality);
     })
 })
