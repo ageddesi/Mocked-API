@@ -295,9 +295,8 @@ We assume `<TOPIC>` as a new TAG on OpenAPI, meaning a different category with d
 
 Example on how to create and endpoint for a new topic:
 
-1 - Create a new folder with the topic name, under `./modules` folder, like `./modules/users`
-2 - Create a new file with mocked data, under `./modules/users/data`, like `./modules/users/data/users.ts`. Example:
-
+- 1 - Create a new folder with the topic name, under `./modules` folder, like `./modules/users`
+- 2 - Create a new file with mocked data, under `./modules/users/data`, like `./modules/users/data/users.ts`. Example:
 ```javascript
 const usersList = [
     {
@@ -319,9 +318,8 @@ const usersList = [
     ...
 ]
 ```
-
-3 - Create an `api` folder to store the `routes` file, like `./modules/users/api/users-routes.ts`
-4 - Create different endpoints for users. Example:
+- 3 - Create an `api` folder to store the `routes` file, like `./modules/users/api/users-routes.ts`
+- 4 - Create different endpoints for users. Example:
 
 ```javascript
 import usersList from '../data/users';
@@ -348,12 +346,12 @@ TODO
 For each endpoint you should do an OpenAPI comment, this way, you will make sure your endpoint will be reflected in swagger, as well as the response schema and type are correct.
 To describe describe an endpoint as an OpenAPI comment, you should use the yaml structure like this:
 
-1 - Define the path
-2 - Define the http method referent to that path
-3 - Define the tag in order to group all endpoints referent to the same TAG (in this case, all `users` endpoints will be grouped under the tag `Users`)
-4 - Define a brief summary of you endpoint
-5 - Define the response types for the endpoint (200 - OK ; 404 - Not found, etc...)
-6 - Define the schema of the response
+- 1 - Define the path
+- 2 - Define the http method referent to that path
+- 3 - Define the tag in order to group all endpoints referent to the same TAG (in this case, all `users` endpoints will be grouped under the tag `Users`)
+- 4 - Define a brief summary of you endpoint
+- 5 - Define the response types for the endpoint (200 - OK ; 404 - Not found, etc...)
+- 6 - Define the schema of the response
 
 Note: You can define the properties of each schema or reuse a schema that already exists
 
