@@ -283,3 +283,91 @@ The file structures in this repository should look like this :
 
 ## Join The Project Team
 <!-- TODO -->
+
+## Adding an API endpoint
+
+This example will use `users` as a new TAG for OpenAPI, meaning we will have dedicated endpoints to get some mocked users or create new ones.
+
+### How to add an endpoint
+
+Endpoints should be created in a `<TOPIC>-routes.ts` file under `./modules/<TOPIC>/api` folder.
+We assume `<TOPIC>` as a new TAG on OpenAPI, meaning a different category with dedicated endpoints like `address`, `countries`, `currency`, and son on... We will use `users` topic in our examples.
+
+Example on how to create and endpoint for a new topic:
+
+1 - Create a new folder with the topic name, under `./modules` folder, like `./modules/users`
+2 - Create a new file with mocked data, under `./modules/users/data`, like `./modules/users/data/users.ts`. Example:
+
+```javascript
+const usersList = [
+    {
+    "email": "male@example.com",
+    "gender": "male",
+    "username": "user0000",
+    "first_name": "John",
+    "last_name": "Doe",
+    "title": "mr",
+    },
+    {
+    "email": "female@example.com",
+    "gender": "male",
+    "username": "user0001",
+    "first_name": "Hydra",
+    "last_name": "Smith",
+    "title": "mrs",
+    },
+    ...
+]
+```
+
+3 - Create an `api` folder to store the `routes` file, like `./modules/users/api/users-routes.ts`
+4 - Create different endpoints for users. Example:
+
+```javascript
+import usersList from '../data/users';
+
+module.exports = function (app: core.Express) {
+    app.get('/users', (req: Request, res: Response) => {
+        res.json(usersList);
+    });
+}
+```
+
+Note: This endpoint will fetch all mocked users stored in `./modules/users/data/users.ts`
+
+### How our folders are structured
+
+    Mocked-API
+    │   Source folder
+    │
+    └───modules
+    │   │
+    │   └───Each folder represents a new Tag on OpenAPI, meaning a new topic with different endpoints
+    │   │   │
+    │   │   └───api
+    │   │   │   │   Where to define all endpoints per TAG
+    │   │   │
+    │   │   └───consts
+    │   │   │   │   Where to define shared constants per TAG
+    │   │   │
+    │   │   └───data
+    │   │   │   │   Where to define mocked data per TAG
+    │   │   │
+    │   │   └───models
+    │   │   │   │   Where to define models and data structures per TAG
+    │   │   │
+    │   │   └───utils
+    │   │   │   │   Where to define util methods to reuse when calling different endpoints
+    │   │   │
+    │   │   └───tests
+    │   │       │
+    │   │       └───api
+    │   │       |   │   Where to test each endpoint
+    │   │       │
+    │   │       └───utils
+    │   │           │   Where to define different methods to reuse when testing like mocks and different test scenarios
+
+### How to add tests
+
+
+### How to add OpenAPI comments
