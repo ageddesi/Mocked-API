@@ -337,39 +337,114 @@ module.exports = function (app: core.Express) {
 
 Note: This endpoint will fetch all mocked users stored in `./modules/users/data/users.ts`
 
-### How our folders are structured
-
-    Mocked-API
-    │   Source folder
-    │
-    └───modules
-    │   │
-    │   └───Each folder represents a new Tag on OpenAPI, meaning a new topic with different endpoints
-    │   │   │
-    │   │   └───api
-    │   │   │   │   Where to define all endpoints per TAG
-    │   │   │
-    │   │   └───consts
-    │   │   │   │   Where to define shared constants per TAG
-    │   │   │
-    │   │   └───data
-    │   │   │   │   Where to define mocked data per TAG
-    │   │   │
-    │   │   └───models
-    │   │   │   │   Where to define models and data structures per TAG
-    │   │   │
-    │   │   └───utils
-    │   │   │   │   Where to define util methods to reuse when calling different endpoints
-    │   │   │
-    │   │   └───tests
-    │   │       │
-    │   │       └───api
-    │   │       |   │   Where to test each endpoint
-    │   │       │
-    │   │       └───utils
-    │   │           │   Where to define different methods to reuse when testing like mocks and different test scenarios
+### [How our folders are structured](#file-structures)
 
 ### How to add tests
 
+TODO
 
 ### How to add OpenAPI comments
+
+For each endpoint you should do an OpenAPI comment, this way, you will make sure your endpoint will be reflected in swagger, as well as the response schema and type are correct.
+To describe describe an endpoint as an OpenAPI comment, you should use the yaml structure like this:
+
+1 - Define the path
+2 - Define the http method referent to that path
+3 - Define the tag in order to group all endpoints referent to the same TAG (in this case, all `users` endpoints will be grouped under the tag `Users`)
+4 - Define a brief summary of you endpoint
+5 - Define the response types for the endpoint (200 - OK ; 404 - Not found, etc...)
+6 - Define the schema of the response
+
+Note: You can define the properties of each schema or reuse a schema that already exists
+
+Each OpenAPI comment should start with `@openapi` in order to be read by swagger and reflected on it.
+
+Example:
+
+```javascript
+    /**
+     * @openapi
+     * '/users':
+     *   get:
+     *     tags:
+     *     - Users
+     *     summary: Obtain a list of all users
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: array
+     *           items:
+     *             type: object
+     *             properties:
+     *               email:
+     *                 type: string
+     *                 example: example@example.com
+     *               gender:
+     *                 type: string
+     *                 example: male
+     *               username:
+     *                 type: string
+     *                 example: user00000
+     *               first_name:
+     *                 type: string
+     *                 example: John
+     *               last_name:
+     *                 type: string
+     *                 example: Doe
+     *               title:
+     *                 type: string
+     *                 example: mr
+     */
+```
+
+This describe the get endpoint that we did [here](#how-to-add-an-endpoint).
+
+After doing the OpenAPI comment:
+
+```javascript
+import usersList from '../data/users';
+
+module.exports = function (app: core.Express) {
+
+    /**
+     * @openapi
+     * '/users':
+     *   get:
+     *     tags:
+     *     - Users
+     *     summary: Obtain a list of all users
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: array
+     *           items:
+     *             type: object
+     *             properties:
+     *               email:
+     *                 type: string
+     *                 example: example@example.com
+     *               gender:
+     *                 type: string
+     *                 example: male
+     *               username:
+     *                 type: string
+     *                 example: user00000
+     *               first_name:
+     *                 type: string
+     *                 example: John
+     *               last_name:
+     *                 type: string
+     *                 example: Doe
+     *               title:
+     *                 type: string
+     *                 example: mr
+     */
+    app.get('/users', (req: Request, res: Response) => {
+        res.json({
+            users: usersList,
+        });
+    });
+}
+```
