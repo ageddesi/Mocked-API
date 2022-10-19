@@ -75,24 +75,6 @@ Now you should be able to make any request to that port, and get a response back
 
 💡 If you browse to that port, you'll see our swagger documentation.
 
-
-## Testing
-
-### How to write tests
-For each module you create you will also need to create a tests folder, Inside this folder there should be a `api` and `utils`
-(if you create any utils) folder.
-
-The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add
-```javascript
-import request from 'supertest';
-import app from 'path/to/app';
-```
-to your tests and make a request in your test instead of calling a normal function.
-
-### How to run tests
-run `npm test`
-run `npm run test:watch` to run the tests in watch mode.
-
 ## FAQ
 
 **Q:** Are you planning to add more end points? <br />
@@ -107,15 +89,6 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 I encourage you to contribute to ***Mocked-API***! Feel free to fork the codebase and make a pull request for your changes.
 
 Our contributing guide is currently WIP and available here [CONTRIBUTING GUIDE](CONTRIBUTING.md)
-
-We use semantic commit messages
-- feat: (new feature for the user, not a new feature for build script)
-- fix: (bug fix for the user, not a fix to a build script)
-- docs: (changes to the documentation)
-- style: (formatting, missing semi colons, etc; no production code change)
-- refactor: (refactoring production code, eg. renaming a variable)
-- test: (adding missing tests, refactoring tests; no production code change)
-- chore: (updating grunt tasks etc; no production code change)
 
 ## Sponsor
 
