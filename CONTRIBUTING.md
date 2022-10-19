@@ -328,7 +328,9 @@ import usersList from '../data/users';
 
 module.exports = function (app: core.Express) {
     app.get('/users', (req: Request, res: Response) => {
-        res.json(usersList);
+        res.json({
+            users: usersList,
+        });
     });
 }
 ```
