@@ -73,7 +73,8 @@ const schemaOptions = {
     swaggerOptions: {
         dom_id: "#swagger-ui",
         tagsSorter: "alpha",
-        operationsSorter: "alpha"
+        operationsSorter: "alpha",
+        docExpansion: "none"
     }
 };
 
