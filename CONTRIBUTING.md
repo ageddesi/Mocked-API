@@ -277,9 +277,16 @@ The file structures in this repository should look like this :
     └───another-folders
 
 ### Commit Messages
-<!-- TODO
 
--->
+We use semantic commit messages
+
+- feat: (new feature for the user, not a new feature for build script)
+- fix: (bug fix for the user, not a fix to a build script)
+- docs: (changes to the documentation)
+- style: (formatting, missing semi colons, etc; no production code change)
+- refactor: (refactoring production code, eg. renaming a variable)
+- test: (adding missing tests, refactoring tests; no production code change)
+- chore: (updating grunt tasks etc; no production code change)
 
 ## Join The Project Team
 <!-- TODO -->
@@ -337,7 +344,7 @@ Note: This endpoint will fetch all mocked users stored in `./modules/users/data/
 
 ### [How our folders are structured](#file-structures)
 
-### How to add tests
+### [How to add tests](./README.md#testing)
 
 TODO
 
