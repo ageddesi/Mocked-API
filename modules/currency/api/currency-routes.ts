@@ -6,6 +6,7 @@ import { getQtyFromRequest } from '../../../utils/route-utils';
 import getDigitalCurrencyAddress from '../utils/getDigitalCurrencyAddress';
 import getDigitalCurrencyTxList from '../utils/getDigitalCurrencyTxList';
 import DigitalCoinEnum from '../consts/DigitalCoinEnum';
+import getDigitalCurrencyBalance from '../utils/GetDigitalCurrencyBalance';
 
 module.exports = function (app: core.Express) {
     /**
@@ -160,6 +161,14 @@ module.exports = function (app: core.Express) {
         const qty = getQtyFromRequest(req);
         const tx_list = getDigitalCurrencyTxList(address, qty);
         res.json(tx_list);
+    })
+
+    app.get("/currencies/digital-coins/balance/:network?/:address?", (req: Request, res: Response) => {
+        const network = req.params.network;
+        const address = req.params.address;
+        const addressBalance = getDigitalCurrencyBalance(network, address);
+        res.json(addressBalance);
+
     })
 
 }
