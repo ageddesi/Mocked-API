@@ -16,8 +16,38 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           type: array
      *           items:
-     *             type: string
-     *             example: United Kingdom, United States Of America
+     *             type: object
+     *             properties:
+     *               name:
+     *                 type: string
+     *                 example: Iceland
+     *               officialName:
+     *                 type: string
+     *                 example: Iceland
+     *               capital:
+     *                 type: string
+     *                 example: Reykjavik
+     *               continent:
+     *                 type: string
+     *                 example: Europe
+     *               cca3:
+     *                 type: string
+     *                 example: ISL
+     *               areaInKm2:
+     *                 type: string
+     *                 example: 103000
+     *               flagUrl:
+     *                 type: string
+     *                 example: https://flagcdn.com/w320/is.png
+     *               mapsUrl:
+     *                 type: string
+     *                 example: https://goo.gl/maps/WxFWSQuc3oamNxoE6
+     *               currencyName:
+     *                 type: string
+     *                 example: Icelandic króna
+     *               currencySymbol:
+     *                 type: string
+     *                 example: kr
      */
     app.get('/countries/', (req: Request, res: Response) => {
         res.json({
@@ -44,13 +74,43 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           type: array
      *           items:
-     *             type: string
-     *             example: United Kingdom
+     *             type: object
+     *             properties:
+     *               name:
+     *                 type: string
+     *                 example: Iceland
+     *               officialName:
+     *                 type: string
+     *                 example: Iceland
+     *               capital:
+     *                 type: string
+     *                 example: Reykjavik
+     *               continent:
+     *                 type: string
+     *                 example: Europe
+     *               cca3:
+     *                 type: string
+     *                 example: ISL
+     *               areaInKm2:
+     *                 type: string
+     *                 example: 103000
+     *               flagUrl:
+     *                 type: string
+     *                 example: https://flagcdn.com/w320/is.png
+     *               mapsUrl:
+     *                 type: string
+     *                 example: https://goo.gl/maps/WxFWSQuc3oamNxoE6 
+     *               currencyName:
+     *                 type: string
+     *                 example: Icelandic króna     
+     *               currencySymbol:
+     *                 type: string
+     *                 example: kr   
      */
     app.get('/countries/:filterBy?', (req: Request, res: Response) => {
         if (req.params.filterBy) {
             const filteredList = countriesList.filter((source) =>
-                source.toLocaleLowerCase().includes(req.params.filterBy.toLocaleLowerCase())
+                source.name.toLocaleLowerCase().includes(req.params.filterBy.toLocaleLowerCase())
             );
             return res.json({
                 countries: filteredList,

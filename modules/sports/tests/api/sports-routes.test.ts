@@ -18,4 +18,13 @@ describe('sports api endpoints', () => {
             expect(response.body.length).toBe(qty);
         });
     });
+
+    describe('GET /sports/football/leagues/seriea/teams', () => {
+        it('should return a list of serie A teams', async () => {
+            const qty = 5;
+            const response = await request(app).get(`/sports/football/leagues/seriea/teams/${qty}`);
+
+            expect(response.body.length).toBe(qty);
+        });
+    });
 });

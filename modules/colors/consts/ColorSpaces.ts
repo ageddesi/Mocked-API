@@ -75,7 +75,7 @@ const ColorSpaces: {[key: string]: ColorSpace} = {
     id: 'cmyka',
     getNums: () => {
       return [
-        ...ColorSpaces.CMYKA.getNums(),
+        ...ColorSpaces.CMYK.getNums(),
         Math.round(Math.random() * 100) / 100,
       ]
     }

@@ -6,6 +6,25 @@ import quotes from '../data/quotes';
 module.exports = function (app: core.Express) {
     /**
      * @openapi
+     * '/quotes/random':
+     *   get:
+     *     tags:
+     *     - Quotes
+     *     summary: Get a random quote from the database
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: object
+     *           example: { quote: '', author: ''}
+     */
+    app.get('/quotes/random', (req: Request, res: Response) => {
+        const quote = quotes[Math.floor(Math.random() * quotes.length)];
+        res.json(quote);
+    });
+
+    /**
+     * @openapi
      * '/quotes/{qty}':
      *   get:
      *     tags:
@@ -29,24 +48,5 @@ module.exports = function (app: core.Express) {
     app.get('/quotes/:qty', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         res.json(qty >= quotes.length ? quotes : quotes.slice(0, qty));
-    });
-
-    /**
-     * @openapi
-     * '/quotes/random':
-     *   get:
-     *     tags:
-     *     - Quotes
-     *     summary: Get a random quote from the database
-     *     responses:
-     *       '200':
-     *         description: OK
-     *         schema:
-     *           type: object
-     *           example: { quote: '', author: ''}
-     */
-    app.get('/quotes/random', (req: Request, res: Response) => {
-        const quote = quotes[Math.floor(Math.random() * quotes.length)];
-        res.json(quote);
     });
 };

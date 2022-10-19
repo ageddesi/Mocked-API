@@ -10,31 +10,30 @@ const defaultColorFormat = 'hex';
 
 module.exports = function (app: core.Express) {
     /**
-     * @openapi
-     * '/colors/{qty}':
-     *   get:
-     *     tags:
-     *     - Colors
-     *     summary: Obtain a random color
-     *     parameters:
-     *     - in: path
-     *       name: qty
-     *       description: They quantity of colors you want to generate
-     *       type: string
-     *       default: 1
-     *       required: false
-     *     responses:
-     *       '200':
-     *         description: OK
-     *         schema:
-     *           type: array
-     *           items:
-     *             type: string
-     *             example: efc27b
-     */
+    * @openapi
+    * '/colors/{qty}':
+    *   get:
+    *     tags:
+    *     - Colors
+    *     summary: Obtain a random color
+    *     parameters:
+    *     - in: path
+    *       name: qty
+    *       description: They quantity of colors you want to generate
+    *       type: string
+    *       default: 1
+    *       required: false
+    *     responses:
+    *       '200':
+    *         description: OK
+    *         schema:
+    *           type: array
+    *           items:
+    *             type: string
+    *             example: efc27b
+    */
     app.get('/colors/:qty?', (req: Request, res: Response) => {
-        const qty = getQtyFromRequest(req);
-
+        const qty = getQtyFromRequest(req,1)
         try {
             const randomColors = [];
 
