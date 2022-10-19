@@ -163,6 +163,33 @@ module.exports = function (app: core.Express) {
         res.json(tx_list);
     })
 
+    /**
+     * @openapi
+     * '/currencies/digital-coins/balance/:network?/:address?':
+     *   get:
+     *     tags:
+     *     - Currency
+     *     summary: Get the balance of an address
+     *     parameters:
+     *     - in: path
+     *       name: network
+     *       description: The network the address has a balance on (Currently 10 networks supported, view data/digital-currency-units.ts)
+     *       type: string
+     *     - in: path
+     *       name: address
+     *       description: The address that contains the balance
+     *       type: string
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: json
+     *           items:
+     *             type: object
+     *             example: {"amount":403.01,"unit":"ETH"}
+     */
+
+    //Returns the balance (with unit) of a given address
     app.get("/currencies/digital-coins/balance/:network?/:address?", (req: Request, res: Response) => {
         const network = req.params.network;
         const address = req.params.address;
