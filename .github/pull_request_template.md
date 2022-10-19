@@ -21,13 +21,13 @@
 IMPORTANT: Please review the [CONTRIBUTING.md](../CONTRIBUTING.md) file for detailed contributing guidelines.
 
 ## Describe your changes
-<!--- TODO: A short summary of your changes and impact --->
+<!--- TODO: Add a short summary of your changes and impact: --->
 
 ## Link to issue this resolves
-<!--- TODO:Add you issue no. or link of the issue. Example: --->
+<!--- TODO: Add your issue no. or link to the issue. Example: --->
 <!--- Fixes: #100 --->
 
 ## Screenshot of changes(if relevant)
-<!--- TODO:Add you issue no. or link of the issue. Example: --->
+<!--- TODO: Add images: --->
 
 <!--- 🙏🙏 !! THANK YOU !! 🚀🚀 --->
