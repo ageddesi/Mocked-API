@@ -68,9 +68,18 @@ app.get('/docs.json', (req: Request, res: Response) => {
     res.send(swaggerSpec);
 });
 
+
+const schemaOptions = {
+    swaggerOptions: {
+        dom_id: "#swagger-ui",
+        tagsSorter: "alpha",
+        operationsSorter: "alpha"
+    }
+};
+
 // Setup Swagger API Documentation
 const swaggerUi = require('swagger-ui-express');
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec, schemaOptions));
 
 app.use(cors()); // enabling CORS for all requests
 app.use(morgan('combined')); // adding morgan to log HTTP requests
