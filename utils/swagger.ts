@@ -4,6 +4,7 @@ const { version } = require('../package.json');
 
 const options: swaggerJsdoc.Options = {
     definition: {
+        failOnErrors: true,
         swagger: '2.0',
         info: {
             version,
