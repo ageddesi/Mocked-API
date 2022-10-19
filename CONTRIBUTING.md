@@ -291,7 +291,7 @@ We use semantic commit messages
 ## Join The Project Team
 <!-- TODO -->
 
-## Adding an API endpoint
+## Add an API endpoint
 
 This example will use `users` as a new TAG for OpenAPI, meaning we will have dedicated endpoints to get some mocked users or create new ones.
 
@@ -344,9 +344,24 @@ Note: This endpoint will fetch all mocked users stored in `./modules/users/data/
 
 ### [How our folders are structured](#file-structures)
 
-### [How to add tests](./README.md#testing)
+### How to write tests
 
-TODO
+For each module you create you will also need to create a tests folder, Inside this folder there should be a `api` and `utils`
+(if you create any utils) folder.
+
+The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add
+
+```javascript
+import request from 'supertest';
+import app from 'path/to/app';
+```
+
+to your tests and make a request in your test instead of calling a normal function.
+
+### How to run tests
+
+run `npm test`
+run `npm run test:watch` to run the tests in watch mode.
 
 ### How to add OpenAPI comments
 
