@@ -58,3 +58,5 @@ type Movie = {
   release_date: string;
   directors: string;
 };
+
+export default Movie;
