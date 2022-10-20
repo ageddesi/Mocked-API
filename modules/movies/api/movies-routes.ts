@@ -28,7 +28,7 @@ module.exports = function (app: core.Express) {
 
     /**
      * @openapi
-     * '/api/movies/{qty}':
+     * '/movies/{qty}':
      *  get:
      *    tags:
      *    - Movies
