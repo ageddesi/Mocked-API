@@ -10,4 +10,16 @@ describe('currency api endpoints', () => {
             expect(response.body.length).toBe(qty);
         });
     });
+
+    describe('GET /currencies/digital-coins/balance/:network?/:address?', () => {
+        it('should return the balance of an address on a specified network', async () => {
+            const network = "ethereum";
+            const address = "0xc0ffee254729296a45a3885639AC7E10F9d54979"
+            const response = await request(app).get(`/currencies/digital-coins/balance/${network}/${address}`);
+
+            expect(response.body.unit).toBe("ETH");
+            expect(response.body.amount).toBeGreaterThan(0);
+            expect(response.body.address).toBe(address);
+        });
+    });
 });

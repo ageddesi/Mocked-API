@@ -6,6 +6,7 @@ import { getQtyFromRequest } from '../../../utils/route-utils';
 import getDigitalCurrencyAddress from '../utils/getDigitalCurrencyAddress';
 import getDigitalCurrencyTxList from '../utils/getDigitalCurrencyTxList';
 import DigitalCoinEnum from '../consts/DigitalCoinEnum';
+import getDigitalCurrencyBalance from '../utils/GetDigitalCurrencyBalance';
 
 module.exports = function (app: core.Express) {
     /**
@@ -160,6 +161,50 @@ module.exports = function (app: core.Express) {
         const qty = getQtyFromRequest(req);
         const tx_list = getDigitalCurrencyTxList(address, qty);
         res.json(tx_list);
+    })
+
+    /**
+     * @openapi
+     * '/currencies/digital-coins/balance/:network?/:address?':
+     *   get:
+     *     tags:
+     *     - Currency
+     *     summary: Get the balance of an address
+     *     parameters:
+     *     - in: path
+     *       name: network
+     *       description: The network the address has a balance on (Currently 10 networks supported, view data/digital-currency-units.ts)
+     *       type: string
+     *     - in: path
+     *       name: address
+     *       description: The address that contains the balance
+     *       type: string
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: json
+     *           items:
+     *             type: object
+     *             properties:
+     *              address:
+     *                  type: string
+     *                  example: 0xc0ffee254729296a45a3885639AC7E10F9d54979
+     *              amount:
+     *                  type: number
+     *                  example: 267.706
+     *              unit:
+     *                  type: string
+     *                  example: ETH
+     */
+
+    //Returns the balance (with unit) of a given address
+    app.get("/currencies/digital-coins/balance/:network?/:address?", (req: Request, res: Response) => {
+        const network = req.params.network;
+        const address = req.params.address;
+        const addressBalance = getDigitalCurrencyBalance(network, address);
+        res.json(addressBalance);
+
     })
 
 }
