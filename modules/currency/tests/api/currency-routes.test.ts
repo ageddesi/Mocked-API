@@ -19,6 +19,7 @@ describe('currency api endpoints', () => {
 
             expect(response.body.unit).toBe("ETH");
             expect(response.body.amount).toBeGreaterThan(0);
+            expect(response.body.address).toBe(address);
         });
     });
 });

@@ -7,6 +7,7 @@ const getDigitalCurrencyBalance = (network: string, address: string) : addressBa
     const amount: number = Number((Math.random() * (1000 - 0.001) + 0.001).toFixed(3));
 
     const addressBalance = {
+        address: address,
         amount: amount,
         unit: unit,
     }
