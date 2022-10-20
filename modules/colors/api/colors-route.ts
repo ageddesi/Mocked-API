@@ -100,7 +100,7 @@ module.exports = function (app: core.Express) {
      *             example: efc27b
      */
     app.get('/colors/:qty/:colorSpace/:colorFormat', (req: Request, res: Response) => {
-        const qty = getQtyFromRequest(req);
+        const qty = getQtyFromRequest(req, 1);
         const colorSpace = req.params.colorSpace || defaultColorSpace;
         const colorFormat = req.params.colorFormat || defaultColorFormat;
 

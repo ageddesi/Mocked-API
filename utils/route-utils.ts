@@ -19,11 +19,11 @@ function isNumber(value: string | number): boolean
 const getQtyFromRequest = (request: Request | null, overrideDefaultQty?: number | null): number => {
     const defaultValue = overrideDefaultQty ?? defaultQty; 
 
-    return  request.params.qty ? 
-                isNumber(request.params.qty) && parseInt(request.params.qty) < maxQty ? 
-                    parseInt(request.params.qty)
+    return  request.params.qty && isNumber(request.params.qty) ? 
+            parseInt(request.params.qty) < maxQty ?
+                parseInt(request.params.qty)
                     : maxQty
-                :defaultValue
+            : defaultValue;
 };
 
 const getImageDataFromRequest = (request: Request | null): ImageDataType => {
