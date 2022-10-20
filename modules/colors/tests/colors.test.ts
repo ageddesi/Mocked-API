@@ -8,9 +8,9 @@ describe('color api endpoints', () => {
       const response = await request(app).get(`/colors/`);
       expect(response.body.length).toBe(qty);
     });
-    it('requesting with non-numerical qty returns a list of 100 color', async () => {
+    it('requesting with non-numerical qty returns a list of 1 color', async () => {
       // I think this is potentially a bug - we probably should be retuning 1 colour, or throwing an error.
-      const qty = 100;
+      const qty = 1;
       const response = await request(app).get(`/colors/foo`);
 
       expect(response.body.length).toBe(qty);
@@ -72,10 +72,10 @@ describe("GET /color/x/y/z Execution", () => {
     ["/colors/1/hsl/hex", 1],
     ["/colors/1/hsv/hex", 1],
     ["/colors/1/cmyk/hex", 1],
-    ["/colors/foo/rgb/hex", 100],
-    ["/colors/foo/hsl/hex", 100],
-    ["/colors/foo/hsv/hex", 100],
-    ["/colors/foo/cmyk/hex", 100],
+    ["/colors/foo/rgb/hex", 1],
+    ["/colors/foo/hsl/hex", 1],
+    ["/colors/foo/hsv/hex", 1],
+    ["/colors/foo/cmyk/hex", 1],
     ["/colors/2/rgb/hex", 2],
     ["/colors/2/hsl/hex", 2],
     ["/colors/2/hsv/hex", 2],
@@ -92,14 +92,14 @@ describe("GET /color/x/y/z Execution", () => {
     ["/colors/1/hsva/decimal", 1],
     ["/colors/1/cmyk/decimal", 1],
     ["/colors/1/cmyka/decimal", 1],
-    ["/colors/foo/rgb/decimal", 100],
-    ["/colors/foo/rgba/decimal", 100],
-    ["/colors/foo/hsl/decimal", 100],
-    ["/colors/foo/hsla/decimal", 100],
-    ["/colors/foo/hsv/decimal", 100],
-    ["/colors/foo/hsva/decimal", 100],
-    ["/colors/foo/cmyk/decimal", 100],
-    ["/colors/foo/cmyka/decimal", 100],
+    ["/colors/foo/rgb/decimal", 1],
+    ["/colors/foo/rgba/decimal", 1],
+    ["/colors/foo/hsl/decimal", 1],
+    ["/colors/foo/hsla/decimal", 1],
+    ["/colors/foo/hsv/decimal", 1],
+    ["/colors/foo/hsva/decimal", 1],
+    ["/colors/foo/cmyk/decimal", 1],
+    ["/colors/foo/cmyka/decimal", 1],
     ["/colors/2/rgb/decimal", 2],
     ["/colors/2/rgba/decimal", 2],
     ["/colors/2/hsl/decimal", 2],
@@ -124,14 +124,14 @@ describe("GET /color/x/y/z Execution", () => {
     ["/colors/1/hsva/css", 1],
     ["/colors/1/cmyk/css", 1],
     ["/colors/1/cmyka/css", 1],
-    ["/colors/foo/rgb/css", 100],
-    ["/colors/foo/rgba/css", 100],
-    ["/colors/foo/hsl/css", 100],
-    ["/colors/foo/hsla/css", 100],
-    ["/colors/foo/hsv/css", 100],
-    ["/colors/foo/hsva/css", 100],
-    ["/colors/foo/cmyk/css", 100],
-    ["/colors/foo/cmyka/css", 100],
+    ["/colors/foo/rgb/css", 1],
+    ["/colors/foo/rgba/css", 1],
+    ["/colors/foo/hsl/css", 1],
+    ["/colors/foo/hsla/css", 1],
+    ["/colors/foo/hsv/css", 1],
+    ["/colors/foo/hsva/css", 1],
+    ["/colors/foo/cmyk/css", 1],
+    ["/colors/foo/cmyka/css", 1],
     ["/colors/2/rgb/css", 2],
     ["/colors/2/rgba/css", 2],
     ["/colors/2/hsl/css", 2],
