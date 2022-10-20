@@ -3,6 +3,7 @@ import express, { Request, Response } from 'express';
 import { swaggerSpec } from './utils/swagger';
 import swag from './swagger.json';
 import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
+import path from 'path';
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -39,6 +40,7 @@ require('./modules/location/api/location-routes')(app); // Bank Feed
 require('./modules/instruments/api/instruments-routes')(app); // Instruments
 require('./modules/news/api/news-routes')(app); // news
 require('./modules/video/api/video-routes')(app) // Video Data
+require('./modules/chuck-norris/api/chuck-norris-routes')(app) // Chuck Norris Fact.
 
 // Add an healthcheck endpoint
 // Shows amount of API Categories and their endpoints
@@ -67,7 +69,7 @@ app.get('/docs.json', (req: Request, res: Response) => {
     res.setHeader('Content-Type', 'application/json');
     res.send(swaggerSpec);
 });
-
+app.use(express.static(path.join(__dirname,'public')))
 // Setup Swagger API Documentation
 const swaggerUi = require('swagger-ui-express');
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
