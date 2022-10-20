@@ -2,7 +2,9 @@ import getRandomMovies from '../../utils/getRandomMovies';
 
 describe('get random movies', () => {
     it('should return an array of movies', () => {
-        const movies = getRandomMovies(1);
+        const movies = getRandomMovies(5);
+
+        expect(movies).toBeGreaterThan(0);
 
         expect(movies[0]).toHaveProperty('id');
         expect(movies[0]).toHaveProperty('created');
