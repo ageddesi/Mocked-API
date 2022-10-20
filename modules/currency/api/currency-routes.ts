@@ -186,7 +186,16 @@ module.exports = function (app: core.Express) {
      *           type: json
      *           items:
      *             type: object
-     *             example: {"address":"0xc0ffee254729296a45a3885639AC7E10F9d54979","amount":267.706,"unit":"BTC"}
+     *             properties:
+     *              address:
+     *                  type: string
+     *                  example: 0xc0ffee254729296a45a3885639AC7E10F9d54979
+     *              amount:
+     *                  type: number
+     *                  example: 267.706
+     *              unit:
+     *                  type: string
+     *                  example: ETH
      */
 
     //Returns the balance (with unit) of a given address
