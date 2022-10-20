@@ -1,17 +1,40 @@
+import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 import getMovieById from '../utils/getMovieById';
 import getRandomMovies from '../utils/getRandomMovies';
 
 module.exports = function (app: core.Express) {
+
     /**
      * @openapi
-     * '/api/movies/':
+     * '/movies/random':
      *  get:
      *    tags:
      *    - Movies
-     *    summary: Returns a random array of ids
+     *    summary: Get a random movie
+     *    responses:
+     *      '200':
+     *        description: OK
+     *        schema:
+     *          $ref: '#/definitions/MockMovie'
+     */
+    app.get('/movies/random', (req: Request, res: Response) => {
+        const randomNumber = Math.floor(Math.random() * (122-0) + 0)
+        const movie = getMovieById(randomNumber);
+
+        res.json(movie);
+    });
+
+    /**
+     * @openapi
+     * '/api/movies/{qty}':
+     *  get:
+     *    tags:
+     *    - Movies
+     *    summary: Returns random movies
      *    parameters:
-     *    - in: query
+     *    - in: params
      *      name: qty
      *      schema:
      *          type: number
@@ -24,45 +47,11 @@ module.exports = function (app: core.Express) {
      *          items:
      *            $ref: '#/definitions/MockMovie'
      */
-    app.get('/movies', (req, res) => {
-        const { qty = 10 } = req.query;
-        const movies = getRandomMovies(Number(qty));
+    app.get('/movies/:qty?', (req: Request, res: Response) => {
+        const quantity = getQtyFromRequest(req, 10);
+        const movies = getRandomMovies(quantity);
 
         return res.json(movies);
     });
 
-    /**
-     * @openapi
-     * '/movies/{id}':
-     *  get:
-     *    tags:
-     *    - Movies
-     *    summary: Get movie by id
-     *    parameters:
-     *    - in: path
-     *      name: id
-     *      type: number
-     *      required: true
-     *    responses:
-     *      '200':
-     *        description: OK
-     *        schema:
-     *          $ref: '#/definitions/MockMovie'
-     *      '404':
-     *        description: Not Found
-     *        schema:
-     *          type: object
-     *          properties:
-     *            message:
-     *              type: string
-     *              example: Movie not found
-     */
-    app.get('/movies/:id', (req, res) => {
-        const { id } = req.params;
-        const movie = getMovieById(Number(id));
-
-        if (movie === undefined) return res.status(404).send({ message: 'Movie not found' });
-
-        res.json(movie);
-    });
 };
