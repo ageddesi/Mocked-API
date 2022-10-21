@@ -23,7 +23,7 @@
  *           example: Bulls
  *         color:
  *           type: string
- *           example: Chicago
+ *           example: 061922
  *         colors:
  *           type: array
  *           items:
