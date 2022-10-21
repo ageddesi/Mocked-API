@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import { getQtyFromRequest } from '../../../utils/route-utils';
+import ColorErrors from '../consts/chuck-norris-errors';
 import facts from "./chuckfacts.json"
 /**
  * @openapi
@@ -68,7 +69,7 @@ const defaultErrorMessage = 'Unable to provide a random list of names at this ti
 module.exports = function (app: core.Express) {
     /**
      * @openapi
-     * '/chuck-norris-fact/{category}':
+     * '/chuck-norris/fact/{category}':
      *   get:
      *     description: |-
      *        <img style="margin-right: 20px;float:left" height="50" width="50" title="image Title" alt="beware" src="/IMAG0038.jpg">
@@ -116,25 +117,46 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/ErrorResponse'
      */
-    app.get('/chuck-norris-fact/:category/:qty?', (req: Request, res: Response) => {
-        const qty = getQtyFromRequest(req,1);
-        const category = req.params.category;
-        console.log(JSON.stringify(category))
-        console.log(qty)
-        var factlist = []
-        var filtered = category==="all" ? facts : facts.filter((value) =>{ return   value.categories.includes(category)   });
-        console.log("Filtered list " + filtered.length);
-        for (var i = 0; i < qty; i++) {
-            var randomFact = {};
-            randomFact = filtered[Math.floor(Math.random() * filtered.length)];
-            factlist.push(randomFact)
+    app.get('/chuck-norris/fact/:category/:qty?', (req: Request, res: Response) => {
+        try {
+            const qty = getQtyFromRequest(req,1);
+            if(qty < 1 ) { 
+                throw ColorErrors.InvalidQuantityError 
+            }
+            const category = req.params.category;
+            var categories = facts.map(item => item.categories[0]).filter((value, index, self) => self.indexOf(value) === index);
+
+            if (category !== "all" && !categories.includes(category)){
+                  throw ColorErrors.InvalidCategoryError; 
+            }     
+            var factlist = []
+            var filtered = category==="all" ? facts : facts.filter((value) =>{ return   value.categories.includes(category)   });
+            
+            
+            
+            for (var i = 0; i < qty; i++) {
+                var randomFact = {};
+                randomFact = filtered[Math.floor(Math.random() * filtered.length)];
+                factlist.push(randomFact)
+            }
+            res.json(factlist);
+        } catch (error) {
+            if (
+                error === ColorErrors.InvalidCategoryError ||
+                error === ColorErrors.InvalidQuantityError
+            ) {
+                res.status(400).json({
+                    error: error.message,
+                });
+
+                return;
+            }
         }
-        res.json(factlist);
     });
 
     /**
      * @openapi
-     * '/chuck-norris-fact/categories':
+     * '/chuck-norris/categories':
      *   get:
      *     tags:
      *       - Chuck Norris
@@ -148,9 +170,8 @@ module.exports = function (app: core.Express) {
      *             type: string
      *             example: ["dev", "food", "sport", "career", "fashion", "history", "animal", "movie", "money", "music", "celebrity", "science", "political", "travel", "religion"]
      */
-    app.get('/chuck-norris-fact/categories', (req: Request, res: Response) => {
-        const categories = facts.map(item => item.categories[0]).filter((value, index, self) => self.indexOf(value) === index)
-        console.log(JSON.stringify(categories));
+    app.get('/chuck-norris/categories', (req: Request, res: Response)  => {
+        var categories = facts.map(item => item.categories[0]).filter((value, index, self) => self.indexOf(value) === index);
         res.json(categories);
     });
 
