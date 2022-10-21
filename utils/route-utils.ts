@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import ImageDataType from '../modules/images/consts/imageDataType';
+import ImageDataType from '../src/modules/images/consts/imageDataType';
 
 const defaultQty = 10;
 const maxQty = 100;
@@ -17,9 +17,9 @@ function isNumber(value: string | number): boolean
 
 
 const getQtyFromRequest = (request: Request | null, overrideDefaultQty?: number | null): number => {
-    const defaultValue = overrideDefaultQty ?? defaultQty; 
+    const defaultValue = overrideDefaultQty ?? defaultQty;
 
-    return  request.params.qty && isNumber(request.params.qty) ? 
+    return  request.params.qty && isNumber(request.params.qty) ?
             parseInt(request.params.qty) < maxQty ?
                 parseInt(request.params.qty)
                     : maxQty
