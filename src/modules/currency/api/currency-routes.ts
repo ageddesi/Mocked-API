@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import currencySnapshot from '../data/currency-snapshot';
 import GBP_USD_TICKER_DATA from '../data/gbp-usd-ticker-data';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 import getDigitalCurrencyAddress from '../utils/getDigitalCurrencyAddress';
 import getDigitalCurrencyTxList from '../utils/getDigitalCurrencyTxList';
 import DigitalCoinEnum from '../consts/DigitalCoinEnum';

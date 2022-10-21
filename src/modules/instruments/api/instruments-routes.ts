@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import instrumentsList from '../data/instruments';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 
 module.exports = function (app: core.Express) {
     /**

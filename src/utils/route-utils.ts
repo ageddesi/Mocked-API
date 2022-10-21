@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import ImageDataType from '../src/modules/images/consts/imageDataType';
+import ImageDataType from '../modules/images/consts/imageDataType';
 
 const defaultQty = 10;
 const maxQty = 100;

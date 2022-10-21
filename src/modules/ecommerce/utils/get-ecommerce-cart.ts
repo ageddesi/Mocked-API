@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { Request } from 'express';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 import productReviews from '../../products/data/product-reviews';
 import { EcommerceCart, EcommerceCartItem } from '../consts/ecommerce-cart';
 

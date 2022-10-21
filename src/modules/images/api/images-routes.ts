@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import { getImageDataFromRequest } from '../../../../utils/route-utils';
+import { getImageDataFromRequest } from '../../../utils/route-utils';
 import ImageEnum from '../consts/ImageEnum';
 import getImageUrls from '../utils/getImageUrls';
 

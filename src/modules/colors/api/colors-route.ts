@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 
-import { getQtyFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 import getRandomColor from '../utils/getRandomColor';
 import ColorErrors from '../consts/ColorErrors';
 

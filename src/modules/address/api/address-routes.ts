@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import getRandomAddresses from '../utils/getRandomAddress';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
-import { getCountryNameFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
+import { getCountryNameFromRequest } from '../../../utils/route-utils';
 
 module.exports = function(app : core.Express) {
     /**

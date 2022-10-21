@@ -3,7 +3,7 @@ import * as core from 'express-serve-static-core';
 import { faker } from '@faker-js/faker';
 import { Music } from '../consts/Music';
 import { Album } from '../consts/Album';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 
 module.exports = function (app: core.Express) {
     /**

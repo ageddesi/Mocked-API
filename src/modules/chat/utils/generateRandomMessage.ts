@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker'
-import { getRandomArrayItem } from '../../../../utils/arrays'
+import { getRandomArrayItem } from '../../../utils/arrays'
 
 const messageProviders: Array<() => string> = [
   faker.lorem.sentence,

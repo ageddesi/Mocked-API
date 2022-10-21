@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
-import { getRandomSubArray } from '../../../../utils/arrays';
+import { getQtyFromRequest } from '../../../utils/route-utils';
+import { getRandomSubArray } from '../../../utils/arrays';
 import PremierLeagueData2022 from '../data/football-premier-league-2022';
 import LaLigaLeagueData2022 from '../data/football-laliga-league-2022';
 import SerieALeagueData2022 from '../data/football-serie-a-league-2022';

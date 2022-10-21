@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 import { getVideo, getVideos } from '../utils/getVideo';
 
 module.exports = function (app: core.Express) {

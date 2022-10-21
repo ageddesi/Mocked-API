@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import productReviews from '../data/product-reviews';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 import getProducts from '../utils/getProducts';
-import { randomRating } from '../../../../utils/numbers';
+import { randomRating } from '../../../utils/numbers';
 
 /**
  * @openapi

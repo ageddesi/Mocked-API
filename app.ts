@@ -1,6 +1,6 @@
 require('dotenv').config();
 import express, { Request, Response } from 'express';
-import { swaggerSpec } from './utils/swagger';
+import { swaggerSpec } from './src/utils/swagger';
 import swag from './swagger.json';
 import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
 const morgan = require('morgan');

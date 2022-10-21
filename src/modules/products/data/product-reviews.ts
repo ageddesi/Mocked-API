@@ -1,5 +1,5 @@
-import { getRandomDate } from "../../../../utils/dates";
-import { randomRating } from "../../../../utils/numbers";
+import { getRandomDate } from "../../../utils/dates";
+import { randomRating } from "../../../utils/numbers";
 import getFullNames from "../../names/utils/getFullNames";
 
 const productReviews = [

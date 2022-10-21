@@ -2,7 +2,7 @@ import e, { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import { getRandomCoordinates, getCountryCoordinates } from '../utils/getCoordinates';
 import centroids from '../consts/centroids';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 
 module.exports = function (app: core.Express) {
     /**

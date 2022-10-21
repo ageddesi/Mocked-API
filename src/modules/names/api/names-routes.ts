@@ -4,7 +4,7 @@ import getFirstNames from '../utils/getFirstNames';
 import getFullNames from '../utils/getFullNames';
 import getLastNames from '../utils/getLastNames';
 import getMiddleNames from '../utils/getMiddleNames';
-import { getQtyFromRequest } from '../../../../utils/route-utils';
+import { getQtyFromRequest } from '../../../utils/route-utils';
 
 /**
  * @openapi
