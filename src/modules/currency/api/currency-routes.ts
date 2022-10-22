@@ -133,7 +133,7 @@ module.exports = function (app: core.Express) {
      * '/currencies/digital-coins/ethereum/tx-list/:address?/:qty?':
      *   get:
      *     tags:
-     *     - Currency
+     *     - Currencies
      *     summary: Get the list of transactions performed by an address
      *     parameters:
      *     - in: path
