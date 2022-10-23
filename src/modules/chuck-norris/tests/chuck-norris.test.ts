@@ -1,6 +1,6 @@
 import request from 'supertest';
 import app from "../../../../app";
-const facts = require("../api/chuckfacts.json");
+const facts = require("../data/chuckfacts.json");
 import chuckNorrisErrors from '../consts/chuck-norris-errors';
 describe('Chuck Norris api endpoints', () => {
     describe('GET /chuck-norris/fact/:category/:qty?', () =>{
