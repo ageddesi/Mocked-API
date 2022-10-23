@@ -39,6 +39,8 @@ require('./src/modules/location/api/location-routes')(app); // Bank Feed
 require('./src/modules/instruments/api/instruments-routes')(app); // Instruments
 require('./src/modules/news/api/news-routes')(app); // news
 require('./src/modules/video/api/video-routes')(app) // Video Data
+require('./src/modules/courses/api/courses-routes')(app); // Courses
+
 
 // Add an healthcheck endpoint
 // Shows amount of API Categories and their endpoints
