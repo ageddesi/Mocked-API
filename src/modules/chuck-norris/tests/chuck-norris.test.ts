@@ -6,13 +6,11 @@ describe('Chuck Norris api endpoints', () => {
     describe('GET /chuck-norris/fact/:category/:qty?', () =>{
         it("Calling the endpoint with no qty returns 1", async () =>{
             const response = await request(app).get(`/chuck-norris/fact/dev`);
-            console.log(response.body)
             expect(response.status).toBe(200);
             expect(response.body.length).toBe(1);
         })
         it("Calling the endpoint with category all and no qty returns 1", async () =>{
             const response = await request(app).get(`/chuck-norris/fact/all`);
-            console.log(response.body)
             expect(response.status).toBe(200);
             expect(response.body.length).toBe(1);
         })
