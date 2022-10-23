@@ -33,37 +33,6 @@ import facts from "./chuckfacts.json"
  *         example: Chuck Norris knows the last digit of pi.
  */
 
-/**
- * @openapi
- * definitions:
- *   ChuckNorrisFact:
- *     description: Chuck Norris Facts were obtained from api.chucknorris.io
- *     type: object
- *     properties:
- *       categories:
- *         type: array
- *         items:
- *           type: string
- *         example: ["science","dev"]
- *         description: A list of categories that this fact relates to.
- *       icon:
- *         type: string
- *         example: https://assets.chucknorris.host/img/avatar/chuck-norris.png
- *         description: URL for an icon - provided in the original data from api.chucknorris.com      
- *       id:
- *         type: string
- *         example: izjeqnjzteeqms8l8xgdhw
- *         description: ID from api.chucknorris.io
- *       sourceUrl:
- *         type: string
- *         example: https://api.chucknorris.io/jokes/izjeqnjzteeqms8l8xgdhw
- *         description: URL for this Fact on api.chucknorris.io
- *       value:
- *         type: string
- *         example: Chuck Norris knows the last digit of pi.
- */
-
-
 module.exports = function (app: core.Express) {
     /**
      * @openapi
