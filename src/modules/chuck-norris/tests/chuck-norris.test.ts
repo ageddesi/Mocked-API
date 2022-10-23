@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from "../../../app";
+import app from "../../../../app";
 const facts = require("../api/chuckfacts.json")
 import chuckNorrisErrors from '../consts/chuck-norris-errors';
 describe('Chuck Norris api endpoints', () => {
