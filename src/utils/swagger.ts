@@ -51,6 +51,10 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to ecommerce',
             },
             {
+                name: 'Courses',
+                description: 'A set of endpoints related to Courses',
+            },
+            {
                 name: 'Elements',
                 description: 'A set of endpoints related to elements on the periodic table',
             },

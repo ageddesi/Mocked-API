@@ -13,7 +13,6 @@ const app = express();
 // Rate limit middleware
 app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
 
-// Load Mock Modules
 var constantPath = './src/modules/';
 var routes = {};
 
