@@ -4,7 +4,7 @@ import { getQtyFromRequest } from '../../../utils/route-utils';
 import getRandomVehicles from '../utils/getRandomVehicles';
 
 module.exports = function (app: core.Express) {
-  /**
+    /**
      * @openapi
      * "/vehicles/{qty}":
      *   get:
@@ -23,9 +23,9 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockVehicles'
      */
-  app.get('/vehicles/:qty?', (req: Request, res: Response) => {
-    const qty = getQtyFromRequest(req, 10);
-    const users = getRandomVehicles(qty);
-    res.json(users);
-  });
+    app.get('/vehicles/:qty?', (req: Request, res: Response) => {
+        const qty = getQtyFromRequest(req, 10);
+        const users = getRandomVehicles(qty);
+        res.json(users);
+    });
 };

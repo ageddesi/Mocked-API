@@ -1,4 +1,4 @@
-import app from "../../../../app";
+import app from '../../../../app';
 let request = require('supertest');
 
 // Test case: for random coordinates is returned check

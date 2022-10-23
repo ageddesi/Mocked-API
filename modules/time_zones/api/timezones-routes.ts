@@ -3,7 +3,6 @@ import * as core from 'express-serve-static-core';
 import time_zones from '../data/time_zones';
 
 module.exports = function (app: core.Express) {
-
     /**
      * @openapi
      * "/time-zones":
@@ -20,10 +19,9 @@ module.exports = function (app: core.Express) {
      *            $ref: '#/definitions/MockTimeZoneResponse'
      */
     // Get all time_zones
-    app.get("/time-zones", (req: Request, res: Response) => {
-        res.json(time_zones)
-
-    })
+    app.get('/time-zones', (req: Request, res: Response) => {
+        res.json(time_zones);
+    });
 
     /**
      * @openapi
@@ -39,9 +37,8 @@ module.exports = function (app: core.Express) {
      *          $ref: '#/definitions/MockTimeZoneResponse'
      */
     // Get a random quote
-    app.get("/time-zones/random", (req: Request, res: Response) => {
+    app.get('/time-zones/random', (req: Request, res: Response) => {
         const time_zone = time_zones[Math.floor(Math.random() * time_zones.length)];
-        res.json(time_zone)
-    })
-
-}
+        res.json(time_zone);
+    });
+};

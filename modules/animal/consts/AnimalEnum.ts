@@ -13,7 +13,7 @@ enum AnimalType {
     Rabbit,
     Rodent,
     Snake,
-    Type
+    Type,
 }
 
-export default AnimalType
+export default AnimalType;

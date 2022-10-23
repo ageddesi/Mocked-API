@@ -99,13 +99,13 @@ module.exports = function (app: core.Express) {
      *                 example: https://flagcdn.com/w320/is.png
      *               mapsUrl:
      *                 type: string
-     *                 example: https://goo.gl/maps/WxFWSQuc3oamNxoE6 
+     *                 example: https://goo.gl/maps/WxFWSQuc3oamNxoE6
      *               currencyName:
      *                 type: string
-     *                 example: Icelandic króna     
+     *                 example: Icelandic króna
      *               currencySymbol:
      *                 type: string
-     *                 example: kr   
+     *                 example: kr
      */
     app.get('/countries/:filterBy?', (req: Request, res: Response) => {
         if (req.params.filterBy) {

@@ -1,9 +1,8 @@
-import ImageDataType from "../consts/imageDataType";
-import ImageEnum from "../consts/ImageEnum";
-import { faker } from "@faker-js/faker";
+import ImageDataType from '../consts/imageDataType';
+import ImageEnum from '../consts/ImageEnum';
+import { faker } from '@faker-js/faker';
 
 const getImageUrls = (type: ImageEnum, data: ImageDataType) => {
-
     const imageUrls = [];
 
     for (let index = 0; index < data.Qty; index++) {
@@ -54,7 +53,6 @@ const getImageUrls = (type: ImageEnum, data: ImageDataType) => {
     }
 
     return imageUrls;
+};
 
-}
-
-export default getImageUrls
+export default getImageUrls;

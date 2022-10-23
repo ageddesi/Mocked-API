@@ -1,9 +1,8 @@
 import request from 'supertest';
 import app from '../../../app';
 
-
 describe('ip api endpoints', () => {
-       describe('GET /ip/:qty', () => {
+    describe('GET /ip/:qty', () => {
         it('should return a list of ip address', async () => {
             const qty = 5;
 
@@ -12,7 +11,7 @@ describe('ip api endpoints', () => {
         });
     });
 
-describe('GET /mac/:qty', () => {
+    describe('GET /mac/:qty', () => {
         it('should return a list of mac address', async () => {
             const qty = 5;
 
@@ -20,5 +19,4 @@ describe('GET /mac/:qty', () => {
             expect(response.body.length).toEqual(qty);
         });
     });
-
 });

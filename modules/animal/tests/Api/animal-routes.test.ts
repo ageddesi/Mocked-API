@@ -1,7 +1,6 @@
 import request from 'supertest';
 import app from '../../../../app';
 
-
 //These routes dont seem to provide consistent responses
 // Its not consistent because the data is randomly generated. You will need to mock the data to get consistent responses.
 describe.skip('animal api endpoints', () => {

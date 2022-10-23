@@ -1,7 +1,7 @@
 enum DigitalCoinEnum {
     Bitcoin,
     Ethereum,
-    Litecoin
+    Litecoin,
 }
 
 export default DigitalCoinEnum;

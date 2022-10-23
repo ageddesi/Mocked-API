@@ -38,7 +38,7 @@ require('./modules/bankfeed/api/bankfeed-routes')(app); // Bank Feed
 require('./modules/location/api/location-routes')(app); // Bank Feed
 require('./modules/instruments/api/instruments-routes')(app); // Instruments
 require('./modules/news/api/news-routes')(app); // news
-require('./modules/video/api/video-routes')(app) // Video Data
+require('./modules/video/api/video-routes')(app); // Video Data
 
 // Add an healthcheck endpoint
 // Shows amount of API Categories and their endpoints
@@ -57,7 +57,7 @@ app.get('/full-status', (req, res) => {
         date: new Date(),
         totalCategories: swag.tags.length,
         totalEndpoints: Object.keys(swag.paths).length,
-        version: swag.info.version
+        version: swag.info.version,
     };
     res.status(200).send(data);
 });
@@ -68,13 +68,12 @@ app.get('/docs.json', (req: Request, res: Response) => {
     res.send(swaggerSpec);
 });
 
-
 const schemaOptions = {
     swaggerOptions: {
-        dom_id: "#swagger-ui",
-        tagsSorter: "alpha",
-        operationsSorter: "alpha"
-    }
+        dom_id: '#swagger-ui',
+        tagsSorter: 'alpha',
+        operationsSorter: 'alpha',
+    },
 };
 
 // Setup Swagger API Documentation

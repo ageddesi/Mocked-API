@@ -4,36 +4,36 @@
  *   MockAddress:
  *     type: objcts
  *     properties:
- *        houseNumber: 
+ *        houseNumber:
  *          type: string
  *          example: 10
- *        addressLine1: 
+ *        addressLine1:
  *          type: string
  *          example: Flat 22b
- *        addressLine2: 
+ *        addressLine2:
  *          type: string
  *          example: Gladstone Road
- *        city: 
+ *        city:
  *          type: string
  *          example: London
- *        postcode: 
+ *        postcode:
  *          type: string
  *          example: TN22 7HL
- *        zipcode: 
+ *        zipcode:
  *          type: string
  *          example: 10234
- *        country: 
+ *        country:
  *          type: string
  *          example: uk
  */
 type Address = {
-    houseNumber: string,
-    addressLine1: string,
-    addressLine2: string,
-    city: string,
-    postcode: string, 
-    zipcode: string,
-    country: string
-}
+    houseNumber: string;
+    addressLine1: string;
+    addressLine2: string;
+    city: string;
+    postcode: string;
+    zipcode: string;
+    country: string;
+};
 
 export default Address;

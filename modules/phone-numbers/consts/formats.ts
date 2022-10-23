@@ -1,7 +1,7 @@
 const formats = {
-  space: ' ',
-  nospace: '',
-  dash: '-'
-}
+    space: ' ',
+    nospace: '',
+    dash: '-',
+};
 
 export default formats;

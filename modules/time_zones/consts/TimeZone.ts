@@ -26,10 +26,10 @@
  *          example: 'America/New_York'
  */
 type TimeZone = {
-  value: string;
-  abbr: string;
-  offset: number;
-  isdst: boolean;
-  text: string;
-  utc: string[];
-}
+    value: string;
+    abbr: string;
+    offset: number;
+    isdst: boolean;
+    text: string;
+    utc: string[];
+};

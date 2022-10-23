@@ -127,9 +127,9 @@ module.exports = function (app: core.Express) {
         const qty = getQtyFromRequest(req);
         const addresses = getDigitalCurrencyAddress(qty, DigitalCoinEnum.Litecoin);
         res.json(addresses);
-    })
+    });
 
-     /**
+    /**
      * @openapi
      * '/currencies/digital-coins/ethereum/tx-list/:address?/:qty?':
      *   get:
@@ -156,12 +156,12 @@ module.exports = function (app: core.Express) {
      */
 
     //Returns the list of transactions performed by an address
-    app.get("/currencies/digital-coins/ethereum/tx-list/:address?/:qty?", (req: Request, res: Response) => {
+    app.get('/currencies/digital-coins/ethereum/tx-list/:address?/:qty?', (req: Request, res: Response) => {
         const address = req.params.address;
         const qty = getQtyFromRequest(req);
         const tx_list = getDigitalCurrencyTxList(address, qty);
         res.json(tx_list);
-    })
+    });
 
     /**
      * @openapi
@@ -199,12 +199,10 @@ module.exports = function (app: core.Express) {
      */
 
     //Returns the balance (with unit) of a given address
-    app.get("/currencies/digital-coins/balance/:network?/:address?", (req: Request, res: Response) => {
+    app.get('/currencies/digital-coins/balance/:network?/:address?', (req: Request, res: Response) => {
         const network = req.params.network;
         const address = req.params.address;
         const addressBalance = getDigitalCurrencyBalance(network, address);
         res.json(addressBalance);
-
-    })
-
-}
+    });
+};

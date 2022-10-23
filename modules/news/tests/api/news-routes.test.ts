@@ -12,21 +12,21 @@ describe('news api endpoints', () => {
     });
 
     describe('GET /news/slug', () => {
-      it('should return a list of news', async () => {
-        const slug = 'The-Rise-and-Fall-of-Bitcoin-Maximalism';
-        const response = await request(app).get(`/news/slug/${slug}`);
+        it('should return a list of news', async () => {
+            const slug = 'The-Rise-and-Fall-of-Bitcoin-Maximalism';
+            const response = await request(app).get(`/news/slug/${slug}`);
 
-        expect(response).not.toBeFalsy();
-      });
-  });
-
-  describe('GET /news/slug', () => {
-    it('should return an error status response', async () => {
-      const slug = 'invalid-slug';
-      const response = await request(app).get(`/news/slug/${slug}`);
-      console.log(response.statusCode);
-
-      expect(response.statusCode).toBeGreaterThanOrEqual(400);
+            expect(response).not.toBeFalsy();
+        });
     });
-});
+
+    describe('GET /news/slug', () => {
+        it('should return an error status response', async () => {
+            const slug = 'invalid-slug';
+            const response = await request(app).get(`/news/slug/${slug}`);
+            console.log(response.statusCode);
+
+            expect(response.statusCode).toBeGreaterThanOrEqual(400);
+        });
+    });
 });

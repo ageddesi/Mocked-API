@@ -7,23 +7,18 @@ const imageWidthDefault = 640;
 const imageHeightDefault = 480;
 const defaultCountry = 'uk';
 
-
-function isNumber(value: string | number): boolean
-{
-   return ((value != null) &&
-           (value !== '') &&
-           !isNaN(Number(value.toString())));
+function isNumber(value: string | number): boolean {
+    return value != null && value !== '' && !isNaN(Number(value.toString()));
 }
 
-
 const getQtyFromRequest = (request: Request | null, overrideDefaultQty?: number | null): number => {
-    const defaultValue = overrideDefaultQty ?? defaultQty; 
+    const defaultValue = overrideDefaultQty ?? defaultQty;
 
-    return  request.params.qty ? 
-                isNumber(request.params.qty) && parseInt(request.params.qty) < maxQty ? 
-                    parseInt(request.params.qty)
-                    : maxQty
-                :defaultValue
+    return request.params.qty
+        ? isNumber(request.params.qty) && parseInt(request.params.qty) < maxQty
+            ? parseInt(request.params.qty)
+            : maxQty
+        : defaultValue;
 };
 
 const getImageDataFromRequest = (request: Request | null): ImageDataType => {
@@ -37,13 +32,8 @@ const getImageDataFromRequest = (request: Request | null): ImageDataType => {
     };
 };
 
-const getCountryNameFromRequest = (request : Request | null) : string => {
-	return request.params.country ? request.params.country : defaultCountry;
-}
+const getCountryNameFromRequest = (request: Request | null): string => {
+    return request.params.country ? request.params.country : defaultCountry;
+};
 
-
-export {
-    getQtyFromRequest,
-    getImageDataFromRequest,
-	getCountryNameFromRequest
-}
+export { getQtyFromRequest, getImageDataFromRequest, getCountryNameFromRequest };
