@@ -70,7 +70,7 @@ module.exports = function (app: core.Express) {
      * '/chuck-norris/fact/{category}':
      *   get:
      *     description: |-
-     *        <img style="margin-right: 20px;float:left" height="50" width="50" title="image Title" alt="beware" src="/IMAG0038.jpg">
+     *        <img style="margin-right: 20px;float:left" title="image Title" alt="beware" src="/warning.png">
      *        **Retrieve a random Chuck Norris fact.**
      *        This endpoint returns a __single__ fact as it is not possible for the human brain to store more than 1 Chuck Norris fact without exploding (this is why we have Chuck Norris Databases)...  
      *        

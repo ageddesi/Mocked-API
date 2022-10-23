@@ -35,6 +35,10 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to chats',
             },
             {
+                name: 'Chuck Norris',
+                description: 'A set of endpoints related to Chuck Norris Facts',
+            },
+            {
                 name: 'Colors',
                 description: 'A set of endpoints related to colors',
             },
