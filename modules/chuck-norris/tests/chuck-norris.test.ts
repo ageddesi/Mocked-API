@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from "../../../app" // "../../../../app";
+import app from "../../../app";
 const facts = require("../api/chuckfacts.json")
 import chuckNorrisErrors from '../consts/chuck-norris-errors';
 describe('Chuck Norris api endpoints', () => {
@@ -20,15 +20,13 @@ describe('Chuck Norris api endpoints', () => {
         it("Calling the endpoint with valid category but negative qty throws 400", async () =>{
             const response = await request(app).get(`/chuck-norris/fact/dev/-1`);
             expect(response.status).toBe(400);
-            expect(response.body.error).toBe(chuckNorrisErrors
-        s.InvalidQuantityMessage);
+            expect(response.body.error).toBe(chuckNorrisErrors.InvalidQuantityMessage);
         })
 
         it("Calling the endpoint with invalid category throws 400", async () =>{
             const response = await request(app).get(`/chuck-norris/fact/wimp`);
             expect(response.status).toBe(400);
-            expect(response.body.error).toBe(chuckNorrisErrors
-        s.InvalidCategoryMessage);
+            expect(response.body.error).toBe(chuckNorrisErrors.InvalidCategoryMessage);
         })
         
 
