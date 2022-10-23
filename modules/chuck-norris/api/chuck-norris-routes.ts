@@ -33,8 +33,6 @@ import facts from "./chuckfacts.json"
  *         example: Chuck Norris knows the last digit of pi.
  */
 
-const defaultErrorMessage = 'Unable to provide a random list of names at this time. Unknown Error Occured';
-
 /**
  * @openapi
  * definitions:
