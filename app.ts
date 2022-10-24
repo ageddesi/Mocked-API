@@ -3,6 +3,7 @@ import express, { Request, Response } from 'express';
 import { swaggerSpec } from './src/utils/swagger';
 import swag from './swagger.json';
 import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
+import glob from 'glob';
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -16,10 +17,33 @@ app.use(applicationRateLimiter); // rate-limit applied to all the routes by defa
 var constantPath = './src/modules/';
 var routes = {};
 
-fs.readdirSync(constantPath).forEach((module) => {
-    const apiRoutePath = `${constantPath}${module}/api/`;
-    fs.readdirSync(apiRoutePath).forEach((route) => {
-        routes[module] = require(`${apiRoutePath}${route}`)(app);
+glob(`${constantPath}/*/*routes.ts`, (err, files) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+
+    /**
+     * Modules name always after the modules folder.
+     * e.g. './src/modules/address/address.routes.ts'
+     * It means it's the 3rd array
+     * */
+    files.map((file) => {
+        const moduleName = file?.split('/')[3];
+        routes[moduleName] = require(file)(app);
+    });
+});
+
+/* Un-refactored files, and should be removed afterwards */
+glob(`${constantPath}/*/api/*.ts`, (err, files) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+
+    files.map((file) => {
+        const moduleName = file?.split('/')[3];
+        routes[moduleName] = require(file)(app);
     });
 });
 

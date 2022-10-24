@@ -27,8 +27,8 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to animal',
             },
             {
-                name: 'BankFeeds',
-                description: 'A set of endpoints related to bank feeds',
+                name: 'BankFeed',
+                description: 'A set of endpoints related to bank feed',
             },
             {
                 name: 'Chat',
@@ -112,7 +112,12 @@ const options: swaggerJsdoc.Options = {
             },
         ],
     },
-    apis: ['./src/modules/*/api/*.ts', './src/modules/*/consts/*.ts'],
+    apis: [
+        './src/modules/*/api/*.ts', // Remove this after all files has been refactored
+        './src/modules/*/consts/*.ts', // Remove this after all files has been refactored
+        './src/modules/*/*.routes.ts',
+        './src/modules/*/models/*.types.ts',
+    ],
 };
 
 export const swaggerSpec = swaggerJsdoc(options);
