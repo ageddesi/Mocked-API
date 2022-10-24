@@ -3,6 +3,7 @@ import express, { Request, Response } from 'express';
 import { swaggerSpec } from './src/utils/swagger';
 import swag from './swagger.json';
 import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
+import path from 'path';
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -50,6 +51,8 @@ app.get('/docs.json', (req: Request, res: Response) => {
     res.setHeader('Content-Type', 'application/json');
     res.send(swaggerSpec);
 });
+
+app.use(express.static(path.join(__dirname,'public')))
 
 const schemaOptions = {
     swaggerOptions: {
