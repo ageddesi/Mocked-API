@@ -1,45 +1,51 @@
 require('dotenv').config();
 import express, { Request, Response } from 'express';
-import { swaggerSpec } from './utils/swagger';
+import { swaggerSpec } from './src/utils/swagger';
 import swag from './swagger.json';
-import { applicationRateLimiter } from './middleware/rate-limiter/rate-limiter';
-
+import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
+import glob from 'glob';
 const morgan = require('morgan');
 const cors = require('cors');
+
+var fs = require('fs');
 
 const app = express();
 
 // Rate limit middleware
 app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
 
-// Load Mock Modules
-require('./modules/address/address.routes')(app); // Addresses
-require('./modules/animal/animal.routes')(app); // Animals
-require('./modules/bank-feed/bankfeed.routes')(app); // Bank Feed
-require('./modules/chat/chat.routes')(app); // Chat
-require('./modules/colors/colors.routes')(app); // Colors
-require('./modules/countries/countries.routes')(app); // Countries
-require('./modules/currency/currency.routes')(app); // Currencies
-require('./modules/ecommerce/api/ecommerce-routes')(app); // Ecommerce
-require('./modules/emails/api/emails-routes')(app); // Emails
-require('./modules/images/api/images-routes')(app); // Images
-require('./modules/names/api/names-routes')(app); // Names
-require('./modules/products/api/products-routes')(app); // Products
-require('./modules/socials/api/socials-routes')(app); // Socials
-require('./modules/sports/api/sports-routes')(app); // Sports
-require('./modules/users/api/user-routes')(app); //Users
-require('./modules/music/api/music-routes')(app); // Music
-require('./modules/invoice/api/invoice-routes')(app); // Invoices
-require('./modules/elements/api/elements-routes')(app); // Chemical Elements
-require('./modules/time_zones/api/timezones-routes.ts')(app); // Timezones
-require('./modules/phone-numbers/api/phone-numbers-routes')(app); // Phone numbers
-require('./modules/quotes/api/quotes-routes')(app); // Quotes
-require('./modules/ip/api/ip-routes')(app); // ip and mac address
-require('./modules/vehicles/api/vehicles-routes')(app); // Vehicles
-require('./modules/location/api/location-routes')(app); // Bank Feed
-require('./modules/instruments/api/instruments-routes')(app); // Instruments
-require('./modules/news/api/news-routes')(app); // news
-require('./modules/video/api/video-routes')(app) // Video Data
+var constantPath = './src/modules/';
+var routes = {};
+
+glob(`${constantPath}/*/*routes.ts`, (err, files) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+
+    /**
+     * Modules name always after the modules folder.
+     * e.g. './src/modules/address/address.routes.ts'
+     * It means it's the 3rd array
+     * */
+    files.map((file) => {
+        const moduleName = file?.split('/')[3];
+        routes[moduleName] = require(file)(app);
+    });
+});
+
+/* Un-refactored files, and should be removed afterwards */
+glob(`${constantPath}/*/api/*.ts`, (err, files) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+
+    files.map((file) => {
+        const moduleName = file?.split('/')[3];
+        routes[moduleName] = require(file)(app);
+    });
+});
 
 // Add an healthcheck endpoint
 // Shows amount of API Categories and their endpoints
@@ -48,8 +54,17 @@ app.get('/status', (req, res) => {
         uptime: process.uptime(),
         message: 'Ok',
         date: new Date(),
+    };
+    res.status(200).send(data);
+});
+app.get('/full-status', (req, res) => {
+    const data = {
+        uptime: process.uptime(),
+        message: 'Ok',
+        date: new Date(),
         totalCategories: swag.tags.length,
         totalEndpoints: Object.keys(swag.paths).length,
+        version: swag.info.version,
     };
     res.status(200).send(data);
 });
@@ -60,9 +75,18 @@ app.get('/docs.json', (req: Request, res: Response) => {
     res.send(swaggerSpec);
 });
 
+const schemaOptions = {
+    swaggerOptions: {
+        dom_id: '#swagger-ui',
+        tagsSorter: 'alpha',
+        operationsSorter: 'alpha',
+        docExpansion: 'none',
+    },
+};
+
 // Setup Swagger API Documentation
 const swaggerUi = require('swagger-ui-express');
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec, schemaOptions));
 
 app.use(cors()); // enabling CORS for all requests
 app.use(morgan('combined')); // adding morgan to log HTTP requests
