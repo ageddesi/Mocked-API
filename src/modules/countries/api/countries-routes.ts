@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import countriesList from '../data/countries';
+import provincesList from '../data/provinces';
 
 module.exports = function (app: core.Express) {
     /**
@@ -52,6 +53,36 @@ module.exports = function (app: core.Express) {
     app.get('/countries/', (req: Request, res: Response) => {
         res.json({
             countries: countriesList,
+        });
+    });
+
+    /**
+     * @openapi
+     * '/countries/provinces':
+     *   get:
+     *     tags:
+     *     - Countries
+     *     summary: Obtain a list of all countries and their associated provinces.
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           type: array
+     *           items:
+     *             type: object
+     *             properties:
+     *               name:
+     *                 type: string
+     *                 example: Iceland
+     *               provinces:
+     *                 type: array
+     *                 items:
+     *                   type: string
+     *                   example: Austurland
+     */
+     app.get('/countries/provinces/', (req: Request, res: Response) => {
+        res.json({
+            countries: provincesList,
         });
     });
 
