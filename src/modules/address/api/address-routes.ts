@@ -83,7 +83,6 @@ module.exports = function(app : core.Express) {
     app.get('/address/:country?/:qty?', (req: Request, res: Response) => {
         const country = getCountryNameFromRequest(req);
         const qty = getQtyFromRequest(req);
-        console.log(qty);
         const addresses = getRandomAddresses(qty, country);
         res.json(addresses);
     });
