@@ -2,6 +2,23 @@ import request from 'supertest';
 import app from '../../../../../app';
 
 describe('sports api endpoints', () => {
+    describe('GET /sports/basketball/leagues/nba/teams', () => {
+        it('should return a list of teams', async () => {
+            const response = await request(app).get(`/sports/basketball/leagues/nba/teams`);
+            const defaultQuantity = 10;
+            expect(response).not.toBeFalsy();
+            expect(response.body.length).toBe(defaultQuantity);
+        });
+    });
+    describe('GET /sports/basketball/leagues/nba/teams/5', () => {
+        it('should return a list of 5 teams', async () => {
+            const response = await request(app).get(`/sports/basketball/leagues/nba/teams/5`);
+            const quantity = 5;
+            expect(response).not.toBeFalsy();
+            expect(response.body.length).toBe(quantity);
+        });
+    });
+
     describe('GET /sports/football/leagues/premier/teams', () => {
         it('should return a list of teams', async () => {
             const response = await request(app).get(`/sports/football/leagues/premier/teams`);
