@@ -7,3 +7,9 @@ npm-debug.log
 .idea
 coverage
 .vscode
+
+# ignoring mapped volumes for docker compose / plausible
+plausible-conf.env
+db-data
+event-data
+clickhouse
