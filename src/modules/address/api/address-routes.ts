@@ -29,7 +29,7 @@ module.exports = function(app : core.Express) {
     // get a random UK/USA address
     /**
      * @openapi
-     * '/address/:country':
+     * '/address/{country}':
      *   get:
      *     tags:
      *     - Address
@@ -57,7 +57,7 @@ module.exports = function(app : core.Express) {
     // get random USA/UK addresses
     /**
      * @openapi
-     * '/address/:country/:qty':
+     * '/address/{country}/{qty}':
      *   get:
      *     tags:
      *     - Address
