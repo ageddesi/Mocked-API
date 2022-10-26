@@ -1,24 +1,93 @@
 # Notes:
-This is a reference implementation of the MockAPI Analytics Middleware.
+This is a reference document for the implementation of the MockAPI Analytics Middleware.  
+
 Analytics is based on an interface - the imaginitively names IAnalytics interface.
 This describes the functionality required for an analytics provider.
+
+## Code provided
+There are 2 'reference' implementation for analytics.  
+- conlog - A simple console based analytics logger, which will write requests to the console.
+
+- plausible-logger 
+A analytics logger that posts API request information to the [Plausible](https://plausible.io/) analytics system
+
+Additionally a docker-compose file has been created to stand up a plausible server environment based on the plausible self hosting instructions.
+
 
 ## What is an analytics provider?
 An Analytics provider is a class that contains everything required to communicate with an analytics engine, such as Matomo, Plausible, Google Analytics or anthing else.
  
 The implementation of the Analytics is based on the provider model - and is similar to the method that modules are registered.
 
-The implementation for modules is pretty fluid - based mostly on having some typescript files in an appropriate location that feature route methods that can be found.
+The implementation for modules is pretty fluid - based mostly on having some typescript files in an appropriate location that feature route methods that can be found.  Analytics providers are slightly more structured and are a bit stricter, and are based on an interface.
 
-Here the rules for an analytic provider are a bit stricter, and are based on an interface.
+If you want to read more about providers - see this [wikipedia article on the provider model](https://en.wikipedia.org/wiki/Provider_model).
+
 
 ## Interface?
 An interface describes the requirements for any class that implements that interface.  So - at the time of writing these notes - the IAnalytics interface describes that any class implementing this interface must :
 
 - have a method called middleware, into which an options object can be passed.
 
-- have a swaggerRegistration method (which is currently under development) which allows the swagger front end to register with Analytics providers (plausible - for instance requires this)
+- have a swaggerRegistration method which allows the swagger front end to register with Analytics providers (plausible - for instance requires this)
 
 - have a string property called name, which relates to the the environment variable name to use to read configuration for this analytics provider.
 
-https://en.wikipedia.org/wiki/Provider_model
+## How the provider works in practice.
+Firstly we need to reference the provider in the main execution code (app.ts)  The reference instance can be found in the middleware\analytics folder.
+
+so - for instance to reference the consoleLogger -
+
+```javascript
+import { consoleLogger } from './middleware/analytics/console-logger';
+```
+with this reference we can now create an instance of the `consoleLogger` class   
+
+```javascript
+const Analytics : IAnalytics = new consoleLogger();
+```
+
+Now can tell Express to use the middleware
+
+```javascript
+APIrouter.use(Analytics.middleware(JSON.parse(process.env[Analytics.name])))
+```
+We can break that down a little.  `Analytics.name` will return the name of the configuration in the environment.  Configuration is stored as a JSON string.  
+`process.env[Analytics.name]` will therefore pull the environment configuration for that provider from the environment.
+
+`Analytics.middleware` is a class instance method, that returns the middleware. It reqires configuration object - which it can then use within the middleware as required.
+
+so - the middleware will now be called for all requests routed to that instance of the express (or in our case router).
+
+However Plausible requires a js file to loaded from the server.
+
+This is done through the Swagger `schemaOptions` and setting the `customJsStr` based on the output of the provider.
+
+The `consoleLogger` doesn't require this - so that method on the class returns undefined.  Whereas `plausible` does require this, and generates a JS code block that is added into the page.
+
+# Running Self Hosted Plausible
+Much of the documentation for plausible suggests that localhost reporting is not supported.  There is a reference to a special script extension - however testing failed to prove that this script executed.
+
+Instead a host entry was used to allow a domain to resolve to local host, allowing testing to work locally in a mostly live-like configuration.
+
+## Configuring local execution.
+
+### setting up a domain
+A host file (or similar) is required to point a domain name to the local machine - in this example the domain `MockedApi.local` will be used.
+
+```
+127.0.0.1   MockedApi.local
+```
+
+### configuring the hostname
+the `.env` file (or environment variable) will need to be updated to reference the new hostname - here is an example .env file
+
+```
+SCHEME=http
+HOSTNAME=MockedApi.local:3000
+# Set the following for Plausible Analytics
+PLAUSIBLE_CONFIGURATION={"baseUrl":"http://localhost:3000","loggingURL": "http://localhost:8000"}
+CONSOLELOG_CONFIGURATION={"logEmoji":"🔍"}
+```
+
+Now when the site executes it will create links in the generated swagger docs that link to `MockedApi.local`.
