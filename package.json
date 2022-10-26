@@ -11,7 +11,7 @@
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
     "contributors:check": "all-contributors check",
-    "chuck" : "ts-node modules\\chuck-norris\\utils\\scrape-facts.ts modules\\chuck-norris\\data\\chuckfacts.json"
+    "chuck": "ts-node modules\\chuck-norris\\utils\\scrape-facts.ts modules\\chuck-norris\\data\\chuckfacts.json"
   },
   "repository": {
     "type": "git",
