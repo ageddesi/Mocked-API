@@ -10,7 +10,7 @@ module.exports = function (app: core.Express) {
      *  get:
      *    tags:
      *      - TimeZones
-     *    summary: Get all time zones
+     *    summary: Get all timezones
      *    responses:
      *      '200':
      *        description: OK
@@ -31,14 +31,14 @@ module.exports = function (app: core.Express) {
      *  get:
      *    tags:
      *      - TimeZones
-     *    summary: Get random time zone
+     *    summary: Get a random timezone
      *    responses:
      *      '200':
      *        description: OK
      *        schema:
      *          $ref: '#/definitions/MockTimeZoneResponse'
      */
-    // Get a random quote
+    // Get a random timezone
     app.get("/time-zones/random", (req: Request, res: Response) => {
         const time_zone = time_zones[Math.floor(Math.random() * time_zones.length)];
         res.json(time_zone)
