@@ -11,8 +11,8 @@ class configuration{
 }
 export const consoleLogger= class conlog implements IAnalytics{
     name:string = 'CONSOLELOG_CONFIGURATION'; // name of configuration variable
-    swaggerRegistration(): void {
-        console.log("REGISTER WITH SWAGGER")
+    swaggerRegistration(): string {
+        return undefined
     }
     middleware(options: configuration): (req, res, next) => void {
         let id = <configuration> options;
