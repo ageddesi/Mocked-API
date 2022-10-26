@@ -3,8 +3,9 @@ import express, { Request, Response } from 'express';
 import { swaggerSpec } from './src/utils/swagger';
 import swag from './swagger.json';
 import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
-//import { consoleLogger } from './middleware/analytics/console-logger';
-import { plausible } from  './middleware/analytics/plausible';
+import {IAnalytics} from './middleware/analytics/IAnalytics';
+import { consoleLogger } from './middleware/analytics/console-logger';
+// import { plausible } from  './middleware/analytics/plausible';
 import path from 'path';
 import { exit } from 'process';
 const morgan = require('morgan');
@@ -19,8 +20,9 @@ app.use(applicationRateLimiter); // rate-limit applied to all the routes by defa
 var constantPath = './src/modules/';
 
 const APIrouter = express.Router();
-const Analytics = new plausible();
-APIrouter.use(Analytics.middleware(JSON.parse(process.env[Analytics.name])));
+const Analytics : IAnalytics = new consoleLogger();
+
+APIrouter.use(Analytics.middleware(JSON.parse(process.env[Analytics.name])))
 
 var routes = {};
 fs.readdirSync(constantPath).forEach((module) => {
