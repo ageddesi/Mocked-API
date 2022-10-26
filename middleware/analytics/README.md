@@ -71,6 +71,7 @@ Much of the documentation for plausible suggests that localhost reporting is not
 Instead a host entry was used to allow a domain to resolve to local host, allowing testing to work locally in a mostly live-like configuration.
 
 ## Configuring local execution.
+To run a local installation you will require docker.  All of the configuration for plausible can be found in the infrastruture folder.
 
 ### setting up a domain
 A host file (or similar) is required to point a domain name to the local machine - in this example the domain `MockedApi.local` will be used.
@@ -92,9 +93,13 @@ CONSOLELOG_CONFIGURATION={"logEmoji":"🔍"}
 
 Now when the site executes it will create links in the generated swagger docs that link to `MockedApi.local`.
 
+
 ## Configuring plausible
 Configuration of the plausible services should be fairly straightforward.  A `plausible-conf.env.example` file is provided - which is missing a single entry - `SECRET_KEY_BASE`.
 
 This is - for the most part - not an important requirement.  This key is used to generate API keys that allow code to read analytics.
 
 plausible has [instructions](https://plausible.io/docs/self-hosting#2-add-required-configuration) within their documentation that covers this.
+
+## Starting the services
+Running docker-compose up -d within the infrastructure/analytics will start up the plausible and supporting services.

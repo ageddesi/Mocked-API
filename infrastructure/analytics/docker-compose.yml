@@ -1,15 +1,6 @@
 version: '3.7'
 
 services:
-  mocked-api:
-    build:
-      dockerfile: Dockerfile
-      context: .
-    ports:
-      - 3000:3000
-    volumes:
-      - "./:/usr/src/app/"
-
   mail:
     image: mailhog/mailhog
     logging:
