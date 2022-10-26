@@ -91,3 +91,10 @@ CONSOLELOG_CONFIGURATION={"logEmoji":"🔍"}
 ```
 
 Now when the site executes it will create links in the generated swagger docs that link to `MockedApi.local`.
+
+## Configuring plausible
+Configuration of the plausible services should be fairly straightforward.  A `plausible-conf.env.example` file is provided - which is missing a single entry - `SECRET_KEY_BASE`.
+
+This is - for the most part - not an important requirement.  This key is used to generate API keys that allow code to read analytics.
+
+plausible has [instructions](https://plausible.io/docs/self-hosting#2-add-required-configuration) within their documentation that covers this.
