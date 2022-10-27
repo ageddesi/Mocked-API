@@ -1,7 +1,7 @@
 # Notes:
 This is a reference document for the implementation of the MockAPI Analytics Middleware.  
 
-Analytics is based on an interface - the imaginitively names IAnalytics interface.
+Analytics is based on an interface - the imaginitively named IAnalytics interface.
 This describes the functionality required for an analytics provider.
 
 ## Code provided
@@ -64,6 +64,28 @@ However Plausible requires a js file to loaded from the server.
 This is done through the Swagger `schemaOptions` and setting the `customJsStr` based on the output of the provider.
 
 The `consoleLogger` doesn't require this - so that method on the class returns undefined.  Whereas `plausible` does require this, and generates a JS code block that is added into the page.
+
+## Simplifying the use of a analytics provider
+The complexity for loading and registering providers has been abstracted into a Loader, now all that is required is the environment settings to be configured correctly
+
+```
+# Analytics Configuration:
+# ========================
+#
+# Analytics Provider Name
+ANALYTICS_PROVIDER=ConsoleProvider
+# Configuration for the Plausible Analytics Engine
+PLAUSIBLE_CONFIGURATION={"baseUrl":"<base for example : http://mockedapi.local:3000>","loggingURL": "<Address of the plausible server - for example : http://localhost:8000>"
+# Configuration for the Console Logging.
+CONSOLELOG_CONFIGURATION={"logEmoji":"🔍"}
+```
+### ANALYTICS_PROVIDER
+This should be set to the provider name within the middleware class - for example: The Consolelogger has the name : ConsoleProvider, whereas the Plausible provider is called PlausibleProvider". To switch off analytics, this value can be left empty or null.
+
+## Configuration Settings
+The console logger, is a simple middleware - and in real terms doesn't really need configuration - however to show how configuration works within the provider, a simple configuration (logEmoji) is set up.  This is the emoji character that is printed to the screen.  The Configuration is a JSON String, which allows for more complex configuration - like the PLAUSIBLE_CONFIGURATION.
+
+
 
 # Running Self Hosted Plausible
 Much of the documentation for plausible suggests that localhost reporting is not supported.  There is a reference to a special script extension - however testing failed to prove that this script executed.
