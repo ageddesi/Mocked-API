@@ -27,12 +27,16 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to animal',
             },
             {
-                name: 'BankFeeds',
+                name: 'Banks',
                 description: 'A set of endpoints related to bank feeds',
             },
             {
                 name: 'Chat',
                 description: 'A set of endpoints related to chats',
+            },
+            {
+                name: 'Chuck Norris',
+                description: 'A set of endpoints related to Chuck Norris Facts',
             },
             {
                 name: 'Colors',
@@ -49,6 +53,10 @@ const options: swaggerJsdoc.Options = {
             {
                 name: 'Ecommerce',
                 description: 'A set of endpoints related to ecommerce',
+            },
+            {
+                name: 'Courses',
+                description: 'A set of endpoints related to Courses',
             },
             {
                 name: 'Elements',

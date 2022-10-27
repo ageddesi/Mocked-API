@@ -1,6 +1,6 @@
 # Pull request template
 
-<!--- **REMOVE THIS - START**
+<!--- ***REMOVE THIS - START***
 
 1. Title should be something descriptive about what you're changes do. (It will default to whatever you put as your commit message.)
 2. Make sure to point to `dev` branch;
@@ -16,7 +16,7 @@
 5. Describe your changes, link to the issue and add images if relevant under each #TODO next comments;
 6. MAKE SURE TO CLEAN ALL THIS 6 POINTS BEFORE SUBMITTING
 
---- **REMOVE THIS - END** --->
+--- ***REMOVE THIS - END*** --->
 
 IMPORTANT: Please review the [CONTRIBUTING.md](../CONTRIBUTING.md) file for detailed contributing guidelines.
 
