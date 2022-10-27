@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../../../../app';
+import app from '../../../../../app';
 import Movie from '../../consts/Movie';
 
 describe('movies api endpoints', () => {
@@ -29,8 +29,6 @@ describe('movies api endpoints', () => {
 
   describe('GET /movies/random', () => {
     it('should return a movie', async () => {
-      const id = 1;
-
       const response = await request(app).get('/movies/random');
       const movie: Movie = response.body;
 
