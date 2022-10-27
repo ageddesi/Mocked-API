@@ -3,9 +3,8 @@ import express, { Request, Response } from 'express';
 import { swaggerSpec } from './src/utils/swagger';
 import swag from './swagger.json';
 import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
+import { AnalyticsLoader } from './middleware/analytics/AnalyticsLoader';
 import {IAnalytics} from './middleware/analytics/IAnalytics';
-// import { consoleLogger } from './middleware/analytics/console-logger';
-import { plausible } from  './middleware/analytics/plausible';
 import path from 'path';
 const morgan = require('morgan');
 const cors = require('cors');
@@ -19,9 +18,13 @@ app.use(applicationRateLimiter); // rate-limit applied to all the routes by defa
 var constantPath = './src/modules/';
 
 const APIrouter = express.Router();
-const Analytics : IAnalytics = new plausible();
-
-APIrouter.use(Analytics.middleware(JSON.parse(process.env[Analytics.name])))
+var Analytics : IAnalytics = null;
+if(process.env.NODE_ENV !== "test"){
+    Analytics = AnalyticsLoader(process.env.ANALYTICS_PROVIDER,process.env.NODE_ENV);
+    if (Analytics){
+        APIrouter.use(Analytics.middleware(JSON.parse(process.env[Analytics.name])))
+    }
+}
 
 var routes = {};
 fs.readdirSync(constantPath).forEach((module) => {
@@ -64,7 +67,7 @@ app.get('/docs.json', (req: Request, res: Response) => {
 app.use(express.static(path.join(__dirname,'public')))
 
 const schemaOptions = {
-    customJsStr: Analytics.swaggerRegistration(JSON.parse(process.env[Analytics.name])),
+    customJsStr: Analytics ? Analytics.swaggerRegistration(JSON.parse(process.env[Analytics.name])):undefined,
     swaggerOptions: {
         dom_id: '#swagger-ui',
         tagsSorter: 'alpha',

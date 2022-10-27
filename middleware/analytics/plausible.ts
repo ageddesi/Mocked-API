@@ -13,7 +13,7 @@ class configuration{
 }
 export const plausible= class plausiblelog implements IAnalytics{
     name:string = 'PLAUSIBLE_CONFIGURATION';  
-    
+    providerName:string ='PlausibleProvider';
     swaggerRegistration(options: configuration): string {
         let config = <configuration> options;
         let url = new URL(config.baseUrl);
