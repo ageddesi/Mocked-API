@@ -1,4 +1,4 @@
-# Notes:
+# Notes
 This is a reference document for the implementation of the MockAPI Analytics Middleware.  
 
 Analytics is based on an interface - the imaginitively named IAnalytics interface.
@@ -6,15 +6,15 @@ This describes the functionality required for an analytics provider.
 
 ## Code provided
 There are 2 'reference' implementation for analytics.  
-- conlog - A simple console based analytics logger, which will write requests to the console.
+- conlog 
+A simple console based analytics logger, which will write requests to the console.
 
 - plausible-logger 
 A analytics logger that posts API request information to the [Plausible](https://plausible.io/) analytics system
 
 Additionally a docker-compose file has been created to stand up a plausible server environment based on the plausible self hosting instructions.
 
-
-## What is an analytics provider?
+## What is an analytics provider
 An Analytics provider is a class that contains everything required to communicate with an analytics engine, such as Matomo, Plausible, Google Analytics or anthing else.
  
 The implementation of the Analytics is based on the provider model - and is similar to the method that modules are registered.
@@ -23,8 +23,7 @@ The implementation for modules is pretty fluid - based mostly on having some typ
 
 If you want to read more about providers - see this [wikipedia article on the provider model](https://en.wikipedia.org/wiki/Provider_model).
 
-
-## Interface?
+## What is an interface
 An interface describes the requirements for any class that implements that interface.  So - at the time of writing these notes - the IAnalytics interface describes that any class implementing this interface must :
 
 - have a method called middleware, into which an options object can be passed.
