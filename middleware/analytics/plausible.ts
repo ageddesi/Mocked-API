@@ -1,4 +1,5 @@
 import { IAnalytics } from "./IAnalytics";
+import {IAnalyticsInformation} from "./IAnalyticsInformation"
 import fetch from 'node-fetch';
 
 /**
@@ -8,6 +9,7 @@ class configuration{
     baseUrl: string;    
     loggingURL: string;      
 }
+
 export const plausible= class plausiblelog implements IAnalytics{
     name:string = 'PLAUSIBLE_CONFIGURATION';  
     providerName:string ='PlausibleProvider';
@@ -27,16 +29,16 @@ export const plausible= class plausiblelog implements IAnalytics{
         return (req, res, next) =>{
         try {
             let url = new URL(options.baseUrl + req.url);
-            var trakingObject = {
+            var trakingObject:IAnalyticsInformation = {
                 domain:url.hostname,
                 url: options.baseUrl + req.url,
                 ua: req.header('User-Agent'),
                 lang: req.header('Accept-Language'),
-                method:req.method,
+                method: req.method,
                 cip: getRemoteAddr(req),
                 res: res.body,
                 res_status: res.status,
-                res_length:res.length,
+                res_length: res.length,
             };
             SendToPlausible(options,trakingObject);
         } catch (error  ) {

@@ -2,9 +2,15 @@ import { IAnalytics } from "./IAnalytics";
 import {consoleLogger} from "./console-logger";
 import {plausible} from "./plausible";
 
-
-export const AnalyticsLoader = function(ProviderName: string, environment:string) :IAnalytics {
-    if (environment==="test")
+/**
+ * Analytics provider loader
+ * @param ProviderName string: Name of the provider to load
+ * @param enabled bool : Is analytics enabled?
+ * @param environment string: The environment executing against (no analytics provider will be loaded when testing)
+ * @returns 
+ */
+export const AnalyticsLoader = function(ProviderName: string,enabled:boolean, environment:string) :IAnalytics {
+    if (environment==="test" || enabled === false)
         return null;
     var providers =[consoleLogger,plausible]
     var result = providers.filter(x=>{
