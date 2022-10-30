@@ -8,10 +8,10 @@ import {IAnalytics} from './middleware/analytics/IAnalytics';
 import path from 'path';
 const morgan = require('morgan');
 const cors = require('cors');
-
 var fs = require('fs');
-
 const app = express();
+const ENVIRONMENT = process.env.NODE_ENV;
+const ANALYTICS_ENABLED: boolean = process.env.ANALYTICS_ENABLED ? JSON.parse(process.env.ANALYTICS_ENABLED.toLowerCase()) : false;
 
 // Rate limit middleware
 app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
@@ -19,11 +19,9 @@ var constantPath = './src/modules/';
 
 const APIrouter = express.Router();
 var Analytics : IAnalytics = null;
-if(process.env.NODE_ENV !== "test"){
-    Analytics = AnalyticsLoader(process.env.ANALYTICS_PROVIDER,process.env.NODE_ENV);
-    if (Analytics){
-        APIrouter.use(Analytics.middleware(JSON.parse(process.env[Analytics.name])))
-    }
+Analytics = AnalyticsLoader(process.env.ANALYTICS_PROVIDER,ANALYTICS_ENABLED, ENVIRONMENT);
+if (Analytics){
+    APIrouter.use(Analytics.middleware(JSON.parse(process.env[Analytics.name])))
 }
 
 var routes = {};
