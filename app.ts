@@ -3,26 +3,36 @@ import express, { Request, Response } from 'express';
 import { swaggerSpec } from './src/utils/swagger';
 import swag from './swagger.json';
 import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
+import { AnalyticsLoader } from './middleware/analytics/AnalyticsLoader';
+import {IAnalytics} from './middleware/analytics/IAnalytics';
 import path from 'path';
 const morgan = require('morgan');
 const cors = require('cors');
-
 var fs = require('fs');
-
 const app = express();
+const ENVIRONMENT = process.env.NODE_ENV;
+const ANALYTICS_ENABLED: boolean = process.env.ANALYTICS_ENABLED ? JSON.parse(process.env.ANALYTICS_ENABLED.toLowerCase()) : false;
 
 // Rate limit middleware
 app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
-
 var constantPath = './src/modules/';
-var routes = {};
 
+const APIrouter = express.Router();
+var Analytics : IAnalytics = null;
+Analytics = AnalyticsLoader(process.env.ANALYTICS_PROVIDER,ANALYTICS_ENABLED, ENVIRONMENT);
+if (Analytics){
+    APIrouter.use(Analytics.middleware(JSON.parse(process.env[Analytics.name])))
+}
+
+var routes = {};
 fs.readdirSync(constantPath).forEach((module) => {
     const apiRoutePath = `${constantPath}${module}/api/`;
     fs.readdirSync(apiRoutePath).forEach((route) => {
-        routes[module] = require(`${apiRoutePath}${route}`)(app);
+        routes[module] = require(`${apiRoutePath}${route}`)(APIrouter);
     });
 });
+app.use('/', APIrouter)
+
 
 // Add an healthcheck endpoint
 // Shows amount of API Categories and their endpoints
@@ -51,10 +61,11 @@ app.get('/docs.json', (req: Request, res: Response) => {
     res.setHeader('Content-Type', 'application/json');
     res.send(swaggerSpec);
 });
-
+ 
 app.use(express.static(path.join(__dirname,'public')))
 
 const schemaOptions = {
+    customJsStr: Analytics ? Analytics.swaggerRegistration(JSON.parse(process.env[Analytics.name])):undefined,
     swaggerOptions: {
         dom_id: '#swagger-ui',
         tagsSorter: 'alpha',
@@ -62,6 +73,10 @@ const schemaOptions = {
         docExpansion: 'none',
     },
 };
+
+
+
+
 
 // Setup Swagger API Documentation
 const swaggerUi = require('swagger-ui-express');

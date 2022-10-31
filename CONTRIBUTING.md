@@ -1,3 +1,4 @@
+<!-- markdownlint-disable -->
 <!-- omit in toc -->
 # Contributing to Mocked-API
 
@@ -14,15 +15,15 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 <!-- omit in toc -->
 ## Table of Contents
 
-    - [I Have a Question](#i-have-a-question)
-    - [I Want To Contribute](#i-want-to-contribute)
-    - [Reporting Bugs](#reporting-bugs)
-    - [Suggesting Enhancements](#suggesting-enhancements)
-    - [Your First Code Contribution](#your-first-code-contribution)
-    - [Improving The Documentation](#improving-the-documentation)
-    - [Coding Conventions](#Coding-Conventions)
-    - [Commit Messages](#commit-messages)
-    - [Join The Project Team](#join-the-project-team)
+- [I Have a Question](#i-have-a-question)
+- [I Want To Contribute](#i-want-to-contribute)
+- [Reporting Bugs](#reporting-bugs)
+- [Suggesting Enhancements](#suggesting-enhancements)
+- [Your First Code Contribution](#your-first-code-contribution)
+- [Improving The Documentation](#improving-the-documentation)
+- [Coding Conventions](#coding-conventions)
+- [Commit Messages](#commit-messages)
+- [Join The Project Team](#join-the-project-team)
 
 
 
@@ -130,8 +131,8 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/agedde
 include Setup of env, IDE and typical getting started instructions?
 -->
 1. When adding new API endpoints, please add OpenAPI comments
-2. All code must have corresponding unit tests.
-3. All API endpoints must have unit tests for all return codes.
+1. All code must have corresponding unit tests.
+1. All API endpoints must have unit tests for all return codes.
 
 ### Improving The Documentation
 <!-- TODO
@@ -153,31 +154,31 @@ All of the folders and files should use `kebab-case`.
 ### File Extensions
 
 This is all about the files and the clear definition of their usage :
-
-    - APIs
-        - `*.routes.ts`
-        - This file located right inside the feature's folder
-    - Data
-        - `*.ts`
-        - This file located under `data` folder of the feature's folder (e.g. `data/*.ts`)
-        - This `data` folder is used to store the static data used in APIs (not your mock data)
-    - Interfaces/Types
-        - `*.types.ts`
-        - This file located under `models` folder of the feature's folder (e.g. `models/*.types.ts`)
-    - Utilities
-        - `*.ts`
-        - This file located under `utils` folder of the feature's folder (e.g. `utils/*.ts`)
-    - Tests
-        - `*.test.ts`
-        - This file located under `tests` folder of the feature's folder (e.g. `tests/*.test.ts`)
-        - This `tests` folder should follow the feature's folder structure, e.g. :
-            - `tests/*.test.ts` -> test file for the APIs
-            - `tests/utils/*.test.ts` -> test file for the APIs
-
+```none
+- APIs
+    - `*.routes.ts`
+    - This file located right inside the feature's folder
+- Data
+    - `*.ts`
+    - This file located under `data` folder of the feature's folder (e.g. `data/*.ts`)
+    - This `data` folder is used to store the static data used in APIs (not your mock data)
+- Interfaces/Types
+    - `*.types.ts`
+    - This file located under `models` folder of the feature's folder (e.g. `models/*.types.ts`)
+- Utilities
+    - `*.ts`
+    - This file located under `utils` folder of the feature's folder (e.g. `utils/*.ts`)
+- Tests
+    - `*.test.ts`
+    - This file located under `tests` folder of the feature's folder (e.g. `tests/*.test.ts`)
+    - This `tests` folder should follow the feature's folder structure, e.g. :
+        - `tests/*.test.ts` -> test file for the APIs
+        - `tests/utils/*.test.ts` -> test file for the APIs
+```
 ### File Structures
 
 The file structures in this repository should look like this :
-
+```bash
     Mocked-API
     │   README.md
     │   package.json
@@ -275,7 +276,7 @@ The file structures in this repository should look like this :
     │       │   ...
     │
     └───another-folders
-
+```
 ### Commit Messages
 
 We use semantic commit messages

@@ -9,3 +9,10 @@ services:
       - 3000:3000
     volumes:
       - "./:/usr/src/app/"
+
+  db-data:
+    driver: local
+  event-data:
+    driver: local
+  geoip:
+    driver: local

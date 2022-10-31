@@ -1,0 +1,20 @@
+{   
+  "settings": {
+    "incrementListMarker": false
+  },
+  "plugins": [
+    "preset-lint-consistent",
+    "preset-lint-recommended",
+    "lint-heading-increment",
+    ["lint-no-undefined-references",false],
+    [
+      "lint-list-item-indent","space"
+    ],
+    [
+      "lint-unordered-list-marker-style", "consistent"
+    ],
+    [
+      "lint-ordered-list-marker-value", "one"
+    ]
+  ]
+}
