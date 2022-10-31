@@ -21,10 +21,8 @@ module.exports = function (app: core.Express) {
      *          $ref: '#/definitions/MockMovie'
      */
     app.get('/movies/random', (req: Request, res: Response) => {
-        const randomNumber = Math.floor(Math.random() * movies.length) + 1
-        const movie = getMovieById(randomNumber);
-
-        res.json(movie);
+        const movie = getRandomMovies(1);
+        res.json(movie[0]);
     });
 
     /**
@@ -51,7 +49,6 @@ module.exports = function (app: core.Express) {
     app.get('/movies/:qty?', (req: Request, res: Response) => {
         const quantity = getQtyFromRequest(req, 10);
         const movies = getRandomMovies(quantity);
-
         return res.json(movies);
     });
 
