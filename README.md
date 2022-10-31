@@ -23,9 +23,9 @@ If you would like to contribute during Hacktoberfest please following our contri
 
 1. Find a ticket and ask to be assigned, once assigned start work. :) This is so we don't get multiple PR's for the same issue.
 1. Please branch from our active next release *dev*
-2. Please make sure your new endpoints all have OpenAPI Comments as they will be used to generate our swagger documentation.
-3. Please make sure you have added unit tests for end points and util functions.
-4. MOST importantly, have fun.
+1. Please make sure your new endpoints all have OpenAPI Comments as they will be used to generate our swagger documentation.
+1. Please make sure you have added unit tests for end points and util functions.
+1. MOST importantly, have fun.
 
 If you need help, please leave a comment on the ticket you are assigned to our join our discord by clicking the link below.
 
@@ -50,12 +50,12 @@ Once you've cloned this repository, running Mocked-API is quite easy, there are 
 ```bash
 npm install
 ```
-2. Configure the application
+1. Configure the application
 An example configuration file `.env.example` is provided.
 ```bash
 npm run config
 ```
-3. Serve the application
+1. Serve the application
 ```bash
 npm run serve
 ```
