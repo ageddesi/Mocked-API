@@ -853,6 +853,34 @@
                 }
             }
         },
+        "/currencies/digital-coins/ripple/ledgers-list/{qty}": {
+            "get": {
+                "tags": [
+                    "Currencies"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "qty",
+                        "description": "The amount of ledgers you require",
+                        "type": "string",
+                        "default": 10
+                    }
+                ],
+                "summary": "Returns a random set of Ripple (XPR) Validated Ledgers",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/emails": {
             "get": {
                 "tags": [

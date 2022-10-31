@@ -47,4 +47,13 @@ describe('currency api endpoints', () => {
             expect(response.body.length).toBe(qty);
         });
     });
+
+    describe('GET currencies/digital-coins/ripple/ledgers-list/:qty?', () => {
+        it('should return a list of Ripple ledgers', async () => {
+            const qty = 5;
+            const response = await request(app).get(`/currencies/digital-coins/ripple/ledgers-list/${qty}`);
+
+            expect(response.body.length).toBe(qty);
+        });
+    });
 });
