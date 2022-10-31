@@ -131,8 +131,8 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/agedde
 include Setup of env, IDE and typical getting started instructions?
 -->
 1. When adding new API endpoints, please add OpenAPI comments
-2. All code must have corresponding unit tests.
-3. All API endpoints must have unit tests for all return codes.
+1. All code must have corresponding unit tests.
+1. All API endpoints must have unit tests for all return codes.
 
 ### Improving The Documentation
 <!-- TODO
@@ -154,7 +154,7 @@ All of the folders and files should use `kebab-case`.
 ### File Extensions
 
 This is all about the files and the clear definition of their usage :
-
+```none
 - APIs
     - `*.routes.ts`
     - This file located right inside the feature's folder
@@ -174,7 +174,7 @@ This is all about the files and the clear definition of their usage :
     - This `tests` folder should follow the feature's folder structure, e.g. :
         - `tests/*.test.ts` -> test file for the APIs
         - `tests/utils/*.test.ts` -> test file for the APIs
-
+```
 ### File Structures
 
 The file structures in this repository should look like this :
