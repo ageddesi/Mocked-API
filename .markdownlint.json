@@ -1,0 +1,107 @@
+{
+    "default": true,
+    "extends": null,
+    "MD001": true,
+    "MD002": {
+      "level": 1
+    },
+    "MD003": {
+      "style": "consistent"
+    },
+    "MD004": {
+      "style": "consistent"
+    },
+    "MD005": true,
+    "MD006": true,
+    "MD007": {
+      "indent": 4,
+      "start_indented": false,
+      "start_indent": 2
+    },
+    "MD009": {
+      "br_spaces": 2,
+      "list_item_empty_lines": false,
+      "strict": false
+    },
+    "MD010": {
+      "code_blocks": true,
+      "ignore_code_languages": [],
+      "spaces_per_tab": 1
+    },
+    "MD011": true,
+    "MD012": false,
+    "MD013": false,
+    "MD014": true,
+    "MD018": true,
+    "MD019": true,
+    "MD020": true,
+    "MD021": true,
+    "MD022": false,
+    "MD023": true,
+    "MD024": false,
+    "MD025": {
+      "level": 1,
+      "front_matter_title": "^\\s*title\\s*[:=]"
+    },
+    "MD026": {
+      "punctuation": ".,;:!。，；：！"
+    },
+    "MD027": true,
+    "MD028": true,
+    "MD029": {
+      "style": "one_or_ordered"
+    },
+    "MD030": {
+      "ul_single": 1,
+      "ol_single": 1,
+      "ul_multi": 1,
+      "ol_multi": 1
+    },
+    "MD031": false,
+    "MD032": false,
+    "MD033": {
+      "allowed_elements": []
+    },
+    "MD034": false,
+    "MD035": {
+      "style": "consistent"
+    },
+    "MD036": {
+      "punctuation": ".,;:!?。，；：！？"
+    },
+    "MD037": true,
+    "MD038": true,
+    "MD039": true,
+    "MD040": true,
+    "MD041": {
+      "level": 1,
+      "front_matter_title": "^\\s*title\\s*[:=]"
+    },
+    "MD042": false,
+    "MD044": {
+      "names": [],
+      "code_blocks": true,
+      "html_elements": true
+    },
+    "MD045": true,
+    "MD046": {
+      "style": "fenced"
+    },
+    "MD047": true,
+    "MD048": {
+      "style": "consistent"
+    },
+    "MD049": {
+      "style": "consistent"
+    },
+    "MD050": {
+      "style": "consistent"
+    },
+    "MD051": true,
+    "MD052": true,
+    "MD053": {
+      "ignored_definitions": [
+        "//"
+      ]
+    }
+  }
