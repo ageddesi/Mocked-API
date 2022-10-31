@@ -44,4 +44,20 @@ describe('sports api endpoints', () => {
             expect(response.body.length).toBe(qty);
         });
     });
+
+    describe('GET /sports/football/leagues/ligue1/teams', () => {
+        it('should return a list of ligue 1 teams', async () => {
+            const qty = 5;
+            const response = await request(app).get(`/sports/football/leagues/ligue1/teams/${qty}`);
+
+            expect(response.body.length).toBe(qty);
+        });
+
+        it('no quantity specified should return a list of 10 ligue 1 teams', async () => {
+            const defaultNumber = 10;
+            const response = await request(app).get(`/sports/football/leagues/ligue1/teams`);
+
+            expect(response.body.length).toBe(defaultNumber);
+        });
+    });
 });
