@@ -49,7 +49,7 @@ Paragraph.
 stuff here
 
 ```javascript
-        import { consoleLogger } from './middleware/analytics/console-logger';
+import { consoleLogger } from './middleware/analytics/console-logger';
 ```
 
 with this reference we can now create an instance of the `consoleLogger` class
