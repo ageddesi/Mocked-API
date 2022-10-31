@@ -1,11 +1,10 @@
-import User from "../consts/User";
-import { faker } from "@faker-js/faker";
+import User from '../consts/User';
+import { faker } from '@faker-js/faker';
 
 const getRandomUsers = (qty: number) => {
-
     const users: User[] = [];
 
-    Array.from({length: qty}).forEach(() => {
+    Array.from({ length: qty }).forEach(() => {
         users.push({
             userId: faker.datatype.uuid(),
             username: faker.internet.userName(),
@@ -14,10 +13,10 @@ const getRandomUsers = (qty: number) => {
             password: faker.internet.password(),
             birthDate: faker.date.birthdate(),
             registeredAt: faker.date.past(),
-        })
-    })
+        });
+    });
 
     return users;
-}
+};
 
-export default getRandomUsers
+export default getRandomUsers;

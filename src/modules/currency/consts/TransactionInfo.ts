@@ -14,7 +14,6 @@ interface transactionInfo {
     txreceipt_status: string;
     input: string;
     confirmations: string;
-
 }
 
 export default transactionInfo;

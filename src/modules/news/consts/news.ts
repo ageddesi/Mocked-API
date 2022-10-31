@@ -5,8 +5,8 @@ const slug = (title: string) => {
     return slugify(title, {
         lower: true,
         trim: true,
-    })
-}
+    });
+};
 
 const newsData: INews[] = [
     {

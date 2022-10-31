@@ -44,7 +44,7 @@ module.exports = function (app: core.Express) {
         res.json(getRandomInstagramPosts(DEFAULT_POSTS_COUNT));
     });
 
-        /**
+    /**
      * @openapi
      * '/socials/facebook':
      *   get:
@@ -60,7 +60,7 @@ module.exports = function (app: core.Express) {
      *             type: object
      *             $ref: '#/definitions/FacebookPost'
      */
-         app.get('/socials/facebook', (req: Request, res: Response) => {
-            res.json(getRandomFacebookPosts(DEFAULT_POSTS_COUNT));
-        });
+    app.get('/socials/facebook', (req: Request, res: Response) => {
+        res.json(getRandomFacebookPosts(DEFAULT_POSTS_COUNT));
+    });
 };

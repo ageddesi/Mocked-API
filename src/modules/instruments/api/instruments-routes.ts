@@ -65,9 +65,9 @@ module.exports = function (app: core.Express) {
     app.get('/instruments/:filterBy?/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         if (req.params.filterBy) {
-            const filteredList = instrumentsList.filter((source) =>
-                source.toLocaleLowerCase().includes(req.params.filterBy.toLocaleLowerCase())
-            ).slice(0, qty);
+            const filteredList = instrumentsList
+                .filter((source) => source.toLocaleLowerCase().includes(req.params.filterBy.toLocaleLowerCase()))
+                .slice(0, qty);
             return res.json({
                 instruments: filteredList,
             });

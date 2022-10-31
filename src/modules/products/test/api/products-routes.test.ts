@@ -34,7 +34,7 @@ describe('products api endpoints', () => {
 
     describe('GET /products/:qty/:department', () => {
         const quantity = 4;
-        const department = "Computer";
+        const department = 'Computer';
 
         it('should return a list of products ', async () => {
             const response = await request(app).get(`/products/${quantity}/${department}`);
@@ -60,7 +60,7 @@ describe('products api endpoints', () => {
     });
 
     describe('GET /products/department/:qty', () => {
-        const department = "Computer";
+        const department = 'Computer';
 
         it('should return a list of products', async () => {
             const response = await request(app).get(`/products/department/${department}`);

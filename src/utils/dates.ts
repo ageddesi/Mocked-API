@@ -4,6 +4,4 @@ function getRandomDate(from: Date, to: Date) {
     return new Date(fromTime + Math.random() * (toTime - fromTime));
 }
 
-export {
-    getRandomDate
-}
+export { getRandomDate };

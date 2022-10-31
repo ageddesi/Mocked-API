@@ -15,7 +15,7 @@ enum ImageEnum {
     People,
     Sports,
     Technics,
-    Transport
+    Transport,
 }
 
-export default ImageEnum
+export default ImageEnum;

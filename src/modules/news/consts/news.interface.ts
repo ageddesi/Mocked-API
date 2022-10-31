@@ -29,13 +29,13 @@
  *           example: sport-drinks
  */
 interface INews {
-  title: string;
-  slug: string;
-  author: string;
-  published_date: string;
-  summary: string;
-  language: string;
-  category: string;
+    title: string;
+    slug: string;
+    author: string;
+    published_date: string;
+    summary: string;
+    language: string;
+    category: string;
 }
 
-export { INews }
+export { INews };

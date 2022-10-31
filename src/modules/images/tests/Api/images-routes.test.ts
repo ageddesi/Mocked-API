@@ -1,7 +1,6 @@
 import request from 'supertest';
 import app from '../../../../../app';
 
-
 const get_width_height = (str: string): string[] => {
     const width_height_regex = /\d+\/\d+/;
     const vals = str.match(width_height_regex)[0];

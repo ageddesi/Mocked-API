@@ -3,7 +3,7 @@ import Video from '../consts/Video';
 import resolutions from '../consts/videoResolutions';
 
 const getVideo = () => {
-    const video : Video = {
+    const video: Video = {
         title: faker.lorem.sentence(),
         description: faker.lorem.paragraph(),
         date: faker.date.past(),
@@ -13,16 +13,16 @@ const getVideo = () => {
         dislikes: 0,
         runtimeSeconds: faker.datatype.number(),
         maxQuality: resolutions[Math.floor(Math.random() * resolutions.length)],
-    }
+    };
 
     video.likes = Math.max(video.views, faker.datatype.number());
     video.dislikes = faker.datatype.number();
     if (video.dislikes > video.views - video.likes) {
-        video.dislikes = video.views - video.likes
+        video.dislikes = video.views - video.likes;
     }
 
     return video;
-}
+};
 
 const getVideos = (qty: number) => {
     const videos = [];
@@ -32,6 +32,6 @@ const getVideos = (qty: number) => {
     }
 
     return videos;
-}
+};
 
-export { getVideo, getVideos }
+export { getVideo, getVideos };

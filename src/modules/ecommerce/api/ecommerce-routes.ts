@@ -90,44 +90,43 @@ import { getEcommerceCart } from '../utils/get-ecommerce-cart';
  */
 
 module.exports = function (app: core.Express) {
+    /**
+     * @openapi
+     * '/ecommerce/cart':
+     *   get:
+     *     tags:
+     *     - Ecommerce
+     *     summary: Returns a random cart with random products
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           $ref: '#/definitions/MockEcommerceCart'
+     */
+    app.get('/ecommerce/cart', (req: Request, res: Response) => {
+        const ecommerceCart = getEcommerceCart(req);
+        res.json(ecommerceCart);
+    });
 
-	/**
-	 * @openapi
-	 * '/ecommerce/cart':
-	 *   get:
-	 *     tags:
-	 *     - Ecommerce
-	 *     summary: Returns a random cart with random products
-	 *     responses:
-	 *       '200':
-	 *         description: OK
-	 *         schema:
-	 *           $ref: '#/definitions/MockEcommerceCart'
-	 */
-	app.get('/ecommerce/cart', (req: Request, res: Response) => {
-		const ecommerceCart = getEcommerceCart(req);
-		res.json(ecommerceCart);
-	});
-
-	/**
-	 * @openapi
-	 * '/ecommerce/cart/{qty}':
-	 *   get:
-	 *     tags:
-	 *     - Ecommerce
-	 *     summary: Returns a random cart with the given number of random products
-	 *     parameters:
-	 *     - in: path
-	 *       name: qty
-	 *       description: The number of carts you want
-	 *     responses:
-	 *       '200':
-	 *         description: OK
-	 *         schema:
-	 *           $ref: '#/definitions/MockEcommerceCartList'
-	 */
-	app.get('/ecommerce/cart/:qty', (req: Request, res: Response) => {
-		const ecommerceCart = getEcommerceCart(req);
-		res.json(ecommerceCart);
-	});
+    /**
+     * @openapi
+     * '/ecommerce/cart/{qty}':
+     *   get:
+     *     tags:
+     *     - Ecommerce
+     *     summary: Returns a random cart with the given number of random products
+     *     parameters:
+     *     - in: path
+     *       name: qty
+     *       description: The number of carts you want
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           $ref: '#/definitions/MockEcommerceCartList'
+     */
+    app.get('/ecommerce/cart/:qty', (req: Request, res: Response) => {
+        const ecommerceCart = getEcommerceCart(req);
+        res.json(ecommerceCart);
+    });
 };

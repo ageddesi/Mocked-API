@@ -7,7 +7,7 @@ describe('instrument api endpoints', () => {
     describe('GET /instruments/:qty?', () => {
         it('should return a list of instruments', async () => {
             const response = await request(app).get(`/instruments/1`);
-            expect(response.body).toStrictEqual({ instruments: ["Accordion"] });
+            expect(response.body).toStrictEqual({ instruments: ['Accordion'] });
         });
     });
 

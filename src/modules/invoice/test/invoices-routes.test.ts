@@ -2,7 +2,6 @@ import request from 'supertest';
 import Invoice from '../consts/Invoice';
 import app from '../../../../app';
 
-
 describe('invoice api endpoints', () => {
     describe('GET /invoices/', () => {
         it('should return a invoice', async () => {
