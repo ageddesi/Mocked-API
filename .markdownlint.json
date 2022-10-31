@@ -13,11 +13,7 @@
     },
     "MD005": true,
     "MD006": true,
-    "MD007": {
-      "indent": 4,
-      "start_indented": false,
-      "start_indent": 2
-    },
+    "MD007": false,
     "MD009": {
       "br_spaces": 2,
       "list_item_empty_lines": false,
