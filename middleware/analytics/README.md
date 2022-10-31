@@ -1,4 +1,3 @@
-<!-- markdownlint-disable -->
 # Notes
 This is a reference document for the implementation of the MockAPI Analytics Middleware.
 
@@ -10,7 +9,6 @@ This describes the functionality required for an analytics provider.
 There are 2 'reference' implementation for analytics.  
     - conlog
 A simple console based analytics logger, which will write requests to the console.
--  One
 - plausible-logger
 A analytics logger that posts API request information to the [Plausible](https://plausible.io/) analytics system
 
