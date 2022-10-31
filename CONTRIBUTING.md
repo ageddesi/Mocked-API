@@ -1,3 +1,4 @@
+<!-- markdownlint-disable -->
 <!-- omit in toc -->
 # Contributing to Mocked-API
 
