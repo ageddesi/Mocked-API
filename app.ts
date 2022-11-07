@@ -8,6 +8,20 @@ const cors = require('cors');
 
 const app = express();
 
+/** DEFINE SENTRY LOGGING */
+const Sentry = require('@sentry/node');
+const SentryTracing = require("@sentry/tracing");
+Sentry.init({
+    dsn: process.env.SENTRY_DSN,
+    tracesSampleRate: 1.0,
+    integrations: [
+        new Sentry.Integrations.Http({ tracing: true }),
+        new SentryTracing.Integrations.Express({
+          app,
+        }),
+      ],
+});
+
 // Rate limit middleware
 app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
 
@@ -68,7 +82,6 @@ app.get('/docs.json', (req: Request, res: Response) => {
     res.send(swaggerSpec);
 });
 
-
 const schemaOptions = {
     swaggerOptions: {
         dom_id: "#swagger-ui",
@@ -80,6 +93,11 @@ const schemaOptions = {
 // Setup Swagger API Documentation
 const swaggerUi = require('swagger-ui-express');
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec, schemaOptions));
+
+/** DEFINE SENTRY HANDLERS - MUST COME AFTER ALL ROUTES */
+app.use(Sentry.Handlers.errorHandler());
+app.use(Sentry.Handlers.requestHandler());
+app.use(Sentry.Handlers.tracingHandler());
 
 app.use(cors()); // enabling CORS for all requests
 app.use(morgan('combined')); // adding morgan to log HTTP requests
