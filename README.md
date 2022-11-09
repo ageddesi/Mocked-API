@@ -17,17 +17,23 @@
 
 Welcome to Mocked-API, this is a live API that can be accessed by anyone who needs data to test out their website, app, components etc.
 
-## Hacktoberfest Contributors
+## Sponsors
 
-If you would like to contribute during Hacktoberfest please following our contribution guidelines (Which we are still working on) but here is a quick summary of what we expect in the process of dev to raising your PR.
+We are eternally greatful for the amazing sponsors of this project. They help provide this little birdy with a home to live in. So thank you to the following sponsors for their contributions to the platform.
 
-1. Find a ticket and ask to be assigned, once assigned start work. :) This is so we don't get multiple PR's for the same issue.
-1. Please branch from our active next release *dev*
-2. Please make sure your new endpoints all have OpenAPI Comments as they will be used to generate our swagger documentation.
-3. Please make sure you have added unit tests for end points and util functions.
-4. MOST importantly, have fun.
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%">
+        <a href=https://github.com/dlford"><img src="https://avatars.githubusercontent.com/u/22881850?v=4?s=100" width="100px;" alt="cweave"/></a>
+      </td>
+      <td align="center" valign="top" width="14.28%">
+        <a href=https://github.com/cweave"><img src="https://avatars.githubusercontent.com/u/16121690?v=4?s=100" width="100px;" alt="cweave"/></a>
+      </td>
+     </tr>
+  </tbody>
+</table>
 
-If you need help, please leave a comment on the ticket you are assigned to our join our discord by clicking the link below.
 
 ## Getting Started
 
