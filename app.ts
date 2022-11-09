@@ -12,16 +12,16 @@ const constantPath = './src/modules/';
 const routes = {};
 /** DEFINE SENTRY LOGGING */
 const Sentry = require('@sentry/node');
-const SentryTracing = require("@sentry/tracing");
+const SentryTracing = require('@sentry/tracing');
 Sentry.init({
     dsn: process.env.SENTRY_DSN,
     tracesSampleRate: 1.0,
     integrations: [
         new Sentry.Integrations.Http({ tracing: true }),
         new SentryTracing.Integrations.Express({
-          app,
+            app,
         }),
-      ],
+    ],
 });
 
 fs.readdirSync(constantPath).forEach((module) => {
