@@ -60,6 +60,8 @@
     "typescript-eslint": "^0.0.1-alpha.0"
   },
   "dependencies": {
+    "@sentry/node": "^7.17.4",
+    "@sentry/tracing": "^7.17.4",
     "chucknorris-io": "^1.0.5",
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
