@@ -1,4 +1,3 @@
-
 /**
  * @openapi
  * definitions:
@@ -29,7 +28,7 @@
  *           type: string
  *           example: $80.09
  */
- type Course = {
+type Course = {
     name: string;
     description: string;
     provider: string;
@@ -38,6 +37,5 @@
     address: string;
     price: string;
 };
-
 
 export default Course;

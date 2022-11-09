@@ -5,7 +5,7 @@ import GBP_USD_TICKER_DATA from '../data/gbp-usd-ticker-data';
 import { getQtyFromRequest } from '../../../utils/route-utils';
 import getDigitalCurrencyAddress from '../utils/getDigitalCurrencyAddress';
 import getDigitalCurrencyTxList from '../utils/getDigitalCurrencyTxList';
-import getDigitalCurrencyLedger from '../utils/getDigitalCurrencyLedger'
+import getDigitalCurrencyLedger from '../utils/getDigitalCurrencyLedger';
 import DigitalCoinEnum from '../consts/DigitalCoinEnum';
 
 module.exports = function (app: core.Express) {
@@ -127,9 +127,9 @@ module.exports = function (app: core.Express) {
         const qty = getQtyFromRequest(req);
         const addresses = getDigitalCurrencyAddress(qty, DigitalCoinEnum.Litecoin);
         res.json(addresses);
-    })
+    });
 
-     /**
+    /**
      * @openapi
      * '/currencies/digital-coins/ethereum/tx-list/:address?/:qty?':
      *   get:
@@ -156,13 +156,13 @@ module.exports = function (app: core.Express) {
      */
 
     //Returns the list of transactions performed by an address
-    app.get("/currencies/digital-coins/ethereum/tx-list/:address?/:qty?", (req: Request, res: Response) => {
+    app.get('/currencies/digital-coins/ethereum/tx-list/:address?/:qty?', (req: Request, res: Response) => {
         const address = req.params.address;
         const qty = getQtyFromRequest(req);
         const tx_list = getDigitalCurrencyTxList(address, qty);
         res.json(tx_list);
-    })
-    
+    });
+
     /**
      * @openapi
      * '/currencies/digital-coins/ripple/ledgers-list/{qty}':
@@ -184,10 +184,9 @@ module.exports = function (app: core.Express) {
      *           items:
      *             $ref: '#/definitions/MockedRippleLedger'
      */
-    app.get("/currencies/digital-coins/ripple/ledgers-list/:qty?", (req: Request, res: Response) => {
+    app.get('/currencies/digital-coins/ripple/ledgers-list/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const ledger = getDigitalCurrencyLedger(qty);
         res.json(ledger);
-    })
-
-}
+    });
+};

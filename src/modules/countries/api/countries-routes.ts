@@ -80,7 +80,7 @@ module.exports = function (app: core.Express) {
      *                   type: string
      *                   example: Austurland
      */
-     app.get('/countries/provinces/', (req: Request, res: Response) => {
+    app.get('/countries/provinces/', (req: Request, res: Response) => {
         res.json({
             countries: provincesList,
         });

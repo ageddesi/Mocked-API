@@ -71,7 +71,6 @@ describe('socials api endpoints', () => {
             expect(facebook).toHaveProperty('comments');
             expect(facebook).toHaveProperty('createdAt');
             expect(response.body.length).toEqual(DEFAULT_POSTS_COUNT);
-
         });
     });
 });
