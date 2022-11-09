@@ -12,7 +12,7 @@ var fs = require('fs');
 const app = express();
 
 // Rate limit middleware
-app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
+if (process.env.ENABLE_RATE_LIMIT === 'true') app.use(applicationRateLimiter); // rate-limit applied to all the routes by default
 
 var constantPath = './src/modules/';
 var routes = {};
@@ -52,7 +52,7 @@ app.get('/docs.json', (req: Request, res: Response) => {
     res.send(swaggerSpec);
 });
 
-app.use(express.static(path.join(__dirname,'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 const schemaOptions = {
     swaggerOptions: {

@@ -4,7 +4,6 @@ import getRandomCourses from '../utils/getRandomCourses';
 import { getQtyFromRequest } from '../../../utils/route-utils';
 
 module.exports = function (app: core.Express) {
-
     /**
      * @openapi
      * "/courses/{qty}":
@@ -18,7 +17,7 @@ module.exports = function (app: core.Express) {
      *       description: The quantity of courses you want
      *       type: string
      *       default: 1
-     *       required: false 
+     *       required: false
      *     responses:
      *       '200':
      *         description: OK

@@ -6,7 +6,6 @@ import getMovieById from '../utils/getMovieById';
 import getRandomMovies from '../utils/getRandomMovies';
 
 module.exports = function (app: core.Express) {
-
     /**
      * @openapi
      * '/movies/random':
@@ -51,5 +50,4 @@ module.exports = function (app: core.Express) {
         const movies = getRandomMovies(quantity);
         return res.json(movies);
     });
-
 };

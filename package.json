@@ -13,7 +13,9 @@
     "contributors:check": "all-contributors check",
     "chuck": "ts-node modules\\chuck-norris\\utils\\scrape-facts.ts modules\\chuck-norris\\data\\chuckfacts.json",
     "lint": "eslint . --ext .ts",
-    "lint-fix": "eslint . --fix --ext .ts"
+    "lint-fix": "eslint . --ext .ts --fix",
+    "pretty": "prettier --write \"src/**/*.ts\"",
+    "clean-up": "npm run lint-fix & npm run pretty"
   },
   "repository": {
     "type": "git",

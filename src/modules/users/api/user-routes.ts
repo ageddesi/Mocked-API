@@ -3,9 +3,7 @@ import * as core from 'express-serve-static-core';
 import { getQtyFromRequest } from '../../../utils/route-utils';
 import getRandomUsers from '../utils/getRandomUsers';
 
-
 module.exports = function (app: core.Express) {
-
     /**
      * @openapi
      * "/users/{qty}":
@@ -25,10 +23,9 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockUsers'
      */
-    app.get("/users/:qty?", (req: Request, res: Response) => {
+    app.get('/users/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req, 1);
         const users = getRandomUsers(qty);
         res.json(users);
-    })
-
-}
+    });
+};

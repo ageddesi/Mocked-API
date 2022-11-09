@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
 import { getQtyFromRequest } from '../../../utils/route-utils';
 import ColorErrors from '../consts/chuck-norris-errors';
-import facts from "../data/chuckfacts.json"
+import facts from '../data/chuckfacts.json';
 /**
  * @openapi
  * definitions:
@@ -19,7 +19,7 @@ import facts from "../data/chuckfacts.json"
  *       icon:
  *         type: string
  *         example: https://assets.chucknorris.host/img/avatar/chuck-norris.png
- *         description: URL for an icon - provided in the original data from api.chucknorris.com      
+ *         description: URL for an icon - provided in the original data from api.chucknorris.com
  *       id:
  *         type: string
  *         example: izjeqnjzteeqms8l8xgdhw
@@ -41,8 +41,8 @@ module.exports = function (app: core.Express) {
      *     description: |-
      *        <img style="margin-right: 20px;float:left" title="image Title" alt="beware" src="/warning.png">
      *        **Retrieve a random Chuck Norris fact.**
-     *        This endpoint returns a __single__ fact as it is not possible for the human brain to store more than 1 Chuck Norris fact without exploding (this is why we have Chuck Norris Databases)...  
-     *        
+     *        This endpoint returns a __single__ fact as it is not possible for the human brain to store more than 1 Chuck Norris fact without exploding (this is why we have Chuck Norris Databases)...
+     *
      *        Of course the counter argument to that is "this is an api - and the end recipient is a computer".
      *        Maybe but think of the liability
      *     tags:
@@ -86,32 +86,34 @@ module.exports = function (app: core.Express) {
      */
     app.get('/chuck-norris/fact/:category/:qty?', (req: Request, res: Response) => {
         try {
-            const qty = getQtyFromRequest(req,1);
-            if(qty < 1 ) { 
-                throw ColorErrors.InvalidQuantityError 
+            const qty = getQtyFromRequest(req, 1);
+            if (qty < 1) {
+                throw ColorErrors.InvalidQuantityError;
             }
             const category = req.params.category;
-            var categories = facts.map(item => item.categories[0]).filter((value, index, self) => self.indexOf(value) === index);
+            var categories = facts
+                .map((item) => item.categories[0])
+                .filter((value, index, self) => self.indexOf(value) === index);
 
-            if (category !== "all" && !categories.includes(category)){
-                  throw ColorErrors.InvalidCategoryError; 
-            }     
-            var factlist = []
-            var filtered = category==="all" ? facts : facts.filter((value) =>{ return   value.categories.includes(category)   });
-            
-            
-            
+            if (category !== 'all' && !categories.includes(category)) {
+                throw ColorErrors.InvalidCategoryError;
+            }
+            var factlist = [];
+            var filtered =
+                category === 'all'
+                    ? facts
+                    : facts.filter((value) => {
+                          return value.categories.includes(category);
+                      });
+
             for (var i = 0; i < qty; i++) {
                 var randomFact = {};
                 randomFact = filtered[Math.floor(Math.random() * filtered.length)];
-                factlist.push(randomFact)
+                factlist.push(randomFact);
             }
             res.json(factlist);
         } catch (error) {
-            if (
-                error === ColorErrors.InvalidCategoryError ||
-                error === ColorErrors.InvalidQuantityError
-            ) {
+            if (error === ColorErrors.InvalidCategoryError || error === ColorErrors.InvalidQuantityError) {
                 res.status(400).json({
                     error: error.message,
                 });
@@ -137,11 +139,10 @@ module.exports = function (app: core.Express) {
      *             type: string
      *             example: ["dev", "food", "sport", "career", "fashion", "history", "animal", "movie", "money", "music", "celebrity", "science", "political", "travel", "religion"]
      */
-    app.get('/chuck-norris/categories', (req: Request, res: Response)  => {
-        var categories = facts.map(item => item.categories[0]).filter((value, index, self) => self.indexOf(value) === index);
+    app.get('/chuck-norris/categories', (req: Request, res: Response) => {
+        var categories = facts
+            .map((item) => item.categories[0])
+            .filter((value, index, self) => self.indexOf(value) === index);
         res.json(categories);
     });
-
- 
-
 };

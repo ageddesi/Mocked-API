@@ -1,4 +1,3 @@
-
 /**
  * @openapi
  * definitions:
@@ -45,18 +44,18 @@
  *
  */
 type Movie = {
-  id: number;
-  created: string;
-  modified: string;
-  title: string;
-  url: string;
-  IMDb_rating: number;
-  runtime: number;
-  year: number;
-  genres: string;
-  IMDb_votes: number;
-  release_date: string;
-  directors: string;
+    id: number;
+    created: string;
+    modified: string;
+    title: string;
+    url: string;
+    IMDb_rating: number;
+    runtime: number;
+    year: number;
+    genres: string;
+    IMDb_votes: number;
+    release_date: string;
+    directors: string;
 };
 
 export default Movie;

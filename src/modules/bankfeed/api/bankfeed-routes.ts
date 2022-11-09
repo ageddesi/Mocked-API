@@ -5,7 +5,7 @@ import { getQtyFromRequest } from '../../../utils/route-utils';
 import BankData from '../data/bankdata'; //Bank feed json
 
 module.exports = function (app: core.Express) {
-  /**
+    /**
      * @openapi
      * '/bank/feed/:qty':
      *   get:
@@ -39,9 +39,9 @@ module.exports = function (app: core.Express) {
      *                 type: array
      *                 example: [{ date: '2222-22-22', description: 'This is bank statement', amount: '50000' }]
      */
-  app.get('/bank/feed/:qty', (req: Request, res: Response) => {
-    const defaultErrorMessage = 'Unable to provide a bank statement. Unknown Error Occured';
-    const qty = getQtyFromRequest(req);
+    app.get('/bank/feed/:qty', (req: Request, res: Response) => {
+        const defaultErrorMessage = 'Unable to provide a bank statement. Unknown Error Occured';
+        const qty = getQtyFromRequest(req);
         try {
             if (qty) {
                 BankData.statement[0].amount = qty.toString();

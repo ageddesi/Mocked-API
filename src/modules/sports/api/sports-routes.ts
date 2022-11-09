@@ -9,7 +9,6 @@ import BasketballNbaLeague2022 from '../data/basketball-nba-league-2022';
 import Ligue1LeagueData2022 from '../data/football-ligue-1-league-2022';
 
 module.exports = function (app: core.Express) {
-
     /**
      * @openapi
      * '/sports/basketball/leagues/nba/teams/{qty}':

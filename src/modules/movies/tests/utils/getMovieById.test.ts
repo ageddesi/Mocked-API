@@ -1,4 +1,4 @@
-import getMovieById from "../../utils/getMovieById";
+import getMovieById from '../../utils/getMovieById';
 
 describe('get movie by id', () => {
     it('should return a movie', () => {

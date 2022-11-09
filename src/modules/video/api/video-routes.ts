@@ -19,7 +19,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/video', (req: Request, res: Response) => {
         res.json(getVideo());
-    })
+    });
 
     /**
      * @openapi
@@ -39,5 +39,5 @@ module.exports = function (app: core.Express) {
     app.get('/video/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         res.json(getVideos(qty));
-    })
-}
+    });
+};
