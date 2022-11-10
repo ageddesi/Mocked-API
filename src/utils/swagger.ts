@@ -107,6 +107,10 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints to get random sports data',
             },
             {
+                name: 'Text',
+                description: 'A set of endpoints to get random text',
+            },
+            {
                 name: 'TimeZones',
                 description: 'A set of endpoints to get random time zones',
             },
