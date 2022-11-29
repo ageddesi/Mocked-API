@@ -67,6 +67,10 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to emails',
             },
             {
+                name: 'Food',
+                description: 'A set of endpoints related to food',
+            },
+            {
                 name: 'Images',
                 description: 'A set of endpoints related to obtaining placeholder image urls',
             },
