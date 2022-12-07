@@ -1,3 +1,9 @@
+/*
+Data obtained from: The Government of Canada
+Date obtained: December 1st, 2022
+URL: https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/nutrient-data/canadian-nutrient-file-2015-download-files.html
+*/
+
 const beverages = [
     {
         Food: 'Alcohol, beer, light (4% alcohol by volume)',
