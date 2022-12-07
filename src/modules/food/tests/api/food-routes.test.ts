@@ -130,9 +130,9 @@ describe('food/nutrition/grains api endpoints', () => {
 });
 
 describe('food/nutrition/protein api endpoints', () => {
-    describe('GET /food/nutrition/protein', () => {
+    describe('GET /food/nutrition/proteins', () => {
         it('should return a user', async () => {
-            const response = await request(app).get(`/food/nutrition/protein`);
+            const response = await request(app).get(`/food/nutrition/proteins`);
 
             const food = response.body[0];
 
@@ -151,11 +151,11 @@ describe('food/nutrition/protein api endpoints', () => {
         });
     });
 
-    describe('GET /food/nutrition/protein/qty', () => {
+    describe('GET /food/nutrition/proteins/qty', () => {
         const qty = 5;
 
-        it('should return protein with the given quantity of protein', async () => {
-            const response = await request(app).get(`/food/nutrition/protein/${qty}`);
+        it('should return proteins with the given quantity of proteins', async () => {
+            const response = await request(app).get(`/food/nutrition/proteins/${qty}`);
             expect(response.body.length).toEqual(qty);
         });
     });
@@ -212,15 +212,6 @@ describe('food/nutrition/ api endpoints', () => {
             expect(food).toHaveProperty('Sugars');
             expect(food).toHaveProperty('Fibre');
             expect(food).toHaveProperty('Protein');
-        });
-    });
-
-    describe('GET /food/nutrition/qty', () => {
-        const qty = 10;
-
-        it('should return various categories of food item with the given quantity of food items', async () => {
-            const response = await request(app).get(`/food/nutrition/${qty}`);
-            expect(response.body.length).toEqual(qty);
         });
     });
 });
