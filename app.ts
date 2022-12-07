@@ -10,19 +10,22 @@ const app = express();
 
 const constantPath = './src/modules/';
 const routes = {};
-/** DEFINE SENTRY LOGGING */
-const Sentry = require('@sentry/node');
-const SentryTracing = require('@sentry/tracing');
-Sentry.init({
-    dsn: process.env.SENTRY_DSN,
-    tracesSampleRate: 1.0,
-    integrations: [
-        new Sentry.Integrations.Http({ tracing: true }),
-        new SentryTracing.Integrations.Express({
-            app,
-        }),
-    ],
-});
+let Sentry = null;
+if(process.env.ENABLE_SENTRY === 'true'){
+    /** DEFINE SENTRY LOGGING */
+    Sentry = require('@sentry/node');
+    const SentryTracing = require('@sentry/tracing');
+    Sentry.init({
+        dsn: process.env.SENTRY_DSN,
+        tracesSampleRate: 1.0,
+        integrations: [
+            new Sentry.Integrations.Http({ tracing: true }),
+            new SentryTracing.Integrations.Express({
+                app,
+            }),
+        ],
+    });
+}
 
 fs.readdirSync(constantPath).forEach((module) => {
     const apiRoutePath = `${constantPath}${module}/api/`;
@@ -52,9 +55,11 @@ app.get('/full-status', (req, res) => {
     res.status(200).send(data);
 });
 
-app.use(Sentry.Handlers.errorHandler());
-app.use(Sentry.Handlers.requestHandler());
-app.use(Sentry.Handlers.tracingHandler());
+if(process.env.ENABLE_SENTRY == "true"){
+    app.use(Sentry.Handlers.errorHandler());
+    app.use(Sentry.Handlers.requestHandler());
+    app.use(Sentry.Handlers.tracingHandler());
+}
 if (process.env.ENABLE_RATE_LIMIT === 'true') app.use(applicationRateLimiter); // enable RateLimiting
 initSwagger(app); // setup Swagger
 app.use(cors()); // enabling CORS for all requests
