@@ -4,7 +4,7 @@ enum FoodType {
     Vegetables,
     Fruits,
     Grains,
-    Protein,
+    Proteins,
     Beverages,
 }
 

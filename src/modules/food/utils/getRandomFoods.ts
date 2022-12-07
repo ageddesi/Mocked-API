@@ -20,7 +20,7 @@ const getRandomFoods = (FoodType, qty) => {
             return getRandomSubArray(fruits, qty);
         case FoodEnum.Grains:
             return getRandomSubArray(grains, qty);
-        case FoodEnum.Protein:
+        case FoodEnum.Proteins:
             return getRandomSubArray(proteins, qty);
         case FoodEnum.Vegetables:
             return getRandomSubArray(vegetables, qty);
