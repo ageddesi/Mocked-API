@@ -3,7 +3,7 @@ let request = require('supertest');
 
 describe('food/nutrition/fruits api endpoints', () => {
     describe('GET /food/nutrition/fruits', () => {
-        it('should return a user', async () => {
+        it('should return fruit nutrition', async () => {
             const response = await request(app).get(`/food/nutrition/fruits`);
 
             const food = response.body[0];
@@ -35,7 +35,7 @@ describe('food/nutrition/fruits api endpoints', () => {
 
 describe('food/nutrition/dairy api endpoints', () => {
     describe('GET /food/nutrition/dairy', () => {
-        it('should return a user', async () => {
+        it('should return dairy nutrition', async () => {
             const response = await request(app).get(`/food/nutrition/dairy`);
 
             const food = response.body[0];
@@ -67,7 +67,7 @@ describe('food/nutrition/dairy api endpoints', () => {
 
 describe('food/nutrition/vegetables api endpoints', () => {
     describe('GET /food/nutrition/vegetables', () => {
-        it('should return a user', async () => {
+        it('should return vegetable nutrition', async () => {
             const response = await request(app).get(`/food/nutrition/vegetables`);
 
             const food = response.body[0];
@@ -99,7 +99,7 @@ describe('food/nutrition/vegetables api endpoints', () => {
 
 describe('food/nutrition/grains api endpoints', () => {
     describe('GET /food/nutrition/grains', () => {
-        it('should return a user', async () => {
+        it('should return grain nutrition', async () => {
             const response = await request(app).get(`/food/nutrition/grains`);
 
             const food = response.body[0];
@@ -131,7 +131,7 @@ describe('food/nutrition/grains api endpoints', () => {
 
 describe('food/nutrition/protein api endpoints', () => {
     describe('GET /food/nutrition/proteins', () => {
-        it('should return a user', async () => {
+        it('should return protein nutrition', async () => {
             const response = await request(app).get(`/food/nutrition/proteins`);
 
             const food = response.body[0];
@@ -163,7 +163,7 @@ describe('food/nutrition/protein api endpoints', () => {
 
 describe('food/nutrition/beverages api endpoints', () => {
     describe('GET /food/nutrition/beverages', () => {
-        it('should return a user', async () => {
+        it('should return beverage nutrition', async () => {
             const response = await request(app).get(`/food/nutrition/beverages`);
 
             const food = response.body[0];
@@ -195,7 +195,7 @@ describe('food/nutrition/beverages api endpoints', () => {
 
 describe('food/nutrition/ api endpoints', () => {
     describe('GET /food/nutrition/', () => {
-        it('should return a user', async () => {
+        it('should return nutrition of the food', async () => {
             const response = await request(app).get(`/food/nutrition/`);
 
             const food = response.body[0];

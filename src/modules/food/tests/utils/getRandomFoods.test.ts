@@ -56,3 +56,11 @@ describe('get random items for all food categories', () => {
         expect(res.length).toBe(amount);
     });
 });
+
+describe('each enum type in FoodEnum must appear exactly once. FoodEnum should have unique enum types', () => {
+    it('should return the length of FoodEnum', () => {
+        const enumArray = Object.keys(FoodEnum);
+        const uniqueEnumSet = [... new Set(enumArray)];
+        expect(enumArray.length).toBe(uniqueEnumSet.length);
+    });
+});
