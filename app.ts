@@ -8,15 +8,14 @@ const morgan = require('morgan');
 const cors = require('cors');
 const fs = require('fs');
 const app = express();
-app.use(cors()); // enabling CORS for all requests
 
 const constantPath = './src/modules/';
 const routes = {};
 
-if (process.env.ENABLE_SENTRY === 'true') initSentry(app, process.env)
+if (process.env.ENABLE_SENTRY === 'true') initSentry(app, process.env);
 if (process.env.ENABLE_MORGAN_LOGGING === 'true') app.use(morgan('combined')); // adding morgan to log HTTP requests
 if (process.env.ENABLE_RATE_LIMIT === 'true') app.use(applicationRateLimiter); // enable RateLimiting
-if (process.env.ENABLE_SWAGGER === 'true') initSwagger(app); // setup Swagger
+if (process.env.ENABLE_SWAGGER === 'true') initSwagger(app); // setup Swagger;
 
 fs.readdirSync(constantPath).forEach((module) => {
     const apiRoutePath = `${constantPath}${module}/api/`;
@@ -45,5 +44,7 @@ app.get('/full-status', (req, res) => {
     };
     res.status(200).send(data);
 });
+
+app.use(cors()); // enabling CORS for all requests;
 
 export default app;

@@ -29,7 +29,7 @@ module.exports = function (app: core.Express) {
      *         description: OK
      *         schema:
      *           $ref: '#/definitions/MockFoodNutrition'
-     * 
+     *
      * definitions:
      *   MockFoodNutrition:
      *     type: array
