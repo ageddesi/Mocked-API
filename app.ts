@@ -9,6 +9,8 @@ const cors = require('cors');
 const fs = require('fs');
 const app = express();
 
+app.use(cors()); // enabling CORS for all requests;
+
 const constantPath = './src/modules/';
 const routes = {};
 
@@ -44,7 +46,5 @@ app.get('/full-status', (req, res) => {
     };
     res.status(200).send(data);
 });
-
-app.use(cors()); // enabling CORS for all requests;
 
 export default app;
