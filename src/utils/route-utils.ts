@@ -39,7 +39,7 @@ const getCountryNameFromRequest = (request: Request | null): string => {
 
 const getFoodGroup = (request: Request | null): string => {
     const foodGroup = request.params.foodGroup ? request.params.foodGroup : defaultFoodGroup;
-    return foodGroup.charAt(0).toUpperCase() + foodGroup.slice(1)
-}
+    return foodGroup.charAt(0).toUpperCase() + foodGroup.slice(1);
+};
 
 export { getQtyFromRequest, getImageDataFromRequest, getCountryNameFromRequest, getFoodGroup };
