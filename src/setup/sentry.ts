@@ -1,7 +1,6 @@
 import * as core from 'express-serve-static-core';
 
-export function initSentry(app: core.Express, env : any){
-
+export function initSentry(app: core.Express, env: any) {
     /** DEFINE SENTRY LOGGING */
     const Sentry = require('@sentry/node');
     const SentryTracing = require('@sentry/tracing');
