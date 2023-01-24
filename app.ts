@@ -4,6 +4,7 @@ import swag from './swagger.json';
 import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
 import { initSwagger } from './src/setup/swagger';
 import { initSentry } from './src/setup/sentry';
+import path from 'path';
 const morgan = require('morgan');
 const cors = require('cors');
 const fs = require('fs');
@@ -15,7 +16,8 @@ const routes = {};
 if (process.env.ENABLE_SENTRY === 'true') initSentry(app, process.env);
 if (process.env.ENABLE_MORGAN_LOGGING === 'true') app.use(morgan('combined')); // adding morgan to log HTTP requests
 if (process.env.ENABLE_RATE_LIMIT === 'true') app.use(applicationRateLimiter); // enable RateLimiting
-if (process.env.ENABLE_SWAGGER === 'true') initSwagger(app); // setup Swagger;
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 fs.readdirSync(constantPath).forEach((module) => {
     const apiRoutePath = `${constantPath}${module}/api/`;
@@ -46,5 +48,7 @@ app.get('/full-status', (req, res) => {
 });
 
 app.use(cors()); // enabling CORS for all requests;
+
+if (process.env.ENABLE_SWAGGER === 'true') initSwagger(app); // setup Swagger;
 
 export default app;
