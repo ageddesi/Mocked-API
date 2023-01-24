@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "0.17.1",
+        "version": "0.17.2",
         "title": "Mocked-API",
         "description": "An API library for providing endpoints of mock data for use during testing. This API is still in the development and until it reaches version 1.0.0 the API is subject to change. To find out more head over to https://mocked-api.dev/"
     },
