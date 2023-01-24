@@ -6,6 +6,7 @@ const maxQty = 100;
 const imageWidthDefault = 640;
 const imageHeightDefault = 480;
 const defaultCountry = 'uk';
+const defaultFoodGroup = 'All';
 
 function isNumber(value: string | number): boolean {
     return value != null && value !== '' && !isNaN(Number(value.toString()));
@@ -36,4 +37,9 @@ const getCountryNameFromRequest = (request: Request | null): string => {
     return request.params.country ? request.params.country : defaultCountry;
 };
 
-export { getQtyFromRequest, getImageDataFromRequest, getCountryNameFromRequest };
+const getFoodGroup = (request: Request | null): string => {
+    const foodGroup = request.params.foodGroup ? request.params.foodGroup : defaultFoodGroup;
+    return foodGroup.charAt(0).toUpperCase() + foodGroup.slice(1);
+};
+
+export { getQtyFromRequest, getImageDataFromRequest, getCountryNameFromRequest, getFoodGroup };
