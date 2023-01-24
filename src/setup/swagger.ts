@@ -1,7 +1,6 @@
 import { swaggerSpec } from '../utils/swagger';
 import express, { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import path from 'path';
 
 export function initSwagger(app: core.Express) {
     // Docs in JSON format
@@ -9,8 +8,6 @@ export function initSwagger(app: core.Express) {
         res.setHeader('Content-Type', 'application/json');
         res.send(swaggerSpec);
     });
-
-    app.use(express.static(path.join(__dirname, 'public')));
 
     const schemaOptions = {
         swaggerOptions: {
