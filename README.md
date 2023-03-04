@@ -21,6 +21,8 @@ Welcome to Mocked-API, this is a live API that can be accessed by anyone who nee
 
 We are eternally greatful for the amazing sponsors of this project. They help provide this little birdy with a home to live in. So thank you to the following sponsors for their contributions to the platform.
 
+If you would like to help support this project. We now have an Open Collective page which you can visit [here](https://opencollective.com/mocked-api-os)
+
 <table>
   <tbody>
     <tr>
