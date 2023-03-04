@@ -118,6 +118,10 @@ const options: swaggerJsdoc.Options = {
                 name: 'Users',
                 description: 'A set of endpoints to get random user data',
             },
+            {
+                name: 'Weathers',
+                description: 'A set of endpoints to get random weather data',
+            },
         ],
     },
     apis: ['./src/modules/*/api/*.ts', './src/modules/*/consts/*.ts'],
