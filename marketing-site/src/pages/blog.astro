@@ -1,0 +1,82 @@
+---
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+			ul {
+				list-style-type: none;
+				padding: unset;
+			}
+			ul li {
+				display: flex;
+			}
+			ul li time {
+				flex: 0 0 130px;
+				font-style: italic;
+				color: #595959;
+			}
+			ul li a:visited {
+				color: #8e32dc;
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 overflow-x-hidden">
+		<Header></Header>
+		<main>
+            <div class="relative px-4 pt-8 pb-20 sm:px-6 lg:px-8 lg:pt-16 lg:pb-28">
+                <div class="absolute inset-0">
+                    <div class="h-1/3 bg-gradient-to-b from-indigo-700 to-gray-800 sm:h-2/3"></div>
+                  </div>
+  <div class="relative mx-auto max-w-7xl">
+    <div class="text-center">
+      <h2 class="text-4xl font-bold tracking-tight text-pink-400 sm:text-4xl">The Mocked Blog</h2>
+      <p class="mx-auto mt-3 max-w-3xl text-xl text-gray-200 sm:mt-4">Updates from the world of mocked-api.</p>
+    </div>
+    <div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+        {posts.map((post) => (
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gradient-to-b from-indigo-700 to-purple-800 p-4">
+                <div class="flex-shrink-0">
+                    <img class="mb-4" src={post.frontmatter.heroImage} alt="">
+                </div>
+                <div class="flex flex-1 flex-col justify-between bg-white p-6 border-r-pink-300 border-4">
+                    <div class="flex-1">
+                        <p class="text-sm font-medium text-indigo-600">
+                            {post.frontmatter.category}
+                        </p>
+                        <div class="mt-2 block">
+                            <p class="text-xl font-semibold text-gray-900">{post.frontmatter.title}</p>
+                            <p class="mt-3 text-base text-gray-500">{post.frontmatter.summary}</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-center">
+                        <p class="text-sm font-medium text-gray-900">
+                            <a href="#" class="hover:underline">{post.frontmatter.author}</a>
+                        </p>
+                        <div class="flex space-x-1 text-sm text-gray-500 ml-2">
+                            {post.frontmatter.pubDate}
+                        </div>                        
+                    </div>
+                    <a href={post.url} class="m-auto">
+                        <button class="bg-blue-500 w-60 m-auto mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Read more
+                        </button>
+                    </a>
+                </div>
+            </div>
+        ))}
+    </div>
+  </div>
+</div>
+		</main>
+        <Footer></Footer>
+	</body>
+</html>

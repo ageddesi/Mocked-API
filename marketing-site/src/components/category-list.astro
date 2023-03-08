@@ -1,0 +1,29 @@
+---
+import CategorySvg from "./category-svg.astro";
+
+const apiStatusResponse = await fetch("https://api.mocked-api.dev/docs.json")
+const apiStatus = await apiStatusResponse.json()
+const apiEndPointsCount = Object.keys(apiStatus.paths).length
+---
+<div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
+    <h2 class="text-3xl font-bold text-white tracking-tight">We are still working towards our v1.0 release</h2>
+    <p class="mt-4 max-w-3xl text-lg text-purple-200">In the meantime you can use our api anytime but until v1.0 is released breaking API changes can occcur. However we are trying our best to not have any happen (but we are only human). <br/>For our full api docs head over to <a class="underline text-white hover:text-pink-400" href="https://api.mocked-api.dev">api.mocked-api.dev</a> or click on a category below</p>
+    <h2 class="text-xl text-white tracking-tight mt-8">Current Release : <span class="text-pink-400">{apiStatus.info.version}</span> | Categories: <span class="text-pink-400">{apiStatus.tags.length}</span> | Endpoints: <span class="text-pink-400">{apiEndPointsCount}</span> </h2>
+    <div class="mt-12 grid grid-cols-3 gap-x-6 gap-y-12 sm:grid-cols-4 lg:mt-16 lg:grid-cols-8 lg:gap-x-8 lg:gap-y-16">
+        
+        {apiStatus.tags.map((data) => 
+        <div>
+            <a href={`https://api.mocked-api.dev/#/${data.name}`} target="_blank" class="flex flex-col items-center">
+                <div>
+                    <span class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10 hover:bg-pink-400 hover:scale-150">
+                       <CategorySvg name={data.name} />
+                    </span>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-lg font-medium text-white">{data.name}</h3>
+                </div>
+            </a>
+        </div>
+        )}
+    </div>
+</div>

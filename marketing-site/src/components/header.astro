@@ -1,0 +1,47 @@
+---
+import image1 from '../../public/icon.png';
+
+const repoInfoResponse = await fetch("https://api.github.com/repos/ageddesi/mocked-api")
+const repoInfo = await repoInfoResponse.json()
+
+---
+
+<script defer data-domain="mocked-api.dev" src="https://plausible.io/js/plausible.js"></script>
+
+<style is:global>
+	@import '../../styles/global.css';
+</style>
+
+<header>
+	<div class="w-full bg-pink-600 text-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" aria-label="Top">
+			<div class="flex-grow">We need your help keeping this API free.</div>
+			<div class="inline-flex rounded-md shadow p-2">
+				<a href="https://github.com/sponsors/ageddesi" class="inline-flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white border-b-4 hover:bg-gray-50 hover:border-b-indigo-800">
+					<!-- Heroicon name: solid/external-link -->
+					<svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+						<path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+						<path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+					</svg>
+					Sponsor Us
+				</a>
+			</div>
+		</div>
+	</div>
+	<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+	  <div class="w-full py-3 flex items-center justify-between border-b border-indigo-700">
+		<div class="flex items-center">
+			<a href="/" class="text-base text-white font-bold hover:text-pink-500 flex justify-center align-middle items-center"> 
+				<span><img class="w-12 m-auto cursor-pointer mr-4" src={image1} alt=""></span>
+				<span>Mocked-API</span>
+			</a>
+		</div>
+		<div class="ml-10 space-x-8">
+			<a href="https://api.mocked-api.dev/" target="_blank" class="text-base text-white hover:text-pink-500"> Api Docs </a>
+			<a href="/blog" class="text-base text-white hover:text-pink-500"> Blog </a>
+			<a href="https://github.com/ageddesi/Mocked-API" target="_blank" class="text-base text-pink-500 hover:text-pink-600 border-2 p-2 rounded-xl pr-1 border-pink-500 hover:border-pink-600"> Repo <span class="bg-pink-500 p-1 rounded-lg text-white">🌟{repoInfo.watchers}</span> </a>
+			<!--<a href="/examples" class="text-base text-white hover:text-pink-500"> Examples </a>-->
+		</div>
+	  </div>
+	</nav>
+  </header>
