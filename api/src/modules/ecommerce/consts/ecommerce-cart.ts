@@ -1,7 +1,7 @@
 import productReviews from '../../products/data/product-reviews';
 
 type EcommerceCartItem = {
-    product: typeof productReviews[number];
+    product: (typeof productReviews)[number];
     pricePerUnit: number;
     quantity: number;
 };
