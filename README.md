@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-47-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-48-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center" style="margin-bottom: 20px">
@@ -175,6 +175,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://vishvamahadevan.netlify.app/"><img src="https://avatars.githubusercontent.com/u/34962962?v=4?s=100" width="100px;" alt="Vishwa Mahadevan"/><br /><sub><b>Vishwa Mahadevan</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=Vishwamagdavan" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://christa-burch.com/"><img src="https://avatars.githubusercontent.com/u/16121690?v=4?s=100" width="100px;" alt="Christa"/><br /><sub><b>Christa</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=cweave" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bpvcode"><img src="https://avatars.githubusercontent.com/u/66181027?v=4?s=100" width="100px;" alt="Bruno Vilar"/><br /><sub><b>Bruno Vilar</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=bpvcode" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vitormcferreira"><img src="https://avatars.githubusercontent.com/u/50532101?v=4?s=100" width="100px;" alt="Vitor"/><br /><sub><b>Vitor</b></sub></a><br /><a href="https://github.com/ageddesi/Mocked-API/commits?author=vitormcferreira" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

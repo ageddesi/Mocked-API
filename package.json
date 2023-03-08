@@ -1,0 +1,24 @@
+{
+  "name": "mocked-api",
+  "version": "1.0.0",
+  "description": "This package is enabled to run top level packages, eg. all-contributors",
+  "main": "index.js",
+  "scripts": {
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "contributors:check": "all-contributors check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ageddesi/Mocked-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ageddesi/Mocked-API/issues"
+  },
+  "homepage": "https://github.com/ageddesi/Mocked-API#readme",
+  "devDependencies": {
+    "all-contributors-cli": "^6.24.0"
+  }
+}
