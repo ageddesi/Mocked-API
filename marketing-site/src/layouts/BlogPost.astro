@@ -1,0 +1,73 @@
+---
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+
+export interface Props {
+	content: {
+		title: string;
+		description: string;
+		pubDate?: string;
+		updatedDate?: string;
+		heroImage?: string;
+        author?: string;
+	};
+}
+
+const {
+	content: { title, description, pubDate, updatedDate, heroImage, author },
+} = Astro.props;
+---
+
+<style lang="scss" is:global>
+    #blog-content {
+        h1 {
+           @apply mt-12 mb-6 text-3xl font-bold -rotate-1 decoration-pink-600 underline underline-offset-2;
+        }
+
+        h2 {
+           @apply mt-12 text-lg font-bold decoration-purple-600 underline underline-offset-2;
+        }
+
+        P{
+            @apply mt-4
+        }
+
+        a{
+            @apply text-purple-400 hover:text-pink-600 underline-offset-1 underline
+        }
+
+        ul{
+            @apply list-disc mt-8
+        }
+
+        li{
+            @apply mt-2 decoration-pink-600 ml-10
+        }
+       
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+	<body class="bg-gray-800 overflow-x-hidden">
+		<Header></Header>
+		<main>
+            <div class="relative px-4 pt-8 pb-20 sm:px-6 lg:px-8 lg:pt-16 lg:pb-28">
+                <div class="absolute inset-0">
+                    <div class="h-1/3 bg-gradient-to-b from-indigo-700 to-gray-800 sm:h-2/3"></div>
+                  </div>
+                <div class="relative mx-auto max-w-5xl">
+                    <div class="text-center">
+                        <img src={heroImage} class="max-h-48 m-auto" />
+                        <h1 class="mt-24 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">{title}</h1>
+                        <span class="text-pink-500">{pubDate} by {author}</span>
+                    </div>
+                    <div id="blog-content" class=" text-gray-100 mt-24">
+                        <slot />
+                    </div>
+                </div>
+            </div>
+		</main>
+        <Footer></Footer>
+	</body>
+</html>

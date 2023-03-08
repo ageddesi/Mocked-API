@@ -11,7 +11,7 @@ registries:
     token: ${{secrets.WORKFLOWS_TOKEN}}
 updates:
   - package-ecosystem: "npm" # See documentation for possible values 
-    directory: "/" # Location of package manifests
+    directory: "/api/" # Location of package manifests
     registries: 
       - npm-github
     target-branch: "dev"

@@ -1,0 +1,109 @@
+---
+import image1 from '../../public/mocked-api-logo.png';
+import hackImage from '../../public/Hfest-Logo-2-Color-Manga.png';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import CategoryList from '../components/category-list.astro';
+import '../../public/birds-flying.css';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<link rel="manifest" href="/manifest.webmanifest">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="title" content="Mocked-API">
+		<meta name="description" content="A set of free API's that allow you to fill your application with mocked data">
+		<meta name="keywords" content="api, mocked data, data-api, free-apis, free-api, mocked-api, free data for api">
+		<meta name="robots" content="index, follow">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://metatags.io/">
+		<meta property="og:title" content="Mocked-API">
+		<meta property="og:description" content="A set of free API's that allow you to fill your application with mocked data">
+		<meta property="og:image" content="https://mocked-api.dev/mocked-api.dev">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://metatags.io/">
+		<meta property="twitter:title" content="Mocked-API">
+		<meta property="twitter:description" content="A set of free API's that allow you to fill your application with mocked data">
+		<meta property="twitter:image" content="https://mocked-api.dev/mocked-api.dev">
+
+		<title>Mocked-API - A Set of mocked apis for your app</title>
+	</head>
+	<body class="bg-gray-800 overflow-x-hidden">
+
+		<Header></Header>
+
+		<div>
+			<div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 relative">
+				<div class="grid grid-cols-1 md:grid-cols-2 z-50">
+					
+					<div class="bird-container bird-container--one z-10">
+						<div class="bird bird--one z-10"></div>
+					</div>
+					
+					<div class="bird-container bird-container--two z-10">
+						<div class="bird bird--two z-10"></div>
+					</div>
+					
+					<div class="bird-container bird-container--three z-10">
+						<div class="bird bird--three z-10"></div>
+					</div>
+					
+					<div class="bird-container bird-container--four z-10">
+						<div class="bird bird--four z-10"></div>
+					</div>
+					<div class="z-50">
+						<h2 class="text-4xl tracking-tight font-bold text-white sm:text-5xl sm:tracking-tight lg:text-6xl lg:tracking-tight">Mocked-API</h2>
+						<p class="mt-5 text-xl text-gray-400">A set of <span class="text-pink-400 font-bold">FREE</span> Api's that allow you to fill your application with mocked data</p>
+						<p class="mt-2 text-base text-purple-200">Our API is currently live and accessible via <a class="underline text-white hover:text-pink-400" href="https://api.mocked-api.dev">api.mocked-api.dev</a></p>
+					</div>
+					<div class="z-50">
+						<img class="w-96 mt-6 md:-mt-12 md:float-right m-auto hover:rotate-12 hover:scale-110" src={image1} alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-r from-purple-800 to-indigo-700 -mt-48 pt-28 md:pt-8 lg:pt-0">
+			<CategoryList></CategoryList>
+		</div>
+
+		<div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
+			<div class="relative bg-gray-900">
+				<div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+				<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100" alt="">
+				<div aria-hidden="true" class="absolute inset-0 bg-gradient-to-br from-purple-800 to-indigo-700 mix-blend-multiply"></div>
+				</div>
+				<div class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
+				<div class="md:ml-auto md:w-1/2 md:pl-10">
+					<p class="mt-2 text-white text-3xl font-bold tracking-tight sm:text-4xl sm:tracking-tight">Got an idea or found a bug?</p>
+					<p class="mt-3 text-lg text-gray-300">You can head over to our github repo to raise a ticket.</p>
+					<div class="mt-8">
+					<div class="inline-flex rounded-md shadow">
+						<a href="https://github.com/ageddesi/Mocked-API/issues" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white border-b-4 hover:bg-gray-50 hover:border-b-pink-500">
+							Go to repo
+							<!-- Heroicon name: solid/external-link -->
+							<svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+								<path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+								<path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+							</svg>
+						</a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<Footer></Footer>
+
+	</body>
+</html>

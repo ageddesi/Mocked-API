@@ -12,6 +12,8 @@ jobs:
       - name: Set up node 
         uses: actions/setup-node@v3
       - name: Install dependencies
+        working-directory: ./api
         run: npm install
       - name: Run tests 
+        working-directory: ./api
         run: npm test
