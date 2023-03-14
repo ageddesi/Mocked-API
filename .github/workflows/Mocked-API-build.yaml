@@ -1,0 +1,63 @@
+# To better understand this file read this:
+# https://docs.ionos.space/docs/github-actions-customization/
+
+name: "Deploy Now: Execute Build"
+
+on:
+  workflow_call:
+    inputs:
+      site-url:
+        required: true
+        type: string
+      branch-id:
+        required: true
+        type: string
+
+env:
+  DEPLOYMENT_FOLDER: ./api/
+
+jobs:
+# Please do not rename this job
+  build-project:
+    name: build Mocked-API
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: v16.x
+
+      - name: Build Node assets
+        env:
+          CI: true
+          ENABLE_MORGAN_LOGGING: true
+          ENABLE_RATE_LIMIT: false
+          ENABLE_SENTRY: true
+          ENABLE_SWAGGER: true
+          HOSTNAME: api.mocked-api.dev
+          RATELIMIT_WINDOWSIZE: 10
+          RATELIMIT_WINDOWTIME: 90000
+          SCHEME: https
+          SENTRY_DSN: https://3ab3eea1ba8943df9acf9c605c192ad3@o4504118549282816.ingest.sentry.io/4504118550331392
+          SITE_URL: ${{ inputs.site-url }}
+        run: |
+          npm install
+          nodemon server.ts
+
+# Please do not touch the following action
+      - name: Store deployment content
+        uses: ionos-deploy-now/artifact-action@v1
+        with:
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          service-host: api-eu.ionos.space
+          project-id: befb3c7a-a5a8-48f8-9970-e262a410ea3a
+          branch-id: ${{ inputs.branch-id }}
+          version: ${{ github.sha }}
+          folder: ${{ env.DEPLOYMENT_FOLDER }}
+          config-file: .deploy-now/Mocked-API/config.yaml
+          action: upload
