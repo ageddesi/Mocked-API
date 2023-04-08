@@ -13,5 +13,8 @@
     "@astrojs/tailwind": "^1.0.0",
     "astro": "^1.0.8",
     "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "yarn": "^1.22.19"
   }
 }
