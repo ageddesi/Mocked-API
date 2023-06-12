@@ -18,20 +18,40 @@
     ],
     "tags": [
         {
+            "name": "Address",
+            "description": "A set of endpoints related to addresses"
+        },
+        {
             "name": "Animals",
             "description": "A set of endpoints related to animal"
+        },
+        {
+            "name": "Banks",
+            "description": "A set of endpoints related to bank feeds"
         },
         {
             "name": "Chat",
             "description": "A set of endpoints related to chats"
         },
         {
+            "name": "Chuck Norris",
+            "description": "A set of endpoints related to Chuck Norris Facts"
+        },
+        {
             "name": "Colors",
             "description": "A set of endpoints related to colors"
         },
         {
+            "name": "Coordinates",
+            "description": "A set of endpoints to obtain random coordinates"
+        },
+        {
             "name": "Countries",
             "description": "A set of endpoints related to countries"
+        },
+        {
+            "name": "Courses",
+            "description": "A set of endpoints related to Courses"
         },
         {
             "name": "Currencies",
@@ -42,16 +62,36 @@
             "description": "A set of endpoints related to ecommerce"
         },
         {
+            "name": "Elements",
+            "description": "A set of endpoints related to elements on the periodic table"
+        },
+        {
             "name": "Emails",
             "description": "A set of endpoints related to emails"
+        },
+        {
+            "name": "Food",
+            "description": "A set of endpoints related to food"
         },
         {
             "name": "Images",
             "description": "A set of endpoints related to obtaining placeholder image urls"
         },
         {
+            "name": "Instruments",
+            "description": "A set of endpoints related to instruments"
+        },
+        {
+            "name": "Invoices",
+            "description": "A set of endpoints related to invoices"
+        },
+        {
             "name": "IPs",
             "description": "A set of endpoints related to obtaining random IP Addresses"
+        },
+        {
+            "name": "Movies",
+            "description": "A set of endpoints related to get movies"
         },
         {
             "name": "Music",
@@ -60,6 +100,10 @@
         {
             "name": "Names",
             "description": "A set of endpoints to get randomly generated names"
+        },
+        {
+            "name": "News",
+            "description": "A set of endpoints to get news"
         },
         {
             "name": "Phone Numbers",
@@ -82,16 +126,28 @@
             "description": "A set of endpoints to get random sports data"
         },
         {
-            "name": "Chemical Elements",
-            "description": "A set of endpoints to get random Chemical Elements values"
+            "name": "Text",
+            "description": "A set of endpoints to get random text"
         },
         {
             "name": "TimeZones",
-            "description": "A set of endpoints related to TimeZones"
+            "description": "A set of endpoints to get random time zones"
         },
         {
-            "name": "IP",
-            "description": "A set of endpoints to get random ip and mac address"
+            "name": "Users",
+            "description": "A set of endpoints to get random user data"
+        },
+        {
+            "name": "Vehicles",
+            "description": "A set of endpoints to obtain vehicles"
+        },
+        {
+            "name": "Video",
+            "description": "A set of endpoints to obtain random video data"
+        },
+        {
+            "name": "Weathers",
+            "description": "A set of endpoints to get random weather data"
         }
     ],
     "paths": {
