@@ -40,9 +40,9 @@ app.get('/full-status', (req, res) => {
         uptime: process.uptime(),
         message: 'Ok',
         date: new Date(),
-        totalCategories: swaggerSpec["tags"].length,
-        totalEndpoints: Object.keys(swaggerSpec["paths"]).length,
-        version: swaggerSpec["info"]["version"],
+        totalCategories: swaggerSpec['tags'].length,
+        totalEndpoints: Object.keys(swaggerSpec['paths']).length,
+        version: swaggerSpec['info']['version'],
     };
     res.status(200).send(data);
 });
