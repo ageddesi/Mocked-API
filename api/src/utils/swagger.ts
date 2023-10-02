@@ -71,6 +71,10 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to emails',
             },
             {
+                name: "Flaky",
+                description: "A set of endpoints that return random responses and status codes with a given weight"
+            },
+            {
                 name: 'Food',
                 description: 'A set of endpoints related to food',
             },
