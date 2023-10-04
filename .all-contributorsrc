@@ -446,6 +446,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "suppergerrie2",
+      "name": "Suppergerrie2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15769860?v=4",
+      "profile": "http://suppergerrie2.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -453,5 +462,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "Mocked-API",
-  "projectOwner": "ageddesi"
+  "projectOwner": "ageddesi",
+  "commitType": "docs"
 }
