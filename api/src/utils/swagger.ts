@@ -43,8 +43,16 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to colors',
             },
             {
+                name: 'Coordinates',
+                description: 'A set of endpoints to obtain random coordinates',
+            },
+            {
                 name: 'Countries',
                 description: 'A set of endpoints related to countries',
+            },
+            {
+                name: 'Courses',
+                description: 'A set of endpoints related to Courses',
             },
             {
                 name: 'Currencies',
@@ -55,16 +63,16 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to ecommerce',
             },
             {
-                name: 'Courses',
-                description: 'A set of endpoints related to Courses',
-            },
-            {
                 name: 'Elements',
                 description: 'A set of endpoints related to elements on the periodic table',
             },
             {
                 name: 'Emails',
                 description: 'A set of endpoints related to emails',
+            },
+            {
+                name: "Flaky",
+                description: "A set of endpoints that return random responses and status codes with a given weight"
             },
             {
                 name: 'Food',
@@ -75,12 +83,20 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints related to obtaining placeholder image urls',
             },
             {
-                name: 'IPs',
-                description: 'A set of endpoints related to obtaining random IP Addresses',
+                name: 'Instruments',
+                description: 'A set of endpoints related to instruments',
             },
             {
                 name: 'Invoices',
                 description: 'A set of endpoints related to invoices',
+            },
+            {
+                name: 'IPs',
+                description: 'A set of endpoints related to obtaining random IP Addresses',
+            },
+            {
+                name: 'Movies',
+                description: 'A set of endpoints related to get movies',
             },
             {
                 name: 'Music',
@@ -91,8 +107,12 @@ const options: swaggerJsdoc.Options = {
                 description: 'A set of endpoints to get randomly generated names',
             },
             {
-                name: 'PhoneNumbers',
-                description: 'A set of endpoints to get randomly generated phone numbers',
+                name: 'News',
+                description: 'A set of endpoints to get news',
+            },
+            {
+                name: 'Phone Numbers',
+                description: 'A set of endpoints to get random phone numbers',
             },
             {
                 name: 'Products',
@@ -121,6 +141,14 @@ const options: swaggerJsdoc.Options = {
             {
                 name: 'Users',
                 description: 'A set of endpoints to get random user data',
+            },
+            {
+                name: 'Vehicles',
+                description: 'A set of endpoints to obtain vehicles',
+            },
+            {
+                name: 'Video',
+                description: 'A set of endpoints to obtain random video data',
             },
             {
                 name: 'Weathers',

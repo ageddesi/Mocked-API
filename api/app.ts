@@ -1,6 +1,6 @@
 require('dotenv').config();
 import express, { Request, Response } from 'express';
-import swag from './swagger.json';
+import { swaggerSpec } from './src/utils/swagger';
 import { applicationRateLimiter } from './middleware/rate-limiter/RateLimiter';
 import { initSwagger } from './src/setup/swagger';
 import { initSentry } from './src/setup/sentry';
@@ -40,9 +40,9 @@ app.get('/full-status', (req, res) => {
         uptime: process.uptime(),
         message: 'Ok',
         date: new Date(),
-        totalCategories: swag.tags.length,
-        totalEndpoints: Object.keys(swag.paths).length,
-        version: swag.info.version,
+        totalCategories: swaggerSpec['tags'].length,
+        totalEndpoints: Object.keys(swaggerSpec['paths']).length,
+        version: swaggerSpec['info']['version'],
     };
     res.status(200).send(data);
 });
