@@ -49,6 +49,12 @@ app.get('/full-status', (req, res) => {
 
 app.use(cors()); // enabling CORS for all requests;
 
-if (process.env.ENABLE_SWAGGER === 'true') initSwagger(app); // setup Swagger;
+if (process.env.ENABLE_SWAGGER === 'true'){
+    initSwagger(app); // setup Swagger;
+} else {
+    app.get('/', (req, res) => {
+        res.status(200).send('Welcome to the Mocked API')
+    })
+}
 
 export default app;
