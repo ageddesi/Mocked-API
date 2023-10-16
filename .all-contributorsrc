@@ -473,6 +473,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "shodown96",
+      "name": "Elijah Soladoye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41167893?v=4",
+      "profile": "http://elijahsoladoye.vercel.app",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
