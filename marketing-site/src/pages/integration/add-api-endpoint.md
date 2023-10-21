@@ -34,7 +34,7 @@ const usersList = [
         "username": "user0000",
         "first_name": "John",
         "last_name": "Doe",
-        "title": "mr",
+        "title": "mr"
     },
     {
         "email": "female@example.com",
@@ -42,10 +42,10 @@ const usersList = [
         "username": "user0001",
         "first_name": "Hydra",
         "last_name": "Smith",
-        "title": "mrs",
+        "title": "mrs"
     },
-    ...
-]
+    // ... (If you have more items, add them here)
+];
 ```
 
     - 3 - Create an `api` folder to store the `routes` file, like `./modules/users/api/users-routes.ts`
