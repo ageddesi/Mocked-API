@@ -27,25 +27,24 @@ Example on how to create and endpoint for a new topic:
 Example:
 
 ```javascript
-const usersList = [
-    {
-        "email": "male@example.com",
-        "gender": "male",
-        "username": "user0000",
-        "first_name": "John",
-        "last_name": "Doe",
-        "title": "mr",
-    },
-    {
-        "email": "female@example.com",
-        "gender": "male",
-        "username": "user0001",
-        "first_name": "Hydra",
-        "last_name": "Smith",
-        "title": "mrs",
-    },
-    // ...
-];
+	const usersList = [
+		{
+			"email": "male@example.com",
+			"gender": "male",
+			"username": "user0000",
+			"first_name": "John",
+			"last_name": "Doe",
+			"title": "mr",
+		},
+		{
+			"email": "female@example.com",
+			"gender": "male",
+			"username": "user0001",
+			"first_name": "Hydra",
+			"last_name": "Smith",
+			"title": "mrs",
+		},
+	];
 ```
 
     - 3 - Create an `api` folder to store the `routes` file, like `./modules/users/api/users-routes.ts`
