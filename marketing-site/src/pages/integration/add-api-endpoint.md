@@ -22,25 +22,27 @@ We assume `<TOPIC>` as a new TAG on OpenAPI, meaning a different category with d
 Example on how to create and endpoint for a new topic:
 
     - 1 - Create a new folder with the topic name, under `./modules` folder, like `./modules/users`
-    - 2 - Create a new file with mocked data, under `./modules/users/data`, like `./modules/users/data/users.ts`. Example:
+    - 2 - Create a new file with mocked data, under `./modules/users/data`, like `./modules/users/data/users.ts`.
+
+Example:
 
 ```javascript
 const usersList = [
     {
-    "email": "male@example.com",
-    "gender": "male",
-    "username": "user0000",
-    "first_name": "John",
-    "last_name": "Doe",
-    "title": "mr",
+        "email": "male@example.com",
+        "gender": "male",
+        "username": "user0000",
+        "first_name": "John",
+        "last_name": "Doe",
+        "title": "mr",
     },
     {
-    "email": "female@example.com",
-    "gender": "male",
-    "username": "user0001",
-    "first_name": "Hydra",
-    "last_name": "Smith",
-    "title": "mrs",
+        "email": "female@example.com",
+        "gender": "male",
+        "username": "user0001",
+        "first_name": "Hydra",
+        "last_name": "Smith",
+        "title": "mrs",
     },
     ...
 ]
