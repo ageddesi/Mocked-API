@@ -21,6 +21,7 @@ Example on how to create and endpoint for a new topic:
 
 - 1 - Create a new folder with the topic name, under `./modules` folder, like `./modules/users`
 - 2 - Create a new file with mocked data, under `./modules/users/data`, like `./modules/users/data/users.ts`. Example:
+
 ```javascript
 const usersList = [
     {
@@ -42,19 +43,20 @@ const usersList = [
     ...
 ]
 ```
+
 - 3 - Create an `api` folder to store the `routes` file, like `./modules/users/api/users-routes.ts`
 - 4 - Create different endpoints for users. Example:
 
 ```javascript
-import usersList from '../data/users';
+import usersList from "../data/users";
 
 module.exports = function (app: core.Express) {
-    app.get('/users', (req: Request, res: Response) => {
-        res.json({
-            users: usersList,
-        });
+  app.get("/users", (req: Request, res: Response) => {
+    res.json({
+      users: usersList,
     });
-}
+  });
+};
 ```
 
 Note: This endpoint will fetch all mocked users stored in `./modules/users/data/users.ts`
@@ -69,8 +71,8 @@ For each module you create you will also need to create a tests folder, Inside t
 The utils tests are fairly simple jests tests, the `api` routes tests are slightly different where you will need to add
 
 ```javascript
-import request from 'supertest';
-import app from 'path/to/app';
+import request from "supertest";
+import app from "path/to/app";
 ```
 
 to your tests and make a request in your test instead of calling a normal function.
@@ -99,40 +101,40 @@ Each OpenAPI comment should start with `@openapi` in order to be read by swagger
 Example:
 
 ```javascript
-    /**
-     * @openapi
-     * '/users':
-     *   get:
-     *     tags:
-     *     - Users
-     *     summary: Obtain a list of all users
-     *     responses:
-     *       '200':
-     *         description: OK
-     *         schema:
-     *           type: array
-     *           items:
-     *             type: object
-     *             properties:
-     *               email:
-     *                 type: string
-     *                 example: example@example.com
-     *               gender:
-     *                 type: string
-     *                 example: male
-     *               username:
-     *                 type: string
-     *                 example: user00000
-     *               first_name:
-     *                 type: string
-     *                 example: John
-     *               last_name:
-     *                 type: string
-     *                 example: Doe
-     *               title:
-     *                 type: string
-     *                 example: mr
-     */
+/**
+ * @openapi
+ * '/users':
+ *   get:
+ *     tags:
+ *     - Users
+ *     summary: Obtain a list of all users
+ *     responses:
+ *       '200':
+ *         description: OK
+ *         schema:
+ *           type: array
+ *           items:
+ *             type: object
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 example: example@example.com
+ *               gender:
+ *                 type: string
+ *                 example: male
+ *               username:
+ *                 type: string
+ *                 example: user00000
+ *               first_name:
+ *                 type: string
+ *                 example: John
+ *               last_name:
+ *                 type: string
+ *                 example: Doe
+ *               title:
+ *                 type: string
+ *                 example: mr
+ */
 ```
 
 This describe the get endpoint that we did [here](#how-to-add-an-endpoint).
@@ -140,48 +142,47 @@ This describe the get endpoint that we did [here](#how-to-add-an-endpoint).
 After doing the OpenAPI comment:
 
 ```javascript
-import usersList from '../data/users';
+import usersList from "../data/users";
 
 module.exports = function (app: core.Express) {
-
-    /**
-     * @openapi
-     * '/users':
-     *   get:
-     *     tags:
-     *     - Users
-     *     summary: Obtain a list of all users
-     *     responses:
-     *       '200':
-     *         description: OK
-     *         schema:
-     *           type: array
-     *           items:
-     *             type: object
-     *             properties:
-     *               email:
-     *                 type: string
-     *                 example: example@example.com
-     *               gender:
-     *                 type: string
-     *                 example: male
-     *               username:
-     *                 type: string
-     *                 example: user00000
-     *               first_name:
-     *                 type: string
-     *                 example: John
-     *               last_name:
-     *                 type: string
-     *                 example: Doe
-     *               title:
-     *                 type: string
-     *                 example: mr
-     */
-    app.get('/users', (req: Request, res: Response) => {
-        res.json({
-            users: usersList,
-        });
+  /**
+   * @openapi
+   * '/users':
+   *   get:
+   *     tags:
+   *     - Users
+   *     summary: Obtain a list of all users
+   *     responses:
+   *       '200':
+   *         description: OK
+   *         schema:
+   *           type: array
+   *           items:
+   *             type: object
+   *             properties:
+   *               email:
+   *                 type: string
+   *                 example: example@example.com
+   *               gender:
+   *                 type: string
+   *                 example: male
+   *               username:
+   *                 type: string
+   *                 example: user00000
+   *               first_name:
+   *                 type: string
+   *                 example: John
+   *               last_name:
+   *                 type: string
+   *                 example: Doe
+   *               title:
+   *                 type: string
+   *                 example: mr
+   */
+  app.get("/users", (req: Request, res: Response) => {
+    res.json({
+      users: usersList,
     });
-}
+  });
+};
 ```
