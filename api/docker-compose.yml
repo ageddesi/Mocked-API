@@ -9,3 +9,5 @@ services:
       - 3000:3000
     volumes:
       - "./:/usr/src/app/"
+    environment:
+      - HOSTNAME=localhost:3000
