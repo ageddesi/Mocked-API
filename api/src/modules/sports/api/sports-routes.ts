@@ -5,7 +5,7 @@ import { getRandomSubArray } from '../../../utils/arrays';
 import PremierLeagueData2022 from '../data/football-premier-league-2022';
 import LaLigaLeagueData2022 from '../data/football-laliga-league-2022';
 import SerieALeagueData2022 from '../data/football-serie-a-league-2022';
-import BasketballNbaLeague2022 from '../data/basketball-nba-league-2022';
+import BasketballNbaLeague2024 from '../data/basketball-nba-league-2024';
 import Ligue1LeagueData2022 from '../data/football-ligue-1-league-2022';
 
 module.exports = function (app: core.Express) {
@@ -32,7 +32,7 @@ module.exports = function (app: core.Express) {
      */
     app.get('/sports/basketball/leagues/nba/teams/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
-        res.json(getRandomSubArray(BasketballNbaLeague2022, qty));
+        res.json(getRandomSubArray(BasketballNbaLeague2024, qty));
     });
 
     /**
